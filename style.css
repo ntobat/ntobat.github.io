@@ -63,9 +63,6 @@ a{
 #p1abt{
   cursor: pointer;
 }
-
-/** HEADER **/
-
 .header {
   height: 60px;
   background-color: #264FBF;
@@ -156,6 +153,7 @@ a{
 
 #p2abt{
   font-weight: 700;
+  cursor: pointer;
 }
 
 /** CIRCLE **/
@@ -198,22 +196,15 @@ a{
   margin-bottom: -2vh;
 }
 .ylw{
+  background-color: #fffc54;
   width: 100%;
-  height: 20px;
-  /*background-color: #FFFE00;*/
-}
-#ylw{
-  width: 100%;
+  height: 24px;
 }
 #abt-txt{
   font-size: 2.5vw;
   text-align: justify;
   line-height: 1.5em;
   margin-top: -4px; 
-}
-#cool{
-  margin-top: 60px;
-  width: 100%;
 }
 
 /** FOOTER **/
@@ -230,7 +221,6 @@ a{
   color: white;
   text-align: center;
   font-size: 8px;
-  letter-spacing: .25em;
 }
 
 

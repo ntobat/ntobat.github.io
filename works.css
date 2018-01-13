@@ -1,0 +1,112 @@
+/* ==========================
+-- BODY                    --
+========================== */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+p, h1, h2, h3, h4, h5, li{
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 400;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ==========================
+-- NAV                    --
+========================== */
+@keyframes bgcolor{
+	from {background-color: #264FBF;}
+	to{background-color: white}
+}
+@keyframes colors{
+	from {color: white;}
+	to{color: black}
+}
+.nav{
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  animation: colors 1s forwards;
+}
+.navitem{
+  position: absolute;
+  top: 20px;
+}
+.nav-two{
+  left: 75%;
+}
+.nav-one{
+  right: 75%;
+}
+#navworks{
+  font-weight: 700;
+}
+.header {
+  animation: bgcolor 1s forwards;
+  height: 60px;
+}
+.logo-wrap{
+  width: 120px;
+  margin: 0 auto;
+}
+.logo-wrap img {
+  display: block;
+  margin: 0 auto;
+  padding-top: 24px;
+  width: 64px;
+}
+#p1-hdr-circle{
+  position:absolute;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  top: -30px;
+  left: 50%;
+  margin-right: -50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  animation: bgcolor 1s forwards;
+}
+
+/* ==========================
+-- WORKS                   --
+========================== */
+
+.welcome{
+  text-align: center;
+  margin: 100px 0 30px 0;
+}
+.container{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 200px;
+	grid-template-areas: "kinis topo grabit";
+	grid-column-gap: 20px;
+	width: 90vw;
+	margin: 0 auto;
+}
+.work{
+	background-color: orange;
+}
+#kinis{
+	grid-area: kinis;
+}
+#topo{
+	grid-area: topo;
+}
+#grabit{
+	grid-area: grabit;
+}
+
+
+
+
+
+
+
+
+
