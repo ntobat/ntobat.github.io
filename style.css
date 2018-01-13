@@ -16,6 +16,7 @@ p, h1, h2, h3, h4, h5, li{
 a{
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
 
 
@@ -70,7 +71,7 @@ a{
   width: 120px;
   margin: 0 auto;
 }
-.logo-wrap img {
+.logo-wrap img{
   display: block;
   margin: 0 auto;
   padding-top: 24px;
