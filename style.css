@@ -6,16 +6,18 @@
   padding: 0;
   box-sizing: border-box;
 }
-p, h1, h2, h3, h4, h5, li{
+p, h1, h2, h3, h4, h5, li, a{
   font-family: 'PT Sans', sans-serif;
   font-weight: 400;
+}
+p, h1, h2, h3, h4, h5, li{
+  cursor: default;
 }
 a{
   text-decoration: none;
   color: inherit;
 }
-.page{
-}
+
 
 /* ==========================
 -- LOADER                  --
@@ -59,9 +61,6 @@ a{
 }
 .nav-one{
   right: 75%;
-}
-#p1abt{
-  cursor: pointer;
 }
 .header {
   height: 60px;

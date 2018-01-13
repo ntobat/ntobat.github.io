@@ -1,16 +1,26 @@
 //loader
-$(function(){
-  if ( document.referrer == null || document.referrer.indexOf(window.location.hostname) < 0 ) {
-    console.log('yo');
-  } else {
-    $(".loader").css("display", "block");
-    setTimeout(function(){
-      $('.loader').fadeOut('slow', function() {
-        $(this).remove();
-      });
-    }, 3200);
-  };
+var cookieName = 'yourcookiename';
+$(function() {
+    checkCookie();
 });
+
+function checkCookie() {
+  if (document.cookie.length > 0 && document.cookie.indexOf(cookieName + '=') != -1) {
+    // do nothing, cookie already sent
+  } else {
+    // handle jQuery animation
+    $(".loader").css("display", "block");
+    $(function(){
+      setTimeout(function(){
+        $('.loader').fadeOut('slow', function() {
+          $(this).remove();
+        });
+      }, 3200);
+    });
+    // set the cookie to show user has already visited
+    document.cookie = cookieName + "=1";
+  }
+}
 /*
 $(function(){
   setTimeout(function(){
