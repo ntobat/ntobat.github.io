@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Crete+Round" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <script src="scrollify.js"></script>
+    <script>
+        $(function() {
+          $.scrollify({
+            section: ".page"
+          });
+        });
+    </script>
+  </head>
+
+  <body>
+    
+    <!--<div class="loader">
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+      <img id="loadergif" src="https://i.imgur.com/LDCfXDy.gif" />
+    </div>-->
+      
+    <div class="page" id="p1" data-section-name="page1">
+      
+      <div class="nav">
+        <a href="#"><p class="navitem nav-two">WORKS</p></a>
+        <p class="navitem nav-one" id="p1abt">ABOUT</p>
+      </div>
+    
+      <div id="p1-hdr-circle"></div>
+      <div class="header">
+        <div class="logo-wrap">
+          <a href="#p1"><img src="https://i.imgur.com/Xc9HvV4.png" /></a>
+        </div>
+      </div>
+      
+      <div class="p1txt">
+        <h3>Hi, my name is</h3>
+        <h1>Nicholas Tobat</h1>
+        <h3>&</h3>
+        <h2>DESIGN IS WHAT I DO</h2>
+      </div>
+      <a id="p1-ftr-circle" href="#p2"><img class="spin" src="https://i.imgur.com/UvA95G3.png" /></a>
+
+    </div>
+    
+    
+    <div class="page" id="p2" data-section-name="page2">
+      
+      <div class="header">
+        <div class="nav">
+          <p class="navitem nav-two">WORKS</p>
+          <p class="navitem nav-one" id="p2abt">ABOUT</p>
+        </div>
+      </div>
+
+      <a class="arrow" href="#p1">
+        <div id="p2linkup"></div>
+      </a>
+
+      <div id="p2border"></div>
+
+      <div class="abt-content">
+        <h1 id="abt-title">MY ADVENTURES IN DESIGN</h1>
+        <div class="ylw"><img src="assets/ylw.png" id="ylw" /></div>
+        <p id="abt-txt">began when I moved to San Francisco in 2014 and taught myself front-end coding. Since then I've continued my self-education, taking on roles including web designer, graphic designer, and instructional designer. I am currently expanding my knowledge of UI/UX and visual design at the VCU Brandcenter in Richmond, VA.</p>
+        <img id="cool" src="assets/cool.png" />
+      </div>
+
+      <div class="footer">
+        <p id="ftr">Created by Nicholas Tobat<br><br><span style="font-size: 6px">Go easy on me, I'm not a developer ;)</span></p>
+      </div>
+
+    </div>
+    
+  </body>
+
+</html>
