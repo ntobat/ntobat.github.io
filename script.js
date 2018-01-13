@@ -1,12 +1,25 @@
 //loader
 $(function(){
+  if ( document.referrer == null || document.referrer.indexOf(window.location.hostname) < 0 ) {
+    console.log('yo');
+  } else {
+    $(".loader").css("display", "block");
+    setTimeout(function(){
+      $('.loader').fadeOut('slow', function() {
+        $(this).remove();
+      });
+    }, 3200);
+  };
+});
+/*
+$(function(){
   setTimeout(function(){
     $('.loader').fadeOut('slow', function() {
       $(this).remove();
     });
    }, 3200);
 });
-
+*/
 //scroll animation
 $(function(){
   //disable spacebar scroll
