@@ -1,0 +1,12 @@
+Options +FollowSymLinks -MultiViews -Indexes
+RewriteEngine on
+RewriteBase /
+
+RewriteCond %{ENV:REDIRECT_STATUS} 200
+RewriteRule ^ - [L]
+
+RewriteCond %{QUERY_STRING} ^(letter)=(\w)$ [NC]
+RewriteRule ([^.]+)\.html http://www.quotist.com/$1/%1/%2? [L,R=301]
+
+RewriteCond %{REQUEST_URI} ^/([\w-]+)/(letter)/\w/? [NC]
+RewriteRule ^ /%1.html?%2=%3 [L,QSA]
