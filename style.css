@@ -18,6 +18,10 @@ a{
   color: inherit;
   cursor: pointer;
 }
+.page{
+  width: 100vw;
+  height: 100vh;
+}
 
 
 /* ==========================
@@ -45,26 +49,9 @@ a{
 -- PAGE ONE                --
 ========================== */
 
-/** NAV **/
-
-.nav{
-  display: inline-block;
-  position: absolute;
-  width: 100%;
-  color: white;
-}
-.navitem{
-  position: absolute;
-  top: 20px;
-}
-.nav-two{
-  left: 75%;
-}
-.nav-one{
-  right: 75%;
-}
+/** HEADER **/
 .header {
-  height: 60px;
+  height: 80px;
   background-color: #264FBF;
 }
 .logo-wrap{
@@ -74,139 +61,192 @@ a{
 .logo-wrap img{
   display: block;
   margin: 0 auto;
-  padding-top: 24px;
-  width: 64px;
-}
-#p1-hdr-circle{
-  position:absolute;
-  background-color: #264FBF;
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  top: -30px;
-  left: 50%;
-  margin-right: -50%;
-  transform: translateX(-50%);
-  z-index: -1;
+  padding-top: 8px;
+  height: 72px;
 }
 
 /** CONTENT **/
 
-.p1txt{
+.container{
+  width: 100%;
+  position: relative;
+  margin-top: 100px;
+  height: 400px;
+}
+@keyframes test{
+  0%{ margin-top: 0px; }
+  50%{ margin-top: 10px; }
+  100%{ margin-top: 0px; }
+}
+.sec1{
+  width: 100vw;
+  height: 262px;
   text-align: center;
   position: absolute;
-  top: 50%;
   left: 50%;
   margin-right: -50%;
-  transform: translate(-50%, -50%)
+  transform: translate(-50%);
+  animation: test 2200ms ease-in-out infinite;
 }
-.p1txt h1{
+.sec1 h1{
   font-family: 'Crete Round', serif;
-  font-size: 6.5em;
+  font-size: 14vmin;
 }
-.p1txt h2{
-  font-size: 2em;
+.sec1 h2{
+  font-size: 5vmin;
   letter-spacing: .3em;
   padding: 12px;
 }
-.p1txt h3{
+.sec1 h3{
   font-size: 1.25em;
-  padding: 12px;
+  padding-bottom: 12px;
 }
-
-/** CIRCLE **/
-
-@keyframes circle-spin-down {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(180deg); }
-}
-@keyframes circle-spin-up {
-  from { transform: rotate(180deg); }
-  to { transform: rotate(360deg); }
-}
-#p1-ftr-circle{
-  position:absolute;
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  bottom: -90px;
-  left: 50%;
-  margin-right: -50%;
-  transform: translateX(-50%);
-}
-.spin{
-  display: block;
-  margin: 0 auto;
-  width: 140px;
-}
-.animate-down{
-  animation: circle-spin-down 800ms forwards;
-}
-.animate-up{
-  animation: circle-spin-up 800ms forwards;
-}
-
-
-/* ==========================
--- PAGE TWO                --
-========================== */
-
-#p2abt{
-  font-weight: 700;
-  cursor: pointer;
-}
-
-/** CIRCLE **/
-
-#p2{
-  margin-top: 40px;
-}
-.arrow{
-  border-radius: 0 0 100% 100%;
+.sec2{
+  width: 100vw;
+  padding: 0 15%;
+  height: 262px;
+  text-align: center;
   position: absolute;
-  width: 140px;
-  height:50px;
-  left: 50%;
+  left: 150%;
   margin-right: -50%;
-  margin-top: -60px;
-  transform: translateX(-50%);
+  transform: translate(-50%);
+  animation: test 2000ms ease-in-out infinite;
 }
-#p2linkup{
-  display: block;
-  margin: 0 auto;
-}
-
-/** CONTENT **/
-
-#p2border{
-  width: 100%;
-  height: 100%;
-  border: 60px solid #264FBF;
-  margin-top: -60px;
-  position: absolute;
-  z-index: -10;
-}
-.abt-content{
-  position: relative;
-  margin: 80px 120px 0 120px;
-}
-#abt-title{
-  font-size: 5.5vw;
+.sec2 h1{
+  font-size: 8vmin;
   font-family: 'Crete Round', serif;
-  margin-bottom: -2vh;
+  padding-bottom: 10px;
 }
-.ylw{
-  background-color: #fffc54;
-  width: 100%;
-  height: 24px;
-}
-#abt-txt{
-  font-size: 2.5vw;
+.sec2 p{
+  font-size: 3vmin;
   text-align: justify;
   line-height: 1.5em;
-  margin-top: -4px; 
+}
+.sec3{
+  width: 100vw;
+  padding: 0 15%;
+  height: 262px;
+  text-align: center;
+  position: absolute;
+  left: 150%;
+  margin-right: -50%;
+  transform: translate(-50%);
+  animation: test 2000ms ease-in-out infinite;
+}
+.sec3 h1{
+  font-size: 8vmin;
+  font-family: 'Crete Round', serif;
+  padding-bottom: 50px;
+}
+.sec3 p{
+  font-size: 3vmin;
+  line-height: 1.5em;
+}
+.sec0{
+  width: 100vw;
+  padding: 0 15%;
+  height: 262px;
+  text-align: center;
+  position: absolute;
+  left: -50%;
+  margin-right: -50%;
+  transform: translate(-50%);
+  animation: test 2000ms ease-in-out infinite;
+}
+.sec0 h1{
+  font-size: 8vmin;
+  font-family: 'Crete Round', serif;
+  padding-bottom: 10px;
+}
+.sec0 p{
+  font-size: 3vmin;
+  text-align: justify;
+  line-height: 1.5em;
+}
+.sec-1{
+  width: 100vw;
+  padding: 0 15%;
+  height: 262px;
+  text-align: center;
+  position: absolute;
+  left: -50%;
+  margin-right: -50%;
+  transform: translate(-50%);
+  animation: test 2000ms ease-in-out infinite;
+}
+.sec-1 h1{
+  font-size: 8vmin;
+  font-family: 'Crete Round', serif;
+  padding-bottom: 50px;
+}
+.sec-1 p{
+  font-size: 3vmin;
+  line-height: 1.5em;
 }
 
+@keyframes work{
+  from{ background-color: rgba(38,79,191,0); }
+  to{ background-color: rgba(38,79,191,1); color: white; }
+}
+.work{
+  font-size: 3vmin;
+  padding: 14px;
+}
+.work:hover{
+  animation: work 400ms forwards;
+}
+
+/** NAV **/
+.nav{
+  width: 320px;
+  height: 48px;
+  margin: 0 auto;
+  position: relative;
+}
+.nav p{
+  font-family: 'Crete Round', serif;
+}
+.nav img{
+  width: 32px;
+}
+.this{
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+.that{
+  position: absolute;
+  left: 0;
+  cursor: pointer;
+}
+.this, .that{
+  height: 48px;
+  line-height: 48px;
+}
+#thatpt{
+  transform: scaleX(-1);
+}
+.this p, .this img, .that p, .that img{
+  display: inline-block;
+  cursor: pointer;
+}
+#or{
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%);
+  font-family: 'PT Sans', sans-serif;
+  height: 48px;
+  line-height: 48px;
+}
+.this:hover, .that:hover{
+  animation: point 400ms infinite;
+}
+@keyframes point{
+  0%{ transform: rotate(6deg); }
+  50%{ transform: rotate(-6deg); }
+  100%{ transform: rotate(6deg); }
+}
 /** FOOTER **/
 
 .footer{
@@ -218,7 +258,7 @@ a{
   z-index: -1;
 }
 #ftr{
-  color: white;
+  color: black;
   text-align: center;
   font-size: 8px;
 }

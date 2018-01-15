@@ -1,0 +1,252 @@
+/* ==========================
+-- BODY                    --
+========================== */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+p, h1, h2, h3, h4, h5, li, a{
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 400;
+}
+p, h1, h2, h3, h4, h5, li{
+  cursor: default;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+
+/* ==========================
+-- LOADER                  --
+========================== */
+.loader{
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: #274CBF;
+  overflow: visible;
+  z-index: 99;
+}
+#loadergif{
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+
+/* ==========================
+-- PAGE ONE                --
+========================== */
+
+/** NAV **/
+
+.nav{
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  color: white;
+}
+.navitem{
+  position: absolute;
+  top: 20px;
+}
+.nav-two{
+  left: 75%;
+}
+.nav-one{
+  right: 75%;
+}
+.header {
+  height: 60px;
+  background-color: #264FBF;
+}
+.logo-wrap{
+  width: 120px;
+  margin: 0 auto;
+}
+.logo-wrap img{
+  display: block;
+  margin: 0 auto;
+  padding-top: 24px;
+  width: 64px;
+}
+#p1-hdr-circle{
+  position:absolute;
+  background-color: #264FBF;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  top: -30px;
+  left: 50%;
+  margin-right: -50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+/** CONTENT **/
+
+.p1txt{
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  animation: test 2500ms ease-in-out infinite;
+}
+.p1txt h1{
+  font-family: 'Crete Round', serif;
+  font-size: 14vmin;
+}
+.p1txt h2{
+  font-size: 5vmin;
+  letter-spacing: .3em;
+  padding: 12px;
+}
+.p1txt h3{
+  font-size: 1.25em;
+  padding: 12px;
+}
+@keyframes test{
+  0%{ top: 51.5%; }
+  50%{ top: 48.5%; }
+  100%{ top: 51.5%; }
+}
+
+.p2txt{
+  text-align: center;
+  width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 150%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  animation: test 2500ms ease-in-out infinite;
+}
+
+/** CIRCLE **/
+
+@keyframes circle-spin-down {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(180deg); }
+}
+@keyframes circle-spin-up {
+  from { transform: rotate(180deg); }
+  to { transform: rotate(360deg); }
+}
+#p1-ftr-circle{
+  position:absolute;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  bottom: -90px;
+  left: 50%;
+  margin-right: -50%;
+  transform: translateX(-50%);
+}
+.spin{
+  display: block;
+  margin: 0 auto;
+  width: 140px;
+}
+.animate-down{
+  animation: circle-spin-down 800ms forwards;
+}
+.animate-up{
+  animation: circle-spin-up 800ms forwards;
+}
+
+
+/* ==========================
+-- PAGE TWO                --
+========================== */
+
+#p2abt{
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/** CIRCLE **/
+
+#p2{
+  margin-top: 40px;
+}
+.arrow{
+  border-radius: 0 0 100% 100%;
+  position: absolute;
+  width: 140px;
+  height:50px;
+  left: 50%;
+  margin-right: -50%;
+  margin-top: -60px;
+  transform: translateX(-50%);
+}
+#p2linkup{
+  display: block;
+  margin: 0 auto;
+}
+
+/** CONTENT **/
+
+#p2border{
+  width: 100%;
+  height: 100%;
+  border: 60px solid #264FBF;
+  margin-top: -60px;
+  position: absolute;
+  z-index: -10;
+}
+.abt-content{
+  position: relative;
+  margin: 80px 120px 0 120px;
+}
+.abt-title{
+  font-size: 5.5vw;
+  font-family: 'Crete Round', serif;
+  margin-bottom: -2vh;
+}
+.ylw{
+  background-color: #fffc54;
+  width: 100%;
+  height: 24px;
+}
+#abt-txt{
+  font-size: 2.5vw;
+  text-align: justify;
+  line-height: 1.5em;
+  margin-top: -4px; 
+}
+
+/** FOOTER **/
+
+.footer{
+  position: fixed;
+  left: 50%;
+  margin-right: -50%;
+  transform: translateX(-50%);
+  bottom: 14px;
+  z-index: -1;
+}
+#ftr{
+  color: white;
+  text-align: center;
+  font-size: 8px;
+}
+
+
+
+
+/* ==========================
+-- MEDIA QUERIES           --
+========================== */
+
+
+
+
