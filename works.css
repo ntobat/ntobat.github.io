@@ -11,11 +11,16 @@ p, h1, h2, h3, h4, h5, li, a{
   font-weight: 400;
 }
 p, h1, h2, h3, h4, h5, li{
-	cursor: default;
+  cursor: default;
 }
 a{
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
+}
+.page{
+  width: 100vw;
+  height: 100vh;
 }
 
 /* ==========================
@@ -29,52 +34,20 @@ a{
 	from {color: white;}
 	to{color: black}
 }
-.nav{
-  display: inline-block;
-  position: absolute;
-  width: 100%;
-  animation: colors 1s forwards;
-}
-.navitem{
-  position: absolute;
-  top: 20px;
-}
-.nav-two{
-  left: 75%;
-}
-.nav-one{
-  right: 75%;
-}
-#navworks{
-  font-weight: 700;
-}
 .header {
+  height: 80px;
+  background-color: #264FBF;
   animation: bgcolor 1s forwards;
-  height: 60px;
-  width: 100%;
 }
 .logo-wrap{
   width: 120px;
   margin: 0 auto;
 }
-.logo-wrap img {
+.logo-wrap img{
   display: block;
   margin: 0 auto;
-  padding-top: 24px;
-  width: 64px;
-  z-index: 99;
-}
-#p1-hdr-circle{
-  position:absolute;
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  top: -30px;
-  left: 50%;
-  margin-right: -50%;
-  transform: translateX(-50%);
-  animation: bgcolor 1s forwards;
-  z-index: -1;
+  padding-top: 8px;
+  height: 72px;
 }
 
 /* ==========================
