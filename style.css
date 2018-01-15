@@ -244,7 +244,7 @@ a{
   line-height: 48px;
 }
 .this:hover, .that:hover{
-  animation: point 400ms 2 linear reverse;
+  animation: point 400ms infinite linear reverse;
 }
 .this:active, .that:active{
   animation: pointy 400ms 2 linear;
