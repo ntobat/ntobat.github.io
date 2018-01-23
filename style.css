@@ -21,10 +21,17 @@ a{
   color: inherit;
   cursor: pointer;
 }
-/*.page{
+.unselectable {
+ -moz-user-select: -moz-none;
+ -khtml-user-select: none;
+ -webkit-user-select: none;
+ -ms-user-select: none;
+ user-select: none;
+}
+.page{
   width: 100vw;
-  height: 100vh;
-}*/
+  height: calc(100vh - 80px);
+}
 
 
 /* ==========================
@@ -68,13 +75,15 @@ a{
   height: 72px;
 }
 
-/** CONTENT **/
+/* ==========================
+-- P1:CONTENT              --
+========================== */
 
-.container{
+.p1content{
   width: 100%;
   position: relative;
-  margin-top: 100px;
-  height: 400px;
+  margin-top: 60px;
+  height: calc(100vh - 200px);
   overflow: hidden;
 }
 @keyframes test{
@@ -84,7 +93,7 @@ a{
 }
 .sec1{
   width: 100%;
-  height: 262px;
+  height: ;
   text-align: center;
   position: absolute;
   left: 50%;
@@ -103,12 +112,12 @@ a{
 }
 .sec1 h3{
   font-size: 1.25em;
-  padding-bottom: 12px;
+  padding: 12px;
 }
 .sec2{
   width: 100%;
-  padding: 0 15%;
-  height: 262px;
+  padding: 0 10vw;
+  height: ;
   text-align: center;
   position: absolute;
   left: 150%;
@@ -121,6 +130,17 @@ a{
   font-family: 'Crete Round', serif;
   padding-bottom: 10px;
 }
+#gif{
+  background-image: url('assets/spin_bw.gif');
+  background-size: contain;
+  height: 50vmin;
+  width: 50vmin;
+  margin: 0 auto;
+}
+#gif:hover{
+  background-image: url('assets/spin_color.gif');
+  background-size: contain;
+}
 .sec2 p{
   font-size: 3vmin;
   text-align: justify;
@@ -128,8 +148,8 @@ a{
 }
 .sec3{
   width: 100%;
-  padding: 0 15%;
-  height: 262px;
+  padding: 0 15vw;
+  height: ;
   text-align: center;
   position: absolute;
   left: 150%;
@@ -140,15 +160,15 @@ a{
 .sec3 h1{
   font-size: 8vmin;
   font-family: 'Crete Round', serif;
-  padding-bottom: 50px;
+  padding-bottom: 4vmin;
 }
 .sec3 p{
-  font-size: 3vmin;
+  font-size: 4vmin;
   line-height: 1.5em;
 }
 .sec0{
   width: 100%;
-  padding: 0 15%;
+  padding: 0 15vw;
   height: 262px;
   text-align: center;
   position: absolute;
@@ -200,13 +220,118 @@ a{
   animation: work 400ms forwards;
 }
 
-/** NAV **/
+/* ==========================
+-- P1:NAV                  --
+========================== */
+
+@keyframes downspin {
+  0% { transform: rotate(180deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes upspin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(180deg); }
+} 
+
+.downed{
+  animation: downspin 600ms forwards;
+}
+.upped{
+  animation: upspin 600ms forwards;
+}
 .nav{
-  width: 320px;
-  height: 48px;
+  height: 60px;
+  margin: -20px auto 0 auto;
+  position: relative;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+.arw{
+  cursor: pointer;
+}
+.arrow-left {
+  width: 0; 
+  height: 0; 
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-right: 30px solid #EDF53F;
+  transition: transform 600ms ease-in-out;
+}
+.arrow-down {
+  width: 0; 
+  height: 0;
+  border-left: 30px solid transparent;
+  border-top: 30px solid #264FBF;
+  border-right: 30px solid transparent;
+}
+.arrow-right {
+  width: 0; 
+  height: 0;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-left: 30px solid #E52322;
+  transition: transform 600ms ease-in-out;
+}
+.arrow-up {
+  width: 0; 
+  height: 0;
   margin: 0 auto;
+  border-left: 30px solid transparent;
+  border-bottom: 30px solid #264FBF;
+  border-right: 30px solid transparent;
+}
+
+/* ==========================
+-- P2:CONTENT              --
+========================== */
+
+.p2content{
+  width: 100%;
   position: relative;
 }
+#welcome{
+  font-family: 'Crete Round', serif;
+  margin-top: 80px;
+  font-size: 8vmin;
+  text-align: center;
+}
+.work-wrapper{
+  margin-top: 80px;
+}
+.wrk{
+  width: 55vw;
+  margin: 0 auto 30px;
+}
+.wrk-title{
+  margin-bottom: 15px;
+}
+.wrk-title h2, .wrk-title a{
+  display: inline-block;
+  vertical-align: middle;
+}
+.wrk-title h2{
+  font-size: 4.5vmin;
+  font-weight: 700;
+  font-style: italic;
+}
+.wrk-title a{
+  background-color: #264FBF;
+  padding: 8px 24px;
+  font-size: 2.25vmin;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: white;
+  float: right;
+}
+.wrk p{
+  font-size: 2.75vmin;
+}
+
+
+
+/*
 .nav p{
   font-family: 'Crete Round', serif;
 }
@@ -243,12 +368,12 @@ a{
   height: 48px;
   line-height: 48px;
 }
-.this:hover, .that:hover{
+/*.this:hover, .that:hover{
   animation: point 400ms infinite linear reverse;
 }
 .this:active, .that:active{
   animation: pointy 400ms 2 linear;
-}
+}*/
 @keyframes point{
   0%{ transform: rotate(0deg); }
   25%{ transform: rotate(-6deg); }
@@ -265,17 +390,22 @@ a{
 /** FOOTER **/
 
 .footer{
-  position: fixed;
+  position: absolute;
   left: 50%;
   margin-right: -50%;
   transform: translateX(-50%);
-  bottom: 14px;
+  bottom: 0;
   z-index: -1;
 }
 #ftr{
   color: black;
   text-align: center;
   font-size: 8px;
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  transform: translateX(-50%);
+  bottom: 0;
 }
 
 

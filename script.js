@@ -1,7 +1,32 @@
 //click
 $(function(){
+  $(".arrow-down").click(function(){
+    if( $(this).hasClass("downed") ){
+      $(this).removeClass("downed").addClass("upped");
+      $("html,body").animate({
+        scrollTop: $(".arrow-down").offset().top
+      }, 'slow');
+      $(".arrow-left").css('transform', 'translateX(-50vw)');
+      $(".arrow-right").css('transform', 'translateX(50vw)');
+    } else if ( $(this).hasClass("upped") ){
+      $(this).removeClass("upped").addClass("downed");
+      $("html,body").animate({
+        scrollTop: $(".header").offset().top
+      }, 'slow');
+      $(".arrow-left").css('transform', 'translateX(0)');
+      $(".arrow-right").css('transform', 'translateX(0)');
+    } else {
+      $(this).addClass("upped");
+      $("html,body").animate({
+        scrollTop: $(".arrow-down").offset().top
+      }, 'slow');
+      $(".arrow-left").css('transform', 'translateX(-50vw)');
+      $(".arrow-right").css('transform', 'translateX(50vw)');
+    };
+  });
+
 	var pos = 1;
-  $(".this").click(function(){
+  $(".arrow-right").click(function(){
   	if(pos === 1){
   		$(".sec1").animate({left: '-50%'});
     	$(".sec2").animate({left: '50%'});
@@ -25,7 +50,7 @@ $(function(){
     	pos += 1;
     };
   });
-  $(".that").click(function(){
+  $(".arrow-left").click(function(){
   	if(pos === 1){
   		$(".sec1").animate({left: '150%'});
     	$(".sec0").animate({left: '50%'});
