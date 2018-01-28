@@ -100,10 +100,16 @@ a{
   font-weight: 400;
   transition: all 400ms ease;
 }
+.nav:active{
+  font-weight: 700;
+}
 .nav-middle{
   width: 120px;
 }
 .nav-on{
+  font-weight: 700;
+}
+#nav-1{
   font-weight: 700;
 }
 
@@ -172,9 +178,7 @@ a{
   left: 50%;
   margin-right: -50%;
   top: 50%;
-  transform: translate(-50%, -30%);
-  opacity: 0;
-  z-index: -1;
+  transform: translate(-50%, -50%);
   background-color: white;
   transition: all 800ms ease;
 }
@@ -211,9 +215,5 @@ a{
   opacity: 100;
   visibility: visible;
 }
-
-
-
-
 
 

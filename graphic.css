@@ -122,96 +122,33 @@ a{
   position: absolute;
   left: 50%;
   margin-right: -50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  top: 60px;
+  transform: translateX(-50%);
   background-color: white;
-  transition: all 800ms ease;
 }
 .sec1 h1{
   font-family: 'Crete Round', serif;
   font-size: 14vmin;
 }
-.sec1 h2{
-  font-size: 5vmin;
-  letter-spacing: .3em;
+.sec1 p{
+  font-size: 4vmin;
   padding: 12px;
   margin-bottom: 20px;
 }
-.sec1 h3{
-  font-size: 1.25em;
-  padding: 12px;
-}
-.button{
-  display: inline-block;
-  position: relative;
-  height: 60px;
-  width: 160px;
-  padding: 10px 16px;
-  margin: 20px;
-  line-height: 36px;
-  border-radius: 5px;
-  border: 3px solid black;
-  transition: all 200ms ease;
-}
-.button:hover{
-  color: white;
-  background-color: black;
-  border-color: white;
-  box-shadow: 2px 6px #FF5429, -2px 6px #FF5429;
-}
-.button:active{
-  transform: translateY(4px);
-  background-color: black;
-  box-shadow: 2px 3px #C6330E, -2px 3px #C6330E;
-}
 
-.sec2{
-  width: 100%;
-  text-align: center;
-  position: absolute;
-  left: 50%;
-  margin-right: -50%;
-  top: 50%;
-  transform: translate(-50%, -30%);
-  opacity: 0;
-  z-index: -1;
-  background-color: white;
-  transition: all 800ms ease;
+.graphics{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.sec2 h1{
-  font-size: 8vmin;
-  font-family: 'Crete Round', serif;
-  text-align: center;
-  padding-bottom: 16px;
+.graphics a{
+  box-shadow: 0 10px 6px -6px #777;
+  margin: 12px;
 }
-.sec2 p{
-  font-size: 3vmin;
-  line-height: 1.5em;
-  max-width: 80%;
-  margin: 0 auto;
+.item{
+  width: 20vmin;
+  height: 20vmin;
 }
-#gif{
-  background-image: url('assets/spin_bw.gif');
-  background-size: contain;
-  height: 25vmin;
-  width: 25vmin;
-  margin: 0 auto 20px auto;
-}
-#gif:hover{
-  background-image: url('assets/spin_color.gif');
-  background-size: contain;
-}
-.transform-out{
-  transform: translate(-50%, -70%);
-  opacity: 0;
-  visibility: hidden;
-}
-.transform-in{
-  transform: translate(-50%, -50%);
-  opacity: 100;
-  visibility: visible;
-}
-
 
 
 
