@@ -10,7 +10,6 @@ html{
   box-sizing: border-box;
 }
 body{
-  overflow: hidden;
 }
 p, h1, h2, h3, h4, h5, li, a{
   font-family: 'PT Sans', sans-serif;
@@ -93,7 +92,7 @@ a{
   justify-content: space-around;
   width: 100%;
   color: white;
-  margin-top: -12px;
+  margin-top: -14px;
 }
 .nav{
   font-size: 12px;
@@ -101,7 +100,7 @@ a{
   transition: all 400ms ease;
 }
 .nav-middle{
-  width: 120px;
+  width: 70px;
 }
 .nav-on{
   font-weight: 700;
@@ -138,17 +137,56 @@ a{
 
 .graphics{
   display: flex;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  padding: 0 12%;
+  background-clip: content-box;
 }
 .graphics a{
-  box-shadow: 0 10px 6px -6px #777;
+  box-shadow: ;
   margin: 12px;
+  cursor: zoom-in;
+  transition: all 400ms ease;
+  /*flex-basis: 16.66%;*/
+}
+.graphics a:hover{
+  /*transform: scale(1.1, 1.1);
+  border-radius: 5px;*/
+  box-shadow: none;
 }
 .item{
   width: 20vmin;
-  height: 20vmin;
+  transition: all 400ms ease;
 }
+.item:hover{
+  border-radius: 10%;
+  transform: scale(1.1, 1.1);
+  box-shadow: 0px 5px 12px -6px rgb(205,205,205);
+}
+
+
+
+
+
+
+
+/* ==========================
+-- MEDIA QUERIES           --
+========================== */
+
+@media screen and (max-width: 415px){
+
+  .graphics, .graphics a{
+    padding: 0;
+    margin: 0;
+  }
+  .item{
+    width: 50vw;
+  }
+
+}
+
 
 
 

@@ -93,15 +93,17 @@ a{
   justify-content: space-around;
   width: 100%;
   color: white;
-  margin-top: -12px;
+  margin-top: -14px;
 }
 .nav{
   font-size: 12px;
   font-weight: 400;
+  flex-grow: ;
   transition: all 400ms ease;
 }
 .nav-middle{
-  width: 120px;
+  width: 70px;
+  flex-grow: ;
 }
 .nav-on{
   font-weight: 700;
@@ -110,6 +112,14 @@ a{
 /* ==========================
 -- P1:CONTENT              --
 ========================== */
+.coming-soon{
+  transform: translate(-50%, -50%) !important;
+  animation: soon 1.5s ease forwards;
+}
+@keyframes soon{
+  0%, 20%{ opacity: 0; top: 60%; }
+  100%{ opacity: 1; top: 50%; }
+}
 .p1content{
   width: 100%;
   position: relative;
@@ -125,7 +135,7 @@ a{
   top: 50%;
   transform: translate(-50%, -50%);
   background-color: white;
-  transition: all 800ms ease;
+  transition: all 800ms ease, opacity 1.5s;
 }
 .sec1 h1{
   font-family: 'Crete Round', serif;
@@ -155,15 +165,35 @@ a{
 }
 .button:hover{
   color: white;
-  background-color: #555;
-  border-color: white;
-  box-shadow: 2px 6px #FF5429, -2px 6px #FF5429;
+  background-color: black;
+  animation: btn-animate 4s /*cubic-bezier(0.000, 0.600, 1.000, 0.400)*/ linear infinite;
+  border: 3px solid white;
+  transform: scale(1.1);
+  /*box-shadow: 2px 6px #FF5429, -2px 6px #FF5429;*/
 }
 .button:active{
-  transform: translateY(4px);
-  background-color: black;
-  box-shadow: 2px 3px #C6330E, -2px 3px #C6330E;
+  box-shadow: 100px 100px #FF5429;
+  /*box-shadow: 2px 3px #C6330E, -2px 3px #C6330E;*/
 }
+@keyframes btn-animate{
+  0%{ box-shadow: -10px 4px #FF5429; }
+  12.25%{ box-shadow: 10px 4px #FF5429, 10px -4px #2969FF; }
+  25%{ box-shadow: 10px -4px #FF5429; }
+  37.5%{ box-shadow: -10px 4px #FF5429, -10px -4px #FF5429; }
+  50%{ box-shadow: -10px -4px #FFBF29; }
+  62.5%{ box-shadow: 10px -4px #FF5429, 10px 4px #2969FF; }
+  75%{ box-shadow: 10px 4px #FF5429; }
+  87.5%{ box-shadow: -10px -4px #FF5429, -10px 4px #FF5429; }
+  100%{ box-shadow: -10px 4px #FFBF29; }
+}
+/*@keyframes tester{
+  0%{ box-shadow: -16px 8px #FF5429; }
+  25%{ box-shadow: 16px 8px #FF5429; }
+  50%{ box-shadow: 16px -8px #FF5429; }
+  75%{ box-shadow: -16px -8px #FF5429; }
+  100%{ box-shadow: -16px 8px #FF5429; }
+}
+*/
 
 .sec2{
   width: 100%;
@@ -176,7 +206,7 @@ a{
   opacity: 0;
   z-index: -1;
   background-color: white;
-  transition: all 800ms ease;
+  transition: all 1s ease;
 }
 .sec2 h1{
   font-size: 8vmin;
