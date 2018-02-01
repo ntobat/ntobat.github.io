@@ -159,18 +159,58 @@ hr{
 
 .sec2{
   width: 100%;
-  padding: 0 30%;
+  padding: 0 20%;
   margin-bottom: 40px;
   background-color: white;
 }
 .sec2 p{
   text-align: justify;
 }
-.sec2 img{
-  max-height: 120px;
+.subnav{
+  font-size: .75em;
+  margin-bottom: 24px;
 }
-
-
+.subnav a{
+  color: #2969FF;
+  margin: 0 4px;
+}
+.proc-img{
+  position: relative;
+  display: inline-block;
+}
+.proc-img img{
+  height: 120px;
+  margin: 12px;
+  display: inline-block;
+  cursor: zoom-in;
+}
+.proc-img .tooltip{
+  visibility: hidden;
+  height: 200px;
+  box-shadow: 0px 3px 12px #333;
+  position: absolute;
+  top: -200px;
+  left: -20%;
+  z-index: 10;
+}
+.proc-img:hover .tooltip{
+  visibility: visible;
+}
+.brand-id a{
+  color: #2969FF;
+  font-weight: 700;
+}
+.id-pg{
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 6px 16px #555;
+}
+.tools img{
+  height: 16px;
+  width: 16px;
+  box-shadow: none;
+  vertical-align: top;
+}
 
 
 
