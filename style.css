@@ -219,6 +219,7 @@ a{
   line-height: 1.5em;
   max-width: 80%;
   margin: 0 auto;
+  text-align: justify;
 }
 #gif{
   background-image: url('assets/spin_bw.gif');
