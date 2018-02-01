@@ -1,4 +1,4 @@
-$(function(){
+/*$(function(){
   //more about me
   $(".btn-left").click(function(){
     $(".sec1").toggleClass("transform-out");
@@ -18,7 +18,7 @@ $(function(){
     };
   });
 });
-
+*/
 $(function(){ 
   //smooth scroll
   $(".subnav-nav").on('click', function(event) {
