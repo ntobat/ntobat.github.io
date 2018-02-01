@@ -18,7 +18,7 @@ $(function(){
     };
   });
   //smooth scroll
-  $("a").on('click', function(event) {
+  $(".subnav-nav").on('click', function(event) {
     if (this.hash !== "") {
       event.preventDefault();
       var hash = this.hash;
