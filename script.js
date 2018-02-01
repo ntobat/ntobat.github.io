@@ -17,6 +17,9 @@ $(function(){
       $("#nav-1").toggleClass("nav-on");
     };
   });
+});
+
+$(function(){ 
   //smooth scroll
   $(".subnav-nav").on('click', function(event) {
     if (this.hash !== "") {
@@ -30,5 +33,4 @@ $(function(){
       });
     };
   });
-});
 });
