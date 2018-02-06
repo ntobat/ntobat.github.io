@@ -134,11 +134,11 @@ a{
 .work-item{
   flex: 1 1 200px;
   background-color: white;
-  width: 200px;
-  height: 8vmin;
-  line-height: 8vmin;
+  width: 300px;
+  height: 12vmin;
+  line-height: 12vmin;
   color: black;
-  font-size: 3vmin;
+  font-size: 4vmin;
   transition: all 200ms ease;
   margin: 20px 12px;
 }
@@ -181,10 +181,10 @@ hr{
 .proc-img{
   position: relative;
   display: inline-block;
-
 }
 .proc-img img{
   height: 120px;
+  max-width: 100%;
   margin: 16px;
   display: inline-block;
   cursor: zoom-in;
@@ -193,6 +193,7 @@ hr{
   visibility: hidden;
   opacity: 0;
   height: 220px;
+  max-width: 100%;
   box-shadow: 0px 3px 12px #333;
   position: absolute;
   left: 0;
