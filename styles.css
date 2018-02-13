@@ -1,0 +1,188 @@
+/* ==========================
+-- BODY                    --
+========================== */
+*, *:before, *:after{
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+html{
+  box-sizing: border-box;
+}
+body{
+  overflow: hidden;
+}
+p, h1, h2, h3, h4, h5, li, a{
+  color: white;
+}
+p, h1, h2, h3, h4, h5, li{
+  cursor: default;
+}
+a{
+  text-decoration: none;
+}
+.unselectable {
+ -moz-user-select: -moz-none;
+ -khtml-user-select: none;
+ -webkit-user-select: none;
+ -ms-user-select: none;
+ user-select: none;
+}
+
+/* ==========================
+-- SPLASH                  --
+========================== */
+.page{
+	background-color: black;
+	height: 100vh;
+}
+.header h1{
+	font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
+	font-weight: 700;
+	text-align: center;
+}
+.bread{
+  font-family: Courier, serif;
+  text-align: center;
+  font-size: 11px;
+  margin-top: 12px;
+}
+.bread a, .bread p{
+  display: inline-block;
+}
+.container-1{
+	z-index: 10;
+}
+.container{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+.logo{
+	text-align: center;
+	margin: 0 48px 120px 48px;
+}
+#logo{
+	height: 22vmin;
+}
+.button{
+  display: inline-block;
+  text-align: center;
+  height: 60px;
+  width: 160px;
+  padding: 10px 16px;
+  margin: 0 48px 48px 48px;
+  line-height: 36px;
+  border-radius: 5px;
+  border: 4px solid white;
+  transition: all 200ms ease;
+  font-family: "Nunito Sans", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
+  font-weight: 800;
+}
+.button:hover{
+  color: black;
+  background-color: white;
+  animation: btn-animate 4s linear infinite;
+  border: ;
+  transform: scale(1.1);
+}
+@keyframes btn-animate{
+  0%{ box-shadow: -10px 4px #FF5429; }
+  12.25%{ box-shadow: 10px 4px #FF5429, 10px -4px #2969FF; }
+  25%{ box-shadow: 10px -4px #FF5429; }
+  37.5%{ box-shadow: -10px 4px #FF5429, -10px -4px #FF5429; }
+  50%{ box-shadow: -10px -4px #FFBF29; }
+  62.5%{ box-shadow: 10px -4px #FF5429, 10px 4px #2969FF; }
+  75%{ box-shadow: 10px 4px #FF5429; }
+  87.5%{ box-shadow: -10px -4px #FF5429, -10px 4px #FF5429; }
+  100%{ box-shadow: -10px 4px #FFBF29; }
+}
+
+
+/* ==========================
+-- HOME                    --
+========================== */
+
+.container-2{
+	z-index: 1;
+	opacity: 0;
+  visibility: hidden;
+}
+.face{
+	text-align: center;
+	margin-bottom: 24px;
+	margin-top: -24px;
+}
+#face{
+	height: 28vmin;
+}
+.container-2 p{
+	font-family: "Nunito Sans", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
+	max-width: 80vw;
+	text-align: justify;
+  margin: 8px 0;
+}
+.container-2 .button{
+	margin: 24px 0 0 0;
+	position: relative;
+	left: 50%;
+  margin-right: -50%;
+  transform: translateX(-50%);
+}
+
+/* ==========================
+-- WORK                    --
+========================== */
+
+.container-3{
+  /*width: 100vw;*/
+}
+a.worka, a.branda, a.logoa, a.scrna{
+  display: block;
+  text-align: center;
+  font-size: 3em;
+  color: white;
+  font-family: Courier, serif;
+  padding: 20px;
+  margin: 20px;
+  transition: all 200ms ease;
+}
+.worka:hover{
+  color: black;
+  background-color: white;
+}
+
+
+/* ==========================
+-- WORK CONTAINERS         --
+========================== */
+
+.container-4, .container-5, .container-6{
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+
+
+.footer{
+	font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
+	position: absolute;
+	bottom: 6px;
+	left: 50%;
+  margin-right: -50%;
+  transform: translateX(-50%);
+  font-size: 10px;
+}
+
+
+
+
+
+
+
+
+
