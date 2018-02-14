@@ -116,11 +116,11 @@ a{
 	margin-top: -24px;
 }
 #face{
-	height: 28vmin;
+	height: 30vmin;
 }
 .container-2 p{
 	font-family: "Nunito Sans", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
-	max-width: 80vw;
+	max-width: 50vw;
 	text-align: justify;
   margin: 8px 0;
 }
@@ -182,7 +182,19 @@ a.worka, a.branda, a.logoa, a.scrna{
 
 
 
+/* ==========================
+-- MEDIA QUERIES           --
+========================== */
 
+@media screen and (max-width: 414px){
 
+  .container-2 p{
+    max-width: 90vw;
+    font-size: 12px;
+    text-align: justify;
+    margin: 8px 0;
+  }
+
+}
 
 
