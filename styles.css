@@ -40,12 +40,13 @@ a{
 	font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
 	font-weight: 700;
 	text-align: center;
+  background-color: black;
 }
 .bread{
   font-family: Courier, serif;
   text-align: center;
   font-size: 11px;
-  margin-top: 12px;
+  margin: 12px 0;
 }
 .bread a, .bread p{
   display: inline-block;

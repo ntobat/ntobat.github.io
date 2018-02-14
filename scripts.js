@@ -10,7 +10,7 @@ $(function(){
 		$(".container-1").fadeOut(800);
 	});
 
-	//work button animate
+	//work button animate - prevent immediate navigation
 	$(".btn-2").click(function(e){
     e.preventDefault();
     var goTo = this.getAttribute("href");
