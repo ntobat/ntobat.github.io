@@ -133,5 +133,16 @@ a{
 
 
 
+.footer{
+  font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
+  color: black;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  margin-right: -50%;
+  transform: translateX(-50%);
+  font-size: 10px;
+}
+
 
 
