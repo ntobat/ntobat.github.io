@@ -10,7 +10,7 @@ html{
   box-sizing: border-box;
 }
 body{
-  overflow: hidden;
+  overflow: ;
 }
 p, h1, h2, h3, h4, h5, li, a{
   
@@ -35,7 +35,7 @@ a{
 ========================== */
 
 .page{
-	height: 100vh;
+	/*height: 100vh;*/
 }
 .header{
   background-color: black;
@@ -99,6 +99,7 @@ a{
 
 .container{
   margin: 36px auto 24px auto;
+
 }
 .title{
   text-align: center;
@@ -120,8 +121,15 @@ a{
   font-family: "Nunito Sans", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
   text-align: center;
   margin: 36px;
+  z-index: -2;
+  position: relative;
 }
-
+.content img{
+  max-width: 75vmin;
+  max-height: 75vmin;
+  display: block;
+  margin: 0 auto;
+}
 
 
 
