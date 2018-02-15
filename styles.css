@@ -110,6 +110,8 @@ a{
 	z-index: 1;
 	opacity: 0;
   visibility: hidden;
+  height: calc(100vh - 85px);
+  margin-top: 85px;
 }
 .face{
 	text-align: center;
