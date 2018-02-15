@@ -55,7 +55,7 @@ $(function(){
 
 	//back-nav from work item
 	var referrer = document.referrer;
-	if( referrer === ( 'nicktobat.com/screens/topo.html')){
+	if( referrer === ( 'http://nicktobat.com/screens/topo.html')){
 		$(".container-3").hide();
 		$(".container-6").css("visibility", "visible").animate({ opacity: 1 });
 		$(".bread").replaceWith( "<div class=\"bread\"> <a href=\"index.html\">nicktobat</a> <p>&nbsp;/&nbsp;</p> <a href=\"work.html\">work</a> <p>&nbsp;/&nbsp;</p> <a href=\"\" onclick=\"return false;\">screens</a> </div>" );
