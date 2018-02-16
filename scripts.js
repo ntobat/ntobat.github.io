@@ -53,16 +53,31 @@ $(function(){
 		$(".container-3").fadeOut(800);
 	});
 
-	//back-nav from work item
-	var referrer = document.referrer;
-	if( referrer === ( 'http://nicktobat.com/screens/topo.html')){
+	//work page animate-scrn
+	var hidefun = function(){
 		$(".container-3").hide();
-		$(".container-6").css("visibility", "visible").animate({ opacity: 1 });
-		$(".bread").replaceWith( "<div class=\"bread\"> <a href=\"index.html\">nicktobat</a> <p>&nbsp;/&nbsp;</p> <a href=\"work.html\">work</a> <p>&nbsp;/&nbsp;</p> <a href=\"\" onclick=\"return false;\">screens</a> </div>" );
-	};
+		$(".container-7").css("visibility", "visible").animate({ opacity: 1 });
+		$(".bread").replaceWith( "<div class=\"bread\"> <a href=\"index.html\">nicktobat</a> <p>&nbsp;/&nbsp;</p> <a href=\"work.html\">work</a> <p>&nbsp;/&nbsp;</p> <a href=\"\" onclick=\"return false;\">fun</a> </div>" )
+	}
+	$(".fun").click(function(){
+		setTimeout(hidefun, 800);
+		$(".container-3").fadeOut(800);
+	});
+
+	//back-nav from work item
+	//whyyyyyyy does it break all my other click effects?!
 
 });
 
 
+/*
+	var refer = document.referrer;
+	var url = window.location.href;
+	if( refer = "http://localhost:8000/logos/sw.html" && url = "http://localhost:8000/work.html" ){
+		$(".container-3").hide();
+		$(".container-5").css("visibility", "visible").animate({ opacity: 1 });
+		$(".bread").replaceWith( "<div class=\"bread\"> <a href=\"index.html\">nicktobat</a> <p>&nbsp;/&nbsp;</p> <a href=\"work.html\">work</a> <p>&nbsp;/&nbsp;</p> <a href=\"\" onclick=\"return false;\">logos</a> </div>" )
+	};
+*/
 
 

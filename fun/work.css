@@ -130,13 +130,6 @@ a{
   display: block;
   margin: 0 auto;
 }
-#biff{
-  display: block;
-  margin: 0 auto;
-  font-family: "Nunito Sans", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
-  z-index: -2;
-  position: relative;
-}
 
 
 
