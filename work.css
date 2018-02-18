@@ -121,12 +121,20 @@ a{
   font-family: "Nunito Sans", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
   text-align: center;
   margin: 36px;
-  z-index: -2;
+  z-index: 22;
   position: relative;
+}
+.content a{
+  font-size: 64px;
+  color: black;
+  cursor: pointer;
+}
+#hippo{
+  max-height: 1000vmin;
 }
 .content img{
   max-width: 75vmin;
-  max-height: 75vmin;
+  max-height: 1000vmin;
   display: block;
   margin: 0 auto;
 }
@@ -136,6 +144,103 @@ a{
   font-family: "Nunito Sans", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
   z-index: -2;
   position: relative;
+}
+
+
+/* ==========================
+-- GRAPHICS.               --
+========================== */
+
+.lb_trigger{
+  display: inline-block;
+  margin: 24px 18px;
+  transition: all 200ms ease;
+  border: 8px solid black;
+  position: relative;
+}
+.lb_trigger:hover{
+  transform: scale(1.25);
+  animation: hover 3200ms ease infinite alternate;
+}
+@keyframes hover{
+  0%{ 
+    box-shadow: -10px 4px #FF5429;
+    bottom: 0px;
+   }
+  12.25%{ box-shadow: 10px 4px #FF5429, 10px -4px #2969FF; }
+  25%{ box-shadow: 10px -4px #FF5429; }
+  37.5%{ box-shadow: -10px 4px #FF5429, -10px -4px #FF5429; }
+  50%{ 
+    box-shadow: -10px -4px #FFBF29;
+    bottom: -5px;
+    border: 8px solid white;
+   }
+  62.5%{ box-shadow: 10px -4px #FF5429, 10px 4px #2969FF; }
+  75%{ box-shadow: 10px 4px #FF5429; }
+  87.5%{ box-shadow: -10px -4px #FF5429, -10px 4px #FF5429; }
+  100%{ 
+    box-shadow: -10px 4px #FFBF29;
+    bottom: 0px;
+    border: 8px solid black;
+   }
+}
+.lb_trigger img{
+  max-height: 16vmin;
+}
+#lightbox{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  display: none;
+  z-index: 99;
+}
+#prev, #next{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  margin-top: 20px;
+  z-index: 9999;
+  display: none;
+}
+#next{
+  right: 0;
+  margin-top: -20px;
+  cursor: pointer;
+  display: none;
+}
+#lightbox img{
+  border: 10px solid white;
+  height: 95vmin;
+  margin: 24px;
+  width: auto;
+  transform: scale(0.0);
+  transition: all 400ms ease;
+}
+.scale-in{
+  animation: scale-in 400ms ease forwards;
+}
+.scale-out{
+  animation: scale-out 400ms ease forwards;
+}
+@keyframes scale-in {
+  0% {
+    transform: scale(0.0);
+  }
+  100% {
+    transform: scale(1.0);
+  }
+}
+@keyframes scale-out {
+  0% {
+    transform: scale(1.0) /*rotate(0deg)*/;
+  }
+  100% {
+    transform: scale(0.0)/* rotate(1440deg)*/;
+  }
 }
 
 
@@ -150,6 +255,15 @@ a{
   transform: translateX(-50%);
   font-size: 10px;
 }
+
+
+
+
+
+/* ==========================
+-- MEDIA QUERIES           --
+========================== */
+
 
 
 

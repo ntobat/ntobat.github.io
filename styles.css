@@ -12,6 +12,7 @@ html{
 }
 body{
   overflow: hidden;
+  background-color: black;
 }
 p, h1, h2, h3, h4, h5, li, a{
   color: white;
@@ -37,7 +38,7 @@ a{
 
 .page{
 	background-color: black;
-	height: 100vh;
+	/*height: 100vh;*/
 }
 .header h1{
 	font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
@@ -161,20 +162,80 @@ a{
 .container-3{
   /*width: 100vw;*/
 }
-a.worka, a.branda, a.logoa, a.scrna, a.funa{
+.li{
   display: block;
   text-align: center;
   font-size: 3em;
   color: white;
   font-family: Courier, serif;
-  padding: 20px;
+  padding: 20px 20px 10px 20px;
   margin: 20px;
   transition: all 200ms ease;
 }
-.worka:hover, .branda:hover, .scrna:hover, .logoa:hover, .funa:hover{
+.li:hover{
   color: black;
   background-color: white;
 }
+.li::after{
+  content: '';
+  height: 10px;
+  width: inherit;
+  display: block;
+  background-color: white;
+  color: white;
+  font-size: 10px;
+  line-height: 10px;
+  font-family: "Nunito Sans", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
+  transition: all 200ms ease;
+}
+.li:hover::after{
+  background-color: black;
+  color: white;
+  height: 20px;
+  margin-bottom: -10px;
+  font-size: 20px;
+  line-height: 20px;
+}
+#branding::after{
+  content: 'building identity systems';
+}
+#logos::after{
+  content: 'identifying marks';
+}
+#screens::after{
+  content: 'computers n\' such';
+}
+#rest::after{
+  content: 'what else do i do?';
+}
+#br-kinis::after{
+  content: 'barefoot apparel';
+}
+#br-topo::after{
+  content: 'outdoor gear';
+}
+#lo-kinis::after{
+  content: 'barefoot apparel';
+}
+#lo-sw::after{
+  content: 'brick & masonry supplies';
+}
+#sc-lsg::after{
+  content: 'occupational therapy website';
+}
+#sc-topo::after{
+  content: 'mobile shopping experience';
+}
+#grph::after{
+  content: 'digital illustrations';
+}
+#fairy::after{
+  content: 'yes, it\'s got fairies';
+}
+#hippo::after{
+  content: 'creative agency';
+}
+
 
 
 /* ==========================
@@ -219,7 +280,7 @@ a.worka, a.branda, a.logoa, a.scrna, a.funa{
     text-align: justify;
     margin: 8px 0;
   }
-  a.worka, a.branda, a.logoa, a.scrna{
+  a.worka, a.branda, a.logoa, a.scrna, a.funa{
     font-size: 2em;
   }
 
