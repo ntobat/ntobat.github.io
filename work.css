@@ -148,7 +148,7 @@ a{
 
 
 /* ==========================
--- GRAPHICS.               --
+-- GRAPHICS                --
 ========================== */
 
 .lb_trigger{
@@ -160,8 +160,9 @@ a{
 }
 .lb_trigger:hover{
   transform: scale(1.25);
-  animation: hover 3200ms ease infinite alternate;
+  /*animation: hover 4s ease infinite alternate;*/
 }
+/*
 @keyframes hover{
   0%{ 
     box-shadow: -10px 4px #FF5429;
@@ -184,8 +185,9 @@ a{
     border: 8px solid black;
    }
 }
+*/
 .lb_trigger img{
-  max-height: 16vmin;
+  max-height: 15vmin;
 }
 #lightbox{
   position: fixed;
@@ -193,24 +195,10 @@ a{
   left: 0;
   width: 100vw;
   height: 100vh;
+  background-color: rgba(0,0,0,0.8);
   text-align: center;
   display: none;
-  z-index: 99;
-}
-#prev, #next{
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  background-color: red;
-  margin-top: 20px;
-  z-index: 9999;
-  display: none;
-}
-#next{
-  right: 0;
-  margin-top: -20px;
-  cursor: pointer;
-  display: none;
+  z-index: 999;
 }
 #lightbox img{
   border: 10px solid white;
@@ -219,6 +207,7 @@ a{
   width: auto;
   transform: scale(0.0);
   transition: all 400ms ease;
+  box-shadow: 0 0 25px;
 }
 .scale-in{
   animation: scale-in 400ms ease forwards;
@@ -242,6 +231,25 @@ a{
     transform: scale(0.0)/* rotate(1440deg)*/;
   }
 }
+#prev, #next{
+  position: absolute;
+  color: white;
+  background-color: black;
+  text-align: center;
+  font-family: Courier, serif;
+  font-size: 16px;
+  line-height: 48px;
+  width: 64px;
+  height: 48px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9999;
+  display: none;
+  cursor: pointer;
+}
+#next{
+  right: 0;
+}
 
 
 
@@ -264,6 +272,19 @@ a{
 -- MEDIA QUERIES           --
 ========================== */
 
+@media screen and (max-width: 414px){
+
+  #lightbox img{
+    margin: 12px auto;
+  }
+  #prev, #next{
+    font-size: 12px;
+    height: 28px;
+    width: 40px;
+    line-height: 28px;
+  }
+
+}
 
 
 

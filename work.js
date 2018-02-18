@@ -9,7 +9,7 @@ $(function(){
       window.location = goTo;
     }, 1200);   
 	});
-/*
+
 	//open lightbox
 	$(".lb_trigger").click(function(e){
 		e.preventDefault();
@@ -28,29 +28,82 @@ $(function(){
 			$('body').append(lightbox);
 			$("#lightbox").fadeIn();
 		};
+		*/
 		$("#next").fadeIn();
+		$("#prev").fadeIn();
 		console.log(imglink);
 	});
 
 	//traverse lightbox
-	
-	var gonext = function(){
-		return;
-	};
+	//next
 	$("#next").click(function(){
-		var box = $("#boxed");
-		var lbimg = $("#boxed img");
-		var imgsrc = $("#boxed img");
-		var next = $("a.lb_trigger");
-		var imgarray = next.get();
-		$.each(imgarray, function(i){
-			alert( i.data('class')	 );
-		});
-		console.log(imgarray[4]);
-		//lbimg.attr("src", ancestor);
-		lbimg.fadeIn();
-		$("#boxed img").fadeOut();
-		setTimeout(gonext, 400);
+		$("#boxed img").fadeOut(800);
+		setTimeout(function(){
+			//image displayed in lightbox
+			var lightboxed = $("#boxed img");
+			//list of thumbnail links (jQuery objects)
+			var img_list = $("a.lb_trigger");
+			//starting thumbnail link clicked to open lightbox
+			var start = $("a.img-clicked");
+			//next thumbnail in DOM
+			var next = start.next();
+			if( !next.length ){
+				var next = $(".content").children().first();
+			}
+			//href of next thumbnail
+			var next_src = next.attr("href");
+/*	
+			//array of thumbnail links (array)
+			var img_array = img_list.get();
+			//index position of start link
+			var start_index = img_list.index(start);
+			//index position of next link
+			var next_index = start_index + 1;
+*/
+			//change lightboxed image source
+			lightboxed.attr("src", next_src);
+			//fade image in
+			lightboxed.fadeIn();
+			//update new start point
+			start.removeClass("img-clicked");
+			next.addClass("img-clicked");
+			//test
+			console.log(next);
+		}, 800);
+	});
+	//previous
+	$("#prev").click(function(){
+		$("#boxed img").fadeOut(800);
+		setTimeout(function(){
+			//image displayed in lightbox
+			var lightboxed = $("#boxed img");
+			//list of thumbnail links (jQuery objects)
+			var img_list = $("a.lb_trigger");
+			//starting thumbnail link clicked to open lightbox
+			var start = $("a.img-clicked");
+			//next thumbnail in DOM
+			var prev = start.prev();
+			if( !prev.length ){
+				var prev = $(".content").children().last();
+			}
+			//href of next thumbnail
+			var prev_src = prev.attr("href");
+/*	
+			//array of thumbnail links (array)
+			var img_array = img_list.get();
+			//index position of start link
+			var start_index = img_list.index(start);
+			//index position of next link
+			var next_index = start_index + 1;
+*/
+			//change lightboxed image source
+			lightboxed.attr("src", prev_src);
+			//fade image in
+			lightboxed.fadeIn();
+			//update new start point
+			start.removeClass("img-clicked");
+			prev.addClass("img-clicked");
+		}, 800);
 	});
 
 	//close lightbox
@@ -58,9 +111,10 @@ $(function(){
 		$(".lb_trigger").removeClass("img-clicked");
 		if( $("#lightbox").css("display") === "block" ){
 			$("#lightbox").fadeOut();
+			$("#prev, #next").fadeOut();
 			$("#lightbox img").removeClass("scale-in").addClass("scale-out");
 		};
 	});
-	*/
+	
 
 });

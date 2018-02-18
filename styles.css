@@ -168,7 +168,7 @@ a{
   font-size: 3em;
   color: white;
   font-family: Courier, serif;
-  padding: 20px 20px 10px 20px;
+  padding: 20px 20px 20px 20px;
   margin: 20px;
   transition: all 200ms ease;
 }
@@ -176,6 +176,7 @@ a{
   color: black;
   background-color: white;
 }
+/*
 .li::after{
   content: '';
   height: 10px;
@@ -183,9 +184,8 @@ a{
   display: block;
   background-color: white;
   color: white;
-  font-size: 10px;
+  font-size: 9px;
   line-height: 10px;
-  font-family: "Nunito Sans", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
   transition: all 200ms ease;
 }
 .li:hover::after{
@@ -196,6 +196,7 @@ a{
   font-size: 20px;
   line-height: 20px;
 }
+
 #branding::after{
   content: 'building identity systems';
 }
@@ -235,7 +236,7 @@ a{
 #hippo::after{
   content: 'creative agency';
 }
-
+*/
 
 
 /* ==========================
