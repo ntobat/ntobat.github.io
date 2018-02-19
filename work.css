@@ -255,6 +255,7 @@ a{
 
 
 .footer{
+  height: 20px;
   font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
   color: black;
   position: absolute;
