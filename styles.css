@@ -275,14 +275,38 @@ a{
 
 @media screen and (max-width: 414px){
 
+  .container-2{
+    margin-top: 52px;
+  }
   .container-2 p{
     max-width: 90vw;
-    font-size: 12px;
+    font-size: 13px;
     text-align: justify;
     margin: 8px 0;
   }
-  a.worka, a.branda, a.logoa, a.scrna, a.funa{
+  .li{
     font-size: 2em;
+  }
+
+}
+
+@media screen and (max-width: 320px){
+
+  .container-2 p{
+    max-width: 90vw;
+    text-align: justify;
+    margin: 8px 0;
+  }
+  .li{
+    font-size: 1.8em;
+  }
+  .button{
+    font-size: 14px;
+    line-height: 52px;
+    padding: 0;
+    height: 56px;
+    width: 150px;
+    margin: 0 36px 36px 36px;
   }
 
 }
