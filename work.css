@@ -254,6 +254,7 @@ a{
 
 
 .footer{
+  height: 20px;
   font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
   color: black;
   position: absolute;
@@ -274,6 +275,9 @@ a{
 
 @media screen and (max-width: 414px){
 
+  .content{
+    margin: 36px 20px;
+  }
   #lightbox img{
     margin: 12px auto;
   }
@@ -282,6 +286,16 @@ a{
     height: 28px;
     width: 40px;
     line-height: 28px;
+  }
+  .title h3{
+    font-size: 1em;
+  }
+  .lb_trigger{
+    margin: 18px 10px;
+    border: 5px solid black;
+  }
+  .lb_trigger img{
+    max-height: 20vmin;
   }
 
 }
