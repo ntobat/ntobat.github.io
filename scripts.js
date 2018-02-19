@@ -87,18 +87,35 @@ $(function(){
 
 	//back-nav from work item
 	//whyyyyyyy does it break all my other click effects?!
+	/*
+		var refer = document.referrer;
+		var url = window.location.href;
+		if( refer = "http://localhost:8000/logos/sw.html" && url = "http://localhost:8000/work.html" ){
+			$(".container-3").hide();
+			$(".container-5").css("visibility", "visible").animate({ opacity: 1 });
+			$(".bread").replaceWith( "<div class=\"bread\"> <a href=\"index.html\">nicktobat</a> <p>&nbsp;/&nbsp;</p> <a href=\"work.html\">work</a> <p>&nbsp;/&nbsp;</p> <a href=\"\" onclick=\"return false;\">logos</a> </div>" )
+		};
+	*/
+	/*
+	setTimeout(function(){
+		$(".footer").css({
+			"top": $(document).height() - 21 + "px"
+		});
+	}, 450);
+	*/
+	
+	console.log( $(window).height());
+	console.log( $(document).height());
+
+});
+
+$(window).on('load', function(){
+
+
+
 
 });
 
 
-/*
-	var refer = document.referrer;
-	var url = window.location.href;
-	if( refer = "http://localhost:8000/logos/sw.html" && url = "http://localhost:8000/work.html" ){
-		$(".container-3").hide();
-		$(".container-5").css("visibility", "visible").animate({ opacity: 1 });
-		$(".bread").replaceWith( "<div class=\"bread\"> <a href=\"index.html\">nicktobat</a> <p>&nbsp;/&nbsp;</p> <a href=\"work.html\">work</a> <p>&nbsp;/&nbsp;</p> <a href=\"\" onclick=\"return false;\">logos</a> </div>" )
-	};
-*/
 
 

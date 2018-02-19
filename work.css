@@ -1,6 +1,7 @@
 /* ==========================
 -- BODY                    --
 ========================== */
+
 *, *:before, *:after{
   box-sizing: inherit;
   margin: 0;
@@ -35,11 +36,11 @@ a{
 ========================== */
 
 .page{
+  min-height: 100%;
 	/*height: 100vh;*/
 }
 .header{
   background-color: black;
-  position: relative;
   z-index: 99;
   color: white;
 }
@@ -254,17 +255,14 @@ a{
 
 
 .footer{
-  height: 20px;
   font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
   color: black;
   position: absolute;
-  bottom: 0px;
   left: 50%;
   margin-right: -50%;
   transform: translateX(-50%);
   font-size: 10px;
 }
-
 
 
 
