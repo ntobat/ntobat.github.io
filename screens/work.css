@@ -121,8 +121,15 @@ a{
   font-family: "Nunito Sans", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
   text-align: center;
   margin: 36px;
-  z-index: -2;
+  z-index: 22;
   position: relative;
+}
+a.worklink{
+  cursor: pointer;
+  width: 75vmin;
+  height: 75vmin;
+  display: block;
+  margin: 0 auto;
 }
 .content img{
   max-width: 75vmin;

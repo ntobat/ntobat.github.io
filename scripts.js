@@ -65,10 +65,11 @@ $(function(){
 	});
 
 	//work button animate - prevent immediate navigation
-	$("#workbread").click(function(e){
+	/*$("#workbread").click(function(e){
     e.preventDefault();
     var goTo = this.getAttribute("href");
-    $(".workcat").fadeOut(800);
+    console.log(goTo);
+    /*$(".workcat").fadeOut(800);
     setTimeout(function(){
       window.location = goTo;
     }, 800);       
@@ -85,37 +86,47 @@ $(function(){
 		$(".workcat").css({ "visibility": "hidden", "display": "none" }).animate({ opacity: 0 });
 	});  */
 
-	//back-nav from work item
-	//whyyyyyyy does it break all my other click effects?!
-	/*
-		var refer = document.referrer;
-		var url = window.location.href;
-		if( refer = "http://localhost:8000/logos/sw.html" && url = "http://localhost:8000/work.html" ){
+//need to figure out how to discriminate between clicks of work category or just work
+/*	var refer = document.referrer;
+	var url = window.location.href;
+	console.log(refer, url);
+	if( refer.indexOf("/logos/") >= 0 ){
+		var logonav = function(){
 			$(".container-3").hide();
-			$(".container-5").css("visibility", "visible").animate({ opacity: 1 });
-			$(".bread").replaceWith( "<div class=\"bread\"> <a href=\"index.html\">nicktobat</a> <p>&nbsp;/&nbsp;</p> <a href=\"work.html\">work</a> <p>&nbsp;/&nbsp;</p> <a href=\"\" onclick=\"return false;\">logos</a> </div>" )
+			$(".container-5").css({ "visibility": "visible", "display": "block" }).animate({ opacity: 1 });
+			$(".bread").replaceWith( "<div class=\"bread\"> <a href=\"index.html\">nicktobat</a> <p>&nbsp;/&nbsp;</p> <a id=\"workbread\" href=\"work.html\">work</a> <p>&nbsp;/&nbsp;</p> <p>logos</p> </div>" );
 		};
-	*/
-	/*
-	setTimeout(function(){
-		$(".footer").css({
-			"top": $(document).height() - 21 + "px"
-		});
-	}, 450);
-	*/
+		setTimeout(logonav, 800);
+		$(".container-3").fadeOut(800);
+	};
+*/
+	var refer = document.referrer;
+	$(".btn-3").click(function(){
+		window.location.href = refer;
+	});
 	
-	console.log( $(window).height());
-	console.log( $(document).height());
+	console.log( $(window).height() );
+	console.log( $(document).height() );
+
+});
+/*
+$(window).on("load", function(){
+
+	//back-nav from work item
+	var refer = document.referrer;
+	var url = window.location.href;
+	console.log(refer, url);
+	if( refer === "http://localhost:8000/logos/sw.html" ){
+		console.log("hi");
+		$(".container-3").hide();
+		$(".container-5").css("visibility", "visible").animate( { opacity: 1 }, 800 );
+		$(".bread").replaceWith( "<div class=\"bread\"> <a href=\"index.html\">nicktobat</a> <p>&nbsp;/&nbsp;</p> <a href=\"work.html\">work</a> <p>&nbsp;/&nbsp;</p> <a href=\"\" onclick=\"return false;\">logos</a> </div>" )
+	};
+
+
 
 });
 
-$(window).on('load', function(){
 
-
-
-
-});
-
-
-
+*/
 
