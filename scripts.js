@@ -26,7 +26,8 @@ $(function(){
 		$(".container-4").css({ "visibility": "visible", "display": "block" }).animate({ opacity: 1 });
 		$(".bread").replaceWith( "<div class=\"bread\"> <a href=\"index.html\">nicktobat</a> <p>&nbsp;/&nbsp;</p> <a id=\"workbread\" href=\"work.html\">work</a> <p>&nbsp;/&nbsp;</p> <p>branding</p> </div>" );
 	}
-	$(".brand").click(function(){
+	$(".brand").click(function(e){
+		e.preventDefault();
 		setTimeout(hidebrand, 800);
 		$(".container-3").fadeOut(800);
 	});
@@ -48,8 +49,9 @@ $(function(){
 		$(".container-5").css({ "visibility": "visible", "display": "block" }).animate({ opacity: 1 });
 		$(".bread").replaceWith( "<div class=\"bread\"> <a href=\"index.html\">nicktobat</a> <p>&nbsp;/&nbsp;</p> <a id=\"workbread\" href=\"work.html\">work</a> <p>&nbsp;/&nbsp;</p> <p>experience</p> </div>" );
 	}
-	$(".logo").click(function(){
-		setTimeout(hidelogo, 800);
+	$(".logo").click(function(e){
+		e.preventDefault();
+		setTimeout(hideexp, 800);
 		$(".container-3").fadeOut(800);
 	});
 
@@ -59,7 +61,8 @@ $(function(){
 		$(".container-6").css({ "visibility": "visible", "display": "block" }).animate({ opacity: 1 });
 		$(".bread").replaceWith( "<div class=\"bread\"> <a href=\"index.html\">nicktobat</a> <p>&nbsp;/&nbsp;</p> <a id=\"workbread\" href=\"work.html\">work</a> <p>&nbsp;/&nbsp;</p> <p>screens</p> </div>" );
 	}
-	$(".scrn").click(function(){
+	$(".scrn").click(function(e){
+		e.preventDefault();
 		setTimeout(hidescrn, 800);
 		$(".container-3").fadeOut(800);
 	});
@@ -70,7 +73,8 @@ $(function(){
 		$(".container-7").css({ "visibility": "visible", "display": "block" }).animate({ opacity: 1 });
 		$(".bread").replaceWith( "<div class=\"bread\"> <a href=\"index.html\">nicktobat</a> <p>&nbsp;/&nbsp;</p> <a id=\"workbread\" href=\"work.html\">work</a> <p>&nbsp;/&nbsp;</p> <p>fun</p> </div>" );
 	}
-	$(".fun").click(function(){
+	$(".fun").click(function(e){
+		e.preventDefault();
 		setTimeout(hidefun, 800);
 		$(".container-3").fadeOut(800);
 	});
