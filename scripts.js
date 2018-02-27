@@ -31,11 +31,22 @@ $(function(){
 		$(".container-3").fadeOut(800);
 	});
 
-	//work page animate-logo
+	/*//work page animate-logo
 	var hidelogo = function(){
 		$(".container-3").hide();
 		$(".container-5").css({ "visibility": "visible", "display": "block" }).animate({ opacity: 1 });
 		$(".bread").replaceWith( "<div class=\"bread\"> <a href=\"index.html\">nicktobat</a> <p>&nbsp;/&nbsp;</p> <a id=\"workbread\" href=\"work.html\">work</a> <p>&nbsp;/&nbsp;</p> <p>logos</p> </div>" );
+	}
+	$(".logo").click(function(){
+		setTimeout(hidelogo, 800);
+		$(".container-3").fadeOut(800);
+	});
+	*/
+	//work page animate-exp
+	var hideexp = function(){
+		$(".container-3").hide();
+		$(".container-5").css({ "visibility": "visible", "display": "block" }).animate({ opacity: 1 });
+		$(".bread").replaceWith( "<div class=\"bread\"> <a href=\"index.html\">nicktobat</a> <p>&nbsp;/&nbsp;</p> <a id=\"workbread\" href=\"work.html\">work</a> <p>&nbsp;/&nbsp;</p> <p>experience</p> </div>" );
 	}
 	$(".logo").click(function(){
 		setTimeout(hidelogo, 800);

@@ -149,6 +149,28 @@ a{
 
 
 /* ==========================
+-- DEPOT                   --
+========================== */
+
+.depot-content{
+  font-family: "Nunito Sans", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
+  text-align: center;
+  margin: 36px;
+  z-index: 22;
+  position: relative;
+}
+.depot-content img{
+  max-width: 75vmin;
+  max-height: 1000vmin;
+  display: block;
+  margin: 12px auto;
+  box-shadow: 0px 0px 6px #808080;
+}
+
+
+
+
+/* ==========================
 -- GRAPHICS                --
 ========================== */
 
