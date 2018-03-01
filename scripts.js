@@ -24,12 +24,12 @@ $(function(){
 	var hidebrand = function(){
 		$(".container-3").hide();
 		$(".container-4").css({ "visibility": "visible", "display": "block" }).animate({ opacity: 1 });
-		$(".bread").replaceWith( "<div class=\"bread\"> <a href=\"index.html\">nicktobat</a> <p>&nbsp;/&nbsp;</p> <a id=\"workbread\" href=\"work.html\">work</a> <p>&nbsp;/&nbsp;</p> <p>branding</p> </div>" );
+		$(".bread").replaceWith( "<div class=\"bread\"> <a href=\"index.html\">nicktobat</a> <p>&nbsp;/&nbsp;</p> <a id=\"workbread\" href=\"#work\">work</a> <p>&nbsp;/&nbsp;</p> <p>branding</p> </div>" );
 	}
 	$(".brand").click(function(e){
 		e.preventDefault();
 		setTimeout(hidebrand, 800);
-		$(".container-3").fadeOut(800);
+		$(".container-3").fadeOut(800).animate({ opacity: 0 }, 800);
 	});
 
 	/*//work page animate-logo
@@ -40,7 +40,7 @@ $(function(){
 	}
 	$(".logo").click(function(){
 		setTimeout(hidelogo, 800);
-		$(".container-3").fadeOut(800);
+		$(".container-3").fadeOut(800).animate({ opacity: 0 }, 800);
 	});
 	*/
 	//work page animate-exp
@@ -52,7 +52,7 @@ $(function(){
 	$(".logo").click(function(e){
 		e.preventDefault();
 		setTimeout(hideexp, 800);
-		$(".container-3").fadeOut(800);
+		$(".container-3").fadeOut(800).animate({ opacity: 0 }, 800);
 	});
 
 	//work page animate-scrn
@@ -64,7 +64,7 @@ $(function(){
 	$(".scrn").click(function(e){
 		e.preventDefault();
 		setTimeout(hidescrn, 800);
-		$(".container-3").fadeOut(800);
+		$(".container-3").fadeOut(800).animate({ opacity: 0 }, 800);
 	});
 
 	//work page animate-fun
@@ -76,18 +76,19 @@ $(function(){
 	$(".fun").click(function(e){
 		e.preventDefault();
 		setTimeout(hidefun, 800);
-		$(".container-3").fadeOut(800);
+		$(".container-3").fadeOut(800).animate({ opacity: 0 }, 800);
 	});
 
 	//work button animate - prevent immediate navigation
-	/*$("#workbread").click(function(e){
+	var backtowork = function(){
+		$("div.workcat").hide();
+		$(".container-3").css({ "visibility": "visible", "display": "block" }).animate({ opacity: 1 });
+		$(".bread").replaceWith( "<div class=\"bread\"> <a href=\"index.html\">nicktobat</a> <p>&nbsp;/&nbsp;</p> <p>work</p> </div>" );
+	}
+	$("body").on("click", "#workbread", function(e){
     e.preventDefault();
-    var goTo = this.getAttribute("href");
-    console.log(goTo);
-    /*$(".workcat").fadeOut(800);
-    setTimeout(function(){
-      window.location = goTo;
-    }, 800);       
+    setTimeout(backtowork, 800);
+    $("div.workcat").fadeOut(800).animate({ opacity: 0 }, 800);
 	});
 	//work page animate-back-to-work
 /*	var resetwork = function(){
@@ -100,25 +101,6 @@ $(function(){
 		//$(".workcat").fadeOut(800);
 		$(".workcat").css({ "visibility": "hidden", "display": "none" }).animate({ opacity: 0 });
 	});  */
-
-//need to figure out how to discriminate between clicks of work category or just work
-/*	var refer = document.referrer;
-	var url = window.location.href;
-	console.log(refer, url);
-	if( refer.indexOf("/logos/") >= 0 ){
-		var logonav = function(){
-			$(".container-3").hide();
-			$(".container-5").css({ "visibility": "visible", "display": "block" }).animate({ opacity: 1 });
-			$(".bread").replaceWith( "<div class=\"bread\"> <a href=\"index.html\">nicktobat</a> <p>&nbsp;/&nbsp;</p> <a id=\"workbread\" href=\"work.html\">work</a> <p>&nbsp;/&nbsp;</p> <p>logos</p> </div>" );
-		};
-		setTimeout(logonav, 800);
-		$(".container-3").fadeOut(800);
-	};
-*/
-	var refer = document.referrer;
-	$(".btn-3").click(function(){
-		window.location.href = refer;
-	});
 	
 	console.log( $(window).height() );
 	console.log( $(document).height() );

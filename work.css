@@ -38,6 +38,7 @@ a{
 
 .page{
 	/*height: 100vh;*/
+  position: relative;
 }
 .header{
   background-color: black;
@@ -410,5 +411,12 @@ img.flipper{
 
 }
 
+@media screen and (max-width: 341px){
+
+  h1.twoliner{
+    height: 120px;
+  }
+
+}
 
 
