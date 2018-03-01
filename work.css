@@ -31,16 +31,17 @@ a{
  user-select: none;
 }
 
+
 /* ==========================
--- SPLASH                  --
+-- HEADER                  --
 ========================== */
 
 .page{
-  min-height: 100%;
 	/*height: 100vh;*/
 }
 .header{
   background-color: black;
+  position: relative;
   z-index: 99;
   color: white;
 }
@@ -95,12 +96,11 @@ a{
 
 
 /* ==========================
--- CONTENT                  --
+-- CONTENT                 --
 ========================== */
 
 .container{
   margin: 36px auto 24px auto;
-
 }
 .title{
   text-align: center;
@@ -122,28 +122,52 @@ a{
   font-family: "Nunito Sans", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
   text-align: center;
   margin: 36px;
-  z-index: 22;
+  z-index: -2;
   position: relative;
 }
+.content p, .content h1, .content h2, .content h3{
+  max-width: calc( 90vw - 48px );
+  text-align: center;
+  margin: 0 auto;
+}
 .content a{
-  font-size: 64px;
   color: black;
   cursor: pointer;
 }
-#hippo{
-  max-height: 1000vmin;
-}
 .content img{
   max-width: 75vmin;
-  max-height: 1000vmin;
+  max-height: 75vmin;
   display: block;
   margin: 0 auto;
+}
+
+
+/* ==========================
+-- BRANDING                --
+========================== */
+
+.brand-content img{
+  max-width: 90vmin;
+  max-height: 90vmin;
+  box-shadow: 0 3px 5px 1px #B3B3B3;
+}
+
+
+/* ==========================
+-- FUN                     --
+========================== */
+
+.hippo p{
+  width: 65vw;
+  margin: 0 auto;
+}
+#hippo{
+  max-height: 1000vmin;
 }
 #biff{
   display: block;
   margin: 0 auto;
   font-family: "Nunito Sans", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
-  z-index: -2;
   position: relative;
 }
 
@@ -152,6 +176,43 @@ a{
 -- DEPOT                   --
 ========================== */
 
+.flipcontainer{
+  position: relative;
+  perspective: 1000;
+  max-width: 65vw;
+  display: block;
+  margin: 12px auto;
+  border-radius: 18px;
+}
+.flipcard{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  transform-style: preserve-3d;
+  transition: all 800ms linear;
+}
+.flipcontainer.active .flipcard{
+  transform: rotateY(180deg);
+}
+.face{
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.face.back{
+  display: none;
+  opacity: 1;
+  visibility: hidden;
+  transform: rotateY(180deg);
+}
+.face.front{
+  opacity: 1;
+  visibility: visible;
+}
 .depot-content{
   font-family: "Nunito Sans", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
   text-align: center;
@@ -159,15 +220,19 @@ a{
   z-index: 22;
   position: relative;
 }
-.depot-content img{
-  max-width: 75vmin;
-  max-height: 1000vmin;
-  display: block;
-  margin: 12px auto;
-  box-shadow: 0px 0px 6px #808080;
+.depot-content picture{
+  position: relative;
 }
-
-
+.depot-content img{
+  max-width: 65vw;
+  display: block;
+  margin: 18px auto;
+  box-shadow: 0px 1.5px 4px #808080;
+  border-radius: 18px;
+}
+img.flipper{
+  margin: 0;
+}
 
 
 /* ==========================
