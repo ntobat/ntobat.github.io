@@ -290,6 +290,9 @@ img#ftr-right{
 
 @media screen and (max-width: 414px){
 
+  .container{
+    margin-top: 24px;
+  }
   .container-2{
     margin-top: 52px;
   }
