@@ -416,6 +416,9 @@ img.flipper{
     width: 95vw;
     max-width: 960px;
   }
+  .depot-content img.gif{
+    max-width: 85vw;
+  }
 
 }
 
