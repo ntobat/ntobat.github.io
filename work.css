@@ -156,6 +156,76 @@ a.worklink{
   box-shadow: 0 3px 5px 1px #B3B3B3;
 }
 
+/*** KINIS ***/
+.kinis-content{
+  width: 65vw;
+  margin: 36px auto;
+}
+.kinis-content img{
+  border: 6px solid black;
+  box-shadow: none;
+  padding: 6px;
+}
+img#skew{
+  position: relative;
+  width: 80vw;
+  border: none;
+  margin: 0 auto;
+}
+.kinis-content h3, .kinis-content p{
+  text-align: left;
+}
+div.title{
+  padding-top: 36px;
+  margin-top: -36px;
+}
+h3.sec-title{
+  font-family: Courier;
+  font-weight: 400;
+  font-size: 24px;
+  padding: 12px;
+  background-color: black;
+  color: white;
+  margin-top: 48px;
+}
+.navstick{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: sticky;
+  z-index: 99;
+  top: 10px;
+  border: 4px solid black;
+  background-color: white;
+}
+.navstick a{
+  font-family: Courier;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 12px 10px;
+  transition: all 250ms ease;
+}
+.navstick a:hover{
+  color: white;
+  background-color: black;
+}
+#navigate{
+  font-family: 'Nunito Sans', sans-serif;
+  text-align: initial;
+  font-size: 16px;
+}
+.imgblock img{
+  display: inline-block;
+  height: 240px;
+  margin: 24px;
+}
+p.indent{
+  margin-left: 24px;
+  font-family: Courier;
+  font-weight: 400;
+  font-size: 18px;
+  padding: 20px;
+}
 
 /* ==========================
 -- FUN                     --
@@ -258,6 +328,17 @@ img.flipper{
   display: block;
   margin: 18px auto;
   box-shadow: 0px 2px 3px #808080;
+}
+
+
+/* ==========================
+-- SCREENS                 --
+========================== */
+
+.nicktobat{
+  max-width: 65vw;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -385,6 +466,30 @@ img.flipper{
 -- MEDIA QUERIES           --
 ========================== */
 
+@media screen and (max-width: 718px){
+
+  #navigate, .navstick a{
+    font-size: 13px
+  }
+
+}
+
+@media screen and (max-width: 623px){
+
+  #navigate{
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 472px){
+
+  .navstick{
+    display: none;
+  }
+
+}
+
 @media screen and (max-width: 414px){
 
   .content{
@@ -418,6 +523,23 @@ img.flipper{
   }
   .depot-content img.gif{
     max-width: 85vw;
+  }
+  .kinis-content{
+    width: 85vw;
+  }
+  .navstick{
+    display: none;
+  }
+  .kinis-content img{
+    max-width: 85vw;
+    height: auto;
+    margin: 6px 0;
+  }
+  p.indent{
+    padding: 14px;
+    font-size: 15px;
+    max-width: 245px;
+    word-wrap: break-word;
   }
 
 }

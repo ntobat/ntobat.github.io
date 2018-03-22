@@ -115,6 +115,30 @@ a{
 -- HOME                    --
 ========================== */
 
+.atypical{
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  height: calc(100vh - 113px);
+  max-height: 600px;
+  margin-top: 85px;
+  width: 480px;
+  text-align: center;
+}
+.atypical h1, .atypical h2, .atypical h4{
+  color: white;
+  font-family: "Nunito Sans", sans-serif;
+  padding: 14px;
+}
+.atypical h1{
+  font-size: 48px;
+}
+.atypical h2{
+  font-size: 32px;
+}
+.atypical h4{
+  font-size: 20px;
+}
 .container-2{
 	z-index: 1;
 	opacity: 0;
@@ -144,7 +168,12 @@ a{
 ========================== */
 
 .container-3{
+  animation: works 800ms 1;
   /*width: 100vw;*/
+}
+@keyframes works{
+  0%{ opacity: 0 }
+  100%{ opacity: 1 }
 }
 .li{
   display: block;

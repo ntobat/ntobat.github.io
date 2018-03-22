@@ -16,4 +16,13 @@ $(function(){
     }, 1200);   
 	});
 
+	/*
+	//active link styling
+	$(".navstick li a").click(function(e){
+		e.preventDefault();
+		$(this).removeClass("active");
+		$(e.target).addClass("active");
+	});
+	*/
+
 });

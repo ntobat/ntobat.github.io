@@ -1,6 +1,20 @@
 $(function(){
 
 	//home page animate
+	var atypical = function(){
+		$(".container-1").hide();
+		$(".atypical").css("visibility", "visible").animate({ opacity: 1 }, 2000);
+		$(".atypical").fadeOut(2000);
+		setTimeout(function(){
+			$(".container-2").css("visibility", "visible").animate({ opacity: 1 }, 800);
+		}, 4000);
+	};
+	$(".btn-1").click(function(){
+		setTimeout(atypical, 800);
+		$(".container-1").fadeOut(800);
+	});
+
+/*
 	var hideit = function(){
 		$(".container-1").hide();
 		$(".container-2").css("visibility", "visible").animate({ opacity: 1 });
@@ -9,7 +23,7 @@ $(function(){
 		setTimeout(hideit, 800);
 		$(".container-1").fadeOut(800);
 	});
-
+*/
 	//work button animate - prevent immediate navigation
 	$(".btn-2").click(function(e){
     e.preventDefault();
