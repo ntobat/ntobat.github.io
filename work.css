@@ -125,6 +125,8 @@ a{
   margin: 36px;
   z-index: -2;
   position: relative;
+  max-width: 100vw;
+  overflow: hidden;
 }
 .content p, .content h1, .content h2, .content h3{
   max-width: calc( 90vw - 48px );
@@ -522,6 +524,13 @@ img.flipper{
   .navstick{
     display: none;
   }
+  .atypical{
+    max-width: 320px;
+  }
+  .nicktobat{
+    max-width: 80vw;
+    margin: 36px auto;
+  }
 
 }
 
@@ -561,6 +570,10 @@ img.flipper{
   }
   .kinis-content{
     width: 85vw;
+  }
+  .nicktobat{
+    max-width: 80vw;
+    margin: 36px auto;
   }
   .navstick{
     display: none;
