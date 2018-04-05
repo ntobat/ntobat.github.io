@@ -13,7 +13,7 @@ $(function(){
 		$(".overlay").addClass("away");
 		setTimeout(function(){
       window.location = goTo;
-    }, 1200);   
+    }, 1200);
 	});
 
 	//atypical fade [nicktobat]
