@@ -16,13 +16,27 @@ $(function(){
     }, 1200);   
 	});
 
-	//atypical fade
+	//atypical fade [nicktobat]
 	$(".atypical").css("visibility", "visible").animate({ opacity: 1 }, 2400);
 	$(".atypical").fadeOut(2400);
 	setTimeout(function(){
 		$(".overlay2").addClass("o2out");
-	},4200);
+	}, 4200);
 	
+	//animate blob up
+	$(document).on('scroll', function(){
+		if($(this).scrollTop() > 75){
+			$(".stickyblob").removeClass("blob-down").addClass("blob-up");
+		}
+	});
+
+	//animate blob down
+	$(document).on('scroll', function(){
+		if( $(this).scrollTop() < 75 && $(".stickyblob").hasClass("blob-up") ){
+			$(".stickyblob").removeClass("blob-up").addClass("blob-down");
+		}
+	});
+
 	/*
 	//active link styling
 	$(".navstick li a").click(function(e){
