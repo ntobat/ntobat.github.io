@@ -34,7 +34,11 @@
 
     <div class="left">
       <div class="logo">
-        <img id="logo" src="assets/icon_foot.svg">
+        <picture>
+          <source media="(min-width: 801px)" srcset="assets/icon_foot.svg">
+          <source media="(max-width: 800px)" srcset="assets/icon_smallwhite.png">
+          <img id="logo" src="assets/icon_foot.svg" />
+        </picture>
       </div>
       <h1 id="name">NICHOLAS TOBAT</h1>
       <h3><a class="email" href="mailto:ntobat@gmail.com">ntobat@gmail.com</a></h3>

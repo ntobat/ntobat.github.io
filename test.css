@@ -453,11 +453,21 @@ a.workli:hover, a.workli.active, a.notworkli:hover, a.notworkli.active{
   .page{
     height: initial;
   }
+  #logo{
+    width: calc(60vmin + 32px);
+  }
+  .left h1{
+    font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
+    font-size: calc(10vmin + 6px);
+  }
   .left, .right{
-    width: 95vw;
+    width: 100vw;
     height: initial;
     display: block;
     margin: 0 auto;
+  }
+  .email{
+    font-size: 28px;
   }
   .left{
     padding-top: 100px;
@@ -475,7 +485,7 @@ a.workli:hover, a.workli.active, a.notworkli:hover, a.notworkli.active{
     display: none;
   }
   .about, .work, .entry, .notwork{
-    width: 95vw;
+    width: 100vw;
     height: 100%;
     position: fixed;
     border: none;
@@ -485,41 +495,33 @@ a.workli:hover, a.workli.active, a.notworkli:hover, a.notworkli.active{
     margin: 20px auto;
   }
   .outed, .workouted{
-    left: 2.5vw;
+    left: 0;
   }
   .ex{
     height: 40px;
-    left: calc(47.5vw - 32px);
+    left: calc(50vw - 32px);
   }
   .ex::before{
     top: 10px;
   }
   .worklinks, .notworklinks{
-    width: 80vw;
+    width: 85vw;
     top: 0;
     left: 50%;
     margin-left: -50%;
     transform: translateX(-50%);
     margin: 80px 0;
   }
-  .workli, .notworkli{
-    font-size: 28px;
-    padding: 10px;
-  }
-  .button{
-    height: 48px;
-    padding: 4px 12px;
-  }
   .entry{
     position: fixed;
     top: -100%;
-    left: 2.5vw;
+    left: 0;
     height: 100%;
-    width: 95vw;
+    width: 100vw;
   }
   .entryIn{
     top: 0;
-    left: 2.5vw;
+    left: 0;
     z-index: 99;
   }
   .entrycontent h1{
@@ -531,7 +533,7 @@ a.workli:hover, a.workli.active, a.notworkli:hover, a.notworkli.active{
   .exentry{
     position: absolute;
     top: 10px;
-    left: calc(47.5vw - 32px);
+    left: calc(50vw - 32px);
     height: 40px;
     width: 64px;
   }
@@ -544,7 +546,24 @@ a.workli:hover, a.workli.active, a.notworkli:hover, a.notworkli.active{
 
 }
 
+@media screen and (max-height: 569px){
 
+  .button{
+    height: 48px;
+    padding: 4px 12px;
+  }
+  .workli, .notworkli{
+    font-size: 28px;
+    padding: 10px;
+  }
+  .entrycontent h1{
+    font-size: 28px;
+  }
+  .entrycontent p{
+    font-size: 16px;
+  }
+
+}
 
 
 
