@@ -500,7 +500,11 @@ a.workli:hover, a.workli.active, a.notworkli:hover, a.notworkli.active{
     left: 50%;
     margin-left: -50%;
     transform: translateX(-50%);
-    margin: 84px 0;
+    margin: 80px 0;
+  }
+  .workli, .notworkli{
+    font-size: 28px;
+    padding: 10px;
   }
   .button{
     height: 48px;
