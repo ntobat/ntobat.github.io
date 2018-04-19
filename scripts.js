@@ -1,5 +1,15 @@
 $(function(){
 
+	//detect mobile
+	function isMobileDevice() {
+    return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+	};
+	if( isMobileDevice() ){
+		var viewportHeight = $(".page").outerHeight();
+		$(".page").css({ height: window.innerHeight })
+	};
+	console.log(isMobileDevice());
+
 	//home page animate
 	var atypical = function(){
 		$(".container-1").hide();
@@ -114,7 +124,118 @@ $(function(){
 		//$(".workcat").fadeOut(800);
 		$(".workcat").css({ "visibility": "hidden", "display": "none" }).animate({ opacity: 0 });
 	});  */
-	
+
+	//background color animation
+	$(".skin").click(function(e){
+		e.preventDefault();
+		if( $(".page").hasClass("bg-towhite") ){
+			$(".page").removeClass("bg-towhite").addClass("bg-toblack");
+			$("body").removeClass("bg-towhite").addClass("bg-toblack");
+			$("#name, .email, .li").removeClass("txt-towhite").addClass("txt-toblack");
+			var skimg = $(".skin img");
+			skimg.fadeOut(500, function(){
+				skimg.attr('src', 'assets/color2.svg');
+				skimg.fadeIn(500);
+			});
+			var icon = $("#logo");
+			icon.fadeOut(500, function(){
+				icon.attr('src', 'assets/icon_foot.svg');
+				icon.fadeIn(500);
+			});
+		} else {
+			$(".page").removeClass("bg-toblack").addClass("bg-towhite");
+			$("body").removeClass("bg-toblack").addClass("bg-towhite");
+			$("#name, .email, .li").removeClass("txt-toblack").addClass("txt-towhite");
+			var skimg = $(".skin img");
+			skimg.fadeOut(500, function(){
+				skimg.attr('src', 'assets/color1.svg');
+				skimg.fadeIn(500);
+			});
+			var icon = $("#logo");
+			icon.fadeOut(500, function(){
+				icon.attr('src', 'assets/icon_footblack.svg');
+				icon.fadeIn(500);
+			});
+		}
+	});
+
+	//about section
+	$(".abt").click(function(e){
+		e.preventDefault();
+		$(".about").addClass("outed");
+	});
+	$(".ex").click(function(e){
+		e.preventDefault();
+		$(".about").removeClass("outed");
+	});
+
+	//work section
+	$(".wrk").click(function(e){
+		e.preventDefault();
+		$(".work").addClass("workouted");
+	});
+	$(".ex").click(function(e){
+		e.preventDefault();
+		$(".entryIn").removeClass("entryIn");
+		$(".work").removeClass("workouted");
+		$(".workli.active").removeClass("active");
+		$(".workli svg line.activeline").removeClass("activeline");
+	});
+	//open entry
+	$(".workli").click(function(e){
+		e.preventDefault();
+		//highlight link
+		$(".workli.active").removeClass("active");
+		$(".workli svg line.activeline").removeClass("activeline");
+		$(this).addClass("active");
+		$(".workli.active svg line").addClass("activeline");
+		//entry animation
+		$(".entryIn").removeClass("entryIn");
+		var worknum = $(this).data('worknum');
+		$("#entry" + worknum).addClass("entryIn");
+	});
+	//close entry
+	$(".exentry").click(function(e){
+		e.preventDefault();
+		$(".entryIn").removeClass("entryIn");
+		$(".workli.active").removeClass("active");
+		$(".workli svg line.activeline").removeClass("activeline");
+	});
+
+	//not work section
+	$(".not").click(function(e){
+		e.preventDefault();
+		$(".notwork").addClass("workouted");
+	});
+	$(".ex").click(function(e){
+		e.preventDefault();
+		$(".entryIn").removeClass("entryIn");
+		$(".notwork").removeClass("workouted");
+		$(".notworkli.active").removeClass("active");
+		$(".notworkli svg line.activeline").removeClass("activeline");
+	});
+	//open entry
+	$(".notworkli").click(function(e){
+		e.preventDefault();
+		//highlight link
+		$(".notworkli.active").removeClass("active");
+		$(".notworkli svg line.activeline").removeClass("activeline");
+		$(this).addClass("active");
+		$(".notworkli.active svg line").addClass("activeline");
+		//entry animation
+		$(".entryIn").removeClass("entryIn");
+		var worknum = $(this).data('notworknum');
+		$("#entry" + worknum).addClass("entryIn");
+	});
+	//close entry
+	$(".exentry").click(function(e){
+		e.preventDefault();
+		$(".entryIn").removeClass("entryIn");
+		$(".notworkli.active").removeClass("active");
+		$(".notworkli svg line.activeline").removeClass("activeline");
+	});
+
+	//log window & doc height
 	console.log( $(window).height() );
 	console.log( $(document).height() );
 
