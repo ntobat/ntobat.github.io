@@ -252,10 +252,10 @@ $(function(){
     $(".black").addClass("overlaze");
     setTimeout(function(){
       $(".white").addClass("overlaze");
-    }, 400);
+    }, 600);
     setTimeout(function(){
       window.location = goTo;
-    }, 800);
+    }, 1200);
 	});
 
 
@@ -264,6 +264,7 @@ $(function(){
 	console.log( $(window).height() );
 	console.log( $(document).height() );
 	console.log( $(window).width() );
+	console.log( $(window).scrollTop() );
 
 });
 /*

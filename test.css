@@ -52,7 +52,7 @@ a{
   position: absolute;
   top: -100%;
   left: 0;
-  transition: all 400ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 600ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 .black{
   z-index: 199;
@@ -481,6 +481,13 @@ a.workli:hover, a.workli.active, a.notworkli:hover, a.notworkli.active{
     top: 2.5vh;
     right: 2.5vh;
   }
+  .black, .white{
+    height: 155%;
+    top: -155%;
+  }
+  .overlaze{
+    top: 0;
+  }
   .left, .right{
     width: 100vw;
     height: initial;
@@ -594,7 +601,7 @@ a.workli:hover, a.workli.active, a.notworkli:hover, a.notworkli.active{
     height: 48px;
     padding: 4px 12px;
   }
-  .li, .workli, .notworkli{
+  .workli, .notworkli{
     font-size: 28px;
     padding: 10px;
   }
