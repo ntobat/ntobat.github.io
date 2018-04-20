@@ -46,6 +46,26 @@ a{
   height: 36px;
   width: auto;
 }
+.black, .white{
+  height: 100%;
+  width: 100vw;
+  position: absolute;
+  top: -100%;
+  left: 0;
+  transition: all 400ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.black{
+  z-index: 199;
+  background-color: black;
+}
+.white{
+  z-index: 299;
+  background-color: white;
+}
+.overlaze{
+  position: absolute;
+  top: 0;
+}
 .left, .right{
   width: 40vw;
   height: 90vh;
@@ -197,6 +217,9 @@ a{
   z-index: 10;
   background-color: white;
   transition: all 800ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.abt-mobile{
+  display: none;
 }
 .face{
   text-align: center;
@@ -452,6 +475,17 @@ a.workli:hover, a.workli.active, a.notworkli:hover, a.notworkli.active{
   }
   .page{
     height: initial;
+    width: 100vw;
+  }
+  .skin{
+    top: 2.5vh;
+    right: 2.5vh;
+  }
+  .left, .right{
+    width: 100vw;
+    height: initial;
+    display: block;
+    margin: 0 auto;
   }
   #logo{
     width: calc(60vmin + 32px);
@@ -460,17 +494,11 @@ a.workli:hover, a.workli.active, a.notworkli:hover, a.notworkli.active{
     font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
     font-size: calc(10vmin + 6px);
   }
-  .left, .right{
-    width: 100vw;
-    height: initial;
-    display: block;
-    margin: 0 auto;
-  }
   .email{
     font-size: 28px;
   }
   .left{
-    padding-top: 100px;
+    padding-top: 80px;
   }
   .right{
     float: none;
@@ -490,7 +518,14 @@ a.workli:hover, a.workli.active, a.notworkli:hover, a.notworkli.active{
     position: fixed;
     border: none;
   }
-  .about p{
+  .face{
+    margin-top: 80px;
+  }
+  .abt-p{
+    display: none;
+  }
+  p.abt-mobile{
+    display: block;
     width: 80vw;
     margin: 20px auto;
   }
@@ -548,11 +583,18 @@ a.workli:hover, a.workli.active, a.notworkli:hover, a.notworkli.active{
 
 @media screen and (max-height: 569px){
 
+  #logo{
+    width: calc(60vmin + 32px);
+  }
+  .left h1{
+    font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
+    font-size: calc(8vmin + 12px);
+  }
   .button{
     height: 48px;
     padding: 4px 12px;
   }
-  .workli, .notworkli{
+  .li, .workli, .notworkli{
     font-size: 28px;
     padding: 10px;
   }

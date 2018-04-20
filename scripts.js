@@ -142,6 +142,11 @@ $(function(){
 				icon.attr('src', 'assets/icon_foot.svg');
 				icon.fadeIn(500);
 			});
+			var source800 = $(".logo picture source");
+			source800.fadeOut(500, function(){
+				source800.attr('srcset', 'assets/icon_foot.svg');
+				source800.fadeIn(500);
+			});
 		} else {
 			$(".page").removeClass("bg-toblack").addClass("bg-towhite");
 			$("body").removeClass("bg-toblack").addClass("bg-towhite");
@@ -155,6 +160,11 @@ $(function(){
 			icon.fadeOut(500, function(){
 				icon.attr('src', 'assets/icon_footblack.svg');
 				icon.fadeIn(500);
+			});
+			var source800 = $(".logo picture source");
+			source800.fadeOut(500, function(){
+				source800.attr('srcset', 'assets/icon_footblack.svg');
+				source800.fadeIn(500);
 			});
 		}
 	});
@@ -235,9 +245,25 @@ $(function(){
 		$(".notworkli svg line.activeline").removeClass("activeline");
 	});
 
+	//prevent immediate navigation
+	$(".button").click(function(e){
+    e.preventDefault();
+    var goTo = this.getAttribute("href");
+    $(".black").addClass("overlaze");
+    setTimeout(function(){
+      $(".white").addClass("overlaze");
+    }, 400);
+    setTimeout(function(){
+      window.location = goTo;
+    }, 800);
+	});
+
+
+
 	//log window & doc height
 	console.log( $(window).height() );
 	console.log( $(document).height() );
+	console.log( $(window).width() );
 
 });
 /*
