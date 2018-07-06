@@ -90,7 +90,7 @@ $(function(){
 		$("#entry" + worknum).addClass("entryIn");
 	});
 	//close entry
-	$(".exentry").click(function(e){
+	$(".closeEntry").click(function(e){
 		e.preventDefault();
 		$(".entryIn").removeClass("entryIn");
 		$(".workli.active").removeClass("active");
