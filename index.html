@@ -14,9 +14,11 @@
   <title>Nicholas Tobat - Designer</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="index.css">
   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,800|Saira+Condensed:400,700" rel="stylesheet">
   <link rel="icon" type="img/ico" href="assets/favicon.ico">
+  <link rel="preload" as="image" href="assets/icon_footblack.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="scripts.js"></script>
 </head>
@@ -25,42 +27,201 @@
   
       
   <div class="page unselectable">
-  
-    <div class="header">
-      <h1><a href="https://nicktobat.com">NICHOLAS TOBAT</a></h1>
-		</div>
 
-    <div class="container container-1">
-      <div class="logo">
-        <img id="logo" src="assets/icon.png" />
+    <div class="skin">
+      <a href="#"><img src="assets/color2.svg"></a>
+    </div>
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="black2"></div>
+
+
+    <div class="grid">
+      
+      <div class="grid-el grid-el-left">
+        <div class="logo">
+          <picture>
+            <source media="(min-width: 801px)" srcset="assets/icon_foot.svg">
+            <source media="(max-width: 800px)" srcset="assets/icon_smallwhite.png">
+            <img id="logo" src="assets/icon_foot.svg" />
+          </picture>
+        </div>
+        <h1 id="name">NICHOLAS TOBAT</h1>
+        <a class="email" href="mailto:ntobat@gmail.com"><img id="email" src="assets/email.svg" /></a>
       </div>
-      <a class="button btn-1" href="#">
-        WHO'S NICK?
-      </a>
+
+
+      <div class="grid-el grid-el-right">
+          <a class="li wrk" href="#">
+            <svg width="40vw" height="88px">
+              <line class="top" x1="0" y1="0" x2="120vw" y2="0" />
+              <line class="left" x1="0" y1="88" x2="0" y2="-176" />
+              <line class="bottom" x1="40vw" y1="88" x2="-120vw" y2="88" />
+              <line class="right" x1="40vw" y1="0" x2="40vw" y2="264" />
+            </svg>
+            WORK
+          </a>
+          <a class="li abt" href="#">
+            <svg width="40vw" height="88px">
+              <line class="top" x1="0" y1="0" x2="120vw" y2="0" />
+              <line class="left" x1="0" y1="88" x2="0" y2="-176" />
+              <line class="bottom" x1="40vw" y1="88" x2="-120vw" y2="88" />
+              <line class="right" x1="40vw" y1="0" x2="40vw" y2="264" />
+            </svg>
+            ABOUT
+          </a>
+          <a class="li not" href="#">
+            <svg width="40vw" height="88px">
+              <line class="top" x1="0" y1="0" x2="120vw" y2="0" />
+              <line class="left" x1="0" y1="88" x2="0" y2="-176" />
+              <line class="bottom" x1="40vw" y1="88" x2="-120vw" y2="88" />
+              <line class="right" x1="40vw" y1="0" x2="40vw" y2="264" />
+            </svg>
+            NOT WORK
+          </a>
+      </div>
+
+
     </div>
 
-    <div class="container container-2">
+
+    <div class="work">
+      <div class="worklinks">
+        <div class="close">CLOSE</div>
+        <!--<div class="ex"></div-->
+        <a class="workli" id="work1" data-worknum="1" href="#">
+          <svg width="35vw" height="73px">
+            <line class="top" x1="0" y1="0" x2="105vw" y2="0" />
+            <line class="left" x1="0" y1="73" x2="0" y2="-146" />
+            <line class="bottom" x1="35vw" y1="73" x2="-105vw" y2="73" />
+            <line class="right" x1="35vw" y1="0" x2="35vw" y2="219" />
+          </svg>
+          AMERICA 2050
+        </a>
+        <a class="workli" data-worknum="2" href="#">
+          <svg width="35vw" height="73px">
+            <line class="top" x1="0" y1="0" x2="105vw" y2="0" />
+            <line class="left" x1="0" y1="73" x2="0" y2="-146" />
+            <line class="bottom" x1="35vw" y1="73" x2="-105vw" y2="73" />
+            <line class="right" x1="35vw" y1="0" x2="35vw" y2="219" />
+          </svg>
+          KINIS
+        </a>
+        <a class="workli" data-worknum="3" href="#">
+          <svg width="35vw" height="73px">
+            <line class="top" x1="0" y1="0" x2="105vw" y2="0" />
+            <line class="left" x1="0" y1="73" x2="0" y2="-146" />
+            <line class="bottom" x1="35vw" y1="73" x2="-105vw" y2="73" />
+            <line class="right" x1="35vw" y1="0" x2="35vw" y2="219" />
+          </svg>
+          EDNA
+        </a>
+        <!--
+        <a class="workli" data-worknum="4" href="#">
+          <svg width="35vw" height="73px">
+            <line class="top" x1="0" y1="0" x2="105vw" y2="0" />
+            <line class="left" x1="0" y1="73" x2="0" y2="-146" />
+            <line class="bottom" x1="35vw" y1="73" x2="-105vw" y2="73" />
+            <line class="right" x1="35vw" y1="0" x2="35vw" y2="219" />
+          </svg>
+          HOME DEPOT
+        </a>
+        <a class="workli" data-worknum="5" href="#">
+          <svg width="35vw" height="73px">
+            <line class="top" x1="0" y1="0" x2="105vw" y2="0" />
+            <line class="left" x1="0" y1="73" x2="0" y2="-146" />
+            <line class="bottom" x1="35vw" y1="73" x2="-105vw" y2="73" />
+            <line class="right" x1="35vw" y1="0" x2="35vw" y2="219" />
+          </svg>
+          CAREY
+        </a>
+      -->
+      </div>
+    </div>
+
+    <div class="about">
+      <div class="close">CLOSE</div>
       <div class="face">
-        <img id="face" src="assets/lineface.png" />
+        <img id="face" src="assets/face_black.svg" />
       </div>
-      <p>I'm Nick! That's my face up there. My friend drew it with her eyes closed. Just a few years before that was drawn, in 2014, I moved to San Francisco and opened my eyes wide to the world of technology and design. Noticing a trend in that fair city, I thought it prudent to teach myself front-end development and design. Since then I've continued my self-education, taking on roles including web designer, graphic designer, and instructional designer. I am currently expanding my knowledge in the Experience Design track at the VCU Brandcenter in Richmond, VA.</p>
-      <a class="button btn-2" href="work.html">
-          SEE MY WORK
+      <p class="abt-p">I'm Nick! That's my face up there. My friend drew it with her eyes closed. Just a few years before that was drawn, in 2014, I moved to San Francisco and opened my eyes wide to the world of technology and design. Noticing a trend in that fair city, I thought it prudent to teach myself front-end development and design. Since then I've continued my self-education, taking on roles including web designer, graphic designer, and instructional designer. I am currently expanding my knowledge in the Experience Design track at the VCU Brandcenter in Richmond, VA.</p>
+      <p class="abt-mobile">I'm Nick! That's my face up there. My friend drew it with her eyes closed. I am a designer, that's for certain, but I am still figuring out which type. I do lots of other stuff besides design, too. Want to know more?</p>
+      <a class="button" href="about.html">
+        MORE PLEASE
       </a>
+      <div class="ex"></div>
     </div>
 
-    
-
-    <div class="footer">
-      <p>DESIGNED & DEVELOPED BY NICHOLAS TOBAT ©2018</p>
+    <div class="notwork">
+      <div class="notworklinks">
+        <div class="close">CLOSE</div>
+        <!--<div class="ex"></div>-->
+        <a class="notworkli" id="notwork1" data-notworknum="1" href="graphics.html">
+          <svg width="35vw" height="73px">
+            <line class="top" x1="0" y1="0" x2="105vw" y2="0" />
+            <line class="left" x1="0" y1="73" x2="0" y2="-146" />
+            <line class="bottom" x1="35vw" y1="73" x2="-105vw" y2="73" />
+            <line class="right" x1="35vw" y1="0" x2="35vw" y2="219" />
+          </svg>
+          GRAPHICS
+        </a>
+        <a class="notworkli" data-notworknum="2" href="fairytale.html">
+          <svg width="35vw" height="73px">
+            <line class="top" x1="0" y1="0" x2="105vw" y2="0" />
+            <line class="left" x1="0" y1="73" x2="0" y2="-146" />
+            <line class="bottom" x1="35vw" y1="73" x2="-105vw" y2="73" />
+            <line class="right" x1="35vw" y1="0" x2="35vw" y2="219" />
+          </svg>
+          FAIRY TALE
+        </a>
+        <a class="notworkli" data-notworknum="3" href="eharmony.html">
+          <svg width="35vw" height="73px">
+            <line class="top" x1="0" y1="0" x2="105vw" y2="0" />
+            <line class="left" x1="0" y1="73" x2="0" y2="-146" />
+            <line class="bottom" x1="35vw" y1="73" x2="-105vw" y2="73" />
+            <line class="right" x1="35vw" y1="0" x2="35vw" y2="219" />
+          </svg>
+          EHARMONY
+        </a>
+      </div>
     </div>
+
+    <div class="entry" id="entry1">
+      <div class="exentry">CLOSE</div>
+      <div class="entry-wrap">
+        <h1>Invite Education Through Play</h1>
+        <p>How can you interest people in a topic that appears esoteric, complex, or just plain boring? And how can you then utilize that interest for good?</p>
+        <p>AMERICA 2050 is a satirical gaming platform that invites users to learn more about politics and how "the system" works by playing games.</p>
+        <a class="button" href="2050.html">
+          SHOW ME
+        </a>
+      </div>
+    </div>
+
+    <div class="entry" id="entry2">
+      <div class="exentry">CLOSE</div>
+      <div class="entry-wrap">
+        <h1>Branding a Startup</h1>
+        <p>To tell a story and make itself known, a company first needs to develop its own identity. The visual identity of a brand is important for awareness, consistency, and the development of an emotional bond between the company and its customers.</p>
+        <a class="button" href="kinis.html">
+          SHOW ME
+        </a>
+      </div>
+    </div>
+
+    <div class="entry" id="entry3">
+      <div class="exentry">CLOSE</div>
+      <div class="entry-wrap">
+        <h1>Kids Will Be Kids</h1>
+        <p>Technological advancements are unhappily accompanied by advancements in sexual predation techniques. How can we protect our digitally native children from those who would do them harm?</p>
+        <a class="button" href="#">
+          COMING SOON
+        </a>
+      </div>
+    </div>
+
 
   </div>
-  <!--
-  <div class="footer">
-        <p class="footer_el" id="ftr-left">DESIGNED & <br>DEVELOPED BY<br>NICHOLAS TOBAT<br>©2018</p>
-        <img class="footer_el" id="ftr-right" src="assets/icon.png" />
-    </div>
--->
+
 </body>
 </html>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 395 65" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(1,0,0,1,-5688.82,-16175)">
+        <g id="Artboard8" transform="matrix(0.775133,0,0,0.367885,1271.61,10224.3)">
+            <rect x="5698.65" y="16175.5" width="508.946" height="176.685" style="fill:none;"/>
+            <clipPath id="_clip1">
+                <rect x="5698.65" y="16175.5" width="508.946" height="176.685"/>
+            </clipPath>
+            <g clip-path="url(#_clip1)">
+                <g transform="matrix(2.16388,0,0,3.54513,-8597.04,-41433.3)">
+                    <path d="M6641.06,16281.5C6639.84,16290.3 6619.76,16296.2 6622.61,16293C6624.41,16291 6623.12,16287.7 6621.14,16288.1C6617.96,16288.9 6620.48,16293.2 6617.64,16293C6615.62,16292.9 6614.76,16290.8 6615.05,16290.1C6615.65,16288.7 6617.33,16291.3 6617.64,16288.9C6619.02,16278.1 6606.89,16280.1 6608.18,16288.9C6608.97,16294.2 6612.63,16298.2 6617,16298.2L6840.21,16298.2C6840.21,16298.2 6840.21,16293.1 6840.21,16286.7L6840.21,16263.5C6840.21,16257.1 6840.21,16251.9 6840.21,16251.9L6608.18,16251.9C6608.18,16251.9 6608.02,16257.1 6608.02,16263.5L6608.02,16278.1" style="fill:none;stroke:black;stroke-width:1.84px;"/>
+                </g>
+                <g transform="matrix(0.573501,2.14223,-1.01451,1.211,18299.7,-18537.8)">
+                    <path d="M7026.54,16270L7019,16315.1L7003.99,16315.1L7026.54,16270L7049.09,16315.1L7024.97,16315.1L7026.54,16270" style="fill:none;stroke:black;stroke-width:3.06px;stroke-linejoin:round;"/>
+                </g>
+                <g transform="matrix(1.01451,-1.211,0.573501,2.14223,-10671.8,-10148.4)">
+                    <path d="M7003.99,16291L6997.98,16296" style="fill:none;stroke:black;stroke-width:3.06px;stroke-linejoin:round;"/>
+                </g>
+                <g transform="matrix(1.01451,-1.211,0.573501,2.14223,-10671.8,-10148.4)">
+                    <path d="M6998.52,16295L7003.99,16285.1" style="fill:none;stroke:black;stroke-width:3.06px;stroke-linejoin:round;"/>
+                </g>
+                <g transform="matrix(2.2833,0,0,4.8109,-12005.6,-61831.9)">
+                    <text x="7824.13px" y="16239.2px" style="font-family:'SairaCondensed-Bold', 'Saira Condensed';font-weight:700;font-stretch:condensed;font-size:18px;">ntoba<tspan x="7861.03px " y="16239.2px ">t</tspan>@gmail.com</text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
