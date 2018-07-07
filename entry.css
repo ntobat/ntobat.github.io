@@ -397,6 +397,18 @@ p{
   video{
     max-width: 100%;
   }
+  .footer-grid{
+    flex-flow: column nowrap;
+    height: 360px;
+  }
+  .boxed{
+    width: 80vw;
+    font-family: Courier;
+    font-size: 24px;
+  }
+  .next{
+    padding-top: 24px;
+  }
 
 }
 
