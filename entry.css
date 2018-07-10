@@ -13,6 +13,10 @@ html{
 body{
   overflow: ;
   min-height: 100vh;
+  background-color: black;
+}
+.navModal{
+  overflow: hidden;
 }
 /*p, h1, h2, h3, h4, h5, li, a{
   color: white;
@@ -40,8 +44,9 @@ a{
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 600px 1fr 200px;
+  grid-template-rows: 600px 1fr 277px;
   grid-row-gap: 72px;
+  background-color: white;
 }
 p{
   font-size: 16px;
@@ -49,39 +54,57 @@ p{
 
 
 /* ==========================
--- HERO                    --
+-- HEADER                  --
 ========================== */
 
-.hero-grid{
-  width: 100vw;
-  grid-area: 1/1/2/2;
-
-  background: #000;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 64px 168px 200px 168px 1fr;
-}
-.header{
+.headerBlack{
   grid-area: 1/1/2/5;
 
   display: flex;
+  height: 56px;
+  opacity: 1;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
+  background-color: black;
   position: sticky;
   top: 0;
+  z-index: 99;
+}
+.headerWhite{
+  grid-area: 1/1/2/5;
+
+  background: -moz-linear-gradient( top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100% ); /* FF3.6-15 */
+  background: -webkit-linear-gradient( top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100% ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient( to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100% ); 
+
+  height: 56px;
+  opacity: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: sticky;
+  top: 0;
+  z-index: 89;
 }
 .home{
   cursor: pointer;
   padding: 10px;
   margin: 0 32px;
 }
-#logo{
-  height: 42px;
+#logo, #menuWhite, #menuBlack, #navClose{
+  height: 32px;
   width: auto;
 }
 .menu{
-  width: 42px;
-  height: 42px;
+  cursor: pointer;
+  padding: 10px;
+  margin: 0 32px;
+}
+
+/*
+.menu{
+  width: 40px;
+  height: 40px;
   padding: 10px;
   cursor: pointer;
   position: relative;
@@ -110,6 +133,80 @@ p{
 }
 .menu span::after{
   bottom: -9px;
+}
+.headerWhite .menu span, .headerWhite .menu span::before, .headerWhite .menu span::after{
+  background: #000;
+}
+*/
+
+
+/* ==========================
+-- MENU                    --
+========================== */
+
+.nav{
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  opacity: 0;
+  visibility: hidden;
+  background-color: white;
+  transition: all 800ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.navWrap{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  height: calc( 100vh - 56px );
+}
+.navSpacer{
+  height: 56px;
+}
+.navHeader{
+  font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
+  font-weight: 800;
+  margin-top: 18px;
+  font-size: 18px;
+  text-align: center;
+  color: black;
+}
+.navLinks{
+  font-family: Courier;
+  color: black;
+  font-size: 28px;
+  padding: 8px 0;
+  margin: 6px;
+  width: 30vw;
+  text-align: center;
+  transition: all 200ms ease;
+}
+.navLinks:hover{
+  color: white;
+  background-color: black;
+}
+.navOut{
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* ==========================
+-- HERO                    --
+========================== */
+
+.hero-grid{
+  width: 100vw;
+  grid-area: 1/1/2/2;
+
+  background: #000;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 56px 172px 200px 172px 1fr;
 }
 .jumbo{
   grid-area: 2/1/5/5;
@@ -142,61 +239,6 @@ p{
   font-family: "Nunito Sans";
   font-size: 20px;
   color: white;
-}
-
-
-/* ==========================
--- NAV                     --
-========================== */
-
-.home2{
-  opacity: 0;
-  grid-area: 1/1/2/2;
-  position: sticky;
-  top: calc( 50vh - 64px );
-  cursor: pointer;
-  padding: 10px;
-  margin: 0 32px;
-}
-#logo2{
-  height: 42px;
-  width: auto;
-}
-.menu2{
-  opacity: 0;
-  grid-area: 1/12/2/13;
-  justify-self: end;
-  width: 42px;
-  height: 42px;
-  padding: 10px;
-  cursor: pointer;
-  margin: 0 32px;
-  position: sticky;
-  top: calc( 50vh - 64px )
-}
-.menu2 span{
-  background: #000;
-  position: absolute;
-  top: 18px;
-  left: 6px;
-  right: 6px;
-  display: block;
-  height: 4px;
-}
-.menu2 span::before, .menu2 span::after{
-  content: '';
-  position: absolute;
-  display: block;
-  background: #000;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.menu2 span::before{
-  top: -9px;
-}
-.menu2 span::after{
-  bottom: -9px;
 }
 
 
@@ -334,15 +376,13 @@ p{
 .footer-grid{
   grid-area: 3/1/4/2;
   background-color: black;
-
-  padding: 96px 0;
+}
+.footerNav{
   display: flex;
   justify-content: space-around;
   align-items: center;
   color: white;
-}
-.prev{
-
+  padding: 12px 0;
 }
 .foot{
   font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
@@ -366,7 +406,26 @@ p{
   background-color: white;
   color: black;
 }
-
+.footerSoc{
+  text-align: center;
+  margin: 48px 0 12px 0;
+}
+.footerSoc p{
+  font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  vertical-align: middle;
+  color: white;
+  margin-bottom: 6px;
+}
+.social{
+  margin: 0 12px;
+}
+.social img{
+  width: 28px;
+  height: auto;
+  vertical-align: middle;
+}
 
 
 
@@ -376,11 +435,17 @@ p{
 
 @media screen and (max-width: 700px){
 
-  .home2, .menu2{
-    display: none;
+  .headerWhite{
+    background: -moz-linear-gradient( top, rgba(255,255,255,1) 75%, rgba(255,255,255,0) 100% ); /* FF3.6-15 */
+    background: -webkit-linear-gradient( top, rgba(255,255,255,1) 75%, rgba(255,255,255,0) 100% ); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient( to bottom, rgba(255,255,255,1) 75%, rgba(255,255,255,0) 100% );
   }
-  .content-grid{
-
+  #logo, #menuWhite, #menuBlack, #navClose{
+    height: 24px;
+    width: auto;
+  }
+  .page-grid{
+    grid-template-rows: 600px 1fr 377px;
   }
   .descrip{
     grid-column: 2/12;
@@ -397,9 +462,8 @@ p{
   video{
     max-width: 100%;
   }
-  .footer-grid{
+  .footerNav{
     flex-flow: column nowrap;
-    height: 360px;
   }
   .boxed{
     width: 80vw;
@@ -408,6 +472,21 @@ p{
   }
   .next{
     padding-top: 24px;
+  }
+
+}
+
+@media screen and (max-height: 580px){
+
+  .navHeader{
+    font-size: 14px;
+    margin-top: 14px;
+  }
+  .navLinks{
+    font-size: 18px;
+    padding: 6px 0;
+    margin: 4px;
+    width: 65vw;
   }
 
 }
