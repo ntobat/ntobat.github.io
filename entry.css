@@ -175,6 +175,9 @@ p{
   text-align: center;
   color: black;
 }
+#about{
+
+}
 .navLinks{
   font-family: Courier;
   color: black;
@@ -472,6 +475,12 @@ p{
   }
   .next{
     padding-top: 24px;
+  }
+  .navHeader{
+    margin-top: 14px;
+  }
+  .navLinks{
+    width: 65vw;
   }
 
 }
