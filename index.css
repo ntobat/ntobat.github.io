@@ -203,10 +203,9 @@ a{
 }
 .li svg line{
   stroke-width: 10;
-  stroke: #fff;
-  opacity: 0;
+  stroke: #000;
   fill: none;
-  transition: transform 0.6s ease-out;
+  transition: transform 0.6s ease-out, stroke 0.4s ease;
 }
 .li svg line.top, .li svg line.bottom{
   stroke-dasharray: 40vw;
@@ -216,7 +215,6 @@ a{
 }
 .li:hover svg line{
   stroke: #fff;
-  opacity: 1;
 }
 .li:hover svg line.top{
   transform: translateX(-80vw);
@@ -284,7 +282,7 @@ a.workli:hover, a.workli.active, a.notworkli:hover, a.notworkli.active{
   stroke-width: 10;
   stroke: #fff;
   fill: none;
-  transition: transform 0.6s ease-out, stroke 0.6s ease;
+  transition: transform 0.6s ease-out, stroke 0.4s ease;
 }
 .workli svg line.top, .workli svg line.bottom, .notworkli svg line.top, .notworkli svg line.bottom{
   stroke-dasharray: 259.25px;
