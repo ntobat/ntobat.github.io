@@ -1,0 +1,417 @@
+/* ==========================
+-- BODY                    --
+========================== */
+
+html{
+  box-sizing: border-box;
+}
+*, *:before, *:after{
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+body{
+  overflow: ;
+  min-height: 100vh;
+  background-color: black;
+}
+.navModal{
+  overflow: hidden;
+}
+/*p, h1, h2, h3, h4, h5, li, a{
+  color: white;
+}*/
+p, h1, h2, h3, h4, h5, li{
+  cursor: default;
+}
+a{
+  text-decoration: none;
+}
+.unselectable {
+  user-select: none;
+}
+
+
+/* ==========================
+-- PAGE                    --
+========================== */
+
+.page{
+  width: 100vw;
+}
+.page-grid{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 12px;
+  grid-template-rows: 56px 1fr;
+  grid-row-gap: 32px;
+}
+p{
+  font-size: 16px;
+}
+
+
+/* ==========================
+-- HEADER                  --
+========================== */
+
+.headerBlack{
+  grid-area: 1/1/2/13;
+
+  display: flex;
+  height: 56px;
+  opacity: 1;
+  justify-content: space-between;
+  align-items: baseline;
+  /*background-color: black;*/
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+.home{
+  cursor: pointer;
+  padding: 10px;
+  margin: 0 32px;
+}
+#logo, #menuWhite, #menuBlack, #navClose{
+  height: 32px;
+  width: auto;
+}
+.menu{
+  cursor: pointer;
+  padding: 10px;
+  margin: 0 32px;
+}
+
+
+/* ==========================
+-- MENU                    --
+========================== */
+
+.nav{
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  background-color: white;
+  transition: all 800ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.navWrap{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  height: calc( 100vh - 56px );
+}
+.navSpacer{
+  height: 56px;
+}
+.navHeader{
+  font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
+  font-weight: 800;
+  margin-top: 18px;
+  font-size: 18px;
+  text-align: center;
+  color: black;
+}
+#about{
+
+}
+.navLinks{
+  font-family: Courier;
+  color: black;
+  font-size: 28px;
+  padding: 8px 0;
+  margin: 6px;
+  width: 30vw;
+  text-align: center;
+  transition: all 400ms ease;
+}
+.navLinks:hover{
+  color: white;
+  background-color: black;
+}
+.navOut{
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* ==========================
+-- ????                    --
+========================== */
+
+.title{
+  grid-area: 2/2/3/12;
+  font-family: Courier;
+  color: white;
+  background-color: black;
+  height: 68px;
+  padding-top: 8px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 98;
+}
+.title::after{
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 64px;
+  transform: translateX(-50%);
+  width: 50vw;
+  height: 4px;
+  background-color: white;
+  margin-bottom: 72px;
+}
+.spacer{
+  grid-area: 3/1/4/13;
+  width: 64px;
+  height: 64px;
+}
+
+.iphone{
+  grid-area: 4/1/5/13;
+  margin: 0 auto;
+  position: relative;
+  width: 360px;
+  z-index: 19;
+}
+#iphonex{
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.ixdgif{
+  padding-top: 20px;
+  padding-left: 10px;
+  width: 270px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.ixdCaro{
+  grid-area: 4/2/5/12;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transform: translateX(0px);
+  transition: all 400ms ease;
+  z-index: 9;
+}
+
+.ixdCaro img{
+  width: 180px;
+  height: auto;
+  margin: 72px;
+  opacity: 0.75;
+  transition: all 200ms ease;
+}
+.ixdCaroArrow{
+  grid-area: 4/2/5/12;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  transition: all 400ms ease;
+  z-index: 9;
+}
+.arrowWrap{
+  background-color: black;
+  cursor: pointer;
+}
+.ixdCaroArrow img{
+  height: 56px;
+  width: auto;
+  margin: 24px;
+}
+/*.dot{
+  background-color: white;
+  border-radius: 100%;
+  width: 6px;
+  height: 6px;
+  align-self: flex-end;
+}*/
+.r-arr{
+  transform: scaleX(-1);
+}
+
+.secTitle{
+  grid-area: 5/1/6/13;
+  font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
+  color: white;
+  text-align: center;
+}
+
+.spaces{
+  grid-area: 6/1/7/13;
+  height: 220px;
+}
+
+
+
+
+/* ==========================
+-- FOOTER                  --
+========================== */
+
+.footer-grid{
+  grid-area: 8/1/9/13;
+  background-color: white;
+}
+.footerNav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: black;
+  padding: 12px 0;
+}
+.foot{
+  font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  color: black;
+  text-align: center;
+  padding: 12px 0;
+}
+.boxed{
+  text-align: center;
+  color: black;
+  width: 340px;
+  font-family: Courier;
+  font-size: 32px;
+  padding: 12px 48px;
+  display: block;
+  border: 2px solid black;
+  transition: all 200ms ease;
+  cursor: pointer;
+}
+.boxed:hover{
+  background-color: black;
+  color: white;
+}
+.footerSoc{
+  text-align: center;
+  margin: 48px 0 12px 0;
+}
+.footerSoc p{
+  font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  vertical-align: middle;
+  color: black;
+  margin-bottom: 6px;
+}
+.social{
+  margin: 0 12px;
+}
+.social img{
+  width: 28px;
+  height: auto;
+  vertical-align: middle;
+}
+
+
+
+
+
+
+/* ==========================
+-- MEDIA QUERIES           --
+========================== */
+
+@media screen and (max-width: 850px){
+
+  .page-grid{
+    grid-row-gap: 8px;
+  }
+  .title{
+    position: relative;
+  }
+  .ixdCaro{
+    display: none;
+  }
+  .iphone{
+    width: 280px;
+  }
+  #iphonex{
+    width: 100%;
+  }
+  .ixdgif{
+    transform: scale(0.78);
+    margin-top: -66px;
+  }
+  .ixdCaroArrow{
+    grid-area: 4/1/5/13;
+  }
+
+}
+
+@media screen and (max-width: 700px){
+
+  #logo, #menuBlack, #navClose{
+    height: 24px;
+    width: auto;
+  }
+  .footerNav{
+    flex-flow: column nowrap;
+  }
+  .boxed{
+    width: 80vw;
+    font-family: Courier;
+    font-size: 24px;
+  }
+  .next{
+    padding-top: 24px;
+  }
+  .navHeader{
+    margin-top: 14px;
+  }
+  .navLinks{
+    width: 65vw;
+  }
+
+}
+
+@media screen and (max-height: 580px){
+
+  .navHeader{
+    font-size: 14px;
+    margin-top: 14px;
+  }
+  .navLinks{
+    font-size: 18px;
+    padding: 6px 0;
+    margin: 4px;
+    width: 65vw;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
