@@ -9,12 +9,14 @@ $(function(){
 		var halfCaro = caroWid / 3;
 		if( ixdPos===2 ){
 			$(".ixdCaro").css("transform", "translateX(-" + caroWid + "px)");
-			$("#ixdLeftImg").animate({ opacity: 0.15 }, 50);
+			$("#ixdLeftImg").animate({ opacity: 0.15 }, 25);
+			$("#ixdRgtImg").animate({ opacity: 0 }, 25);
 			$(".ixdgif").attr("src", "assets/studio/menu.gif");
 			ixdPos += 1;
 		} else if ( ixdPos === 1 ){
 			$(".ixdCaro").css("transform", "translateX(0)");
-			$("#ixdRgtImg").animate({ opacity: 0.75 }, 50);
+			$("#ixdRgtImg").animate({ opacity: 0.75 }, 25);
+			$("#ixdLeftImg").animate({ opacity: 0.75 }, 25);
 			$(".ixdgif").attr("src", "assets/studio/product.gif")
 			ixdPos += 1;
 		}
@@ -29,11 +31,13 @@ $(function(){
 		if( ixdPos===2 ){
 			$(".ixdCaro").css("transform", "translateX(" + caroWid + "px)");
 			$("#ixdRgtImg").animate({ opacity: 0.15 }, 25);
+			$("#ixdLeftImg").animate({ opacity: 0 }, 25);
 			$(".ixdgif").attr("src", "assets/studio/reserve.gif")
 			ixdPos -= 1;
 		} else if ( ixdPos === 3 ){
 			$(".ixdCaro").css("transform", "translateX(0)");
 			$("#ixdLeftImg").animate({ opacity: 0.75 }, 25);
+			$("#ixdRgtImg").animate({ opacity: 0.75 }, 25);
 			$(".ixdgif").attr("src", "assets/studio/product.gif");
 			ixdPos -= 1;
 		}
