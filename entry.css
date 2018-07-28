@@ -452,9 +452,10 @@ p{
 @media screen and (max-width: 700px){
 
   .headerWhite{
-    background: -moz-linear-gradient( top, rgba(255,255,255,1) 75%, rgba(255,255,255,0) 100% ); /* FF3.6-15 */
-    background: -webkit-linear-gradient( top, rgba(255,255,255,1) 75%, rgba(255,255,255,0) 100% ); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient( to bottom, rgba(255,255,255,1) 75%, rgba(255,255,255,0) 100% );
+    background: white;
+  }
+  .headerBlack, .headerWhite{
+    height: 48px;
   }
   #logo, #menuWhite, #menuBlack, #navClose{
     height: 24px;

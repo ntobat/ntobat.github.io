@@ -518,6 +518,12 @@ a.workli:hover, a.workli.active, a.notworkli:hover, a.notworkli.active{
 
 }
 
+@media screen and (max-width: 885px){
+
+  .li{
+    width: 80vw;
+  }
+
 
 
 

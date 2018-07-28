@@ -3,7 +3,7 @@ $(function(){
 	var ixdPos = 2;
 
 	//move left
-	$(".l-arr").click(function(e){
+	$(".r-arr").click(function(e){
 		e.preventDefault();
 		var caroWid = ( $(".ixdCaro").width() / 3 );
 		var halfCaro = caroWid / 3;
@@ -26,7 +26,7 @@ $(function(){
 	});
 
 	//move right
-	$(".r-arr").click(function(e){
+	$(".l-arr").click(function(e){
 		e.preventDefault();
 		var caroWid = ( $(".ixdCaro").width() / 3 );
 		var halfCaro = caroWid / 3;
