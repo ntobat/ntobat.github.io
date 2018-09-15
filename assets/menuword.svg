@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 93 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <g transform="matrix(1,0,0,1,-15552,-13569.5)">
+        <g transform="matrix(1.52246,0,0,3.39769,3384.51,-42553.3)">
+            <g transform="matrix(1.22435,0,0,0.331074,-2551.85,11043.4)">
+                <g transform="matrix(0.244466,0,0,0.87367,6443.62,2909.77)">
+                    <rect x="9002.28" y="15596" width="69.857" height="3.737" style="fill:white;"/>
+                </g>
+                <g transform="matrix(0.244466,0,0,0.87367,6443.62,2919.15)">
+                    <rect x="9002.28" y="15596" width="69.857" height="3.737" style="fill:white;"/>
+                </g>
+                <g transform="matrix(0.244466,0,0,0.87367,6443.62,2928.54)">
+                    <rect x="9002.28" y="15596" width="69.857" height="3.737" style="fill:white;"/>
+                </g>
+            </g>
+        </g>
+        <g transform="matrix(1.52246,0,0,3.39769,3384.51,-42553.3)">
+            <g transform="matrix(0.656831,0,0,0.294317,994.496,12499.6)">
+                <text x="10652.3px" y="13672.9px" style="font-family:'SairaCondensed-Bold', 'Saira Condensed';font-weight:700;font-stretch:condensed;font-size:22px;fill:white;">MENU</text>
+            </g>
+        </g>
+    </g>
+</svg>
