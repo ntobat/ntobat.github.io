@@ -52,7 +52,7 @@ a{
 .inlink{
   border-bottom: 1px dashed black;
 }
-.anchor{
+.anchor, #title{
   padding-top: 135px;
   margin-top: -135px;
 }
@@ -65,10 +65,8 @@ a{
   width: 60px;
   margin-bottom: 12px;
 }
-.img{
+.img img, .img video{
   box-shadow: -10px 10px rgba(0,0,0,0.08);
-}
-.img img{
   width: 100%;
 }
 
@@ -106,6 +104,7 @@ a{
   letter-spacing: 5px;
   font-weight: 700;
   line-height: 52px;
+  transition: all 500ms ease;
 }
 .navi a, .jump, .siteNav a{
   color: white;
@@ -120,24 +119,27 @@ a{
   margin-bottom: 15px;
 }
 .navigator a{
-  opacity: 0.65;
+  opacity: 0.35;
   transition: all 500ms ease;
 }
 .navigator a:hover{
-  opacity: 1;
+  opacity: 0.75;
 }
 .active{
   opacity: 1!important;
 }
 .hidden{
   opacity: 0;
-  display: none;
+  visibility: hidden;
 }
 .siteNav{
   font-size: 20px;
   letter-spacing: 5px;
   font-weight: 700;
   line-height: 52px;
+  position: absolute;
+  top: 154px;
+  transition: all 500ms ease;
 }
 #credits{
   color: white;
@@ -260,6 +262,12 @@ a{
   font-weight: 700;
   margin-bottom: 6px;
 }
+.subSecHead{
+  font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 36px;
+}
 .section p{
   font-family: "Nunito Sans", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
   font-size: 16px;
@@ -318,6 +326,7 @@ a{
   text-indent: 16px;
   font-weight: 600;
   font-size: 16px;
+  line-height: 30px;
 }
 #researchImg{
   grid-area: 8/1/9/2;
@@ -342,6 +351,55 @@ p.indent{
 #personaCaption{
   grid-area: 10/2/11/3;
 }
+
+.concl{
+  grid-area: 11/1/12/2;
+}
+
+.design{
+  grid-area: 12/1/13/2;
+}
+
+#explImg{
+  grid-area: 13/1/14/2;
+}
+#explCaption{
+  grid-area: 13/2/14/3; 
+}
+
+.designi{
+  grid-area: 14/1/15/2;
+}
+
+#visImg{
+  grid-area: 15/1/16/2;
+}
+#visCaption{
+  grid-area: 15/2/16/3; 
+}
+
+.lofi{
+  grid-area: 16/1/17/2;
+}
+#lofiImg{
+  grid-area: 17/1/18/2;
+}
+
+.hifi{
+  grid-area: 18/1/19/2;
+}
+#hifiImg{
+  grid-area: 19/1/20/2;
+}
+.wrap{
+  grid-area: 20/1/21/2;
+}
+
+.bottom{
+  grid-area: 21/1/22/2;
+}
+
+
 
 
 
