@@ -107,23 +107,37 @@ a{
   font-weight: 700;
   line-height: 52px;
 }
-.navi a, .navigator a{
+.navi a, .jump, .siteNav a{
   color: white;
   display: block;
 }
-#navTitle{
+.navTitle{
   border-bottom: 1px solid white;
   margin-bottom: 15px;
 }
 .navigator{
   text-indent: 24px;
+  margin-bottom: 15px;
 }
 .navigator a{
   opacity: 0.65;
   transition: all 500ms ease;
 }
+.navigator a:hover{
+  opacity: 1;
+}
 .active{
   opacity: 1!important;
+}
+.hidden{
+  opacity: 0;
+  display: none;
+}
+.siteNav{
+  font-size: 20px;
+  letter-spacing: 5px;
+  font-weight: 700;
+  line-height: 52px;
 }
 #credits{
   color: white;
@@ -346,7 +360,7 @@ p.indent{
     z-index: 99;
     box-shadow: 0 1px 16px rgba(0, 0, 0, 0.45), 0 -15px rgba(255,255,255,0.9)
   }
-  .navi{
+  .navi, .siteNav{
     display: none;
   }
   #credits{

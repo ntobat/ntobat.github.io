@@ -34,4 +34,30 @@ $(function(){
 
     });
 
+    $('.menu').click(function(event) {
+
+        event.preventDefault();
+
+        if( $(".navi").hasClass('hidden') ){
+            $(".navi").removeClass('hidden');
+            $(".siteNav").addClass('hidden');
+        } else {
+            $(".navi").addClass('hidden');
+            $(".siteNav").removeClass('hidden');
+        };
+
+        if( $("#menu").hasClass('menuOpen') ){
+            $("#menu").attr('src', 'assets/menuWord.svg').removeClass('menuOpen');
+        } else {
+            $("#menu").attr('src', 'assets/menuWordClose.svg').addClass('menuOpen');
+        };
+
+
+    });
+
 });
+
+
+
+
+
