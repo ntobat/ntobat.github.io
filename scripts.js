@@ -157,6 +157,7 @@ $(function(){
 	*/
 
 	//prevent immediate navigation
+/*
 	$(".button").click(function(e){
     e.preventDefault();
     var goTo = this.getAttribute("href");
@@ -171,7 +172,7 @@ $(function(){
       window.location = goTo;
     }, 1800);
 	});
-
+*/
 	//entry: scroll fade header nav
 	$(window).scroll(function(){
 		var height = $(this).scrollTop();

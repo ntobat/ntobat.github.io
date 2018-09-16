@@ -422,13 +422,30 @@ p.indent{
   .navbar{
     position: fixed;
     width: 100vw;
-    height: 100px;
-    padding: 24px 25px 0 25px;
+    height: 80px;
+    padding: 14px 25px 0 15px;
     z-index: 99;
     box-shadow: 0 1px 16px rgba(0, 0, 0, 0.45), 0 -15px rgba(255,255,255,0.9)
   }
-  .navi, .siteNav{
+  .navi{
     display: none;
+  }
+  .siteNav{
+    background-color: white;
+    width: 100vw;
+    height: calc(100vh - 100px);
+    top: 100px;
+    left: 0;
+    padding-left: calc(50vw - 200px);
+    padding-top: 15px;
+    overflow-y: scroll;
+    box-shadow: 0 -20px white;
+  }
+  .siteNav a{
+    color: black;
+  }
+  .navTitle{
+    border-bottom: 1px solid black;
   }
   #credits{
     display: none;
@@ -439,10 +456,10 @@ p.indent{
   .content{
     grid-area: 1/1/2/2;
     grid-template-columns: 1fr;
-    padding: 184px 25px 100px 25px;
+    padding: 184px 50px 100px 50px;
   }
   .title{
-    margin: 140px 0 10px 25px;
+    margin: 100px 0 10px 25px;
     padding: 10px;
     height: 64px;
     width: calc(100vw - 50px);
@@ -457,10 +474,12 @@ p.indent{
     display: none;
   }
   #rundown{
-    margin-top: 60px;
+    margin-top: 30px;
   }
   .ovMainArea{
     flex-flow: column wrap;
+    align-items: flex-start;
+    padding-left: 10px;
   }
   .ovImg{
     max-width: 100%;
@@ -469,13 +488,22 @@ p.indent{
   #trumpcoin{
     width: inherit;
   }
+  .img img{
+    max-height: calc(100vh - 120px);
+    object-fit: cover;
+  }
 
 }
 
+@media screen and (max-width: 500px){
+  
+  .content{
+    grid-area: 1/1/2/2;
+    grid-template-columns: 1fr;
+    padding: 184px 25px 100px 25px;
+  }
 
-
-
-
+}
 
 
 
