@@ -1,7 +1,5 @@
 $(function(){
 
-    $("#menu").replaceWith("<img id='menu' class='menuClosed' src='assets/menuWord.svg' />").fadeTo(100, 1);
-
     var navi = navi = $('.navigator');
 
     $('.jump').click(function(event) {
@@ -63,7 +61,7 @@ $(function(){
 
             $("#menu").fadeTo(250, 0);
             setTimeout(function(){
-                $("#menu").replaceWith("<img id='menu' class='menuClosed' src='assets/menuWord.svg' />").fadeTo(250, 1);
+                $("#menu").replaceWith("<img id='menu' class='menuClosed' src='assets/siteMenu.svg' />").fadeTo(250, 1);
             }, 250);
 
         };
