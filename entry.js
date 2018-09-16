@@ -1,5 +1,7 @@
 $(function(){
 
+    $("#menu").replaceWith("<img id='menu' class='menuClosed' src='assets/menuWord.svg' />").fadeTo(100, 1);
+
     var navi = navi = $('.navigator');
 
     $('.jump').click(function(event) {
@@ -63,14 +65,7 @@ $(function(){
             setTimeout(function(){
                 $("#menu").replaceWith("<img id='menu' class='menuClosed' src='assets/menuWord.svg' />").fadeTo(250, 1);
             }, 250);
-            /*
-            setTimeout(function(){
-                $("#menu").attr('src', 'assets/menuWord.svg').removeClass('menuOpen');
-            }, 150);
-        } else {
-            setTimeout(function(){
-                $("#menu").attr('src', 'assets/menuWordClose.svg').addClass('menuOpen');
-            }, 150);*/
+
         };
 
     });
