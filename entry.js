@@ -74,7 +74,7 @@ $(function(){
 
         var threec = $("#threec").offset().top;
         var threecDistance = (threec - scrollTop);
-        var threecHeight = 0 - (($("#research").offset().top) - ($("#threec").offset().top));
+        var threecHeight = 0 - ( ($("#research").offset().top) - ($("#threec").offset().top) );
         if( (0 >= threecDistance) && (threecDistance >= threecHeight) ){
             $('.jump[href$="threec"]').addClass('active');
         } else {

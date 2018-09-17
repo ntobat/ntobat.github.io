@@ -14,173 +14,273 @@
   <title>Kinis | Nicholas Tobat - Designer</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="entry_v3.css">
+  <link rel="stylesheet" href="entry.css">
   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,800|Saira+Condensed:400,700" rel="stylesheet">
   <link rel="icon" type="img/ico" href="assets/favicon.ico">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="scripts.js"></script>
+  <script src="entry.js"></script>
 </head>
 
 <body>
-  
-      
+
+
 <div class="page unselectable">
 
-  <div class="nav">
-    <div class="navSpacer"></div>
-    <div class="navWrap">
-      <p class="navHeader">WORK</p>
-        <a class="navLinks" href="2050.html">AMERICA 2050</a>
-        <a class="navLinks" href="kinis.html">KINIS</a>
-        <a class="navLinks" href="edna.html">EDNA</a>
-      <br>
-      <p class="navHeader">NOT WORK</p>
-      <a class="navLinks" href="studio.html">STUDIO</a>
-      <a class="navLinks" href="fairytale.html">FAIRY TALE</a>
-      <a class="navLinks" href="misc.html">MISC.</a>
-      <br>
-      <a class="navHeader" href="about.html">ABOUT</a>
-    </div>
-  </div>
+  <div id="tops"></div>
 
-  <div class="page-grid">
-
-    <div class="headerBlack">
+  <div class="navbar">
+    <div class="header">
       <a class="home" href="index.html">
         <img id="logo" src="assets/logo.svg" />
       </a>
       <a class="menu" href="#">
-        <img id="menuWhite" src="assets/menu.svg" />
+        <img id="menu" class="menuClosed" src="assets/menuWord.png" />
       </a>
     </div>
-    <div class="headerWhite">
-      <a class="home" href="index.html">
-        <img id="logo" src="assets/logoBlack.png" />
-      </a>
-      <a class="menu" href="#">
-        <img id="menuBlack" src="assets/menuBlack.svg" />
-      </a>
+    <div class="navi">
+      <a class="navTitle jump" href="#title">KINIS</a>
+      <div class="navigator">
+        <!--<a class="jump" href="#">INTRODUCTION</a>
+        <a class="jump" href="#">RESEARCH</a>
+        <a class="jump" href="#">PERSONA</a>
+        <a class="jump" href="#">STEP 1</a>
+        <a class="jump" href="#">STEP 2</a>
+        <a class="jump" href="#">STEP 3</a>
+        <a class="jump" href="#">STEP 4</a>
+        <a class="jump" href="#">STEP 5</a>
+        <a class="jump" href="#">STEP 6</a>
+        <a class="jump" href="#">STEP 7</a>
+        <a class="jump" href="#">WRAP-UP</a>-->
+      </div>
     </div>
-    
-    <div class="hero-grid" style="background-image: url('assets/kinis/logo.svg'); background-size: contain; background-position: center; background-repeat: no-repeat;">
+    <div class="siteNav hidden">
+      <a href="#" class="navTitle">WORK</a>
+      <div class="navigator">
+        <a href="2050.html" >AMERICA 2050</a>
+        <a href="depot.html">HOME DEPOT</a>
+        <a href="#title" style="opacity: 1">KINIS</a>
+        <a href="edna.html">EDNA</a>
+      </div>
+      <a href="" class="navTitle">NOT WORK</a>
+      <div class="navigator">
+        <a href="studio.html">STUDIO</a>
+        <a href="fairytale">FAIRY TALE</a>
+        <a href="misc.html">MISC.</a>
+      </div>
+      <a href="about.html" class="navTitle">ABOUT</a>
+    </div>
+    <div id="credits">DESIGNED & DEVELOPED BY NICHOLAS TOBAT ©2018</div>
+  </div>
 
-      <div class="jumbo">
-        <div class="jumbo-space"></div>
-        <div class="jumbo-txt">
-          <h1 class="title">KINIS</h1>
-          <div class="divider"></div>
-          <h3 class="subtitle">Visual Identity</h3>
+
+  <div class="content">
+    <div class="title">
+      <h1>KINIS</h1>
+      <!--<img id="uidesign" src="assets/ui.svg" />
+      <img src="assets/ux.svg" />
+      <img src="assets/game.svg" /> -->
+    </div>
+    <div class="rundownWrap" id="title">
+      <div id="rundown">
+        <h3 id="descrip">I developed the branding, identity, and website for Kinis, a barefoot apparel startup in Richmond, VA.</h3>
+      </div>
+    </div>
+
+    <div class="ovMainArea">
+      <div class="ovTxt">
+        <div class="ovTxtSec">
+          <p class="ubtitle">Kinis Co.</p>
+          <p class="subtitle">CLIENT</p>
         </div>
-        <div class="jumbo-space"></div>
+        <div class="ovTxtSec">
+          <p class="ubtitle">Branding, Visual Design, Web Design</p>
+          <p class="subtitle">DISCIPLINE</p>
+        </div>
+        <div class="ovTxtSec">
+          <p class="ubtitle">Digital Identity & Branding</p>
+          <p class="subtitle">PRODUCT</p>
+        </div>
       </div>
-
+      <div class="ovImg img">
+        <img id="ovImg" src="assets/kinis/logo_v.svg" />
+      </div>
+    </div>
+    <div class="caption" id="ovCaption">
+      <hr>
+      <p> </p>
     </div>
 
-    <div class="content-grid">
-    
-      <h3 class="descrip">The visual identity of a brand is important for awareness, consistency, and the development of an emotional bond between the company and its customers.</h3>
-      <figure>
-        <img id="pages" src="assets/kinis/kinis2.png" />
-        <figcaption>Pages from the Visual ID book.</figcaption>
-      </figure>
 
-      <div class="section">
-        <h3 class="sec-header"><span class="number">01</span>&nbsp;&nbsp;&nbsp;_OVERVIEW</h3><br>
-        <h5 class="sub-header">_CONTEXT /</h5>
-        <p>Kinis is a barefoot apparel startup based in Richmond, VA. They launched with a prototype and a mission: raise awareness about the benefits of barefoot exercise and equip people with the footwear necessary to make the switch. I was brought on to develop their brand identity and style guide.</p>
-        <br>
-        <h5 class="sub-header">_CHALLENGE /</h5>
-        <p>The challenge here was to create mountains out of a molehill. The founder was extremely passionate about his product and mission, and he had some initial assets to work off of, but he was not great at articulating his vision for the brand identity. There was a lot of trial and error, but hey, that's what design is all about.</p><br>
-        <h5 class="sub-header">_CONCEPT /</h5>
-        <p>Kinis is all about the future of exercise and the movement to barefoot training. Much of the research supporting barefoot exercise hearkens to the habits and practices of our ancestors, who lived their entire lives sans shoes. Therefore, the brand identity pays respect to early human cave art while utilizing sleek and modern curves to link past and future.</p>
-      </div>
-      <figure>
-        <img id="mark" class="no_sh" src="assets/kinis/logo_h.svg" />
-        <figcaption>The Kinis logo and wordmark.</figcaption>
-      </figure>
+    <div class="section section-1">
+      <h2 class="secHead anchor" id="threec">THREE C's</h2>
+      <h3 class="subSecHead">1. CONTEXT</h3>
+      <p>Kinis is a barefoot apparel startup based in Richmond, VA. They launched with a prototype and a mission: raise awareness about the benefits of barefoot exercise and equip people with the footwear necessary to make the switch. I was brought on to develop their brand identity and style guide.</p>
+    </div>
+    <div class="section section-2">
+      <h3 class="subSecHead">2. CHALLENGE</h3>
+      <p>The challenge here was to create mountains out of a molehill. The founder was extremely passionate about his product and mission, and he had some initial assets to work off of, but he was not great at articulating his vision for the brand identity. There was a lot of trial and error, but hey, that's what design is all about.</p>
+    </div>
+    <div class="section section-3">
+      <h3 class="subSecHead">3. CONCEPT</h3>
+      <p>Kinis is all about the future of exercise and the movement to barefoot training. Much of the research supporting barefoot exercise hearkens to the habits and practices of our ancestors, who lived their entire lives sans shoes. Therefore, the brand identity pays respect to early human cave art while utilizing sleek and modern curves to link past and future.</p>
+    </div>
+    <!--
+    <div class="section section-4 img" id="conceptImg">
+        <img id="slap" src="assets/america/slap.gif" />
+    </div>
+    <div class="caption" id="conceptCaption">
+      <hr>
+      <p>A look at the "Whack-A-Scientist" game, in which you silence climate change scientists for a cash reward.</p>
+    </div>
 
-      <div class="section">
-        <h3 class="sec-header"><span class="number">02</span>&nbsp;&nbsp;&nbsp;_DESIGN</h3><br>
-        <h5 class="sub-header">_COMPONENTS /</h5>
-        <p>A brand identity can include or exclude many elements. In this case, I included the following:</p>
+    <div class="section section-5">
+      <h2 class="secHead anchor" id="research">RESEARCH</h2>
+      <p>Our research was primarily conducted online and supported by candid conversations with the target audience we identified. Our key findings didn't reveal any groundbreaking insight, but served to remind us of the breadth of the problem we were trying to solve. We organized the many facets of the issue at hand into four categories:</p>
         <ul class="list">
-          <li>1. &nbsp;&nbsp;Logo</li>
-          <li>2. &nbsp;&nbsp;Wordmark</li>
-          <li>3. &nbsp;&nbsp;Color Palette</li>
-          <li>4. &nbsp;&nbsp;Typography</li>
-          <li>5. &nbsp;&nbsp;Icon & Imagery guidelines</li>
+          <li>1. &nbsp;&nbsp;Voter apathy</li>
+          <li>2. &nbsp;&nbsp;General & specific lack of political knowledge</li>
+          <li>3. &nbsp;&nbsp;Politics, as a subject, is "lame"</li>
+          <li>4. &nbsp;&nbsp;US government is incredibly complex</li>
         </ul>
-        <br>
-        <h5 class="sub-header">_KINIS VISUAL IDENTITY /</h5>
-        <p>Following are pages from the book I created for Kinis.</p>
-        <br>
-        <figure>
-          <img id="pg0" src="assets/kinis/0.png" />
-        </figure>
-        <br>
-        <figure>
-          <img id="pg1" src="assets/kinis/1.png" />
-        </figure>
-        <br>
-        <figure>
-          <img id="pg2" src="assets/kinis/2.png" />
-        </figure>
-        <br>
-        <figure>
-          <img id="pg3" src="assets/kinis/3.png" />
-        </figure>
-        <br>
-        <figure>
-          <img id="pg4" src="assets/kinis/4.png" />
-        </figure>
-        <br>
-        <figure>
-          <img id="pg5" src="assets/kinis/5.png" />
-        </figure>
-        <br>
-        <figure>
-          <img id="pg6" src="assets/kinis/6.png" />
-        </figure>
-        <br>
-        <figure>
-          <img id="pg7" src="assets/kinis/7.png" />
-        </figure>
-        <br>
-      </div>
-      
-
-
+      <p>Phew, that is a lot to tackle. Our initial explorations largely focused on #2, giving rise to ideas such as: a "Guess Who?" game for politicians; a localized issue-tracking app (<a class="inlink" target="_blank" href="http://countable.us">already exists</a>); politician trading cards; and a Build-Your-Own Political Platform competition among schools. Unfortunately, these initial ideas all suffered from the lame-ness that seems inextricably linked to all things political. Our biggest takeaway was nothing new: <span class="bold">gamification makes boring stuff fun!</span></p>
     </div>
 
-
-
-
-    <div class="footer-grid">
-      <div class="footerNav">
-        <div class="prev">
-          <p class="foot foot-left">VIEW PREVIOUS</p>
-          <p><a class="boxed" href="2050.html">AMERICA 2050</a></p>
-        </div>
-        <div class="next">
-          <p class="foot foot-right">VIEW NEXT</p>
-          <p><a class="boxed" href="edna.html">EDNA</a></p>
-        </div>
-      </div>
-      <div class="footerSoc">
-        <p>SOCIAL NETWORKS</p>
-        <a class="social" href="https://www.linkedin.com/in/nicktobat/" target="_blank">
-          <img src="assets/linkedin.svg">
-        </a>
-        <a class="social" href="https://www.instagram.com/nicktobat/" target="_blank">
-          <img src="assets/instagram.svg">
-        </a>
-      </div>
+    <div class="section section-6 img" id="researchImg">
+        <img src="assets/america/concepting.png" />
     </div>
+    <div class="caption" id="researchCaption">
+      <hr>
+      <p>Initial concepting brought to you by everyone's favorite (and not at all frustrating) collaboration tool, Google Docs.</p>
+    </div>
+
+    <div class="section section-7">
+      <h2 class="secHead anchor" id="persona">PERSONA</h2>
+      <p>Crafting a user persona for this project was fairly easy, given the Crooked Media listenership demographics. Jill Abramson, former NY Times editor and current Guardian contributor, summed it up thusly:</p>
+      <p class="indent">“They have the young liberal demographic sewn up in the same way Jon Stewart did on cable in 2000." (<a class="inlink" target="_blank" href="https://www.theguardian.com/media/2018/jan/09/pod-save-america-podcast-european-tour-jon-favreau-obama">source</a>)</p>
+      <p>Basically, we were targeting young left-leaning millennials, perhaps entering the political fray for the first time, likely feeling disenchanted with Trump-era politics, and exhibiting a desire to fight for change or at least willing to educate themselves and stay up to date on what's happening. Here's Troy:
+    </div>
+
+    <div class="section section-8 img" id="personaImg">
+        <img src="assets/america/troy.png" />
+    </div>
+    <div class="caption" id="personaCaption">
+      <hr>
+      <p>Gosh, Troy is such a classic Millenial. Handsome, too.</p>
+    </div>
+
+    <div class="section section-9">
+      <h2 class="secHead anchor" id="conclusions">CONCLUSIONS</h2>
+      <p>We were designing an educational tool for young liberals who, while ostensibly concerned with the state of politics in America, are likely shockingly ignorant of the political system itself. There are many reasons for this ignorance, and our solution must sidestep these obstacles by correctly applying the principles of gamification to drive engagement and subvert the “politics = boring” mindset.</p>
+      <br>
+      <p>With all of this in mind, AMERICA 2050 was born — a gaming platform set in a not-too-distant dystopian future, where users play as villainous lobbyists trying to get their crooked agendas through Congress. The American government has shed its mask of democracy and the real lawmaking mechanism has been laid bare: cash money. The various games tackle different issues that our nation is currently dealing with, from an exaggerated and satirical standpoint. The user plays games to collect coins and buy laws, which unlock new games and increase their standing on the leaderboard.</p>
+    </div>
+
+    <div class="section section-10">
+      <h2 class="secHead anchor" id="design">DESIGN</h2>
+      <h3 class="subSecHead">1. CONSIDERATIONS</h3>
+      <p>While education was the ultimate goal, it was not what would bring users to the table. The key consideration here was to create something fun and engaging with the educational aspect almost a side-effect of the overall experience. We also needed to break the complex topic into manageable chunks. And, of course, we had to consider the user’s knowledge base and the best way to use gamification to bridge the gap.</p>
+      <br>
+      <h3 class="subSecHead">2. EXPLORATION</h3>
+      <p>We looked at a diverse array of sources for inspiration, including the United States' <a class="inlink" href="https://en.wikipedia.org/wiki/Flag_of_the_United_States#Colors" target="_blank">official color palette</a>, old video games, and of course Crooked Media itself.</p>
+    </div>
+
+    <div class="section section-11 img" id="explImg">
+      <img id="vis" src="assets/america/visexplore.png" />
+    </div>
+    <div class="caption" id="explCaption">
+      <hr>
+      <p>Fortnite, anyone?</p>
+    </div>
+
+    <div class="section section-12">
+      <p>Ultimately, we decided to move ahead with a slightly modified Crooked Media color palette and an 8-bit pixel art style. Both of these decisions were rooted in familiarity — we anticipated the vast majority of users to discover the platform via Crooked Media, and using the same color palette would help link the two in their minds. The 8-bit style was chosen to provide a level of abstraction from political reality as well as a callback to the target audience’s younger days and the video games of the 80s and 90s.</p>
+    </div>
+
+    <div class="section section-13 img" id="visImg">
+      <img id="vis" src="assets/america/visid.png" />
+    </div>
+    <div class="caption" id="visCaption">
+      <hr>
+      <p>8-Bit Art is Fun!</p>
+    </div>
+
+    <div class="section section-14">
+      <h2 class="secHead anchor" id="lofi">LO-FI</h2>
+      <p>Working off a low fidelity sketch of the interface, we mapped out a user flow to ensure we included everything the user needed and excluded anything extraneous.</p>
+    </div>
+
+    <div class="section section-15 img" id="lofiImg">
+      <img id="lofi" src="assets/america/lofi.png" /><br><br><br>
+      <img id="flow" src="assets/america/flow.png" /><br><br><br>
+      <img id="beta" src="assets/america/beta.png" />
+    </div>
+
+    <div class="section section-16">
+      <h2 class="secHead anchor" id="hifi">HI-FI</h2>
+      <p>The finished product! Below you will see mockups for both a desktop & mobile version, a product launch booth at SXSW, and advertising materials and merchandise. There is also a prototype of the flagship game, Whack-a-Scientist, animated entirely in Keynote.</p>
+    </div>
+
+    <div class="section section-17 img" id="hifiImg">
+      <img id="home" src="assets/america/home.png" /><br><br><br>
+      <video width="800" controls>
+        <source src="assets/america/welcome.mp4" type="video/mp4" />
+      </video><br><br><br>
+      <video width="800" controls>
+        <source src="assets/america/whack.mp4" type="video/mp4" />
+      </video><br><br><br>
+      <img id="mobile" src="assets/america/mobile_mock.jpeg" /><br><br><br>
+      <img id="booth" src="assets/america/booth.png" /><br><br><br>
+      <img id="booth2" src="assets/america/booth2.png" /><br><br><br>
+      <img id="merch" src="assets/america/merch.png" /><br><br><br>
+      <img id="poster" src="assets/america/poster.gif" />
+    </div>
+
+    <div class="section section-18">
+      <h2 class="secHead anchor" id="wrap">WRAP-UP</h2>
+      <h3 class="subSecHead">1. ROLE</h3>
+      <p>I was responsible for quite a bit of this project, including:</p>
+        <ul class="list">
+          <li>Concept</li>
+          <li>Name</li>
+          <li>Visual Identity</li>
+          <li>8-Bit Art</li>
+          <li>Wireframing</li>
+          <li>Web & Mobile UI Design</li>
+          <li>User Flow</li>
+          <li>Prototype</li>
+          <li>Animation</li>
+        </ul>
+      <br>
+      <h3 class="subSecHead">2. TEAM</h3>
+        <ul class="list">
+          <li>Lauren Acampora, Art Director</li>
+          <li>Colin O'Shea, Art Director</li>
+          <li>Joe Jones, Art Director</li>
+          <li>Meghan Gaffney, Experience Designer</li>
+          <li>Belem Medina, Experience Designer</li>
+        </ul>
+      <br>
+      <h3 class="subSecHead">3. TOOLS</h3>
+        <ul class="list">
+          <li>Affinity Designer: 8-bit art, UI design</li>
+          <li>Sketch: Wireframe, user flow</li>
+          <li>Keynote: Prototyping</li>
+          <li>Google Drive: Concepting, collaboration</li>
+        </ul>
+      <br>
+      <p>That's a wrap!</p>
+      </div>
+
+      <div class="bottom section" id="bottom-edna">
+        <h2 class="secHead anchor" id="bottom" style="opacity: 0; visibility: hidden;">END</h2>
+      </div>
+-->
+
 
   </div>
 
+
 </div>
 
+
 </body>
-</html>

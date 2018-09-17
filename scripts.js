@@ -216,24 +216,4 @@ $(function(){
 	console.log( $(window).scrollTop() );
 
 });
-/*
-$(window).on("load", function(){
-
-	//back-nav from work item
-	var refer = document.referrer;
-	var url = window.location.href;
-	console.log(refer, url);
-	if( refer === "http://localhost:8000/logos/sw.html" ){
-		console.log("hi");
-		$(".container-3").hide();
-		$(".container-5").css("visibility", "visible").animate( { opacity: 1 }, 800 );
-		$(".bread").replaceWith( "<div class=\"bread\"> <a href=\"index.html\">nicktobat</a> <p>&nbsp;/&nbsp;</p> <a href=\"work.html\">work</a> <p>&nbsp;/&nbsp;</p> <a href=\"\" onclick=\"return false;\">logos</a> </div>" )
-	};
-
-
-
-});
-
-
-*/
 
