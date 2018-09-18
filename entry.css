@@ -264,21 +264,25 @@ a{
 #ovCaption{
   grid-area: 2/2/3/3;
 }
-
+.secImg{
+  margin: 25px 0;
+}
 .section-1{
   grid-area: 3/1/4/2;
 }
 .secHead{
   font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 700;
-  margin-bottom: 6px;
+  margin-bottom: 15px;
+  border-bottom: 1.5px solid black;
 }
 .subSecHead{
   font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 36px;
+  margin-bottom: 10px;
 }
 .section p{
   font-family: "Nunito Sans", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
@@ -323,7 +327,9 @@ a{
 #conceptCaption{
   grid-area: 6/2/7/3;
 }
-
+#depotPersonaCaption{
+  grid-area: 6/2/7/3;
+}
 .section-5{
   grid-area: 7/1/8/2;
 }
@@ -348,6 +354,9 @@ a{
 .section-7{
   grid-area: 9/1/10/2;
 }
+#depotJourneyCaption{
+  grid-area: 9/2/10/3;
+}
 p.indent{
   font-family: Courier;
   padding: 28px 0;
@@ -364,6 +373,9 @@ p.indent{
 
 .section-9{
   grid-area: 11/1/12/2;
+}
+#depotARCaption{
+  grid-area: 11/2/12/3;
 }
 
 .section-10{
@@ -404,12 +416,24 @@ p.indent{
 .section-18{
   grid-area: 20/1/21/2;
 }
+.section-19{
+  grid-area: 21/1/22/2;
+}
+.section-20{
+  grid-area: 22/1/23/2;
+}
+.section-21{
+  grid-area: 23/1/24/2;
+}
+.section-22{
+  grid-area: 24/1/25/2;
+}
 
 #bottom-2050{
   grid-area: 21/1/22/2;
 }
 #bottom-depot{
-  grid-area: 21/1/22/2;
+  grid-area: 25/1/26/2;
 }
 
 
