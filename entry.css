@@ -385,6 +385,10 @@ p.indent{
 .section-11{
   grid-area: 13/1/14/2;
 }
+#depotKioskCaption{
+  grid-area: 13/2/14/3;
+}
+
 #explCaption{
   grid-area: 13/2/14/3; 
 }
@@ -428,12 +432,18 @@ p.indent{
 .section-22{
   grid-area: 24/1/25/2;
 }
+.section-23{
+  grid-area: 25/1/26/2;
+}
+#depotWrapCaption{
+  grid-area: 25/2/26/3;
+}
 
 #bottom-2050{
   grid-area: 21/1/22/2;
 }
 #bottom-depot{
-  grid-area: 25/1/26/2;
+  grid-area: 26/1/27/2;
 }
 
 
