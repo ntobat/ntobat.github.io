@@ -46,11 +46,11 @@ a{
 .page{
   width: 100%;
   display: grid;
-  grid-template-columns: 280px 1fr;
-  grid-template-rows: 1fr 280px;
+  grid-template-columns: 260px 1fr;
+  grid-template-rows: 1fr 220px;
 }
 .inlink{
-  border-bottom: 1px dashed black;
+  border-bottom: 1px dashed rgba(0,0,0,0.75);
 }
 .anchor, #title{
   padding-top: 135px;
@@ -79,16 +79,16 @@ a{
   grid-area: 1/1/2/2;
   background-color: black;
   position: fixed;
-  width: 280px;
+  width: 260px;
   height: 100%;
-  padding: 40px 25px 0 25px;
+  padding: 30px 20px 0 20px;
   font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
 }
 .header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 55px;
+  margin-bottom: 36px;
 }
 #logo{
   height: 52px;
@@ -100,7 +100,7 @@ a{
 }
 
 .navi{
-  font-size: 20px;
+  font-size: 18px;
   letter-spacing: 5px;
   font-weight: 700;
   line-height: 52px;
@@ -117,7 +117,7 @@ a{
 .navigator{
   overflow-y: scroll;
   max-height: calc(100vh - 256px);
-  text-indent: 24px;
+  text-indent: 18px;
   margin-bottom: 15px;
 
 }
@@ -149,7 +149,7 @@ a{
   font-size: 10px;
   position: absolute;
   bottom: 0;
-  padding: 10px 5px 20px 0;
+  padding: 10px 5px 5px 0;
   background-color: black;
 }
 
@@ -162,12 +162,12 @@ a{
   grid-area: 1/2/2/3;
   width: 100%;
   height: 100%;
-  padding: 35px 55px 200px 55px;
+  padding: 35px 40px 200px 55px;
   background-color: white;
 
   display: grid;
   grid-template-rows: auto;
-  grid-template-columns: 1fr 160px;
+  grid-template-columns: 1fr 140px;
   grid-column-gap: 20px;
   grid-row-gap: 50px;
 }
@@ -186,16 +186,16 @@ a{
   margin-bottom: 60px;
 }*/
 .title{
-  padding-top: 20px;
-  padding-left: 55px;
-  padding-bottom: 20px;
+  padding-top: 15px;
+  padding-left: 50px;
+  padding-bottom: 15px;
   background: white;
   z-index: 99;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.25);
   margin-bottom: 60px;
   margin-top: 12px;
   position: fixed;
-  width: calc(100% - 310px);
+  width: calc(100% - 290px);
 }
 .title h1{
   font-family: Courier;
@@ -448,6 +448,50 @@ p.indent{
 }
 
 
+/* ==========================
+-- FOOTER                  --
+========================== */
+
+.footer{
+  grid-area: 2/2/3/3;
+  color: white;
+  padding: 35px 50px 60px 50px;
+  margin: 35px 0 0 0;
+  background-color: black;
+}
+.footNavWrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.fNavBox{
+  margin-left: 15px;
+  padding: 20px 30px;
+  width: 35%;
+  background-color: black;
+  border: 3px solid white;
+  box-shadow: -10px 10px white;
+}
+.footNav{
+  font-family: Courier;
+  font-size: 28px;
+  font-weight: 400;
+  color: white;
+}
+.fN-right{
+  text-align: right;
+}
+.social{
+  margin: 0 12px;
+  padding: 12px;
+  border: 3px solid white;
+}
+.social img{
+  width: 28px;
+  height: auto;
+  vertical-align: middle;
+}
+
 
 
 
@@ -537,6 +581,15 @@ p.indent{
   #tops{
     display: none;
   }
+  .footer{
+    grid-area: 2/1/3/2;
+  }
+  .footNav{
+    font-size: 20px;
+  }
+  .social{
+    padding: 17.5px;
+  }
 
 }
 
@@ -553,7 +606,9 @@ p.indent{
     grid-template-columns: 1fr;
     padding: 184px 25px 100px 25px;
   }
-
+  .footer{
+    grid-area: 2/1/3/2;
+  }
 }
 
 

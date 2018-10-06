@@ -1,7 +1,9 @@
 $(function(){
 
-    var navi = navi = $('.navigator');
 
+    /* scrollTo animation */
+    var navi = navi = $('.navigator');
+    
     $('.jump, .navTitle').click(function(event) {
             
         event.preventDefault();
@@ -21,7 +23,6 @@ $(function(){
         /* Add active class to clicked anchor */
             
         $(this).addClass('active');
-
     });
 
     $('#navTitle').click(function(event) {
@@ -31,9 +32,10 @@ $(function(){
         $('html, body').animate({scrollTop:0}, 500);
 
         navi.children().removeClass();
-
     });
 
+
+    /* open menu animation */
     $('.menu').click(function(event) {
 
         event.preventDefault();
@@ -65,15 +67,14 @@ $(function(){
             }, 250);
 
         };
-
     });
 
-
+/*
     $(window).scroll(function(){
         var scrollTop = $(window).scrollTop();
 
 
-        /*function getTarget( jumps ){*/
+/*        function getTarget( jumps ){
 
         var jumps = $("a.jump").toArray();
         var ids = [],
@@ -85,7 +86,7 @@ $(function(){
             
                 
 
-/*                ids.push( jumps[i].data('id') ); */
+/*                ids.push( jumps[i].data('id') ); 
                 offsets.push( jumps[i].offset().top );
                 distances.push( (offsets[i] - scrollTop) );
                 heights.push( (0 - (offsets[i + 1] - offsets[i]) ) );
@@ -99,87 +100,134 @@ $(function(){
         };
         
 
-      /*  getTarget( $("a.jump").toArray() );*/
-    });
-/*
+/*        getTarget( $("a.jump").toArray() );
+    }); */
+
+
+    /* menu highlight scroll function */
     $(window).scroll(function(){
         var scrollTop = $(window).scrollTop();
 
-        var threec = $("#threec").offset().top;
-        var threecDistance = (threec - scrollTop);
-        var threecHeight = 0 - ( ($("#research").offset().top) - ($("#threec").offset().top) );
-        if( (0 >= threecDistance) && (threecDistance >= threecHeight) ){
-            $('.jump[href$="threec"]').addClass('active');
+        var anchor1 = $("#anchor1").offset().top;
+        var anchor1Distance = (anchor1 - scrollTop);
+        var anchor1Height = 0 - ( ($("#anchor2").offset().top) - ($("#anchor1").offset().top) );
+        if( (0 >= anchor1Distance) && (anchor1Distance >= anchor1Height) ){
+            $('.jump[href$="anchor1"]').addClass('active');
         } else {
-            $('.jump[href$="threec"]').removeClass('active');
+            $('.jump[href$="anchor1"]').removeClass('active');
         };
 
-        var research = $("#research").offset().top;
-        var researchDistance = (research - scrollTop);
-        var researchHeight = 0 - (($("#persona").offset().top) - ($("#research").offset().top));
-        if( (0 >= researchDistance) && (researchDistance >= researchHeight) ){
-            $('.jump[href$="research"]').addClass('active');
+        var anchor2 = $("#anchor2").offset().top;
+        var anchor2Distance = (anchor2 - scrollTop);
+        var anchor2Height = 0 - (($("#anchor3").offset().top) - ($("#anchor2").offset().top));
+        if( (0 >= anchor2Distance) && (anchor2Distance >= anchor2Height) ){
+            $('.jump[href$="anchor2"]').addClass('active');
         } else {
-            $('.jump[href$="research"]').removeClass('active');
+            $('.jump[href$="anchor2"]').removeClass('active');
         };
 
-        var persona = $("#persona").offset().top;
-        var personaDistance = (persona - scrollTop);
-        var personaHeight = 0 - (($("#conclusions").offset().top) - ($("#persona").offset().top));
-        if( (0 >= personaDistance) && (personaDistance >= personaHeight) ){
-            $('.jump[href$="persona"]').addClass('active');
+        var anchor3 = $("#anchor3").offset().top;
+        var anchor3Distance = (anchor3 - scrollTop);
+        var anchor3Height = 0 - (($("#anchor4").offset().top) - ($("#anchor3").offset().top));
+        if( (0 >= anchor3Distance) && (anchor3Distance >= anchor3Height) ){
+            $('.jump[href$="anchor3"]').addClass('active');
         } else {
-            $('.jump[href$="persona"]').removeClass('active');
+            $('.jump[href$="anchor3"]').removeClass('active');
         };
 
-        var concl = $("#conclusions").offset().top;
-        var conclDistance = (concl - scrollTop);
-        var conclHeight = 0 - (($("#design").offset().top) - ($("#conclusions").offset().top));
-        if( (0 >= conclDistance) && (conclDistance >= conclHeight) ){
-            $('.jump[href$="conclusions"]').addClass('active');
+        var anchor4 = $("#anchor4").offset().top;
+        var anchor4Distance = (anchor4 - scrollTop);
+        var anchor4Height = 0 - (($("#anchor5").offset().top) - ($("#anchor4").offset().top));
+        if( (0 >= anchor4Distance) && (anchor4Distance >= anchor4Height) ){
+            $('.jump[href$="anchor4"]').addClass('active');
         } else {
-            $('.jump[href$="conclusions"]').removeClass('active');
+            $('.jump[href$="anchor4"]').removeClass('active');
         };
 
-        var design = $("#design").offset().top;
-        var designDistance = (design - scrollTop);
-        var designHeight = 0 - (($("#lofi").offset().top) - ($("#design").offset().top));
-        if( (0 >= designDistance) && (designDistance >= designHeight) ){
-            $('.jump[href$="design"]').addClass('active');
+        var anchor5 = $("#anchor5").offset().top;
+        var anchor5Distance = (anchor5 - scrollTop);
+        var anchor5Height = 0 - (($("#anchor6").offset().top) - ($("#anchor5").offset().top));
+        if( (0 >= anchor5Distance) && (anchor5Distance >= anchor5Height) ){
+            $('.jump[href$="anchor5"]').addClass('active');
         } else {
-            $('.jump[href$="design"]').removeClass('active');
+            $('.jump[href$="anchor5"]').removeClass('active');
         };
 
-        var lofi = $("#lofi").offset().top;
-        var lofiDistance = (lofi - scrollTop);
-        var lofiHeight = 0 - (($("#hifi").offset().top) - ($("#lofi").offset().top));
-        if( (0 >= lofiDistance) && (lofiDistance >= lofiHeight) ){
-            $('.jump[href$="lofi"]').addClass('active');
+        var anchor6 = $("#anchor6").offset().top;
+        var anchor6Distance = (anchor6 - scrollTop);
+        var anchor6Height = 0 - (($("#anchor7").offset().top) - ($("#anchor6").offset().top));
+        if( (0 >= anchor6Distance) && (anchor6Distance >= anchor6Height) ){
+            $('.jump[href$="anchor6"]').addClass('active');
         } else {
-            $('.jump[href$="lofi"]').removeClass('active');
+            $('.jump[href$="anchor6"]').removeClass('active');
         };
 
-        var hifi = $("#hifi").offset().top;
-        var hifiDistance = (hifi - scrollTop);
-        var hifiHeight = 0 - (($("#wrap").offset().top) - ($("#hifi").offset().top));
-        if( (0 >= hifiDistance) && (hifiDistance >= hifiHeight) ){
-            $('.jump[href$="hifi"]').addClass('active');
+        var anchor7 = $("#anchor7").offset().top;
+        var anchor7Distance = (anchor7 - scrollTop);
+        var anchor7Height = 0 - (($("#anchor8").offset().top) - ($("#anchor7").offset().top));
+        if( (0 >= anchor7Distance) && (anchor7Distance >= anchor7Height) ){
+            $('.jump[href$="anchor7"]').addClass('active');
         } else {
-            $('.jump[href$="hifi"]').removeClass('active');
+            $('.jump[href$="anchor7"]').removeClass('active');
         };
 
-        var wrapup = $("#wrap").offset().top;
-        var wrapupDistance = (wrapup - scrollTop);
-        var wrapupHeight = 0 - (($("#bottom").offset().top) - ($("#wrap").offset().top));
-        if( (0 >= wrapupDistance) && (wrapupDistance >= wrapupHeight) ){
-            $('.jump[href$="wrap"]').addClass('active');
+        var anchor8 = $("#anchor8").offset().top;
+        var anchor8Distance = (anchor8 - scrollTop);
+        var anchor8Height = 0 - (($("#anchor9").offset().top) - ($("#anchor8").offset().top));
+        if( (0 >= anchor8Distance) && (anchor8Distance >= anchor8Height) ){
+            $('.jump[href$="anchor8"]').addClass('active');
         } else {
-            $('.jump[href$="wrap"]').removeClass('active');
+            $('.jump[href$="anchor8"]').removeClass('active');
         };
 
+        var anchor9 = $("#anchor9").offset().top;
+        var anchor9Distance = (anchor9 - scrollTop);
+        var anchor9Height = 0 - (($("#anchor10").offset().top) - ($("#anchor9").offset().top));
+        if( (0 >= anchor9Distance) && (anchor9Distance >= anchor9Height) ){
+            $('.jump[href$="anchor9"]').addClass('active');
+        } else {
+            $('.jump[href$="anchor9"]').removeClass('active');
+        };
 
+        var anchor10 = $("#anchor10").offset().top;
+        var anchor10Distance = (anchor10 - scrollTop);
+        var anchor10Height = 0 - (($("#anchor11").offset().top) - ($("#anchor10").offset().top));
+        if( (0 >= anchor10Distance) && (anchor10Distance >= anchor10Height) ){
+            $('.jump[href$="anchor10"]').addClass('active');
+        } else {
+            $('.jump[href$="anchor10"]').removeClass('active');
+        };
+
+        var anchor11 = $("#anchor11").offset().top;
+        var anchor11Distance = (anchor11 - scrollTop);
+        var anchor11Height = 0 - (($("#anchor12").offset().top) - ($("#anchor11").offset().top));
+        if( (0 >= anchor11Distance) && (anchor11Distance >= anchor11Height) ){
+            $('.jump[href$="anchor11"]').addClass('active');
+        } else {
+            $('.jump[href$="anchor11"]').removeClass('active');
+        };
+
+        var anchor12 = $("#anchor12").offset().top;
+        var anchor12Distance = (anchor12 - scrollTop);
+        var anchor12Height = 0 - (($("#anchor13").offset().top) - ($("#anchor12").offset().top));
+        if( (0 >= anchor12Distance) && (anchor12Distance >= anchor12Height) ){
+            $('.jump[href$="anchor12"]').addClass('active');
+        } else {
+            $('.jump[href$="anchor12"]').removeClass('active');
+        };
+
+/*        var anchor13 = $("#anchor10").offset().top;
+        var anchor13Distance = (anchor10 - scrollTop);
+        var anchor13Height = 0 - (($("#anchor1").offset().top) - ($("#anchor13").offset().top));
+        if( (0 >= anchor13Distance) && (anchor13Distance >= anchor13Height) ){
+            $('.jump[href$="anchor13"]').addClass('active');
+        } else {
+            $('.jump[href$="anchor13"]').removeClass('active');
+        };
+
+*/
     });
-    */
+
 
 });
 
