@@ -81,7 +81,7 @@ a{
   position: fixed;
   width: 260px;
   height: 100%;
-  padding: 30px 20px 0 20px;
+  padding: 35px 20px 0 20px;
   font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
 }
 .header{
@@ -136,12 +136,12 @@ a{
   visibility: hidden;
 }
 .siteNav{
-  font-size: 20px;
+  font-size: 18px;
   letter-spacing: 5px;
   font-weight: 700;
   line-height: 52px;
   position: absolute;
-  top: 154px;
+  top: 130px;
   transition: all 500ms ease;
 }
 #credits{
