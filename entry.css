@@ -477,9 +477,7 @@ p.indent{
   font-size: 28px;
   font-weight: 400;
   color: white;
-}
-.fN-right{
-  text-align: right;
+  text-align: center;
 }
 .social{
   margin: 0 12px;
@@ -583,6 +581,10 @@ p.indent{
   }
   .footer{
     grid-area: 2/1/3/2;
+  }
+  .fNavBox{
+    padding: 20px 15px;
+    box-shadow: -5px 5px white;
   }
   .footNav{
     font-size: 20px;
