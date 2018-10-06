@@ -14,7 +14,7 @@
   <title>Nicholas Tobat - 404 ERROR</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="index.css">
   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,800|Saira+Condensed:400,700" rel="stylesheet">
   <link rel="icon" type="img/ico" href="assets/favicon.ico">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -25,25 +25,23 @@
   
       
   <div class="page unselectable">
-  
-    <div class="header">
-      <h1><a href="https://nicktobat.com">NICHOLAS TOBAT</a></h1>
-		</div>
 
-    <div class="container container-1">
-      <div class="logo">
-        <img id="logo" src="assets/404.png" />
+    <div class="grid">
+      
+      <div class="grid-el grid-el-left">
+        <div class="logo">
+          <picture>
+            <source media="(min-width: 801px)" srcset="assets/404.png">
+            <source media="(max-width: 800px)" srcset="assets/404.png">
+            <img id="logo" src="assets/404.png" />
+          </picture>
+        </div>
+        <div class="turnAround" style="margin: 50px;padding-bottom: 20px; border-bottom: 3px solid white;">
+          <a href="https://nicktobat.com" class="li" style="padding: 15px;">TURN AROUND</a>
+        </div>
+        <h1 id="name">NICHOLAS TOBAT</h1>
+        <a class="email" href="mailto:ntobat@gmail.com"><img id="email" src="assets/email.svg" onerror="this.onerror=null; this.src='assets/email.png'"/></a>
       </div>
-      <a class="button btn-404" href="https://nicktobat.com">
-        TURN AROUND
-      </a>
-    </div>
-
-    <div class="footer">
-      <p>DESIGNED & DEVELOPED BY NICHOLAS TOBAT ©2018</p>
-    </div>
-
-  </div>
   <!--
   <div class="footer">
         <p class="footer_el" id="ftr-left">DESIGNED & <br>DEVELOPED BY<br>NICHOLAS TOBAT<br>©2018</p>
