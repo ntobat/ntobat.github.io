@@ -106,7 +106,7 @@ a{
   line-height: 52px;
   transition: all 500ms ease;
 }
-.navi a, .jump, .siteNav a{
+.navi a, .jump, .navTitle, .siteNav a{
   color: white;
   display: block;
 }
@@ -350,7 +350,8 @@ a{
 #researchCaption{
   grid-area: 8/2/9/3;
 }
-
+#kinisLogoImg{
+}
 .section-7{
   grid-area: 9/1/10/2;
 }

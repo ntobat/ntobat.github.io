@@ -2,7 +2,7 @@ $(function(){
 
     var navi = navi = $('.navigator');
 
-    $('.jump').click(function(event) {
+    $('.jump, .navTitle').click(function(event) {
             
         event.preventDefault();
      
@@ -68,7 +68,40 @@ $(function(){
 
     });
 
-    
+
+    $(window).scroll(function(){
+        var scrollTop = $(window).scrollTop();
+
+
+        /*function getTarget( jumps ){*/
+
+        var jumps = $("a.jump").toArray();
+        var ids = [],
+            offsets = [],
+            distances = [],
+            heights = [],
+            scrollTop = $(window).scrollTop();
+        for (var i = 0; i < jumps.length; i++) {
+            
+                
+
+/*                ids.push( jumps[i].data('id') ); */
+                offsets.push( jumps[i].offset().top );
+                distances.push( (offsets[i] - scrollTop) );
+                heights.push( (0 - (offsets[i + 1] - offsets[i]) ) );
+
+                if ( (0 >= distances[i]) && (distances[i] >= heights[i]) ){
+                    $('.jump[id$="' + ids[i] + '"').addClass('active');
+                } else {
+                    $('.jump[id$="' + ids[i] + '"').removeClass('active');
+                };
+            };
+        };
+        
+
+      /*  getTarget( $("a.jump").toArray() );*/
+    });
+/*
     $(window).scroll(function(){
         var scrollTop = $(window).scrollTop();
 
@@ -146,7 +179,7 @@ $(function(){
 
 
     });
-    
+    */
 
 });
 
