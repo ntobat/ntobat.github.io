@@ -50,14 +50,14 @@ h1, h2, h3, h4, h5, h6 {
 .back-to-top {
   position: fixed;
   display: none;
-  background: #50d8af;
+  background: #2D79F3;
   color: #fff;
-  padding: 6px 12px 9px 12px;
+  padding: 6px 12px 6px 12px;
   font-size: 16px;
-  border-radius: 2px;
+  border-radius: 100%;
   right: 15px;
   bottom: 15px;
-  transition: background 0.5s;
+  transition: all 0.5s ease-in-out;
 }
 
 @media (max-width: 768px) {
@@ -67,7 +67,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .back-to-top:focus {
-  background: #50d8af;
+  background: #2D79F3;
   color: #fff;
   outline: none;
 }
@@ -75,6 +75,7 @@ h1, h2, h3, h4, h5, h6 {
 .back-to-top:hover {
   background: #0c2e8a;
   color: #fff;
+  transform: translateY(-4px);
 }
 
 /*--------------------------------------------------------------
@@ -138,7 +139,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #title a{
   font-size: 24px;
-  color: #828286;
+  color: #444444;
   height: inherit;
 }
 
@@ -189,7 +190,7 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 #intro {
   width: 100%;
-  height: 60vh;
+  height: 86vh;
   position: relative;
   background: url("../img/intro-carousel/1.jpg") no-repeat;
   background-size: cover;
@@ -210,15 +211,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #intro .intro-content h2 {
-  margin: 0 0 8vh 50%;
+  margin: 0 0 6vh 50%;
   font-size: 36px;
   font-weight: 700;
 }
 #intro .intro-content p{
-  margin: 0 0 10vh 50%;
+  margin: 0 0 5vh 50%;
   font-size: 18px;
+  line-height: 32px;
   font-weight: 700;
-  max-width: 350px;
+  max-width: 455px;
   text-align: right;
 }
 
@@ -247,7 +249,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #intro #intro-carousel .item {
   width: 100%;
-  height: 60vh;
+  height: 86vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -401,21 +403,21 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-/* About Section
+/* Connect Section
 --------------------------------*/
-#about {
+#connect {
   padding: 60px 0 30px 0;
   position: relative;
 }
 
-#about .about-img {
+#connect .connectImg {
   overflow: hidden;
   width: 100%;
 }
 
-#about .about-img img {
+#connect .connectImg img {
   margin-left: -15px;
-  width: 100%;
+  width: calc(100vw + 15px);
   height: auto;
 }
 
@@ -429,11 +431,11 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-#about .content{
+#connect .content{
   position: absolute;
   bottom: 0;
-  top: 0;
-  left: 0;
+  top: 85px;
+  left: 25px;
   right: 0;
   z-index: 10;
   display: flex;
@@ -442,126 +444,159 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   color: white;
   text-align: left;
-  padding: 0 0 0 32px;
-  margin: 0 60vw 0 0;
+  max-width: 60vw;
+  max-height: 30%;
+  box-shadow: 2px 2px rgba(35,35,35,0.9);
 }
 
-#about .content h2 {
+#connect .content h2 {
   font-weight: 700;
-  font-size: 36px;
+  font-size: 32px;
   font-family: "Product Sans", sans-serif;
   text-align: left;
-  color: white;
-  margin-bottom: 64px;
+  color: #333;
+  margin-bottom: 20px;
+  margin-top: 8px;
 }
 
 #connect{
 
 }
 
-#about .content h3 {
-  color: white;
+#connect .content p {
+  color: #333;
   font-weight: 300;
-  font-size: 18px;
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 10px
+}
+
+#connect .content p {
   line-height: 26px;
 }
 
-#about .content p {
-  line-height: 26px;
-}
-
-#about .content p:last-child {
+#connect .content p:last-child {
   margin-bottom: 0;
 }
 
-#about .content i {
+#connect .content i {
   font-size: 20px;
   padding-right: 4px;
   color: #50d8af;
 }
 
-#about .content ul {
+#connect .content ul {
   list-style: none;
   padding: 0;
 }
 
-#about .content ul li {
+#connect .content ul li {
   padding-bottom: 10px;
 }
 
-/* Services Section
+/* Beacon Section
 --------------------------------*/
-#services {
+#beacon {
   padding: 30px 0 0 0;
 }
 
-#services .box {
+#beacon .box, #connect .box {
   padding: 40px;
   margin-bottom: 40px;
   box-shadow: 10px 10px 15px rgba(73, 78, 92, 0.1);
   background: #fff;
-  transition: 0.4s;
+  transition: 0.4s ease;
 }
-#services .boxed{
+#beacon .boxed{
   padding: 40px;
   text-align: center;
-  transition: 0.4s;
+  transition: 0.4s ease;
 }
-#services .boxed h1{
+#beacon .boxed h1{
   text-align: center;
 }
-#services .box:hover {
+#beacon .box:hover {
   box-shadow: 0px 0px 30px rgba(73, 78, 92, 0.15);
+}
+#beaconBoxtl .box:hover, #beaconBoxtr .box:hover {
   transform: translateY(-10px);
   -webkit-transform: translateY(-10px);
   -moz-transform: translateY(-10px);
 }
-
-#services .box .icon {
+#beaconBoxbl .box:hover, #beaconBoxbr .box:hover {
+  transform: translateY(10px);
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+}
+#beaconBoxtl .icon, #beaconBoxbl .icon {
   float: left;
 }
-
-#services .box .icon i {
-  color: #444;
-  font-size: 64px;
-  transition: 0.5s;
-  line-height: 0;
-  margin-top: 34px;
+#beaconBoxtr .icon, #beaconBoxbr .icon {
+  float: right;
 }
 
-#services .box .icon i:before {
-  background: #0c2e8a;
-  background: linear-gradient(45deg, #50d8af 0%, #a3ebd5 100%);
+#beacon .box .icon i {
+  color: #444;
+  font-size: 44px;
+  transition: 0.5s;
+  line-height: 0;
+  margin-top: 24px;
+  padding: 0 16px;
+}
+
+#beacon .box .icon i:before {
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+#beaconBoxtl .icon i:before{
+  background: #FAB300;
+}
+#beaconBoxtr .icon i:before {
+  background: #F52616;
+}
+#beaconBoxbl .icon i:before {
+  background: #00A63F;
+}
+#beaconBoxbr .icon i:before {
+  background: #2D79F3;
+}
 
-#services .box h4 {
+#beacon .box h4 {
   margin-left: 100px;
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 22px;
 }
 
-#services .box h4 a {
+#beacon .box h4 a {
   color: #444;
 }
-
-#services .box p {
+#beacon .box p{
   font-size: 14px;
-  margin-left: 100px;
   margin-bottom: 0;
   line-height: 24px;
+  cursor: default;
+}
+#beaconBoxtl p, #beaconBoxbl p {
+  margin-left: 100px;
+}
+#beaconBoxtr .box, #beaconBoxbr .box {
+  display: flex;
 }
 
-#beaconBoxLeft{
-  margin-bottom: -90px;
+#beaconBoxtl, #beaconBoxtr{
+  margin-bottom: -50px;
   z-index: 2;
 }
-#beaconBoxRight{
-  margin-top: -40px;
+
+#beaconBoxbl, #beaconBoxbr{
+  margin-top: -17px;
 }
+.beaconBox{
+
+}
+
 #beaconMock{
   padding: 0 20vw;
 }
@@ -582,7 +617,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Clients Section
+/* Phone Section
 --------------------------------*/
 
 
@@ -614,39 +649,79 @@ h1, h2, h3, h4, h5, h6 {
   width: 100vw;
 }
 
+/* Sapp Section
+--------------------------------*/
 
-#clients {
+#sapp{
+  padding: 30px 0 0 0;
+  
+}
+#sapp .container{
+  background: url("../img/sappbg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 80vh;
+}
+#sapp h1, #sapp p{
+  color: white;
+  text-align: center;
+  padding: 32px;
+}
+#sapp img{
+  display: block;
+  margin: 0 auto;
+  width: 65vw;
+  padding: 32px;
+}
+#sapp p{
+  font-size: 20px;
+}
+
+/* Apps Section
+--------------------------------*/
+
+#apps{
+  padding: 30px 0 0 0;
+  
+}
+#apps .container{
+  background: url("../img/apps.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 85vh;
+}
+
+/* Durability Section
+--------------------------------*/
+
+#durable{
+  padding: 30px 0 0 0;
+  
+}
+#durable .container{
+  background: url("../img/durable.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 85vh;
+}
+
+
+/* Pixels Section
+--------------------------------*/
+#pixel {
   padding: 30px 0;
 }
-
-#clients img {
-  max-width: 100%;
-  opacity: 0.5;
-  transition: 0.3s;
-  padding: 15px 0;
+#pixel .container{
+  background: url("../img/pixels.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 85vh;
 }
 
-#clients img:hover {
-  opacity: 1;
-}
-
-#clients .owl-nav, #clients .owl-dots {
-  margin-top: 5px;
-  text-align: center;
-}
-
-#clients .owl-dot {
-  display: inline-block;
-  margin: 0 5px;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: #ddd;
-}
-
-#clients .owl-dot.active {
-  background-color: #50d8af;
-}
 
 /* Our Portfolio Section
 --------------------------------*/
