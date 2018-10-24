@@ -706,11 +706,7 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 18px 0 0 transparent,
               0 0 0 -1px rgba(53,131,252,0);
   transition: all 400ms ease 50ms;
-} 
-/*#durable .techSpecs p:hover{
-  box-shadow: 0 18px 0 0 transparent,
-              0 4px 0 -1px rgba(53,131,252,1);
-}*/
+}
 #durable .techSpecs:hover p{
   box-shadow: 0 18px 0 0 transparent,
               0 4px 0 -1px rgba(53,131,252,1);
@@ -786,6 +782,29 @@ h1, h2, h3, h4, h5, h6 {
   width: 100vw;
   height: 85vh;
 }
+#account .accountContent{
+  position: relative;
+  height: inherit;
+}
+#account .techSpecs{
+  position: absolute;
+  top: 75px;
+  right: 100px;
+  z-index: 10;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  color: #3583FC;
+  text-decoration: none;
+  padding: 12px;
+}
+#account .techSpecs img{
+  display: block;
+  height: 450px;
+  width: auto;
+  padding-right: 8px;
+}
+
 
 
 
