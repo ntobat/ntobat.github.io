@@ -372,36 +372,6 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Sections
 --------------------------------------------------------------*/
-/* Sections Header
---------------------------------*/
-.section-header {
-  margin-bottom: 30px;
-}
-
-.section-header h2 {
-  font-size: 32px;
-  color: #0c2e8a;
-  text-transform: uppercase;
-  font-weight: 700;
-  position: relative;
-  padding-bottom: 20px;
-}
-
-.section-header h2::before {
-  content: '';
-  position: absolute;
-  display: block;
-  width: 50px;
-  height: 3px;
-  background: #50d8af;
-  bottom: 0;
-  left: 0;
-}
-
-.section-header p {
-  padding: 0;
-  margin: 0;
-}
 
 /* Connect Section
 --------------------------------*/
@@ -653,7 +623,7 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------*/
 
 #sapp{
-  padding: 30px 0 0 0;
+  padding: 30px 0;
   
 }
 #sapp .container{
@@ -663,19 +633,26 @@ h1, h2, h3, h4, h5, h6 {
   width: 100vw;
   height: 80vh;
 }
-#sapp h1, #sapp p{
-  color: white;
-  text-align: center;
-  padding: 32px;
+#sapp .sappContent{
+  position: relative;
 }
-#sapp img{
-  display: block;
-  margin: 0 auto;
-  width: 65vw;
-  padding: 32px;
+#sapp .techSpecs{
+  position: absolute;
+  top: 18px;
+  right: 270px;
+  z-index: 10;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  color: #3583FC;
+  text-decoration: none;
+  padding: 12px;
 }
-#sapp p{
-  font-size: 20px;
+#sapp .techSpecs img{
+  display: inline-block;
+  height: 590px;
+  width: auto;
+  padding-right: 8px;
 }
 
 /* Apps Section
@@ -697,8 +674,7 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------*/
 
 #durable{
-  padding: 30px 0 0 0;
-  
+  padding: 30px 0;
 }
 #durable .container{
   background: url("../img/durable.png");
@@ -707,7 +683,44 @@ h1, h2, h3, h4, h5, h6 {
   width: 100vw;
   height: 85vh;
 }
-
+#durable .durableContent{
+  position: relative;
+  height: inherit;
+}
+#durable a.techSpecs{
+  display: block;
+  position: absolute;
+  top: 78%;
+  right: 20%;
+  z-index: 10;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  color: #3583FC;
+  text-decoration: none;
+  padding: 12px;
+}
+ #durable .techSpecs p{
+  font-size: 18px;
+  margin-bottom: 0;
+  box-shadow: 0 18px 0 0 transparent,
+              0 0 0 -1px rgba(53,131,252,0);
+  transition: all 400ms ease 50ms;
+} 
+/*#durable .techSpecs p:hover{
+  box-shadow: 0 18px 0 0 transparent,
+              0 4px 0 -1px rgba(53,131,252,1);
+}*/
+#durable .techSpecs:hover p{
+  box-shadow: 0 18px 0 0 transparent,
+              0 4px 0 -1px rgba(53,131,252,1);
+}
+#durable .techSpecs img{
+  display: inline-block;
+  height: 22px;
+  width: auto;
+  padding-right: 8px;
+}
 
 /* Pixels Section
 --------------------------------*/
@@ -718,9 +731,62 @@ h1, h2, h3, h4, h5, h6 {
   background: url("../img/pixels.png");
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
   width: 100vw;
   height: 85vh;
 }
+#pixel .pixelContent{
+  position: relative;
+  height: inherit;
+}
+#pixel a.techSpecs{
+  display: block;
+  position: absolute;
+  top: 75%;
+  right: 25%;
+  z-index: 10;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  color: #3583FC;
+  text-decoration: none;
+  padding: 12px;
+  cursor: pointer;
+}
+ #pixel .techSpecs p{
+  font-size: 18px;
+  margin-bottom: 0;
+  box-shadow: 0 18px 0 0 transparent,
+              0 0 0 -1px rgba(53,131,252,0);
+  transition: all 400ms ease 50ms;
+} 
+#pixel .techSpecs:hover p{
+  box-shadow: 0 18px 0 0 transparent,
+              0 4px 0 -1px rgba(53,131,252,1);
+}
+#pixel .techSpecs img{
+  display: inline-block;
+  height: 22px;
+  width: auto;
+  padding-right: 8px;
+}
+
+
+/* Account Section
+--------------------------------*/
+
+#account{
+  padding: 30px 0 0 0;
+  
+}
+#account .container{
+  background: url("../img/account.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 85vh;
+}
+
 
 
 /* Our Portfolio Section
