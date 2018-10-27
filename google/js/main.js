@@ -25,6 +25,15 @@ jQuery(document).ready(function( $ ) {
     items: 1
   });
 
+  // Beacon background carousel
+  $("#beacon-carousel").owlCarousel({
+    autoplay: true,
+    dots: false,
+    loop: true,
+    animateOut: 'fadeOut',
+    items: 1
+  });
+
   // Initiate the wowjs animation library
   new WOW().init();
 

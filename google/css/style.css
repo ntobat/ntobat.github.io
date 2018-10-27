@@ -52,7 +52,7 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
   background: #2D79F3;
   color: #fff;
-  padding: 6px 12px 6px 12px;
+  padding: 7px 12px;
   font-size: 16px;
   border-radius: 100%;
   right: 15px;
@@ -118,7 +118,7 @@ h1, h2, h3, h4, h5, h6 {
 #header {
   padding: 16px 25px 16px 25px;
   margin: 0 0 24px 0;
-  height: 60px;
+  height: 72px;
   transition: all 0.5s;
   z-index: 997;
   background: #fff;
@@ -142,12 +142,35 @@ h1, h2, h3, h4, h5, h6 {
   color: #444444;
   height: inherit;
 }
-
-
 #header #logo img {
   padding: 0;
   margin: 0;
 }
+#header #nav{
+  display: flex;
+  margin-top: 2px;
+}
+#header #nav a{
+  padding: 8px 14px;
+  margin-right: 16px;
+  vertical-align: middle;
+  line-height: 22px;
+  font-size: 14px;
+  height: 36px;
+  display: block;
+  color: #727276;
+  border-radius: 16px;
+  border: 0 solid transparent;
+  background-color: transparent;
+  transition: all 400ms ease;
+}
+#header #nav a.focus{
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.15);
+}
+#header #nav a:hover{
+  background-color: #fafafa;
+}
+
 
 @media (max-width: 768px) {
   #header {
@@ -167,7 +190,7 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 
 #descrip{
-  margin-top: 8px;
+  margin-top: 6px;
 }
 #descrip p{
   line-height: 28px;
@@ -469,34 +492,36 @@ h1, h2, h3, h4, h5, h6 {
 #beacon {
   padding: 30px 0 0 0;
 }
-
+#beacon #beaconText{
+  padding: 30px 0 80px 0;
+  text-align: center;
+}
+#beacon #beaconText .title{
+  color: #3583FC;
+}
+#beacon #beaconText .description{
+  line-height: 60px;
+}
 #beacon .box, #connect .box {
-  padding: 40px;
+  padding: 16px 12px;
   margin-bottom: 40px;
   box-shadow: 10px 10px 15px rgba(73, 78, 92, 0.1);
   background: #fff;
   transition: 0.4s ease;
-}
-#beacon .boxed{
-  padding: 40px;
-  text-align: center;
-  transition: 0.4s ease;
-}
-#beacon .boxed h1{
-  text-align: center;
+  z-index: 10;
 }
 #beacon .box:hover {
   box-shadow: 0px 0px 30px rgba(73, 78, 92, 0.15);
 }
 #beaconBoxtl .box:hover, #beaconBoxtr .box:hover {
-  transform: translateY(-10px);
-  -webkit-transform: translateY(-10px);
-  -moz-transform: translateY(-10px);
-}
-#beaconBoxbl .box:hover, #beaconBoxbr .box:hover {
   transform: translateY(10px);
   -webkit-transform: translateY(10px);
   -moz-transform: translateY(10px);
+}
+#beaconBoxbl .box:hover, #beaconBoxbr .box:hover {
+  transform: translateY(-10px);
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
 }
 #beaconBoxtl .icon, #beaconBoxbl .icon {
   float: left;
@@ -504,7 +529,6 @@ h1, h2, h3, h4, h5, h6 {
 #beaconBoxtr .icon, #beaconBoxbr .icon {
   float: right;
 }
-
 #beacon .box .icon i {
   color: #444;
   font-size: 44px;
@@ -513,7 +537,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 24px;
   padding: 0 16px;
 }
-
 #beacon .box .icon i:before {
   background-clip: border-box;
   -webkit-background-clip: text;
@@ -531,19 +554,8 @@ h1, h2, h3, h4, h5, h6 {
 #beaconBoxbr .icon i:before {
   background: #2D79F3;
 }
-
-#beacon .box h4 {
-  margin-left: 100px;
-  font-weight: 700;
-  margin-bottom: 15px;
-  font-size: 22px;
-}
-
-#beacon .box h4 a {
-  color: #444;
-}
 #beacon .box p{
-  font-size: 14px;
+  font-size: 13px;
   margin-bottom: 0;
   line-height: 24px;
   cursor: default;
@@ -551,24 +563,50 @@ h1, h2, h3, h4, h5, h6 {
 #beaconBoxtl p, #beaconBoxbl p {
   margin-left: 100px;
 }
+#beaconBoxtr p, #beaconBoxbr p {
+  text-align: right;
+  margin-right: 12px;
+}
 #beaconBoxtr .box, #beaconBoxbr .box {
   display: flex;
 }
-
 #beaconBoxtl, #beaconBoxtr{
-  margin-bottom: -50px;
+  margin-bottom: -110px;
   z-index: 2;
 }
-
 #beaconBoxbl, #beaconBoxbr{
-  margin-top: -17px;
-}
-.beaconBox{
-
+  margin-top: -70px;
 }
 
-#beaconMock{
-  padding: 0 20vw;
+#beaconB {
+  width: 100%;
+  height: 86vh;
+  position: relative;
+  background: url("../img/beacon-carousel/1.jpg") no-repeat;
+  background-size: cover;
+}
+#beaconB #beacon-carousel {
+  z-index: 0;
+}
+#beaconB #beacon-carousel::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 7;
+}
+#beaconB #beacon-carousel .item {
+  width: 100%;
+  height: 86vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
 }
 
 
@@ -619,11 +657,77 @@ h1, h2, h3, h4, h5, h6 {
   width: 100vw;
 }
 
+
+
+/* Apps Section
+--------------------------------*/
+
+#apps{
+  padding: 30px 0 0 0;
+  
+}
+#apps .container{
+  background: url("../img/apps.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 85vh;
+}
+
+/* Durability Section
+--------------------------------*/
+
+#durable{
+  padding: 0 0 30px 0;
+}
+#durable .container{
+  background: url("../img/durable.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 85vh;
+}
+#durable .durableContent{
+  position: relative;
+  height: inherit;
+}
+#durable a.techSpecs{
+  display: block;
+  position: absolute;
+  top: 75%;
+  right: 20%;
+  z-index: 10;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  color: #3583FC;
+  text-decoration: none;
+  padding: 12px;
+}
+ #durable .techSpecs p{
+  font-size: 18px;
+  margin-bottom: 0;
+  box-shadow: 0 18px 0 0 transparent,
+              0 0 0 -1px rgba(53,131,252,0);
+  transition: all 400ms ease 50ms;
+}
+#durable .techSpecs:hover p{
+  box-shadow: 0 18px 0 0 transparent,
+              0 4px 0 -1px rgba(53,131,252,1);
+}
+#durable .techSpecs img{
+  display: inline-block;
+  height: 22px;
+  width: auto;
+  padding-right: 8px;
+}
+
+
 /* Sapp Section
 --------------------------------*/
 
 #sapp{
-  padding: 30px 0;
+  padding: 0 0 30px 0;
   
 }
 #sapp .container{
@@ -655,68 +759,6 @@ h1, h2, h3, h4, h5, h6 {
   padding-right: 8px;
 }
 
-/* Apps Section
---------------------------------*/
-
-#apps{
-  padding: 30px 0 0 0;
-  
-}
-#apps .container{
-  background: url("../img/apps.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 100vw;
-  height: 85vh;
-}
-
-/* Durability Section
---------------------------------*/
-
-#durable{
-  padding: 30px 0;
-}
-#durable .container{
-  background: url("../img/durable.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 100vw;
-  height: 85vh;
-}
-#durable .durableContent{
-  position: relative;
-  height: inherit;
-}
-#durable a.techSpecs{
-  display: block;
-  position: absolute;
-  top: 78%;
-  right: 20%;
-  z-index: 10;
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  color: #3583FC;
-  text-decoration: none;
-  padding: 12px;
-}
- #durable .techSpecs p{
-  font-size: 18px;
-  margin-bottom: 0;
-  box-shadow: 0 18px 0 0 transparent,
-              0 0 0 -1px rgba(53,131,252,0);
-  transition: all 400ms ease 50ms;
-}
-#durable .techSpecs:hover p{
-  box-shadow: 0 18px 0 0 transparent,
-              0 4px 0 -1px rgba(53,131,252,1);
-}
-#durable .techSpecs img{
-  display: inline-block;
-  height: 22px;
-  width: auto;
-  padding-right: 8px;
-}
 
 /* Pixels Section
 --------------------------------*/
@@ -749,7 +791,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 12px;
   cursor: pointer;
 }
- #pixel .techSpecs p{
+#pixel .techSpecs p{
   font-size: 18px;
   margin-bottom: 0;
   box-shadow: 0 18px 0 0 transparent,
@@ -766,6 +808,53 @@ h1, h2, h3, h4, h5, h6 {
   width: auto;
   padding-right: 8px;
 }
+
+
+/* Details Section
+--------------------------------*/
+
+#details{
+  padding: 80px 0 60px 0;
+}
+#details .container{
+  text-align: center;
+}
+#details .container > img{
+  height: 84px;
+  padding: 10px;
+  margin-bottom: 12px;
+}
+#details a.techSpecs{
+  display: block;
+  margin: 0 auto;
+  z-index: 10;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  color: #3583FC;
+  text-decoration: none;
+  padding: 12px;
+}
+#details a.techSpecs p{
+  font-size: 18px;
+  margin-bottom: 0;
+  box-shadow: 0 18px 0 0 transparent,
+              0 0 0 -1px rgba(53,131,252,0);
+  transition: all 400ms ease 50ms;
+}
+#details a.techSpecs:hover p{
+  box-shadow: 0 18px 0 0 transparent,
+              0 4px 0 -1px rgba(53,131,252,1);
+}
+#details a.techSpecs img{
+  display: inline-block;
+  height: 22px;
+  width: auto;
+  padding: 0;
+  padding-right: 8px;
+}
+
 
 
 /* Account Section
@@ -806,6 +895,97 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+/* Get Involved Section
+--------------------------------*/
+
+#getInvolved{
+  padding: 60px 0;
+}
+#getInvolved .container{
+  text-align: center;
+}
+#getInvolved .container > img{
+  height: 72px;
+  padding: 10px;
+  margin-bottom: 12px;
+}
+#getInvolved a.techSpecs{
+  display: block;
+  margin: 0 auto;
+  z-index: 10;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  color: #3583FC;
+  text-decoration: none;
+  padding: 12px;
+}
+#getInvolved a.techSpecs p{
+  font-size: 18px;
+  margin-bottom: 0;
+  box-shadow: 0 18px 0 0 transparent,
+              0 0 0 -1px rgba(53,131,252,0);
+  transition: all 400ms ease 50ms;
+}
+#getInvolved a.techSpecs:hover p{
+  box-shadow: 0 18px 0 0 transparent,
+              0 4px 0 -1px rgba(53,131,252,1);
+}
+#getInvolved a.techSpecs img{
+  display: inline-block;
+  height: 22px;
+  width: auto;
+  padding: 0;
+  padding-right: 8px;
+}
+
+
+/* One Section
+--------------------------------*/
+
+#one{
+  padding: 60px 0 30px 0;
+}
+#one .container{
+  text-align: center;
+}
+#one .oneContent > img{
+  height: 72px;
+  width: auto;
+}
+#one .oneContent > h1{
+  font-size: 56px;
+  line-height: 72px;
+  padding: 24px;
+  font-weight: 400;
+}
+#one .oneContent p{
+  line-height: 32px;
+}
+#one .buttons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#one .buttons a{
+  height: 46px;
+  width: 140px;
+  background-color: #1a73e8;
+  border-radius: 2px;
+  color: white;
+  letter-spacing: .03125rem;
+  line-height: 1.375rem;
+  padding: 12px 16px 0 16px;
+  margin: 12px;
+  -webkit-transition: box-shadow 280ms cubic-bezier(0.4,0,0.2,1);
+  transition: box-shadow 280ms cubic-bezier(0.4,0,0.2,1);
+}
+#one .buttons a:hover{
+  box-shadow: 0 2px 1px -1px rgba(26,115,232,0.2),
+              0 1px 1px 0 rgba(26,115,232,0.14),
+              0 1px 3px 0 rgba(26,115,232,0.12);
+}
 
 
 /* Our Portfolio Section
@@ -1169,7 +1349,7 @@ h1, h2, h3, h4, h5, h6 {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  margin-top: 1200px;
+  margin-top: 200px;
   background: #f2f5f8;
   padding: 0 0 30px 0;
   font-size: 14px;

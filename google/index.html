@@ -67,20 +67,13 @@
 
       <div id="logo" class="pull-left">
         <h1 id="title"><a href="#body" class="scrollto">Google Refuge</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
       </div>
 
-      <!--nav id="nav-menu-container">
-        <div class="nav-menu flexor">
-          <p class="menu-active"><a href="#body">Overview</a></p>
-          <p><a href="#about">Beacon</a></p>
-          <p><a href="#services">Phone</a></p>
-          <p><a href="#portfolio">Evidence</a></p>
-          <p><a href="#team">About</a></p>
-          <p><a href="#contact">Contact</a></p>
-        </div>
-      </nav><!-- #nav-menu-container -->
+      <div id="nav">
+        <a class="focus" href="#body">Overview</a>
+        <a href="details.html">Details</a>
+        <a href="hero.html">Get Involved</a>
+      </div>
 
       <div id="descrip">
         <p>A mobile device-based solution for those affected by the Syrian Refugee Crisis.</p>
@@ -145,58 +138,62 @@
 
         <div class="row">
 
-          <div class="col-lg-6">
-            <div class="boxed fadeInLeft">
-              <img src="img/beacon.jpeg">
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="boxed wow fadeInRight">
-              <h4 class="title"><a href="">How It Works</a></h4>
-              <h1 class="description">Refugees need more than positive vibes sent their way.  They need a beacon of hope.</h1>
+          <div id="beaconText" class="col-lg-12">
+            <div class="boxed wow fadeInUp">
+              <h4 class="title">How It Works</h4>
+              <h1 class="description">Refugees need more than positive vibes sent their way.<br>They need a beacon of hope.</h1>
             </div>
           </div>
 
           <!-- #beacon boxes -->
-          <div class="col-lg-6 beaconBox" id="beaconBoxtl" style="margin-left: -1px;">
+          <div class="col-lg-4 beaconBox" id="beaconBoxtl" style="margin-left: -1px;">
             <div class="box wow fadeInLeft" data-wow-delay="0.2s">
               <div class="icon"><i class="fas fa-broadcast-tower"></i></div>
-              <p class="description">Google Beacons are wifi-enabling network towers. Each Beacon is stocked with over 1000 Google Light Phones.</p>
+              <p class="description">Google Beacons are WiFi-enabling network towers. Each Beacon is stocked with over 1000 Light Phones.</p>
             </div>
           </div>
 
-          <div class="col-lg-6 beaconBox" id="beaconBoxtr" style="padding-right: 13px;">
+          <div class="col-lg-4"></div>
+          
+          <div class="col-lg-4 beaconBox" id="beaconBoxtr" style="padding-right: 13px;">
             <div class="box wow fadeInRight" data-wow-delay="0.2s">
-              <p class="description">The Beacons tether together wirelessly, creating a greater area of connectivity for the phones to operate on.</p>
+              <p class="description">The Beacons tether together wirelessly, creating a wide net of WiFi connectivity for internet access.</p>
               <div class="icon"><i class="fas fa-network-wired"></i></div>
             </div>
           </div>
 
-          <div class="col-lg-12">
-            <video autoplay muted playsinline loop style="width: 100%;">
-              <source src="img/drone.mp4" type="video/mp4">
-            </video>
+          <div id="beaconB">
+            <div id="beacon-carousel" class="owl-carousel" >
+              <div class="item" style="background-image: url('img/beacon-carousel/1.jpg');">
+              </div>
+              <div class="item" style="background-image: url('img/beacon-carousel/2.jpg');"></div>
+              <div class="item" style="background-image: url('img/beacon-carousel/3.jpg');"></div>
+              <div class="item" style="background-image: url('img/beacon-carousel/4.jpg');"></div>
+              <div class="item" style="background-image: url('img/beacon-carousel/5.jpg');"></div>
+            </div>
           </div>
 
-          <div class="col-lg-6 beaconBox" id="beaconBoxbl" style="margin-left: -1px;">
+          <div class="col-lg-4 beaconBox" id="beaconBoxbl" style="margin-left: -1px;">
             <div class="box wow fadeInLeft" data-wow-delay="0.2s">
               <div class="icon"><i class="fas fa-user-circle"></i></div>
               <p class="description"> Users can then access a specialized suite of Google products, all available through a Google Account.</p>
             </div>
           </div>
 
-          <div class="col-lg-6 beaconBox" id="beaconBoxbr" style="padding-right: 13px;">
+          <div class="col-lg-4"></div>
+
+          <div class="col-lg-4 beaconBox" id="beaconBoxbr" style="padding-right: 13px;">
             <div class="box wow fadeInRight" data-wow-delay="0.2s">
-              <p class="description">Each Beacon also serves as a solar powered charging station to provide sustainable usage for each phone as needed.</p>
+              <p class="description">Each Beacon serves as a solar powered charging station to enable sustained usage for each phone.</p>
               <div class="icon"><i class="fas fa-solar-panel"></i></div>
             </div>
-          </div>
+          </div-->
 
         </div>
 
       </div>
     </section><!-- #services -->
+
 
     <!--==========================
       Phone Section
@@ -205,84 +202,30 @@
       <div class="container">
 
         <div class="row">
-          <div class="phone-img">
-            <img src="img/phone.png" alt="" style="background-color: #000;">
 
-            <div class="phoneContent">
-              <h2>The Google Light Phone</h2>
-              <div id="">
-                <p>Google Light Phones are extra durable and data-efficient smart phones which connect to the internet via WiFi.</p>
-              </div>
-            </div>
+          <div class="phone-img">
+            <img src="img/phone.png" alt="">
+
           </div>
 
-          
         </div>
-
-        <!--div class="owl-carousel clients-carousel">
-          <img src="img/clients/client-1.png" alt="">
-          <img src="img/clients/client-2.png" alt="">
-          <img src="img/clients/client-3.png" alt="">
-          <img src="img/clients/client-4.png" alt="">
-          <img src="img/clients/client-5.png" alt="">
-          <img src="img/clients/client-6.png" alt="">
-          <img src="img/clients/client-7.png" alt="">
-          <img src="img/clients/client-8.png" alt="">
-        </div-->
 
       </div>
     </section><!-- #clients -->
 
-    <!--==========================
-      Apps Section
-    ============================-->
-    <section id="apps" class="wow fadeInUp" data-wow-delay="0.2s">
-      <div class="container">
-      </div>
-    </section><!-- #apps -->
 
     <!--==========================
-      Durable Section
+      Details Section
     ============================-->
-    <section id="durable" class="wow fadeInUp" data-wow-delay="0.2s">
+    <section id="details" class="wow fadeInUp" data-wow-delay="0.2s">
       <div class="container">
-        <div class="durableContent">
-          <a href="img/techSpecs.jpg" target="_blank" class="techSpecs" wow fadeInUp" data-wow-delay="0.6s">
-            <img src="img/specs.png">
-            <p>Full technical specifications</p>
-          </a>
-        </div>
-      </div>
-    </section><!-- #durable -->
-
-    <!--==========================
-      WhatsApp Section
-    ============================-->
-    <section id="sapp" class="wow fadeInUp" data-wow-delay="0.2s">
-      <div class="container">
-        <div class="sappContent">
-          <div class="techSpecs wow fadeInRight" data-wow-delay="0.6s">
-            <img src="img/sappPhone.png">
-          </div>
-        </div>
-      </div>
-    </section><!-- #sapp -->
-
-
-
-    <!--==========================
-      Lights -> Pixels Section
-    ============================-->
-    <section id="pixel" class="wow fadeInUp" data-wow-delay="0.2s">
-      <div class="container">
-        <div class="pixelContent">
-          <a class="techSpecs wow fadeInUp" data-wow-delay="0.6s">
-            <img src="img/specs.png">
-            <p>Learn more</p>
-          </a>
-        </div>
-      </div>
-    </section><!-- #pixel -->
+        <img src="img/details.png" />
+        <h2>Learn more about the technology involved.</h2>
+        <a href="details.html" class="techSpecs wow fadeInUp" data-wow-delay="0.4s">
+          <img src="img/specs.png">
+          <p style="margin-top: 2px;">Details</p>
+        </a>
+    </section>
 
 
     <!--==========================
@@ -296,6 +239,20 @@
           </div>
         </div>
       </div>
+    </section>
+
+
+    <!--==========================
+      Hero Section
+    ============================-->
+    <section id="getInvolved" class="wow fadeInUp" data-wow-delay="0.2s">
+      <div class="container">
+        <img src="img/heart.png" />
+        <h2>See how you can get involved.</h2>
+        <a href="hero.html" class="techSpecs wow fadeInUp" data-wow-delay="0.4s">
+          <img src="img/specs.png">
+          <p>Learn more</p>
+        </a>
     </section>
 
 
