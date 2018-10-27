@@ -954,14 +954,17 @@ h1, h2, h3, h4, h5, h6 {
   height: 72px;
   width: auto;
 }
-#one .oneContent > h1{
+#one #heroic h1{
   font-size: 56px;
   line-height: 72px;
   padding: 24px;
   font-weight: 400;
 }
-#one .oneContent p{
+#one #heroic p{
   line-height: 32px;
+}
+#one #heroic{
+  padding: 24px;
 }
 #one .buttons{
   display: flex;
