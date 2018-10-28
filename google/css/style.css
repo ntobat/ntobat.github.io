@@ -227,10 +227,11 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   z-index: 10;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+  align-items: flex-end;
   flex-direction: column;
   text-align: center;
+  margin: 8vh 100px 0 0;
 }
 
 #intro .intro-content h2 {
@@ -239,11 +240,11 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 #intro .intro-content p{
-  margin: 0 0 5vh 50%;
+  margin: 0 0 5vh 0;
   font-size: 18px;
   line-height: 32px;
-  font-weight: 700;
-  max-width: 455px;
+  font-weight: 400;
+  max-width: 700px;
   text-align: right;
 }
 
@@ -402,7 +403,6 @@ h1, h2, h3, h4, h5, h6 {
   padding: 60px 0 30px 0;
   position: relative;
 }
-
 #connect .connectImg {
   overflow: hidden;
   width: 100%;
@@ -427,7 +427,7 @@ h1, h2, h3, h4, h5, h6 {
 #connect .content{
   position: absolute;
   bottom: 0;
-  top: 85px;
+  top: 65px;
   left: 25px;
   right: 0;
   z-index: 10;
@@ -437,11 +437,12 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   color: white;
   text-align: left;
-  max-width: 60vw;
+  max-width: 50vw;
   max-height: 30%;
-  box-shadow: 2px 2px rgba(35,35,35,0.9);
 }
+#connect .box{
 
+}
 #connect .content h2 {
   font-weight: 700;
   font-size: 32px;
@@ -458,14 +459,10 @@ h1, h2, h3, h4, h5, h6 {
 
 #connect .content p {
   color: #333;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 16px;
-  line-height: 26px;
+  line-height: 32px;
   margin-bottom: 10px
-}
-
-#connect .content p {
-  line-height: 26px;
 }
 
 #connect .content p:last-child {
@@ -502,10 +499,11 @@ h1, h2, h3, h4, h5, h6 {
 #beacon #beaconText .description{
   line-height: 60px;
 }
-#beacon .box, #connect .box {
+#beacon .box{
   padding: 16px 12px;
   margin-bottom: 40px;
-  box-shadow: 10px 10px 15px rgba(73, 78, 92, 0.1);
+  box-shadow: 10px 10px 15px rgba(73, 78, 92, 0.1),
+              -10px -10px 15px rgba(73, 78, 92, 0.1);
   background: #fff;
   transition: 0.4s ease;
   z-index: 10;
@@ -671,7 +669,7 @@ h1, h2, h3, h4, h5, h6 {
   background-size: contain;
   background-repeat: no-repeat;
   width: 100vw;
-  height: 85vh;
+  height: 630px;
 }
 
 /* Durability Section
@@ -685,7 +683,7 @@ h1, h2, h3, h4, h5, h6 {
   background-size: contain;
   background-repeat: no-repeat;
   width: 100vw;
-  height: 85vh;
+  height: 630px;
 }
 #durable .durableContent{
   position: relative;
@@ -735,7 +733,7 @@ h1, h2, h3, h4, h5, h6 {
   background-size: contain;
   background-repeat: no-repeat;
   width: 100vw;
-  height: 80vh;
+  height: 550px;
 }
 #sapp .sappContent{
   position: relative;
@@ -962,6 +960,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 #one #heroic p{
   line-height: 32px;
+  max-width: 50vw;
+  margin: 0 auto 32px auto;
 }
 #one #heroic{
   padding: 24px;
