@@ -646,7 +646,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 #phone{
-  padding: 30px 0;
+  padding: 60px 0;
 }
 #phone .container{
   background: url("../img/phone.png");
@@ -670,7 +670,7 @@ h1, h2, h3, h4, h5, h6 {
   background-size: contain;
   background-repeat: no-repeat;
   width: 100vw;
-  height: 630px;
+  height: 720px;
 }
 
 /* Durability Section
@@ -684,7 +684,7 @@ h1, h2, h3, h4, h5, h6 {
   background-size: contain;
   background-repeat: no-repeat;
   width: 100vw;
-  height: 630px;
+  height: 720px;
 }
 #durable .durableContent{
   position: relative;
@@ -726,7 +726,7 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------*/
 
 #sapp{
-  padding: 0;
+  padding: 30px 0 0 0;
   
 }
 #sapp .container{
@@ -734,7 +734,7 @@ h1, h2, h3, h4, h5, h6 {
   background-size: contain;
   background-repeat: no-repeat;
   width: 100vw;
-  height: 580px;
+  height: 680px;
 }
 #sapp .sappContent{
   position: relative;
@@ -762,7 +762,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Pixels Section
 --------------------------------*/
 #pixel {
-  padding: 30px 0;
+  padding: 0 0 30px 0;
 }
 #pixel .container{
   background: url("../img/pixels.png");
