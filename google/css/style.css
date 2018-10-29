@@ -484,10 +484,28 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 10px;
 }
 
+/* Video Section
+--------------------------------*/
+#video{
+  padding: 30px 0;
+}
+#video .container iframe{
+  display: block;
+  margin: 0 auto;
+}
+
 /* Beacon Section
 --------------------------------*/
 #beacon {
-  padding: 30px 0 0 0;
+  padding: 30px 0;
+}
+#beacon .container{
+  background: url("../img/theBeacon.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100vw;
+  height: 85vh;
 }
 #beacon #beaconText{
   padding: 30px 0 80px 0;
@@ -627,32 +645,16 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------*/
 
 
-#phone .phoneContent{
-  position: absolute;
-  top: 24px;
-  left: 0;
-  right: 0;
-  z-index: 10;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color: white;
-  text-align: left;
-  padding: 0;
-  margin: 0;
-  
+#phone{
+  padding: 30px 0;
 }
-#phone .phoneContent h2, #phone .phoneContent p{
-  text-align: center;
-  width: 65vw;
-}
-#phone .phone-img{
-  position: relative;
-}
-
-#phone .phone-img img{
+#phone .container{
+  background: url("../img/phone.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   width: 100vw;
+  height: 85vh;
 }
 
 
