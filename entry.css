@@ -98,7 +98,6 @@ a{
   height: 24px;
   width: auto;
 }
-
 .navi{
   font-size: 18px;
   letter-spacing: 5px;
@@ -119,7 +118,6 @@ a{
   max-height: calc(100vh - 256px);
   text-indent: 18px;
   margin-bottom: 15px;
-
 }
 .navigator a{
   opacity: 0.35;
