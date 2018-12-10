@@ -322,6 +322,9 @@ a{
 .section-4{
   grid-area: 6/1/7/2;
 }
+#twitcherCaption{
+  grid-area: 6/2/7/3;
+}
 #conceptCaption{
   grid-area: 6/2/7/3;
 }
@@ -353,6 +356,9 @@ a{
 .section-7{
   grid-area: 9/1/10/2;
 }
+#surveyCaption{
+  grid-area: 9/2/10/3;
+}
 #depotJourneyCaption{
   grid-area: 9/2/10/3;
 }
@@ -374,6 +380,9 @@ p.indent{
   grid-area: 11/1/12/2;
 }
 #depotARCaption{
+  grid-area: 11/2/12/3;
+}
+#dashCaption{
   grid-area: 11/2/12/3;
 }
 
@@ -443,6 +452,9 @@ p.indent{
 }
 #bottom-depot{
   grid-area: 26/1/27/2;
+}
+#bottom-twitch{
+  grid-area: 17/1/18/2;
 }
 
 
