@@ -54,7 +54,7 @@ $(function(){
 		}
 	});
 
-	//about section
+	/*//about section
 	$(".abt").click(function(e){
 		e.preventDefault();
 		$(".about").addClass("outed");
@@ -63,6 +63,7 @@ $(function(){
 		e.preventDefault();
 		$(".about").removeClass("outed");
 	});
+*/
 
 	//work section
 	$(".wrk").click(function(e){
@@ -97,7 +98,7 @@ $(function(){
 		$(".workli svg line.activeline").removeClass("activeline");
 	});
 
-	//not work section
+	/*//not work section
 	$(".not").click(function(e){
 		e.preventDefault();
 		$(".notwork").addClass("workouted");
@@ -109,6 +110,7 @@ $(function(){
 		$(".notworkli.active").removeClass("active");
 		$(".notworkli svg line.activeline").removeClass("activeline");
 	});
+	*/
 
 	//entry nav
 	$(".menu").click(function(e){
