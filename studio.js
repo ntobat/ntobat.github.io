@@ -9,6 +9,20 @@ $(function(){
 	});
 
 
+    /* featherlight galleries: initialization */
+    $("a.graphic").featherlightGallery({
+        galleryFadeIn: 300,
+        openSpeed: 300
+    });
+    $("a.motion").featherlightGallery({
+        galleryFadeIn: 300,
+        openSpeed: 300
+    });
+    $("a.threed").featherlightGallery({
+        galleryFadeIn: 300,
+        openSpeed: 300
+    });
+
     /* scrollTo animation */
     var navi = navi = $('.navigator');
     $('.jump, .navTitle').click(function(event) {

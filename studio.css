@@ -221,6 +221,9 @@ a{
   background-size: 100% 99%;
   background-repeat: no-repeat;
 }
+a.graphic, a.motion, a.threed{
+  display: inline-block;
+}
 .lightBoxed img{
   padding: 20px;
 }

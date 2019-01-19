@@ -15,13 +15,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="studio.css">
-  <link rel="stylesheet" href="featherlight.css">
   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,800|Saira+Condensed:400,700" rel="stylesheet">
   <link rel="icon" type="img/ico" href="assets/favicon.ico">
-  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="studio.js" defer></script>
+  <!-- Featherlight Lightbox & Gallery -->
+  <link href="featherlight.css" type="text/css" rel="stylesheet" />
+  <link href="featherlight.gallery.css" type="text/css" rel="stylesheet" />
   <script src="//cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
-  <script src="studio.js"></script>
+  <script src="//cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.gallery.min.js" type="text/javascript" charset="utf-8"></script>
 </head>
 
 <body>
@@ -80,33 +82,33 @@
       <h3 class="subSecHead">iPhone X: Interaction Design</h3>
     </div>
     <div class="section section-2">
-      <div class="studioEntry">
+      <a class="studioEntry motion" href="#ixd1">
         <img class="picHover" id="picHover1" data-picnum='1' src="assets/studio/product.png" />
         <img class="gifHover" id="gifHover1" data-gifnum='1' src="assets/studio/product.gif" />
-        <div class="gifWrap" data-wrapnum='1' data-featherlight='#ixd1'>&nbsp;</div>
+        <div class="gifWrap" data-wrapnum='1'>&nbsp;</div>
         <div id="ixd1" class="lightBoxed">
-          <img src="assets/studio/product.gif" />
+          <img class="gallery" src="assets/studio/product.gif" />
           <div class="iphoneWrap">&nbsp;</div>
         </div>
-      </div>
-      <div class="studioEntry">
+      </a>
+      <a class="studioEntry motion" href="#ixd2">
         <img class="picHover" id="picHover2" data-picnum='2' src="assets/studio/reserve.png" />
         <img class="gifHover" id="gifHover2" data-gifnum='2' src="assets/studio/reserve.gif" />
-        <div class="gifWrap" data-wrapnum='2' data-featherlight='#ixd2'>&nbsp;</div>
+        <div class="gifWrap" data-wrapnum='2'>&nbsp;</div>
         <div id="ixd2" class="lightBoxed">
-          <img src="assets/studio/reserve.gif" />
+          <img class="gallery" src="assets/studio/reserve.gif" />
           <div class="iphoneWrap">&nbsp;</div>
         </div>
-      </div>
-      <div class="studioEntry">
+      </a>
+      <a class="studioEntry motion" href="#ixd3">
         <img class="picHover" id="picHover3" data-picnum='3' src="assets/studio/menu.png" />
         <img class="gifHover" id="gifHover3" data-gifnum='3' src="assets/studio/menu.gif" />
-        <div class="gifWrap" data-wrapnum='3' data-featherlight='#ixd3'>&nbsp;</div>
+        <div class="gifWrap" data-wrapnum='3'>&nbsp;</div>
         <div id="ixd3" class="lightBoxed">
-          <img src="assets/studio/menu.gif" />
+          <img class="gallery" src="assets/studio/menu.gif" />
           <div class="iphoneWrap">&nbsp;</div>
         </div>
-      </div>
+      </a>
       <br><br>
     </div>
     <div class="caption caption-2">
@@ -118,16 +120,16 @@
     	<h3 class="subSecHead" style="margin-bottom: -12px;">Game Animation</h3>
     </div>
     <div class="section section-4">
-      <div class="studioEntry">
+      <a class="studioEntry motion" href="#slap">
         <img class="picHover" id="picHover4" data-picnum='4' src="assets/america/slap.png" style="width: 300px;object-position: -50px;" />
         <img class="gifHover" id="gifHover4" data-gifnum='4' src="assets/america/slap.gif" style="width: 300px; object-position: -50px;" />
-        <div class="gifWrap" data-wrapnum='4' data-featherlight='#slap'>&nbsp;</div>
+        <div class="gifWrap" data-wrapnum='4'>&nbsp;</div>
         <div id="slap" class="lightBoxed">
           <video controls>
             <source src="assets/america/whack.mp4" type="video/mp4" />
           </video>
         </div>  
-      </div>
+      </a>
     </div>
     <div class="caption caption-4">
       <hr>
@@ -141,42 +143,42 @@
       <h2 class="secHead anchor" id="anchor2">GRAPHICS</h2>
     </div>
     <div class="section section-6">
-    	<div class="studioEntry" data-featherlight='#gr1'>
+    	<a class="studioEntry graphic" href="#gr1">
         <img class="entryImg" src="assets/graphics/scoob_sm.png" />
         <div id="gr1" class="lightBoxed">
           <img src="assets/graphics/scoob.png" />
         </div>
-      </div>
-      <div class="studioEntry" data-featherlight='#gr2'>
+      </a>
+      <a class="studioEntry graphic" href="#gr2">
         <img class="entryImg tallerSquare" src="assets/graphics/garden-gods_sm.png" />
         <div id="gr2" class="lightBoxed">
           <img src="assets/graphics/garden-gods.png" />
         </div>
-      </div>
-      <div class="studioEntry" data-featherlight='#gr3'>
+      </a>
+      <a class="studioEntry graphic" href="#gr3">
         <img class="entryImg" src="assets/graphics/howl_sm.png" />
         <div id="gr3" class="lightBoxed">
           <img src="assets/graphics/howl.png" />
         </div>
-      </div>
-      <div class="studioEntry" data-featherlight='#gr4'>
+      </a>
+      <a class="studioEntry graphic" href='#gr4'>
         <img class="entryImg tallerSquare" src="assets/graphics/cig_sm.png" />
         <div id="gr4" class="lightBoxed">
           <img src="assets/graphics/cig.png" />
         </div>
-      </div>
-      <div class="studioEntry" data-featherlight='#gr5'>
+      </a>
+      <a class="studioEntry graphic" href='#gr5'>
         <img class="entryImg" src="assets/graphics/basenji_sm.png" />
         <div id="gr5" class="lightBoxed">
           <img src="assets/graphics/basenji.png" />
         </div>
-      </div>
-      <div class="studioEntry" data-featherlight='#gr6'>
+      </a>
+      <a class="studioEntry graphic" href='#gr6'>
         <img class="entryImg tallerSquare" src="assets/graphics/oasis_sm.png" />
         <div id="gr6" class="lightBoxed">
           <img src="assets/graphics/oasis.png" />
         </div>
-      </div>
+      </a>
     </div>
     <div class="caption caption-6">
       <hr>
@@ -188,26 +190,26 @@
       
     </div>
     <div class="section section-8">
-      <div class="studioEntry">
+      <a class="studioEntry threed" href="#3d1">
         <img class="picHover" id="picHover5" data-picnum='5' src="assets/studio/mask.png" style="width: 300px;object-position: -50px 25px;" />
         <img class="gifHover" id="gifHover5" data-gifnum='5' src="assets/studio/maskSm.gif" style="width: 300px;object-position: -50px 25px;" />
-        <div class="gifWrap" data-wrapnum='5' data-featherlight='#3d1'>&nbsp;</div>
+        <div class="gifWrap" data-wrapnum='5'>&nbsp;</div>
         <div id="3d1" class="lightBoxed">
           <img src="assets/studio/mask.gif" />
         </div>
-      </div>
-      <div class="studioEntry" data-featherlight='#3d2'>
+      </a>
+      <a class="studioEntry threed" href='#3d2'>
         <img class="entryImg" src="assets/studio/portoSm.jpg" style="width: 300px;object-position: -50px 25px;" />
         <div id="3d2" class="lightBoxed">
           <img src="assets/studio/porto.jpg" />
         </div>
-      </div>
-      <div class="studioEntry" data-featherlight='#3d3'>
+      </a>
+      <a class="studioEntry threed" href='#3d3'>
         <img class="entryImg" src="assets/studio/plantSm.jpg" style="width: 300px;object-position: -50px 8px;" />
         <div id="3d3" class="lightBoxed">
           <img src="assets/studio/plant.jpg" />
         </div>
-      </div>
+      </a>
     </div>
     <div class="caption caption-8">
       <hr>
