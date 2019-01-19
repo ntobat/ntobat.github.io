@@ -246,6 +246,9 @@ a{
   /*border-left: 2px solid black;*/
   transition: all 800ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+.work{
+  border-left: 6px solid black;
+}
 .worklinks, .notworklinks{
   display: flex;
   flex-flow: column nowrap;
@@ -347,8 +350,8 @@ a.workli:hover, a.workli.active, a.notworkli:hover, a.notworkli.active{
   opacity: 0;
   transition: all 400ms ease;
   z-index: -1;
-  border-right: 6px solid black;
-  transition: all 800ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  
+  transition: all 800ms ease;
 }
 .entry-wrap{
   height: 100%;
@@ -483,6 +486,9 @@ a.workli:hover, a.workli.active, a.notworkli:hover, a.notworkli.active{
     width: 100vw;
     height: 100vh;
     position: fixed;
+  }
+  .work{
+    border-left: none;
   }
   .workli, .notworkli{
     font-size: 28px;

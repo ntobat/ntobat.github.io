@@ -77,40 +77,25 @@ $(function(){
 		$(".workli.active").removeClass("active");
 		$(".workli svg line.activeline").removeClass("activeline");
 	});
-	//open entry
-	$(".workli").click(function(e){
-		e.preventDefault();
-		//highlight link
-		$(".workli.active").removeClass("active");
-		$(".workli svg line.activeline").removeClass("activeline");
-		$(this).addClass("active");
-		$(".workli.active svg line").addClass("activeline");
-		//entry animation
-		$(".entryIn").removeClass("entryIn");
-		var worknum = $(this).data('worknum');
-		$("#entry" + worknum).addClass("entryIn");
-	});
-	//close entry
-	$(".closeEntry").click(function(e){
-		e.preventDefault();
-		$(".entryIn").removeClass("entryIn");
-		$(".workli.active").removeClass("active");
-		$(".workli svg line.activeline").removeClass("activeline");
-	});
 
-	/*//not work section
-	$(".not").click(function(e){
-		e.preventDefault();
-		$(".notwork").addClass("workouted");
-	});
-	$(".close").click(function(e){
-		e.preventDefault();
-		$(".entryIn").removeClass("entryIn");
-		$(".notwork").removeClass("workouted");
-		$(".notworkli.active").removeClass("active");
-		$(".notworkli svg line.activeline").removeClass("activeline");
-	});
-	*/
+	//open entry
+	if ( $(window).width() > 885) {
+		$(".workli").hover(function(){
+			//highlight link
+			$(".workli.active").removeClass("active");
+			$(".workli svg line.activeline").removeClass("activeline");
+			$(this).addClass("active");
+			$(".workli.active svg line").addClass("activeline");
+			//entry animation
+			$(".entryIn").removeClass("entryIn");
+			var worknum = $(this).data('worknum');
+			$("#entry" + worknum).addClass("entryIn");
+			}, function(){
+			$(".entryIn").removeClass("entryIn");
+			$(".workli.active").removeClass("active");
+			$(".workli svg line.activeline").removeClass("activeline");
+		});
+	};
 
 	//entry nav
 	$(".menu").click(function(e){
