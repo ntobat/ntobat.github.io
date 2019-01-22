@@ -53,19 +53,15 @@ $(function(){
         };
 
         if( $("#menu").hasClass('menuClosed') ){
-
             $("#menu").fadeTo(250, 0);
             setTimeout(function(){
                 $("#menu").replaceWith("<img id='menu' class='' src='assets/menuWordClose.svg' />").fadeTo(250, 1);
             }, 250);
-
         } else {
-
             $("#menu").fadeTo(250, 0);
             setTimeout(function(){
                 $("#menu").replaceWith("<img id='menu' class='menuClosed' src='assets/siteMenu.svg' />").fadeTo(250, 1);
             }, 250);
-
         };
     });
 
