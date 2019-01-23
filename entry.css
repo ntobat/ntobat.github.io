@@ -571,7 +571,7 @@ p.indent{
     margin: -100px 0 0;
     padding: 10px;
     height: 64px;
-    width: calc(100vw - 100px);
+    width: calc(100vw - 50px);
     position: absolute;
     z-index: 1;
     box-shadow: none;
@@ -645,8 +645,6 @@ p.indent{
     margin-right: 0;
   }
 }
-
-
 
 
 

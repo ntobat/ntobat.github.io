@@ -200,6 +200,8 @@ a{
   position: absolute;
   left: 0;
   top: 0;
+  width: 40vw;
+  height: 88px;
 }
 .li svg line{
   stroke-width: 10;
@@ -228,6 +230,10 @@ a{
 .li:hover svg line.right{
   transform: translateY(-176px);
 }
+body:not(:-moz-handler-blocked) svg line.bottom {
+    width:486px;
+  }
+
 
 
 /* ==========================
@@ -323,16 +329,17 @@ a.workli:hover, a.workli.active, a.notworkli:hover, a.notworkli.active{
   font-weight: 800;
   color: white;
   text-align: center;
-  border-top: 6px solid white;
+  border: 3px solid white;
   padding-top: 2px;
   transition: all 400ms ease;
   cursor: pointer;
 }
 .close:hover{
-  background-color: white;
-  color: black;
-  border-top: 6px solid black;
-  border-bottom: 6px solid black;
+  border-top: 3px solid black;
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+  border-bottom: 3px solid white;
+  transform: translateY(-3px);
 }
 
 
@@ -340,12 +347,25 @@ a.workli:hover, a.workli.active, a.notworkli:hover, a.notworkli.active{
 -- ENTRIES                 --
 ========================== */
 
-.entry{
+/*.entry{
   position: absolute;
   width: 50vw;
   height: calc(100vh - 96px);
   background-color: white;
   top: 48px;
+  left: 50vw;
+  opacity: 0;
+  transition: all 400ms ease;
+  z-index: -1;
+  
+  transition: all 800ms ease;
+}*/
+.entry{
+  position: absolute;
+  width: 50vw;
+  height: 100vh;
+  background-color: white;
+  top: 0;
   left: 50vw;
   opacity: 0;
   transition: all 400ms ease;
@@ -362,18 +382,26 @@ a.workli:hover, a.workli.active, a.notworkli:hover, a.notworkli.active{
   justify-content: center;
   align-items: center;
 }
+img.entryThumb{
+  width: 90%;
+  margin: 0 0 24px;
+}
 .entry h1{
   font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
   text-align: center;
-  font-size: 42px;
-  color: black;
+  font-size: 36px;
 }
 .entry p{
   font-family: "Nunito Sans", sans-serif;
   text-align: center;
-  color: black;
-  font-size: 24px;
+  font-size: 18px;
   margin-top: 18px;
+  max-width: 75%;
+}
+.entry p.tags{
+  opacity: 0.75;
+  font-size: 15px;
+  font-weight: 800;
 }
 .entryIn{
   opacity: 1;
