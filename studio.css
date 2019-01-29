@@ -227,7 +227,7 @@ a{
   background-size: 100% 99%;
   background-repeat: no-repeat;
 }
-a.graphic, a.motion, a.threed{
+a.graphic, a.motion, a.threed, a.write{
   display: inline-block;
 }
 .lightBoxed img{
@@ -358,30 +358,6 @@ a.graphic, a.motion, a.threed{
 }
 .caption-2{
   grid-area: 4/2/5/3;
-}
-#stats{
-  margin-top: -18px;
-}
-.stat{
-  padding: 32px;
-  text-align: center;
-  max-width: 20vw;
-  color: white;
-}
-.stat h2{
-  font-family: "Nunito Sans", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
-  font-size: 32px;
-  margin-bottom: 8px;
-  color: white;
-}
-.stat p{
-  font-family: "Nunito Sans", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
-  color: white;
-  font-size: 15px;
-}
-#statCaption{
-  grid-area: 4/2/5/3;
-  margin-top: -18px;
 }
 
 .section-3{

@@ -1,0 +1,55 @@
+body{
+	width: calc(100vw - 30px);
+	margin: 0;
+	padding: 0;
+  	min-height: 100vh;
+  	border-left: 15px solid black;
+  	border-right: 15px solid black;
+  	border-bottom: 15px solid black;
+}
+
+#topnav{
+	position: fixed;
+	width: 100vw;
+	height: 28px;
+	background: black;
+	text-align: center;
+}
+
+#topnav a{
+	display: inline-block;
+	font-family: 'Saira Condensed';
+	color: white;
+	height: 100%;
+	padding: 0 24px;
+}
+
+.section{
+	width: 55%;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+
+#title{
+	font-size: 3.5em;
+	font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
+	width: 100%;
+	border-bottom: 2px solid black;
+}
+
+.section .secHeader{
+	font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
+}
+
+.section p{
+	font-family: "Nunito Sans", sans-serif;
+	line-height: 2;
+	margin-bottom: 32px;
+}
+
+
+@media screen and (max-width: 850px){
+	.section{
+		width: 75%;
+	}
+}
