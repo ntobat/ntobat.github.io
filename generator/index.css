@@ -5,12 +5,13 @@ body, *{
 	padding: 0;
 	box-sizing: border-box;
 	font-family: Rubik, sans-serif;
+	color: white;
 }
 body{
 	height: 100vh;
 	width: 100vw;
 	overflow: hidden;
-	background: linear-gradient(135deg, #cedce7 0%,#596a72 100%);
+	background: #DB5648;
 }
 
 #wrapper{
@@ -35,10 +36,11 @@ body{
 	margin: 0 0 32px;
 }
 span{
-	transition: all 1200ms ease;
-	color: rgba(0,0,0,0);
+	
 }
 button{
 	height: 42px;
 	width: 50%;
+	color: black;
+	font-size: 20px;
 }
