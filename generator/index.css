@@ -15,13 +15,18 @@ body{
 }
 
 #wrapper{
-	margin: 100px auto;
+	margin: 40px auto;
 	width: 50vw;
 	height: auto;
 	display: flex;
 	flex-flow: column;
 	align-items: center;
 	justify-content: center;
+}
+#wrapper img{
+	height: 120px;
+	width: auto;
+	margin: 0 auto 32px auto;
 }
 #wrapper h1, #wrapper p{
 	text-align: center;

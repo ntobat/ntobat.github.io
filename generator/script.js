@@ -51,4 +51,25 @@ function newItem(){
 	document.getElementById("act").innerHTML = activities[randomAct];
 	document.getElementById("age").innerHTML = ages[randomAge];
 };
+
+function share(item){
+	var listItem = document.getElementById('shared').innerHTML;
+	var desc = encodeURIComponent("I just added a new item to my bucket list:" + listItem);
+	window.open("https://www.facebook.com/sharer.php?u=www.nicktobat.com/generator/index.html&description="+desc); 
+}
+
+
+
+
+
+
+
+
 window.onload = newItem();
+
+
+
+
+
+
+
