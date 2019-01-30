@@ -6,6 +6,7 @@ var activities = [
 	'snowboard a black diamond',
 	'ski a black diamond',
 	'hike 10 miles',
+	'ice climb a frozen waterfall',
 	'surf a ten-foot wave'
 ];
 
@@ -53,12 +54,26 @@ function newItem(){
 };
 
 function share(item){
-	var listItem = document.getElementById('shared').innerHTML;
-	var desc = encodeURIComponent("I just added a new item to my bucket list:" + listItem);
-	window.open("https://www.facebook.com/sharer.php?u=www.nicktobat.com/generator/index.html&description="+desc); 
+	var listItem = document.getElementById('shared').textContent;
+	var desc = encodeURIComponent("I just added a new item to my bucket list: " + listItem);
+	window.open("http://twitter.com/share?url=www.nicktobat.com&text=" + desc); 
 }
 
+function shared(){
 
+	document.getElementById("fb-publish").onclick = (function() {
+		console.log('clicked');
+		var listItem = document.getElementById('shared').textContent;
+		var desc = encodeURIComponent("I just added a new item to my bucket list: " + listItem);
+	    FB.ui({
+	        method: "feed",
+	        link: "http://example.com/",
+	        caption: "Example.com",
+	        description: desc,
+	    });
+	});
+
+};
 
 
 

@@ -49,3 +49,7 @@ button{
 	color: black;
 	font-size: 20px;
 }
+
+#social a{
+	cursor: pointer;
+}
