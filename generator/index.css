@@ -1,0 +1,44 @@
+@font-face { font-family: Rubik; src: url('Rubik-Medium.ttf'); } 
+
+body, *{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Rubik, sans-serif;
+}
+body{
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+	background: linear-gradient(135deg, #cedce7 0%,#596a72 100%);
+}
+
+#wrapper{
+	margin: 100px auto;
+	width: 50vw;
+	height: auto;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+}
+#wrapper h1, #wrapper p{
+	text-align: center;
+}
+#wrapper h1{
+	font-size: 96px;
+}
+#wrapper p{
+	font-size: 40px;
+}
+#wrapper > *{
+	margin: 0 0 32px;
+}
+span{
+	transition: all 1200ms ease;
+	color: rgba(0,0,0,0);
+}
+button{
+	height: 42px;
+	width: 50%;
+}
