@@ -1,30 +1,79 @@
-@font-face { font-family: Rubik; src: url('Rubik-Medium.ttf'); } 
-
 body, *{
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: Rubik, sans-serif;
+	font-family: 'Rubik', sans-serif;
 	color: white;
 }
 body{
 	height: 100vh;
 	width: 100vw;
-	overflow: hidden;
 	background: #DB5648;
 }
 
+
+#landing{
+	height: 100vh;
+	width: 100vw;
+	background-image: url('hero.jpg');
+	background-size: cover;
+	background-position: 58% center;
+	display: flex;
+	flex-flow: column;
+	align-items: flex-start;
+	justify-content: center;
+}
+#introText{
+	width: 65%;
+	padding-left: 36px;
+}
+#introText h1, #introText p{
+}
+#introText h1{
+	font-size: calc(3vw + 10px);
+}
+#introText p{
+	font-size: calc(1.8vw + 2px);
+	line-height: 3.8vw;
+	margin-left: 120px;
+}
+#introText p span{
+	background-color: #DB5648;
+	font-weight: 700;
+	padding: 1vw;
+	margin: 4px 0;
+}
+#header{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+#header > *{
+	margin: 0 36px;
+}
+#header img{
+	margin: 0;
+}
+
+
+
+
+
+
+
+
+
 #wrapper{
-	margin: 40px auto;
-	width: 50vw;
-	height: auto;
+	margin: 40px auto 0 auto;
+	width: 75vw;
+	height: 100vh;
 	display: flex;
 	flex-flow: column;
 	align-items: center;
 	justify-content: center;
 }
-#wrapper img{
-	height: 120px;
+img{
+	height: 110px;
 	width: auto;
 	margin: 0 auto 32px auto;
 }
@@ -32,24 +81,175 @@ body{
 	text-align: center;
 }
 #wrapper h1{
-	font-size: 96px;
+	font-size: calc(4vw + 18px);
+	font-weight: 700;
 }
 #wrapper p{
-	font-size: 40px;
+	font-size: calc(2.5vw + 10px);
 }
-#wrapper > *{
+#wrapper h1, #wrapper p, #wrapper button{
 	margin: 0 0 32px;
 }
 span{
 	
 }
-button{
-	height: 42px;
-	width: 50%;
-	color: black;
-	font-size: 20px;
+#wrapper > button{
+  display: block;
+  font-size: 20px;
+  text-align: center;
+  background-color: #DB5648;
+  height: 60px;
+  width: 180px;
+  padding: 10px 16px;
+  line-height: 36px;
+  border-radius: 5px;
+  border: 4px solid white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  transition: all 200ms ease;
+  cursor: pointer;
 }
-
+#wrapper > button:hover{
+  	color: #DB5648;
+  	background-color: white;
+  	transform: scale(1.1);
+  	box-shadow: 0 4px 4px rgba(0,0,0,1);
+}
+#wrapper > button:active{
+	transform: scale(1);
+	transform: translateY(4px);
+}
+#social{
+	width: 50vw;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 #social a{
 	cursor: pointer;
+	transition: all 0.2s ease-in;
+	border-radius: 4px;
+	border: none;
+	font-size: 14px;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 10px;
+	margin: 0 6px;
+	text-align: center;
 }
+#social a:hover{
+	transform: translateY(-4px);
+	box-shadow: 0 2px 5px rgba(0,0,0,0.35);
+}
+#social a svg{
+	fill: #fff;
+	height: 20px;
+	width: 20px;
+	position: relative;
+	top: 10px;
+	vertical-align: top;
+	transform: scale(1.25);
+}
+g{
+	transform-origin: 0px 0px 0px;
+}
+#fb{
+	background-color: #3B5998;
+}
+#twitter{
+	background-color: #55acee;
+}
+#email{
+	background-color: #7d7d7d;
+}
+
+
+#buddy{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 24px;
+}
+#buddy p{
+	text-align: right;
+	font-size: 14px;
+	width: 320px;
+	margin-bottom: 0;
+	padding-right: 18px;
+}
+#buddy a{
+	font-size: 14px;
+	text-align: center;
+	background-color: #DB5648;
+	height: 48px;
+	width: 140px;
+	line-height: 44px;
+	border-radius: 5px;
+	border: 3px solid white;
+	box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+	transition: all 200ms ease;
+	cursor: pointer;
+	text-decoration: none;
+}
+#buddy a:hover{
+	background-color: white;
+	color: #DB5648;
+	transform: translateX(6px);
+	box-shadow: -4px 2px 5px rgba(0,0,0,0.35);
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 767px){
+
+	#introText{
+		width: 80%; 
+	}
+	#header img{
+		height: 72px;
+	}
+	#introText p{
+		font-size: 14px;
+		margin-left: 91px;
+	}
+	#introText p span{
+		padding: 0.5vw;
+	}
+	#wrapper{
+		width: 85vw;
+	}
+	#buddy{
+		flex-flow: column;
+	}
+	#buddy p{
+		text-align: center;
+		margin-bottom: 12px;
+	}
+}
+@media screen and (max-width: 478px){
+
+	#introText{
+		width: 90%;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

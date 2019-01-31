@@ -2,12 +2,26 @@ var activities = [
 	'summit a mountain',
 	'run a marathon',
 	'run a race',
+	'run a 5k',
+	'run a 10k',
+	'run a half marathon',
 	'rock climb outside',
 	'snowboard a black diamond',
+	'snowboard a double black diamond',
 	'ski a black diamond',
-	'hike 10 miles',
+	'ski a double black diamond',
+	'hike 5 miles in one go',
+	'hike 10 miles in one go',
+	'bike 10 miles in one go',
+	'bike 20 miles in one go',
+	'bike 50 miles in one go',
+	'bike 100 miles in one go',
+	'compete in an Iron Man race',
 	'ice climb a frozen waterfall',
-	'surf a ten-foot wave'
+	'surf a ten-foot wave',
+	'paddle class 3 rapids',
+	'paddle class 4 rapids',
+	'paddle class 5 rapids',
 ];
 
 var locales = [
@@ -20,31 +34,32 @@ var locales = [
 ];
 
 var ages = [
-	'25 years old',
-	'30 years old',
-	'35 years old',
-	'40 years old',
-	'45 years old',
-	'50 years old',
-	'55 years old',
-	'60 years old',
-	'65 years old',
-	'70 years old',
-	'75 years old',
-	'80 years old',
-	'85 years old',
-	'90 years old',
-	'95 years old',
-	'100 years old',
-	'105 years old',
-	'110 years old',
-	'dead',
-	'dead',
-	'dead',
-	'dead',
-	'dead',
-	'dead'
+	"'m 25 years old",
+	"'m 30 years old",
+	"'m 35 years old",
+	"'m 40 years old",
+	"'m 45 years old",
+	"'m 50 years old",
+	"'m 55 years old",
+	"'m 60 years old",
+	"'m 65 years old",
+	"'m 70 years old",
+	"'m 75 years old",
+	"'m 80 years old",
+	"'m 85 years old",
+	"'m 90 years old",
+	"'m 95 years old",
+	"'m 100 years old",
+	"'m 105 years old",
+	"'m 110 years old",
+	" kick the bucket",
+	" kick the bucket",
+	" kick the bucket",
+	" kick the bucket",
+	" kick the bucket",
+	" kick the bucket"
 ];
+
 
 function newItem(){
 	var randomAct = Math.floor((Math.random()) * (activities.length));
@@ -53,31 +68,33 @@ function newItem(){
 	document.getElementById("age").innerHTML = ages[randomAge];
 };
 
-function share(item){
+
+function TWshare(item){
 	var listItem = document.getElementById('shared').textContent;
-	var desc = encodeURIComponent("I just added a new item to my bucket list: " + listItem);
-	window.open("http://twitter.com/share?url=www.nicktobat.com&text=" + desc); 
-}
-
-function shared(){
-
-	document.getElementById("fb-publish").onclick = (function() {
-		console.log('clicked');
-		var listItem = document.getElementById('shared').textContent;
-		var desc = encodeURIComponent("I just added a new item to my bucket list: " + listItem);
-	    FB.ui({
-	        method: "feed",
-	        link: "http://example.com/",
-	        caption: "Example.com",
-	        description: desc,
-	    });
-	});
-
+	var desc = encodeURIComponent("I just added a new item to my bucket list: " + listItem + " Hold me accountable, world!");
+	window.open("http://twitter.com/share?url=www.nicktobat.com&text=" + desc + "&hashtags=buddy,buddychallenge"); 
 };
 
 
+function FBshare(){
+	FB.ui({
+        method: "feed",
+        link: "http://nicktobat.com/generator/index.html",
+        caption: "Buddy Adventure Generator",
+    });
+};
 
 
+function copy(){
+	var listItem = document.getElementById('shared').textContent;
+	const el = document.createElement('textarea');
+	el.value = listItem;
+	el.setAttribute('readonly',true);
+	document.body.appendChild(el);
+	el.select();
+	document.execCommand('copy');
+	document.body.removeChild(el);
+};
 
 
 window.onload = newItem();
