@@ -22,6 +22,25 @@ var activities = [
 	'paddle class 3 rapids',
 	'paddle class 4 rapids',
 	'paddle class 5 rapids',
+	'walk on a frozen lake',
+	'swim with sharks',
+	'skydive',
+	'skateboard on a halfpipe',
+	'ride a horse',
+	'go camping',
+	'learn how to surf',
+	'try water skiing',
+	'do a handstand',
+	'try paddleboarding',
+	'do a handstand on a paddle board',
+	'go snow shoeing',
+	'explore a cave',
+	'compete in a triathlon',
+	'go bungee jumping',
+	'ride in a hot air balloon',
+	'learn how to sail',
+	'play polo',
+	'go SCUBA diving'
 ];
 
 var locales = [
@@ -73,15 +92,6 @@ function TWshare(item){
 	var listItem = document.getElementById('shared').textContent;
 	var desc = encodeURIComponent("I just added a new item to my bucket list: " + listItem + " Hold me accountable, world!");
 	window.open("http://twitter.com/share?url=www.nicktobat.com&text=" + desc + "&hashtags=buddy,buddychallenge"); 
-};
-
-
-function FBshare(){
-	FB.ui({
-        method: "feed",
-        link: "http://nicktobat.com/generator/index.html",
-        caption: "Buddy Adventure Generator",
-    });
 };
 
 

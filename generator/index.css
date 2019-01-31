@@ -13,7 +13,7 @@ body{
 
 
 #landing{
-	height: 100vh;
+	height: 99vh;
 	width: 100vw;
 	background-image: url('hero.jpg');
 	background-size: cover;
@@ -48,17 +48,15 @@ body{
 	align-items: center;
 	justify-content: space-around;
 }
-#header > *{
+#header h1{
 	margin: 0 36px;
 }
-#header img{
+#header a, #header img{
 	margin: 0;
 }
-
-
-
-
-
+p#more{
+	font-size: 12px;
+}
 
 
 
@@ -90,8 +88,21 @@ img{
 #wrapper h1, #wrapper p, #wrapper button{
 	margin: 0 0 32px;
 }
-span{
-	
+p#copy{
+	height: 26px;
+	font-size: 12px;
+	color: #DB5648;
+	border-radius: 5px;
+	background-color: white;
+	padding: 6px 10px;
+	cursor: pointer;
+	transition: all 200ms ease;
+}
+p#copy:hover{
+	text-decoration: underline;
+}
+p#copy:active{
+	padding: 9px 10px 3px 10px;
 }
 #wrapper > button{
   display: block;
@@ -107,6 +118,7 @@ span{
   box-shadow: 0 4px 10px rgba(0,0,0,0.25);
   transition: all 200ms ease;
   cursor: pointer;
+  outline: none;
 }
 #wrapper > button:hover{
   	color: #DB5648;
@@ -167,16 +179,16 @@ g{
 #buddy{
 	width: 100%;
 	display: flex;
+	flex-flow: column;
 	align-items: center;
 	justify-content: center;
 	margin-top: 24px;
 }
 #buddy p{
-	text-align: right;
+	text-align: center;
 	font-size: 14px;
 	width: 320px;
-	margin-bottom: 0;
-	padding-right: 18px;
+	margin: 12px 0;
 }
 #buddy a{
 	font-size: 14px;
@@ -195,7 +207,7 @@ g{
 #buddy a:hover{
 	background-color: white;
 	color: #DB5648;
-	transform: translateX(6px);
+	transform: translateX(8px);
 	box-shadow: -4px 2px 5px rgba(0,0,0,0.35);
 }
 
@@ -212,12 +224,19 @@ g{
 	#introText{
 		width: 80%; 
 	}
-	#header img{
-		height: 72px;
+	#header{
+		flex-flow: column;
+		align-items: flex-start;
+	}
+	#introText h1{
+		margin: 0;
+	}
+	#introText img{
+		margin-bottom: 36px;
 	}
 	#introText p{
 		font-size: 14px;
-		margin-left: 91px;
+		margin-left: 0;
 	}
 	#introText p span{
 		padding: 0.5vw;
@@ -238,7 +257,15 @@ g{
 	#introText{
 		width: 90%;
 	}
-
+	#wrapper > button:hover{
+		color: inherit;
+  		background-color: inherit;
+  		transform: none;
+  		box-shadow: none;
+	}
+	p#copy:hover{
+		text-decoration: none;
+	}
 }
 
 
