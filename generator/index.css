@@ -10,7 +10,7 @@ body, *{
 body{
 	height: 100vh;
 	width: 100vw;
-	background: #DB5648;
+	background: #dc5648;
 }
 h1, h2, h3, h4, h5, p, a, button, span{
 	font-family: 'Rubik', sans-serif;
@@ -51,7 +51,7 @@ h1, h2, h3, h4, h5, p, a, button, span{
 	margin-left: 120px;
 }
 #introText p span{
-	background-color: #DB5648;
+	background-color: #dc5648;
 	font-weight: 700;
 	padding: 1vw;
 	margin: 4px 0;
@@ -109,9 +109,9 @@ p#copy{
 	position: relative;
 	height: 26px;
 	font-size: 12px;
-	color: #DB5648;
+	color: white;
+	background-color: #dc5648;
 	border-radius: 5px;
-	background-color: white;
 	padding: 6px 10px;
 	cursor: pointer;
 	transition: all 200ms ease;
@@ -123,22 +123,28 @@ p#copy:active{
 	padding: 9px 10px 3px 10px;
 }
 #copier{
-	width: 80%;
+	width: 60%;
 	position: absolute;
 	left: 50%;
+	margin-left: -30%;
+	padding: 2px 0;
 	bottom: 6px;
+	color: #dc5648;
+	border-radius: 5px;
+	background-color: white;
 	opacity: 0;
-	transition: all 600ms ease;
+	transition: all 500ms ease;
 }
 #copier.copied{
-	left: 85%;
+	bottom: 28px;
 	opacity: 1;
 }
 #generator > button{
   display: block;
   font-size: 20px;
   text-align: center;
-  background-color: #DB5648;
+  color: #dc5648;
+  background-color: white;
   height: 60px;
   width: 180px;
   padding: 10px 16px;
@@ -151,7 +157,7 @@ p#copy:active{
   outline: none;
 }
 #generator > button:hover{
-  	color: #DB5648;
+  	color: #dc5648;
   	background-color: white;
   	transform: scale(1.1);
   	box-shadow: 0 4px 4px rgba(0,0,0,1);
@@ -223,7 +229,7 @@ g{
 #buddy a{
 	font-size: 14px;
 	text-align: center;
-	background-color: #DB5648;
+	background-color: #dc5648;
 	height: 48px;
 	width: 140px;
 	line-height: 44px;
@@ -236,7 +242,7 @@ g{
 }
 #buddy a:hover{
 	background-color: white;
-	color: #DB5648;
+	color: #dc5648;
 	transform: translateX(8px);
 	box-shadow: -4px 2px 5px rgba(0,0,0,0.35);
 }

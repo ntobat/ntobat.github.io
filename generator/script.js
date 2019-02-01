@@ -1,35 +1,65 @@
 var activities = [
 	'summit a mountain',
+	'summit a fourteener',
 	'run a marathon',
 	'run a race',
+	'run a 5k',
+	'run a 5k',
+	'run a 5k',
 	'run a 5k',
 	'run a 10k',
 	'run a half marathon',
 	'rock climb outside',
+	'rock climb outside',
+	'rock climb outside',
+	'try skiing',
+	'try skiing',
+	'try skiing',
+	'try snowboarding',
+	'try snowboarding',
+	'try snowboarding',
 	'snowboard a black diamond',
 	'snowboard a double black diamond',
 	'ski a black diamond',
 	'ski a double black diamond',
 	'hike 5 miles in one go',
 	'hike 10 miles in one go',
+	'hike 20 miles in one go',
 	'bike 10 miles in one go',
 	'bike 20 miles in one go',
 	'bike 50 miles in one go',
 	'bike 100 miles in one go',
 	'compete in an Iron Man race',
 	'ice climb a frozen waterfall',
-	'surf a ten-foot wave',
 	'paddle class 3 rapids',
 	'paddle class 4 rapids',
 	'paddle class 5 rapids',
+	'climb in a gym',
+	'climb in a gym',
+	'climb in a gym',
+	'climb a 5.9',
+	'climb a 5.9',
+	'climb a 5.10',
+	'climb a 5.11',
+	'climb a 5.12',
+	'climb a 5.13',
 	'walk on a frozen lake',
 	'swim with sharks',
 	'skydive',
 	'skateboard on a halfpipe',
 	'ride a horse',
 	'go camping',
+	'go camping',
+	'go camping',
+	'go mountain biking',
+	'go mountain biking',
+	'go mountain biking',
 	'learn how to surf',
+	'learn how to surf',
+	'surf a ten-foot wave',
 	'try water skiing',
+	'take a yoga class',
+	'do a headstand',
 	'do a handstand',
 	'try paddleboarding',
 	'do a handstand on a paddle board',
@@ -43,55 +73,45 @@ var activities = [
 	'go SCUBA diving'
 ];
 
-var locales = [
-	'the west coast of the US',
-	'the east coast of the US',
-	'the Middle East',
-	'Hawai\'i',
-	'the Eurasian Steppe',
-	'the Himalayas'
-];
-
-var ages = [
-	"'m 25 years old",
-	"'m 30 years old",
-	"'m 35 years old",
-	"'m 40 years old",
-	"'m 45 years old",
-	"'m 50 years old",
-	"'m 55 years old",
-	"'m 60 years old",
-	"'m 65 years old",
-	"'m 70 years old",
-	"'m 75 years old",
-	"'m 80 years old",
-	"'m 85 years old",
-	"'m 90 years old",
-	"'m 95 years old",
-	"'m 100 years old",
-	"'m 105 years old",
-	"'m 110 years old",
-	" kick the bucket",
-	" kick the bucket",
-	" kick the bucket",
-	" kick the bucket",
-	" kick the bucket",
-	" kick the bucket"
+var times = [
+	"my next birthday",
+	"the next presidential election",
+	"the end of the year",
+	"the end of the day",
+	"the end of the month",
+	"the end of the week",
+	"the next snowfall",
+	"the next rainfall",
+	"the next full moon",
+	"the next new moon",
+	"the next lunar eclipse",
+	"the next solar eclipse",
+	"I go to sleep",
+	"I'm too old",
+	"I eat breakfast",
+	"I eat lunch",
+	"I eat dinner",
+	"the end of the month",
+	"I kick the bucket",
+	"I kick the bucket",
+	"I kick the bucket",
+	"I kick the bucket",
+	"I kick the bucket"
 ];
 
 
 function newItem(){
 	var randomAct = Math.floor((Math.random()) * (activities.length));
-	var randomAge = Math.floor((Math.random()) * (ages.length));
+	var randomTime = Math.floor((Math.random()) * (times.length));
 	document.getElementById("act").innerHTML = activities[randomAct];
-	document.getElementById("age").innerHTML = ages[randomAge];
+	document.getElementById("time").innerHTML = times[randomTime];
 };
 
 
 function TWshare(item){
 	var listItem = document.getElementById('shared').textContent;
 	var desc = encodeURIComponent("I just added a new item to my bucket list: " + listItem + " Hold me accountable, world!");
-	window.open("http://twitter.com/share?url=www.nicktobat.com&text=" + desc + "&hashtags=buddy,climbsomething,buddychallenge,bringabuddy"); 
+	window.open("http://twitter.com/share?url=www.iambuddy.com&text=" + desc + "&hashtags=buddy,climbsomething,buddychallenge,bringabuddy"); 
 };
 
 
@@ -107,7 +127,7 @@ function copy(){
 	document.body.removeChild(el);
 	setTimeout(function(){
 		document.getElementById('copier').classList.remove("copied");
-	},800);
+	},600);
 };
 
 
