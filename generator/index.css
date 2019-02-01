@@ -1,16 +1,26 @@
+/* ==========================
+-- BODY                    --
+========================== */
+
 body, *{
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'Rubik', sans-serif;
-	color: white;
 }
 body{
 	height: 100vh;
 	width: 100vw;
 	background: #DB5648;
 }
+h1, h2, h3, h4, h5, p, a, button, span{
+	font-family: 'Rubik', sans-serif;
+	color: white;
+}
 
+
+/* ==========================
+-- LANDING                 --
+========================== */
 
 #landing{
 	height: 99vh;
@@ -22,6 +32,9 @@ body{
 	flex-flow: column;
 	align-items: flex-start;
 	justify-content: center;
+}
+#landing img{
+	margin: 0 auto 32px auto;
 }
 #introText{
 	width: 65%;
@@ -59,9 +72,11 @@ p#more{
 }
 
 
+/* ==========================
+-- GENERATOR               --
+========================== */
 
-
-#wrapper{
+#generator{
 	margin: 40px auto 0 auto;
 	width: 75vw;
 	height: 100vh;
@@ -70,25 +85,28 @@ p#more{
 	align-items: center;
 	justify-content: center;
 }
-img{
+#generator img, #landing img{
 	height: 110px;
 	width: auto;
-	margin: 0 auto 32px auto;
 }
-#wrapper h1, #wrapper p{
+#generator img{
+	margin-bottom: 24px;
+}
+#generator h1, #generator p{
 	text-align: center;
 }
-#wrapper h1{
+#generator h1{
 	font-size: calc(4vw + 18px);
 	font-weight: 700;
 }
-#wrapper p{
+#generator p{
 	font-size: calc(2.5vw + 10px);
 }
-#wrapper h1, #wrapper p, #wrapper button{
+#generator h1, #generator p, #generator button{
 	margin: 0 0 32px;
 }
 p#copy{
+	position: relative;
 	height: 26px;
 	font-size: 12px;
 	color: #DB5648;
@@ -104,7 +122,19 @@ p#copy:hover{
 p#copy:active{
 	padding: 9px 10px 3px 10px;
 }
-#wrapper > button{
+#copier{
+	width: 80%;
+	position: absolute;
+	left: 50%;
+	bottom: 6px;
+	opacity: 0;
+	transition: all 600ms ease;
+}
+#copier.copied{
+	left: 85%;
+	opacity: 1;
+}
+#generator > button{
   display: block;
   font-size: 20px;
   text-align: center;
@@ -120,13 +150,13 @@ p#copy:active{
   cursor: pointer;
   outline: none;
 }
-#wrapper > button:hover{
+#generator > button:hover{
   	color: #DB5648;
   	background-color: white;
   	transform: scale(1.1);
   	box-shadow: 0 4px 4px rgba(0,0,0,1);
 }
-#wrapper > button:active{
+#generator > button:active{
 	transform: scale(1);
 	transform: translateY(4px);
 }
@@ -175,7 +205,7 @@ g{
 	background-color: #7d7d7d;
 }
 
-
+/* BUDDY SECTION */
 #buddy{
 	width: 100%;
 	display: flex;
@@ -213,11 +243,9 @@ g{
 
 
 
-
-
-
-
-
+/* ==========================
+-- MEDIA QUERIES           --
+========================== */
 
 @media screen and (max-width: 767px){
 
@@ -237,11 +265,12 @@ g{
 	#introText p{
 		font-size: 14px;
 		margin-left: 0;
+		line-height: 
 	}
 	#introText p span{
-		padding: 0.5vw;
+		padding: 0.4vw;
 	}
-	#wrapper{
+	#generator{
 		width: 85vw;
 	}
 	#buddy{
@@ -257,8 +286,11 @@ g{
 	#introText{
 		width: 90%;
 	}
-	#wrapper > button:hover{
-		color: inherit;
+	#introText p{
+		line-height: 20px;
+	}
+	#generator > button:hover{
+		color: white;
   		background-color: inherit;
   		transform: none;
   		box-shadow: none;

@@ -91,11 +91,12 @@ function newItem(){
 function TWshare(item){
 	var listItem = document.getElementById('shared').textContent;
 	var desc = encodeURIComponent("I just added a new item to my bucket list: " + listItem + " Hold me accountable, world!");
-	window.open("http://twitter.com/share?url=www.nicktobat.com&text=" + desc + "&hashtags=buddy,buddychallenge"); 
+	window.open("http://twitter.com/share?url=www.nicktobat.com&text=" + desc + "&hashtags=buddy,climbsomething,buddychallenge,bringabuddy"); 
 };
 
 
 function copy(){
+	document.getElementById('copier').classList.add("copied");
 	var listItem = document.getElementById('shared').textContent;
 	const el = document.createElement('textarea');
 	el.value = listItem;
@@ -104,6 +105,9 @@ function copy(){
 	el.select();
 	document.execCommand('copy');
 	document.body.removeChild(el);
+	setTimeout(function(){
+		document.getElementById('copier').classList.remove("copied");
+	},800);
 };
 
 
