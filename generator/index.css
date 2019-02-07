@@ -37,8 +37,8 @@ h1, h2, h3, h4, h5, p, a, button, span{
 	margin: 0 auto 32px auto;
 }
 #introText{
-	width: 65%;
-	padding-left: 36px;
+	width: 60%;
+	padding-left: 72px;
 }
 #introText h1, #introText p{
 }
@@ -48,7 +48,6 @@ h1, h2, h3, h4, h5, p, a, button, span{
 #introText p{
 	font-size: calc(1.8vw + 2px);
 	line-height: 3.8vw;
-	margin-left: 120px;
 }
 #introText p span{
 	background-color: #dc5648;
@@ -58,14 +57,12 @@ h1, h2, h3, h4, h5, p, a, button, span{
 }
 #header{
 	display: flex;
-	align-items: center;
+	flex-flow: column;
+	align-items: flex-start;
 	justify-content: space-around;
 }
-#header h1{
-	margin: 0 36px;
-}
 #header a, #header img{
-	margin: 0;
+
 }
 p#more{
 	font-size: 12px;
@@ -258,10 +255,6 @@ g{
 	#introText{
 		width: 80%; 
 	}
-	#header{
-		flex-flow: column;
-		align-items: flex-start;
-	}
 	#introText h1{
 		margin: 0;
 	}
@@ -269,7 +262,7 @@ g{
 		margin-bottom: 36px;
 	}
 	#introText p{
-		font-size: 14px;
+		font-size: 16px;
 		margin-left: 0;
 		line-height: 
 	}
