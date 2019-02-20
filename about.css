@@ -144,6 +144,8 @@ a{
   height: 100vh;
   background-image: url('assets/about/hero.png');
   background-position: 35% top;
+  background-repeat: no-repeat;
+  background-color: black;
   border: 80px solid black;
 
   display: grid;
@@ -170,6 +172,7 @@ a{
   text-align: right;
 }
 .hero-right p.p{
+  font-size: calc(5vw + 6px);
   padding-left: 50px;
   text-align: right;
 }

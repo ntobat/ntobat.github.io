@@ -1,6 +1,27 @@
 $(function(){
 
-
+    var titleClick = false;
+    $('.title').click(function(){
+        if(!titleClick){
+            $('.page').css("grid-template-columns", "260px 1fr");
+            $('.title').css("width", "calc(100% - 290px");
+            setTimeout(function(){
+                $('.navbar').css("transform", "scaleX(1)");
+                $('.navbar .navi').css("transition", "all 500ms ease");
+                
+            }, 100);
+            titleClick = true;
+        } else {
+            $('.navbar').css("transform", "scaleX(0)");
+            $('.navbar .navi').css("transition", "all 0s ease");
+            
+            setTimeout(function(){
+                $('.page').css("grid-template-columns", "0px 1fr");
+                $('.title').css("width", "calc(100% - 30px");
+            }, 200);
+            titleClick = false;
+        }
+    });
     /* scrollTo animation */
     var navi = navi = $('.navigator');
     

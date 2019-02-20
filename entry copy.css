@@ -40,14 +40,21 @@ a{
   width: calc(100vw - 15px);
   position: sticky;
   top: 0;
-  background-color: black;
+  z-index: 99;
+}
+#bottoms{
+  position: fixed;
+  bottom: 0;
+  height: 15px; 
+  width: 100%;
   z-index: 99;
 }
 .page{
   width: 100%;
   display: grid;
-  grid-template-columns: 260px 1fr;
+  grid-template-columns: 0px 1fr;
   grid-template-rows: 1fr 220px;
+  transition: all 400ms ease;
 }
 .inlink{
   border-bottom: 1px dashed rgba(0,0,0,0.75);
@@ -83,6 +90,9 @@ a{
   height: 100%;
   padding: 35px 20px 0 20px;
   font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
+  transform-origin: center left;
+  transition: all 200ms ease;
+  transform: scaleX(0);
 }
 .header{
   display: flex;
@@ -103,7 +113,7 @@ a{
   letter-spacing: 5px;
   font-weight: 700;
   line-height: 52px;
-  transition: all 500ms ease;
+  transition: all 0s ease;
 }
 .navi a, .jump, .navTitle, .siteNav a{
   color: white;
@@ -152,7 +162,7 @@ a{
   color: white;
   font-size: 10px;
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
   padding: 10px 5px 5px 0;
   background-color: black;
 }
@@ -189,6 +199,35 @@ a{
   font-weight: 400;
   margin-bottom: 60px;
 }*/
+/*.title::before{
+  content: '➤';
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  text-align: center;
+  font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  line-height: 64px;
+  color: white;
+  width: 32px;
+  height: 64px;
+  background-color: black;
+}
+.outie::before{
+  content: '➤';
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  text-align: center;
+  font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  line-height: 64px;
+  color: white;
+  width: 32px;
+  height: 64px;
+  background-color: black;
+  transform: rotate(180deg);
+}*/
 .title{
   padding-top: 15px;
   padding-left: 55px;
@@ -200,7 +239,7 @@ a{
   margin-top: -20px;
   margin-left: -55px;
   position: fixed;
-  width: calc(100% - 290px);
+  width: calc(100% - 30px);
 }
 .title h1{
   font-family: Courier;
@@ -538,6 +577,7 @@ p.indent{
     border: none;
   }
   .navbar{
+    transform: scaleX(1);
     position: fixed;
     width: 100vw;
     height: 80px;

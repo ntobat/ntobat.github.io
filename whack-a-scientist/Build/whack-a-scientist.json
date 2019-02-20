@@ -1,0 +1,13 @@
+{
+"companyName": "Nick Tobat",
+"productName": "Whack-A-Scientist",
+"dataUrl": "whack-a-scientist.data.unityweb",
+"asmCodeUrl": "whack-a-scientist.asm.code.unityweb",
+"asmMemoryUrl": "whack-a-scientist.asm.memory.unityweb",
+"asmFrameworkUrl": "whack-a-scientist.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}
