@@ -2,6 +2,24 @@
 -- BODY                    --
 ========================== */
 
+#progressBar{
+  position: fixed;
+  top: 0;
+  right: 15px;
+  width: calc(100vw - 290px);
+  height: 10px;
+  appearance: none;
+  border: none;
+  background-color: white;
+  z-index: 9999;
+}
+#progress{
+  background-color: rgba(0,0,0,1);
+  width: 0;
+  height: 10px;
+  transition: width 50ms ease;
+}
+
 html{
   box-sizing: border-box;
 }
@@ -37,10 +55,11 @@ a{
 
 #tops{
   height: 15px;
-  width: calc(100vw - 15px);
+  width: calc(100vw);
   position: sticky;
   top: 0;
-  background-color: black;
+  margin-left: -15px;
+  background-color: transparent;
   z-index: 99;
 }
 .page{
@@ -81,7 +100,7 @@ a{
   position: fixed;
   width: 260px;
   height: 100%;
-  padding: 35px 20px 0 20px;
+  padding: 20px 20px 0 20px;
   font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
 }
 .header{
@@ -145,7 +164,7 @@ a{
   font-weight: 700;
   line-height: 52px;
   position: absolute;
-  top: 130px;
+  top: 105px;
   transition: all 500ms ease;
 }
 #credits{
@@ -194,10 +213,10 @@ a{
   padding-left: 55px;
   padding-bottom: 15px;
   background: white;
-  z-index: 99;
+  z-index: 98;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.25);
   margin-bottom: 60px;
-  margin-top: -20px;
+  margin-top: -40px;
   margin-left: -55px;
   position: fixed;
   width: calc(100% - 290px);

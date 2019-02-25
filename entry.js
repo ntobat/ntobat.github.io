@@ -1,27 +1,27 @@
 $(function(){
 
-    var titleClick = false;
-    $('.title').click(function(){
-        if(!titleClick){
-            $('.page').css("grid-template-columns", "260px 1fr");
-            $('.title').css("width", "calc(100% - 290px");
-            setTimeout(function(){
-                $('.navbar').css("transform", "scaleX(1)");
-                $('.navbar .navi').css("transition", "all 500ms ease");
-                
-            }, 100);
-            titleClick = true;
-        } else {
-            $('.navbar').css("transform", "scaleX(0)");
-            $('.navbar .navi').css("transition", "all 0s ease");
+    $('#twoCol').click(function(){
+        $('.page').css("grid-template-columns", "260px 1fr");
+        $('.title').css("width", "calc(100% - 290px");
+        $(this).css("background-image", "url('assets/2col.svg");
+        $("#oneCol").css("background-image", "url('assets/1colOL.svg");
+        setTimeout(function(){
+            $('.navbar').css("transform", "scaleX(1)");
+            $('.navbar .navi').css("transition", "all 500ms ease");
             
-            setTimeout(function(){
-                $('.page').css("grid-template-columns", "0px 1fr");
-                $('.title').css("width", "calc(100% - 30px");
-            }, 200);
-            titleClick = false;
-        }
+        }, 100);
     });
+    $('#oneCol').click(function(){
+        $('.navbar').css("transform", "scaleX(0)");
+        $('.navbar .navi').css("transition", "all 0s ease");
+        $(this).css("background-image", "url('assets/1col.svg");
+        $("#twoCol").css("background-image", "url('assets/2colOL.svg");
+        setTimeout(function(){
+            $('.page').css("grid-template-columns", "0px 1fr");
+            $('.title').css("width", "calc(100% - 30px");
+        }, 200);
+    });
+
     /* scrollTo animation */
     var navi = navi = $('.navigator');
     
@@ -38,23 +38,44 @@ $(function(){
         $('html, body').animate({scrollTop:target_top}, 500);
         
         /* Remove active class on any li when an anchor is clicked */
-        
         navi.children().removeClass('active');
         
         /* Add active class to clicked anchor */
-            
         $(this).addClass('active');
     });
 
     $('#navTitle').click(function(event) {
-            
         event.preventDefault();
-
         $('html, body').animate({scrollTop:0}, 500);
-
         navi.children().removeClass();
     });
 
+
+    // progress bar
+    
+    $(window).bind("load", function() {
+        var winHeight = $(window).innerHeight(),
+        docHeight = $(document).height(),
+        max = docHeight - winHeight,
+        value,
+        indicator = $("#progress");
+
+        value = $(window).scrollTop() / max;
+        indicator.css('width', value * 100 + '%');
+            
+        $(document).on('scroll', function(){
+            value = $(window).scrollTop() / max;
+            indicator.css('width', value * 100 + '%');
+        });
+    });
+    
+/*
+value = distance scrolled
+percent = value / max value
+
+
+
+*/
 
     /* open menu animation */
     $('.menu').click(function(event) {
