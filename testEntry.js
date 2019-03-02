@@ -1,7 +1,5 @@
 $(function(){
 
-	var white = true;
-
 
 	// open & close menu
 	$('.menu').click(function(event) {
@@ -22,140 +20,89 @@ $(function(){
 
         // if menu is closed
         if( $("#menu").hasClass('menuClosed') ){
-        	// and if icons should be black
-        	if( !white ){
-        		$("#menu").fadeTo(250, 0);
-        		setTimeout(function(){
-	                $("#menu").replaceWith("<img id='menu' class='' src='assets/menuCloseBlack.svg' />").fadeTo(250, 1);
-	            }, 250);
-        	} else {
-	            $("#menu, #logo").fadeTo(250, 0);
-				$("nav").css("background-color", "white");
-	            // replace with black icons, change bg to white
-	            setTimeout(function(){
-	                $("#menu").replaceWith("<img id='menu' class='' src='assets/menuCloseBlack.svg' />").fadeTo(250, 1);
-	                $("#logo").replaceWith("<img id='logo' src='assets/logoBlack.svg' />")
-	            }, 250);
-	        }
+            $("body").addClass("stop-scrolling");
+            $("img:not(#logo)").css("opacity", 0);
+            $("#menu").replaceWith("<img id='menu' class='' src='assets/menuClose.svg' />");
         // if menu is open
         } else {
-            // and icons should be black
-            if(!white){
-            	$("#menu").fadeTo(250, 0);
-	            setTimeout(function(){
-	                $("#menu").replaceWith("<img id='menu' class='menuClosed' src='assets/menuBlack.svg' />").fadeTo(250, 1);
-	            }, 250);
-	        // or if icons should be white
-	        } else {
-	        	setTimeout(function(){
-	                $("#menu").replaceWith("<img id='menu' class='menuClosed' src='assets/menu.svg' />").fadeTo(250, 1);
-	                $("#logo").replaceWith("<img id='logo' src='assets/logo.svg' />")
-	                $("nav").css("background-color", "transparent");
-	            }, 250);
-	        }
+            $("menu").fadeTo(250, 0);
+            $("body").removeClass("stop-scrolling");
+            $("img").css("opacity", 1);
+            $("#menu").replaceWith("<img id='menu' class='menuClosed' src='assets/menu.svg' />");
         };
     });
 
 
-    // color fade icons on scroll
-    var h = ( $(window).height() * 0.65 ) - 45;
-    
-    $(document).scroll(function(){
-    	if( $(document).scrollTop() > h && white){
-			$("#menu, #logo").fadeTo(100, 0);
-            $("#menu").replaceWith("<img id='menu' class='menuClosed' src='assets/menuBlack.svg' />").fadeTo(250, 1);
-            $("#logo").replaceWith("<img id='logo' src='assets/logoBlack.svg' />");
-            $(".icons").css("background-color", "white");
-	        white = false;
-		} else if( $(document).scrollTop() < h && !white){
-			$("#menu, #logo").fadeTo(100, 0);
-	        setTimeout(function(){
-	            $("#menu").replaceWith("<img id='menu' class='menuClosed' src='assets/menu.svg' />").fadeTo(250, 1);
-	            $("#logo").replaceWith("<img id='logo' src='assets/logo.svg' />")
-	            $("#menu", "#logo").css("transform", "scale(0.75)");
-	            $(".icons").css("background-color", "black");
-	        }, 100);
-	        white = true;
-		}
+
+    //scroll animation    
+    $('.jump, .navTitle').click(function(event) {
+            
+        event.preventDefault();
+
+        if( $(this).data("id") === "top" ){
+            setTimeout(function(){
+                $('html, body').animate({scrollTop:0}, 700);
+            }, 300);
+        }
+
+        $("body").removeClass("stop-scrolling");
+        $(".siteNav").addClass('hidden');
+        
+        $("#menu").replaceWith("<img id='menu' class='menuClosed' src='assets/menu.svg' />").fadeTo(250, 1);
+        $(".navi").removeClass('hidden');
+     
+        var full_url = this.href,
+            parts = full_url.split('#'),
+            trgt = parts[1],
+            target_offset = $('#'+trgt).offset(),
+            target_top = target_offset.top + 1;
+            
+        setTimeout(function(){
+            $('html, body').animate({scrollTop:target_top}, 700);
+        }, 300);
+        
+        /* Remove active class on any li when an anchor is clicked */
+        navi.children().removeClass('active');
+        
+        /* Add active class to clicked anchor */
+        $(this).addClass('active');
     });
+
+    $('.discipline').click(function(event) {
+
+        event.preventDefault();
+
+        var full_url = this.href,
+            parts = full_url.split('#'),
+            trgt = parts[1],
+            target_offset = $('#'+trgt).offset(),
+            target_top = target_offset.top + 1;
+            
+        setTimeout(function(){
+            $('html, body').animate({scrollTop:target_top}, 700);
+        }, 200);
+
+    });
+
 
 
     // progress bar
-    var winHeight = $(window).height(),
-		docHeight = $(document).height(),
-		max = docHeight - winHeight,
-		value,
-		indicator = $("#progress");
-	
+    $(window).bind("load", function() {
+        var winHeight = $(window).innerHeight(),
+        docHeight = $(document).height(),
+        max = docHeight - winHeight,
+        value,
+        indicator = $("#progress");
 
-  	$(document).on('scroll', function(){
-  		value = $(window).scrollTop();
-    	indicator.css('width', value);
-	});
-
-
-    // overview click effect
-    var inOrOut = true; // in = true; out = false
-    $(".ovEl").click(function(){
-    	var el = $(this);
-    	if( inOrOut ){
-			$(".ovEl").addClass("ovOut");
-    		
-	    	$("#box1").css("transform", "translate(-108px, -56px) scale(0.75)");
-	    	$("#box2").css("transform", "translate(108px, -56px) scale(0.75)");
-	    	$("#box3").css("transform", "translate(-108px, 56px) scale(0.75)");
-	    	$("#box4").css("transform", "translate(108px, 56px) scale(0.75)");
-
-	    	el.removeClass("unselected");
-	    	el.siblings(".ovEl").addClass("unselected");
-	    	el.next(".ovText").css("opacity", 1);
-	    	inOrOut = false;
-	    /*} else if( !inOrOut && !el.hasClass("unselected") ){
-	    	$(".ovEl").removeClass("ovOut");
-	    	$(".ovEl").removeClass("unselected");
-
-	    	$("#box1").css("transform", "scale(0.75) translate(108px, 56px)");
-	    	$("#box2").css("transform", "scale(0.75) translate(-108px, 56px)");
-	    	$("#box3").css("transform", "scale(0.75) translate(108px, -56px)");
-	    	$("#box4").css("transform", "scale(0.75) translate(-108px, -56px)");
-	    	el.next(".ovText").css("opacity", 0);
-	    	inOrOut = true;
-	    	*/
-	    } else if( !inOrOut && el.hasClass("unselected") ){
-	    	$('.ovEl:not(.unselected)').next(".ovText").css("opacity", 0);
-	    	$('.ovEl:not(.unselected)').addClass("unselected");
-	    	el.removeClass("unselected");
-	    	el.next(".ovText").css("opacity", 1);
-	    }
+        value = $(window).scrollTop() / max;
+        indicator.css('width', value * 100 + '%');
+            
+        $(document).on('scroll', function(){
+            value = $(window).scrollTop() / max;
+            indicator.css('width', value * 100 + '%');
+        });
     });
 
 
-
-
-
+  
 });
-/*
-click box 1
-if "in": 
-	move & scale all boxes to out position
-	fade out other boxes
-	this.next opacity = 1
-	show text
-	var inOrOut = out
-if "out" & "selected":
-	move & scale to in position
-	fade in other boxes
-	hide text
-	var inOrOut = in
-if "out" and not "selected":
-	fade out selected
-	change selected to this
-	fade in this
-	change text
-
-
-
-
-
-
-*/
