@@ -1,6 +1,24 @@
 $(function(){
 
 
+    //scroll fade-in elements
+    $(window).scroll(function(){
+        $(".el").each(function(i){
+            var bottomEl = $(this).position().top + ( ($(this).outerHeight() / 4)*3 ),
+                bottomWin = $(window).scrollTop() + $(window).height();
+            if(bottomWin > bottomEl){
+                if( $(this).hasClass('el-sub') ){
+                    $(this).addClass('el-in-sub');
+                } else if( $(this).hasClass('el-img') ) {
+                    $(this).addClass('el-in-media');
+                } else {
+                    $(this).addClass('el-in');
+                }
+            }
+        });
+    });
+
+
 	// open & close menu
 	$('.menu').click(function(event) {
 
@@ -21,13 +39,11 @@ $(function(){
         // if menu is closed
         if( $("#menu").hasClass('menuClosed') ){
             $("body").addClass("stop-scrolling");
-            $("img:not(#logo)").css("opacity", 0);
             $("#menu").replaceWith("<img id='menu' class='' src='assets/menuClose.svg' />");
         // if menu is open
         } else {
             $("menu").fadeTo(250, 0);
             $("body").removeClass("stop-scrolling");
-            $("img").css("opacity", 1);
             $("#menu").replaceWith("<img id='menu' class='menuClosed' src='assets/menu.svg' />");
         };
     });
@@ -91,10 +107,9 @@ $(function(){
         var winHeight = $(window).innerHeight(),
         docHeight = $(document).height(),
         max = docHeight - winHeight,
-        value,
+        value = $(window).scrollTop() / max,
         indicator = $("#progress");
 
-        value = $(window).scrollTop() / max;
         indicator.css('width', value * 100 + '%');
             
         $(document).on('scroll', function(){
@@ -104,5 +119,23 @@ $(function(){
     });
 
 
+
+    // hide nav on scroll
+    $(window).bind("load", function() {
+        if( $(window).width() < 800 ){
+            console.log($(window).width());
+            var prevScroll = $(window).scrollTop();            
+            $(document).on('scroll', function(){
+                var newScroll = $(window).scrollTop();
+                if(newScroll > prevScroll){
+                    $(".icons").css('top', '-200px');
+                } else {
+                    $(".icons").css('top', '0');
+                }
+                prevScroll = newScroll;
+            });
+        }    
+    });
+    
   
 });
