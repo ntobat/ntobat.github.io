@@ -44,20 +44,20 @@ a{
 }
 
 h1{
-  font-family: SairaCondensed-Bold;
+  font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
   font-size: 64px;
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: 0;
 }
 
 h2{
-  font-family: SairaCondensed-Bold;
+  font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
   font-size: 36px;
   letter-spacing: 0;
 }
 
 h3{
-  font-family: SairaCondensed-Bold;
+  font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
   font-size: 28px;
   letter-spacing: 0.5px;
   text-align: center;
@@ -72,25 +72,25 @@ h3{
 }
 
 h4{
-  font-family: SairaCondensed-Bold;
+  font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
   font-size: 20px;
   letter-spacing: 0;
 }
 
 p.pHero{
-  font-family: NunitoSans-Regular;
+  font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
   font-size: 32px;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.25px;
 }
 
 p.pFeatured{
-  font-family: NunitoSans-Regular;
+  font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
   font-size: 22px;
   letter-spacing: 0.5px;
 }
 
 p.pCaption{
-  font-family: NunitoSans-Regular;
+  font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
   font-size: 11px;
   color: #ddd;
   /*opacity: 0.85;*/
@@ -104,7 +104,7 @@ p.pCaption{
 }
 
 p{
-  font-family: NunitoSans-Regular;
+  font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
   font-size: 18px;
   letter-spacing: 0;
   line-height: 1.75em;
@@ -124,7 +124,7 @@ nav{
   position: fixed;
   width: 100vw;
   transition: all 250ms ease;
-  z-index: 999;
+  z-index: 9999;
 }
 
 .jumpLinks{
@@ -135,7 +135,7 @@ nav{
 }
 
 .jumpTitle{
-  font-family: SairaCondensed-Bold;
+  font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
   font-size: 18px;
   letter-spacing: 5px;
   font-weight: 700;
@@ -204,8 +204,7 @@ nav{
   font-weight: 700;
   line-height: 52px;
   /*background-color: white;*/
-  transition: all 500ms ease;
-  font-family: SairaCondensed-Bold;
+  font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
 
   display: flex;
 }
@@ -237,6 +236,7 @@ div.navHover{
   background-position: 25% 198px;
   transition: background 500ms, opacity 1s;
   z-index: -1;
+  display: none;
 }
 
 .navLinks .navigator a:hover ~ div.navHover{
@@ -300,7 +300,10 @@ div.navBG{
 }
 
 .bolded{
+  font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
   font-weight: bold;
+  font-size: 20px;
+  line-height: 2.5em;
 }
 
 .content{
@@ -314,12 +317,6 @@ div.navBG{
 
 #ovSub{
   margin: 80px 0 0 0;
-}
-
-.black-bg{
-  grid-column: header-start / -1;
-  background-color: black;
-  z-index: -99;
 }
 
 .image{
@@ -344,7 +341,45 @@ div.navBG{
   max-width: 100%;
 }
 
+.iframer{
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
+}
+.iframer iframe{
+  border: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.black-top, .black-bottom, .black-bg{
+  position: relative;
+}
+.black-bg{
+  background-color: black;
+}
+.black-top::after, .black-bottom::before{
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: black;
+  width: 100vw;
+  height: 100%;
+  z-index: -99;
+}
+.black-top::after{
+  top: 50%;
+}
+.black-bottom::before{
+  bottom: 50%;
+}
+
 a.button{
+  grid-row: 2;
+  grid-column: content;
   display: block;
   font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
   font-weight: 800;
@@ -359,7 +394,8 @@ a.button{
   border-radius: 5px;
   border: 1px solid black;
   box-shadow: 4px 4px white;
-  transition: all 200ms ease;
+  transition-property: color, background-color, border, box-shadow, transform;
+  transition-duration: 400ms;
   cursor: pointer;
 }
 a.button-white{
@@ -395,18 +431,9 @@ a.button-white:hover{
 
 .el{
   opacity: 0;
+  grid-row: 1;
 }
-/*
-.el-left{
-  transform: translateX(-30px);
-}
-.el-text{
-  transform: translateX(30px);
-}
-.el-img{
-  transform: translate(-30px, 30px);
-}
-*/
+
 .el-in{
   transform: translateY(150px);
   animation: el-in 0.8s ease forwards;
@@ -447,6 +474,13 @@ a.button-white:hover{
   grid-column: content;
 }
 
+.menu{
+  transition: transform 250ms;
+}
+.menu:hover{
+  transform: rotate(180deg);
+}
+
 .icons{
   grid-row: 1/2;
   grid-column: header;
@@ -456,8 +490,54 @@ a.button-white:hover{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  transition: all 500ms;
-  z-index: 999;
+  will-change: transform;
+  transition: transform 1s;
+  z-index: 9997;
+}
+.jump-links{
+  background-color: black;
+  font-size: 18px;
+  font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  color: white;
+  width: 100vw;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-left: 25vw;
+  position: absolute;
+  top: 24px;
+  left: 0;
+  box-shadow: 0 24px black, 0 -24px black;
+  opacity: 0;
+  transition: opacity 400ms;
+  z-index: -99;
+  display: none;
+}
+.jump-title{
+  font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
+}
+.jump-links > a.jump-link{
+  color: white;
+  font-size: 18px;
+  opacity: 0.45;
+  transition: opacity 250ms;
+}
+a.jump-link:hover{
+  opacity: 1;
+}
+.menu:hover ~ .jump-links, .jump-links:hover{
+  display: flex;
+  opacity: 1;
+}
+
+.icons-up{
+  transform: translateY(-200px);
+}
+
+.icons a{
+  font-size: 0;
 }
 
 .icons img{
@@ -466,8 +546,15 @@ a.button-white:hover{
   margin: 6px 12px;
 }
 
+.row{
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: inherit;
+  grid-row-gap: 60px;
+}
+
 #hero{
-  grid-row: 2;
+  grid-row: 1;
   grid-column: img;
   height: auto;
   width: auto;
@@ -477,7 +564,7 @@ a.button-white:hover{
 }
 
 #heroText{
-  grid-row: 2;
+  grid-row: 1;
   padding: 0 0 0 8vw;
   margin-top: -80px;
 }
@@ -505,7 +592,8 @@ a.button-white:hover{
 }
 
 .discipline, .ux{
-  font-family: SairaCondensed-Bold;
+  font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
+  font-weight: 700;
   font-size: 14px;
   letter-spacing: 0;
   border-bottom: 1px solid transparent;
@@ -545,11 +633,6 @@ a.discipline:active{
   margin-top: 80px;
 }
 
-#ov-black{
-  height: calc(100% + 380px);
-  margin-bottom: -120px;
-}
-
 .sectionNumber{
   grid-column: sidebar;
   background-color: white;
@@ -557,7 +640,7 @@ a.discipline:active{
   text-align: center;
   padding: 40px 0;
   margin: 120px 0 -60px 0;
-  z-index: 9999;
+  z-index: 9998;
 }
 .sectionTitle{
   grid-column: 3 / -1;
@@ -569,13 +652,17 @@ a.discipline:active{
 }
 
 #ui-black{
-  height: calc(100% + 120px);
-  margin-top: 220px;
+  height: calc(120% + 120px);
+  margin-top: 20%;
 }
 
 #ui-black-2{
   height: calc(100% + 50px);
   margin-top: 220px;
+}
+
+.two{
+  grid-row: 2;
 }
 
 .three{
@@ -667,7 +754,7 @@ a.discipline:active{
 
 
   #sideBlack{
-    background-color: transparent;
+
   }
 
   .icons{
@@ -685,28 +772,34 @@ a.discipline:active{
     grid-column: 3 / -2;
   }
 
-  .content{
-    grid-column: 3 / -2;
+  .content, a.button{
+    grid-column: 4 / -2;
+    margin-left: 24px;
+  }
+
+  .two{
+    margin-top: -160px;
+  }
+  .two > *{
+    margin-left: 24px;
   }
 
   #hero{
     grid-row-start: 1;
     grid-column-start: 4;
     margin-top: 60px;
+    margin-bottom: 30px;
   }
+
   #heroText{
     grid-row-start: 2;
+    padding: 0;
   }
 
   h3{
     grid-column: 2/3;
-    color: black;
-    border-left: 2px solid black;
   }
-  h3.subtitle-black{
-    color: white;
-    border-left: 2px solid white;
-  }
+
   p.pCaption{
     opacity: 0;
   }
@@ -715,12 +808,17 @@ a.discipline:active{
 
 @media screen and (max-width: 780px){
 
+  .navLinks{
+    padding: 90px;
+  }
+
   .icons{
     width: 16.5vw;
+    padding-top: 10px;
   }
 
   .icons img{
-    height: calc(7.5vw);
+    height: calc(6.5vw);
     margin: 6px 10px;
   }
 
@@ -736,16 +834,105 @@ a.discipline:active{
 
 @media screen and (max-width: 600px){
 
+  .page{
+    grid-row-gap: 60px;
+  }
+
+  .navLinks{
+    width: 100vw;
+    padding: 30px;
+  }
+
+  .siteNav, .jumpTitle{
+    font-size: 14px;
+    letter-spacing: 0.5;
+    line-height: 28px;
+  }
+
+  .siteNav{
+    flex-flow: column;
+    height: 100vh;
+    background-color: white;
+  }
+
+  .jumpLinks{
+    width: 100vw;
+    padding: 130px 30px 30px 30px;
+  }
+
+  .navigator{
+    text-indent: 6px;
+  }
+
   .icons img{
-    height: calc(10vw);
+    height: 8vw;
     margin: 6px 10px;
+  }
+
+  .image{
+    border: 2px solid white;
+    box-shadow: 8px 8px black;
   }
 
   a.button{
     width: 75%;
+    font-size: 15px;
+    height: 48px;
+    line-height: 34px;
+    padding: 6px 10px;
+  }
+
+  h1{
+    font-size: 48px;
+  }
+
+  h2{
+    font-size: 30px;
+  }
+
+  h3{
+    font-size: 22px;
+  }
+
+  h4{
+    font-size: 18px;
+  }
+
+  p.pHero{
+    font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+    font-size: 24px;
+    letter-spacing: 0.25px;
+  }
+
+  p.pFeatured{
+    font-size: 18px;
+  }
+
+  p.pCaption{
+    display: none;
+  }
+
+  p{
+    font-size: 13px;
+  }
+
+  .bolded{
+    font-size: 16px;
+  }
+
+  .sectionNumber, .sectionTitle{
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin: 80px 0 -20px 0;
+  }
+
+  div.disciplines{
+    flex-flow: column wrap;
+    align-items: flex-start;
   }
 
 
+}
 
 
 
