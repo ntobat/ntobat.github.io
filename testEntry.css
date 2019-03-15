@@ -41,6 +41,7 @@ p, h1, h2, h3, h4, h5, li{
 
 a{
   text-decoration: none;
+  font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
 }
 
 h1{
@@ -456,13 +457,66 @@ a.button-white:hover{
   to { transform: translate(0,0); opacity: 1; }
 }
 
+footer{
+  margin-top: -120px;
+}
+.footer-left{
+  grid-column: sidebar;
+  padding: 40px 0;
+  text-align: center;
+}
+
+#email{
+  display: block;
+  color: black;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 auto;
+  width: auto;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: transform 200ms;
+}
+
+#email:hover{
+  transform: translateY(-3px);
+}
+.social{
+  display: flex;
+  justify-content: space-around;
+  max-width: 50%;
+  margin: 24px auto 0 auto;
+}
+.social a{
+  padding: 4px;
+  transition: transform 200ms;
+}
+.social img{
+  height: 24px;
+}
+.social a:hover{
+  transform: translateY(-3px);
+}
+.footer-right{
+  grid-column: sidebar-end / -1;
+  padding: 40px 0;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.footer-right a{
+  color: white;
+}
+
+
 
 /* ==========================
 -- CONTENT                 --
 ========================== */
 
 #sideBlack{
-  grid-row: 1/24;
+  grid-row: 1/25;
   grid-column: sidebar;
   background-color: black;
   transition: background-color 500ms;
@@ -474,11 +528,11 @@ a.button-white:hover{
   grid-column: content;
 }
 
-.menu{
+.menu, .home{
   transition: transform 250ms;
 }
-.menu:hover{
-  transform: rotate(180deg);
+.menu:hover, .home:hover{
+  transform: scale(1.1);
 }
 
 .icons{
@@ -487,11 +541,12 @@ a.button-white:hover{
   position: sticky;
   background-color: black;
   top: 0;
+  opacity: 1;
   display: flex;
   justify-content: space-around;
   align-items: center;
   will-change: transform;
-  transition: transform 1s;
+  transition: transform 1s, opacity 0.35s;
   z-index: 9997;
 }
 .jump-links{
@@ -534,6 +589,7 @@ a.jump-link:hover{
 
 .icons-up{
   transform: translateY(-200px);
+  opacity: 0;
 }
 
 .icons a{
@@ -741,6 +797,21 @@ a.discipline:active{
   grid-row: 21;
 }
 
+.twenty2{
+  grid-row: 22;
+}
+
+.twenty3{
+  grid-row: 23;
+}
+
+.twenty4{
+  grid-row: 24;
+}
+
+.twenty5{
+  grid-row: 25;
+}
 
 
 
