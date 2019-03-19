@@ -56,16 +56,10 @@ $(function(){
 
 
 
-    //scroll animation    
+    //scroll animation
     $('.jump').click(function(event) {
             
         event.preventDefault();
-
-        if( $(this).data("id") === "top" ){
-            setTimeout(function(){
-                $('html, body').animate({scrollTop:0}, 700);
-            }, 300);
-        }
 
         $("body").removeClass("stop-scrolling");
         $(".siteNav").addClass('hidden');
@@ -89,8 +83,7 @@ $(function(){
         $(".icons").css('z-index', '999');
     });
 
-    $('.discipline').click(function(event) {
-
+    $('.discipline, .btn-jump').click(function(event) {
         event.preventDefault();
 
         var full_url = this.href,
@@ -102,7 +95,13 @@ $(function(){
         setTimeout(function(){
             $('html, body').animate({scrollTop:target_top}, 700);
         }, 250);
+    });
 
+    $("#top, #process-top").click(function(event){
+        event.preventDefault();
+        setTimeout(function(){
+            $('html, body').animate({scrollTop:0}, 700);
+        }, 300);
     });
 
 

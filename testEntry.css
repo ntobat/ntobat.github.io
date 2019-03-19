@@ -300,13 +300,6 @@ div.navBG{
   grid-auto-rows: minmax(100px, auto);
 }
 
-.bolded{
-  font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 2.5em;
-}
-
 .content{
   grid-column: content;
   align-self: center;
@@ -356,6 +349,54 @@ div.navBG{
   top: 0;
 }
 
+.inlink{
+  font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+  border-bottom: 1px dashed rgba(0,0,0,0.75);
+  text-decoration: none;
+  color: black;
+  transition: border 250ms;
+}
+
+.inlink:hover{
+  border-bottom: 1px solid rgba(0,0,0,0.75);
+}
+
+.bolded{
+  display: block;
+  font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.sub-bolded{
+  font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  opacity: 0.75;
+  line-height: 2.5em;
+}
+
+blockquote.quote{
+  position: relative;
+  padding-left: 1.5em;
+  font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  font-style: italic;
+  line-height: 2em;
+  opacity: 0.75;
+}
+blockquote.quote::before{
+  content: '\201C';
+  position: absolute;
+  top: 0.25em;
+  left: 0;
+  font-family: Arial;
+  font-size: 6em;
+  font-style: normal;
+  opacity: 0.2;
+  z-index: -1;
+}
+
 .black-top, .black-bottom, .black-bg{
   position: relative;
 }
@@ -379,7 +420,6 @@ div.navBG{
 }
 
 a.button{
-  grid-row: 2;
   grid-column: content;
   display: block;
   font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
@@ -432,7 +472,7 @@ a.button-white:hover{
 
 .el{
   opacity: 0;
-  grid-row: 1;
+
 }
 
 .el-in{
@@ -459,6 +499,7 @@ a.button-white:hover{
 
 footer{
   margin-top: -120px;
+  z-index: 99;
 }
 .footer-left{
   grid-column: sidebar;
@@ -516,7 +557,7 @@ footer{
 ========================== */
 
 #sideBlack{
-  grid-row: 1/25;
+  grid-row: 1/29;
   grid-column: sidebar;
   background-color: black;
   transition: background-color 500ms;
@@ -609,6 +650,23 @@ a.jump-link:hover{
   grid-row-gap: 60px;
 }
 
+.image-row{
+  display: grid;
+  grid-template-columns: inherit;
+  grid-column: 1/-1;
+  margin-top: 60px;
+}
+.image-row p{
+  grid-column: caption;
+}
+
+.image-row img{
+  grid-column: img;
+}
+
+.row-new{
+  margin-top: 60px;
+}
 #hero{
   grid-row: 1;
   grid-column: img;
@@ -690,6 +748,7 @@ a.discipline:active{
 }
 
 .sectionNumber{
+  grid-row: 1;
   grid-column: sidebar;
   background-color: white;
   align-self: center;
@@ -699,6 +758,7 @@ a.discipline:active{
   z-index: 9998;
 }
 .sectionTitle{
+  grid-row: 1;
   grid-column: 3 / -1;
   border-top: 2px solid black;
   border-bottom: 2px solid black;
@@ -813,6 +873,22 @@ a.discipline:active{
   grid-row: 25;
 }
 
+.twenty6{
+  grid-row: 26;
+}
+
+.twenty7{
+  grid-row: 27;
+}
+
+.twenty8{
+  grid-row: 28;
+}
+
+.twenty9{
+  grid-row: 29;
+}
+
 
 
 
@@ -909,6 +985,23 @@ a.discipline:active{
     grid-row-gap: 60px;
   }
 
+  .image-row, .row-new{
+    margin-top: 0;
+  }
+
+  footer{
+    margin-top: -60px;
+  }
+
+  .social{
+    max-width: 100%;
+  }
+
+  #email{
+    padding: 6px 2px;
+    font-size: calc(2vw + 5px);
+  }
+
   .navLinks{
     width: 100vw;
     padding: 30px;
@@ -1002,6 +1095,9 @@ a.discipline:active{
     align-items: flex-start;
   }
 
+  blockquote.quote{
+    font-size: 14px;
+  }
 
 }
 
