@@ -1,0 +1,686 @@
+/* ==========================
+-- BODY                    --
+========================== */
+
+#progressBar{
+  position: fixed;
+  top: 0;
+  right: 15px;
+  width: calc(100vw - 290px);
+  height: 10px;
+  appearance: none;
+  border: none;
+  background-color: white;
+  z-index: 9999;
+}
+#progress{
+  background-color: rgba(0,0,0,1);
+  width: 0;
+  height: 10px;
+  transition: width 50ms ease;
+}
+
+html{
+  box-sizing: border-box;
+}
+*, *:before, *:after{
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+body{
+  overflow: ;
+  background-color: black;
+  min-height: 100vh;
+  border-left: 15px solid black;
+  border-right: 15px solid black;
+}
+p, h1, h2, h3, h4, h5, li, a{
+  color: black;
+}
+p, h1, h2, h3, h4, h5, li{
+  cursor: default;
+}
+a{
+  text-decoration: none;
+}
+.unselectable {
+  user-select: none;
+}
+
+
+/* ==========================
+-- PAGE                    --
+========================== */
+
+#tops{
+  height: 15px;
+  width: calc(100vw);
+  position: sticky;
+  top: 0;
+  margin-left: -15px;
+  background-color: transparent;
+  z-index: 99;
+}
+.page{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  grid-template-rows: 1fr 220px;
+}
+.inlink{
+  border-bottom: 1px dashed rgba(0,0,0,0.75);
+}
+.anchor, #title{
+  padding-top: 140px;
+  margin-top: -140px;
+}
+.caption{
+  font-family: "Nunito Sans", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
+  font-size: 13px;
+  opacity: 0.7;
+}
+.caption hr{
+  width: 60px;
+  margin-bottom: 12px;
+}
+.img img, .img video{
+  box-shadow: -10px 10px rgba(0,0,0,0.08);
+  width: 100%;
+}
+
+
+/* ==========================
+-- SIDEBAR                 --
+========================== */
+
+.navbar{
+  grid-area: 1/1/2/2;
+  background-color: black;
+  position: fixed;
+  width: 260px;
+  height: 100%;
+  padding: 20px 20px 0 20px;
+  font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 36px;
+}
+#logo{
+  height: 52px;
+  width: auto;
+}
+#menu{
+  height: 24px;
+  width: auto;
+}
+.navi{
+  font-size: 18px;
+  letter-spacing: 5px;
+  font-weight: 700;
+  line-height: 52px;
+  transition: all 500ms ease;
+}
+.navi a, .jump, .navTitle, .siteNav a{
+  color: white;
+  display: block;
+}
+.navTitle{
+  border-bottom: 1px solid white;
+  margin-bottom: 15px;
+}
+.navTitleLink{
+  color: white;
+  display: block;
+  border-bottom: 1px solid white;
+  margin-bottom: 15px;
+}
+.navigator{
+  overflow-y: scroll;
+  max-height: calc(100vh - 256px);
+  text-indent: 18px;
+  margin-bottom: 15px;
+}
+.navigator a{
+  opacity: 0.35;
+  transition: all 500ms ease;
+}
+.navigator a:hover{
+  opacity: 0.75;
+}
+.active{
+  opacity: 1!important;
+}
+.hidden{
+  opacity: 0;
+  visibility: hidden;
+}
+.siteNav{
+  font-size: 18px;
+  letter-spacing: 5px;
+  font-weight: 700;
+  line-height: 52px;
+  position: absolute;
+  top: 105px;
+  transition: all 500ms ease;
+}
+#credits{
+  color: white;
+  font-size: 10px;
+  position: absolute;
+  bottom: 0;
+  padding: 10px 5px 5px 0;
+  background-color: black;
+}
+
+
+/* ==========================
+-- CONTENT                 --
+========================== */
+
+.content{
+  grid-area: 1/2/2/3;
+  width: 100%;
+  height: 100%;
+  padding: 35px 40px 200px 55px;
+  background-color: white;
+
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 140px;
+  grid-column-gap: 20px;
+  grid-row-gap: 50px;
+}
+.subtitle{
+  font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  opacity: 0.5;
+}
+
+
+/*#title{
+  font-family: Courier;
+  font-size: 56px;
+  font-weight: 400;
+  margin-bottom: 60px;
+}*/
+.title{
+  padding-top: 15px;
+  padding-left: 55px;
+  padding-bottom: 15px;
+  background: white;
+  z-index: 98;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.25);
+  margin-bottom: 60px;
+  margin-top: -40px;
+  margin-left: -55px;
+  position: fixed;
+  width: calc(100% - 290px);
+}
+.title h1{
+  font-family: Courier;
+  font-size: 56px;
+  font-weight: 400;
+  display: inline-block;
+  margin-right: 24px;
+}
+.title img{
+  height: 35px;
+  width: auto;
+  display: inline-block;
+  padding: 0 15px;
+  position: relative;
+}
+.rundownWrap{
+  grid-area: 1/1/2/2;
+  padding-bottom: 20px;
+  margin: 0 0 25px 0;
+}
+#rundown{
+  margin-top: 115px;
+  margin-left: 15px;
+  padding: 15px;
+  background-color: white;
+  border: 3px solid black;
+  box-shadow: -15px 15px;
+}
+#descrip{
+  font-family: "Nunito Sans", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.ovMainArea{
+  grid-area: 2/1/3/2;
+  margin: 0 0 55px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ovTxt{
+  padding-right: 12px;
+  max-width: 50%;
+}
+.ovTxtSec{
+  margin-bottom: 24px;
+}
+.ubtitle{
+  font-family: "Nunito Sans", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  line-height: 36px;
+}
+.ovImg{
+  width: 35%;
+}
+.ovTxt > a.game{
+  display: block;
+  width: 95%;
+  height: 64px;
+  background: url("assets/america/playGame.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: all 200ms ease;
+}
+.ovTxt > a.game:hover{
+  transform: scale(1.1);
+}
+#trumpcoin{
+  width: 100%;
+}
+#ovCaption{
+  grid-area: 2/2/3/3;
+}
+.secImg{
+  margin: 25px 0;
+}
+.section-1{
+  grid-area: 3/1/4/2;
+}
+.secHead{
+  font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  border-bottom: 1.5px solid black;
+}
+.subSecHead{
+  font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 36px;
+  margin-bottom: 10px;
+}
+.section p{
+  font-family: "Nunito Sans", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  line-height: 30px;
+}
+.section-2{
+  grid-area: 4/1/5/2;
+}
+#stats{
+  margin-top: -18px;
+}
+.stat{
+  padding: 32px;
+  text-align: center;
+  max-width: 20vw;
+  color: white;
+}
+.stat h2{
+  font-family: "Nunito Sans", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
+  font-size: 32px;
+  margin-bottom: 8px;
+  color: white;
+}
+.stat p{
+  font-family: "Nunito Sans", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
+  color: white;
+  font-size: 15px;
+}
+#statCaption{
+  grid-area: 4/2/5/3;
+  margin-top: -18px;
+}
+
+.section-3{
+  grid-area: 5/1/6/2;
+}
+
+.section-4{
+  grid-area: 6/1/7/2;
+}
+#twitcherCaption{
+  grid-area: 6/2/7/3;
+}
+#conceptCaption{
+  grid-area: 6/2/7/3;
+}
+#depotPersonaCaption{
+  grid-area: 6/2/7/3;
+}
+.section-5{
+  grid-area: 7/1/8/2;
+}
+.list{
+  list-style-type: none;
+  padding: 8px 0;
+}
+.list li{
+  font-family: "Nunito Sans", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
+  text-indent: 16px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 30px;
+}
+#twitchList{
+  list-style-position: outside;
+}
+#twitchList li{
+  margin-top: 10px;
+  padding-left: 1.6em;
+  text-indent: -1.6em;
+}
+.section-6{
+  grid-area: 8/1/9/2;
+}
+#researchCaption{
+  grid-area: 8/2/9/3;
+}
+#kinisLogoImg{
+}
+.section-7{
+  grid-area: 9/1/10/2;
+}
+#surveyCaption{
+  grid-area: 9/2/10/3;
+}
+#depotJourneyCaption{
+  grid-area: 9/2/10/3;
+}
+p.indent{
+  font-family: Courier;
+  padding: 28px 0;
+  margin-left: 44px;
+  font-weight: 400;
+  font-size: 18px;
+}
+.section-8{
+  grid-area: 10/1/11/2;
+}
+#personaCaption{
+  grid-area: 10/2/11/3;
+}
+
+.section-9{
+  grid-area: 11/1/12/2;
+}
+#depotARCaption{
+  grid-area: 11/2/12/3;
+}
+#dashCaption{
+  grid-area: 11/2/12/3;
+}
+
+.section-10{
+  grid-area: 12/1/13/2;
+}
+
+.section-11{
+  grid-area: 13/1/14/2;
+}
+#depotKioskCaption{
+  grid-area: 13/2/14/3;
+}
+
+#explCaption{
+  grid-area: 13/2/14/3; 
+}
+
+.section-12{
+  grid-area: 14/1/15/2;
+}
+
+.section-13{
+  grid-area: 15/1/16/2;
+}
+#visCaption{
+  grid-area: 15/2/16/3; 
+}
+
+.section-14{
+  grid-area: 16/1/17/2;
+}
+.section-15{
+  grid-area: 17/1/18/2;
+}
+
+.section-16{
+  grid-area: 18/1/19/2;
+}
+.section-17{
+  grid-area: 19/1/20/2;
+}
+.section-18{
+  grid-area: 20/1/21/2;
+}
+.section-19{
+  grid-area: 21/1/22/2;
+}
+.section-20{
+  grid-area: 22/1/23/2;
+}
+.section-21{
+  grid-area: 23/1/24/2;
+}
+.section-22{
+  grid-area: 24/1/25/2;
+}
+.section-23{
+  grid-area: 25/1/26/2;
+}
+#depotWrapCaption{
+  grid-area: 25/2/26/3;
+}
+
+#bottom-2050{
+  grid-area: 21/1/22/2;
+}
+#bottom-depot{
+  grid-area: 26/1/27/2;
+}
+#bottom-twitch{
+  grid-area: 17/1/18/2;
+}
+
+
+/* ==========================
+-- FOOTER                  --
+========================== */
+
+.footer{
+  grid-area: 2/2/3/3;
+  color: white;
+  padding: 35px 50px 60px 50px;
+  margin: 35px 0 0 0;
+  background-color: black;
+}
+.footNavWrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.fNavBox{
+  margin-left: 15px;
+  padding: 20px 30px;
+  width: 35%;
+  background-color: black;
+  border: 3px solid white;
+  box-shadow: -10px 10px white;
+}
+.footNav{
+  font-family: Courier;
+  font-size: 28px;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+}
+.social{
+  margin: 0 12px;
+  padding: 12px;
+  border: 3px solid white;
+}
+.social img{
+  width: 28px;
+  height: auto;
+  vertical-align: middle;
+}
+
+
+
+
+/* ==========================
+-- SCREENS                 --
+========================== */
+
+@media screen and (max-width: 975px){
+
+  body{
+    background-color: white;
+    border: none;
+  }
+  .navbar{
+    position: fixed;
+    width: 100vw;
+    height: 80px;
+    padding: 14px 50px 0 50px;
+    z-index: 99;
+    box-shadow: 0 1px 16px rgba(0, 0, 0, 0.45), 0 -15px rgba(255,255,255,0.9)
+  }
+  .navi{
+    display: none;
+  }
+  .siteNav{
+    background-color: white;
+    width: 100vw;
+    height: calc(100vh - 100px);
+    top: 100px;
+    left: 0;
+    padding-left: calc(50vw - 200px);
+    padding-top: 15px;
+    overflow-y: scroll;
+    box-shadow: 0 -20px white;
+  }
+  .siteNav a{
+    color: black;
+  }
+  .navTitle, .navTitleLink{
+    border-bottom: 1px solid black;
+  }
+  #credits{
+    display: none;
+  }
+  .page{
+    grid-template-columns: 1fr;
+  }
+  .content{
+    grid-area: 1/1/2/2;
+    grid-template-columns: 1fr;
+    padding: 184px 50px 100px 50px;
+  }
+  .title{
+    margin: -100px 0 0;
+    padding: 10px;
+    height: 64px;
+    width: calc(100vw - 50px);
+    position: absolute;
+    z-index: 1;
+    box-shadow: none;
+  }
+  .title h1{
+    font-size: 40px;
+    margin-right: 0;
+  }
+  .caption{
+    display: none;
+  }
+  #rundown{
+    margin-top: 30px;
+  }
+  .ovMainArea{
+    flex-flow: column wrap;
+    align-items: flex-start;
+    padding-left: 10px;
+  }
+  .ovImg{
+    max-width: 100%;
+    width: calc(100% - 10px);
+  }
+  #trumpcoin{
+    width: inherit;
+  }
+  .img img{
+    max-height: calc(100vh - 120px);
+    object-fit: cover;
+  }
+  #tops{
+    display: none;
+  }
+  .footer{
+    grid-area: 2/1/3/2;
+  }
+  .fNavBox{
+    padding: 20px 15px;
+    box-shadow: -5px 5px white;
+  }
+  .footNav{
+    font-size: 20px;
+  }
+  .social{
+    padding: 17.5px;
+  }
+
+}
+
+@media screen and (max-width: 500px){
+  
+  .navbar{
+    padding: 14px 25px 0 25px;
+  }
+  .siteNav{
+    padding-left: 25px;
+  }
+  .content{
+    grid-area: 1/1/2/2;
+    grid-template-columns: 1fr;
+    padding: 184px 25px 100px 25px;
+  }
+  .footer{
+    grid-area: 2/1/3/2;
+  }
+  .title{
+    margin: -100px 0 0;
+    text-align: center;
+  }
+  .title h1{
+    margin-right: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

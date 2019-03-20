@@ -36,13 +36,17 @@ a{
 -- PAGE                    --
 ========================== */
 
-.page{
-
-}
 .inlink{
+  display: inline-block;
+  margin-top: 12px;
   border-bottom: 1px dashed rgba(255,255,255,1);
   color: white;
   opacity: 0.75;
+  transition: opacity 400ms, border 400ms;
+}
+.inlink:hover{
+  opacity: 1;
+  border-bottom: 1px solid white;
 }
 
 
@@ -161,7 +165,7 @@ a{
   flex-flow: column wrap;
   justify-content: center;
 }
-.h1, .p{
+.h1, .p, h3{
   color: white;
   font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
 }
@@ -182,16 +186,53 @@ a{
 -- ACCOLADES               --
 ========================== */
 
+.section2{
+  margin-left: 15px;
+  margin-top: -45px;
+  width: calc(100vw - 60px);
+  background-color: black;
+  border: 8px solid white;
+}
+.info{
+  padding: 50px 25px;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 25px;
+  justify-content: center;
+  align-items: center;
+  margin: 64px 0;
+}
+#infoText{
+  grid-row: 1/2;
+  grid-column: 2/3;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+#infoText h3{
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+#infoText p{
+  width: 75%;
+  margin: 0 auto;
+}
+.info img{
+  grid-row: 1/2;
+  grid-column: 1/2;
+  justify-self: center;
+  width: 90%;
+  box-shadow: /*-10px 10px rgba(0,0,0,0.08),*/
+    -8px 8px white;
+  border: 3px solid white;
+}
 .accolades{
   max-height: 890px;
-  width: calc(100vw - 60px);
-  margin-top: -30px;
-  margin-left: 15px;
   padding: 50px 25px;
-  border: 8px solid white;
-  background-size: contain;
-  background-color: black;
-
+  width: 100%;
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
@@ -199,6 +240,7 @@ a{
   grid-column-gap: 25px;
   justify-content: center;
   align-items: center;
+  margin: 64px 0;
 }
 #accTitle{
   grid-area: 1/1/2/2;
@@ -211,8 +253,8 @@ a{
 #accImg2{
   grid-area: 2/3/3/4;
 }
-.accolades p.p{
-  width: 50%;
+p.p{
+  width: 65%;
   font-size: 18px;
 }
 #acc1{
@@ -329,6 +371,7 @@ a{
 }
 
 
+
 /* ==========================
 -- FOOTER                  --
 ========================== */
@@ -344,21 +387,6 @@ footer{
 -- SCREENS                 --
 ========================== */
 
-/*@media screen and (max-width: 984px){
-
-  .resWrap h1{
-    font-size: 24px;
-  }
-  .resWrap a.button{
-    width: 100px;
-    height: 48px;
-    font-size: 14px;
-    line-height: 42px;
-    padding: 0;
-  }
-
-}*/
-
 @media screen and (max-width: 924px){
 
   .hero{
@@ -373,10 +401,12 @@ footer{
   .hero-right p.p{
     padding-left: 6px;
   }
+  #infoText p{
+    width: 100%;
+  }
   .accolades, .resume{
     display: flex;
     flex-flow: column nowrap;
-
   }
   .accolades > *{
     margin-bottom: 24px;
@@ -401,8 +431,26 @@ footer{
 
 }
 
+
 @media screen and (max-width: 620px){
 
+  .info{
+    margin: 24px 0;
+  }
+  .accolades{
+    margin: 24px 0;
+  }
+  #infoText, .info img{
+    grid-column: 1/-1;
+  }
+  #infoText{
+    grid-row: 2;
+  }
+  #infoText p{
+  }
+  .info img{
+    margin-bottom: 36px;
+  }
   .resume .resWrap{
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
