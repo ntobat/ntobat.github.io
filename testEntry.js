@@ -1,4 +1,4 @@
-$(function(){
+$(document).ready(function(){
 
 
     //init();
@@ -97,7 +97,7 @@ $(function(){
         }, 250);
     });
 
-    $("#top, #process-top").click(function(event){
+    $("a[data-id='top'], #process-top").click(function(event){
         event.preventDefault();
         setTimeout(function(){
             $('html, body').animate({scrollTop:0}, 700);
@@ -107,25 +107,26 @@ $(function(){
 
 
     // progress bar
+    setTimeout(function(){
+        var winHeight = $(window).innerHeight(),
+        docHeight = $(document).height(),
+        max = docHeight - winHeight,
+        value = $(window).scrollTop() / max,
+        indicator = $("#progress");
 
-    var winHeight = $(window).innerHeight(),
-    docHeight = $(document).height(),
-    max = docHeight - winHeight,
-    value = $(window).scrollTop() / max,
-    indicator = $("#progress");
-
-    indicator.css('width', value * 100 + '%');
-        
-    $(document).on('scroll', function(){
-        value = $(window).scrollTop() / max;
         indicator.css('width', value * 100 + '%');
-    });
+            
+        $(document).on('scroll', function(){
+            value = $(window).scrollTop() / max;
+            indicator.css('width', value * 100 + '%');
+        });
+    }, 250);
 
 
 
 
     // hide nav on scroll
-
+    setTimeout(function(){
     //if( $(window).width() < 800 ){
         var prevScroll = $(window).scrollTop();            
         $(document).on('scroll', function(e){
@@ -140,7 +141,7 @@ $(function(){
             prevScroll = newScroll;
         });
         //}    
-
+    }, 250);
     
 
   
