@@ -107,7 +107,7 @@ $(function(){
 
 
     // progress bar
-    $(window).bind("load", function() {
+    $(window).on("load", function() {
         var winHeight = $(window).innerHeight(),
         docHeight = $(document).height(),
         max = docHeight - winHeight,
@@ -125,7 +125,7 @@ $(function(){
 
 
     // hide nav on scroll
-    $(window).bind("load", function() {
+    $(window).on("load", function() {
         //if( $(window).width() < 800 ){
             var prevScroll = $(window).scrollTop();            
             $(document).on('scroll', function(e){
