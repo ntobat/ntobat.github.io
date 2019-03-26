@@ -341,9 +341,45 @@ div.navBG{
   border: 4px solid white;
   box-shadow: 16px 16px black;
 }
+/*
+svg{
+  display: inline-block;
+  grid-column: img;
+  position: absolute;
+  fill: white;
+  right: 16px;
+  top: 12px;
+  width: 36px;
+  height: 36px;
+  background-color: rgba(0,0,0,0.5);
+  padding: 8px;
+  opacity: 0;
+  transition: opacity 250ms;
+}
+
+.image:hover ~ svg, svg:hover{
+  opacity: 0.75;
+}
+.hidden{
+  opacity: 0;
+}
+*/
 
 .image-odd{
   grid-column: img;
+}
+
+.full-width{
+  grid-column: 1/-1;
+  grid-row: 1;
+}
+p.caption-fw{
+  grid-row: 1;
+  z-index: 99;
+  background-color: black;
+  border-top: 4px solid white;
+  border-bottom: 4px solid white;
+  align-self: end;
 }
 
 .smImg{
@@ -699,6 +735,7 @@ a.jump-link:hover{
   display: grid;
   grid-template-columns: inherit;
   grid-row-gap: 60px;
+  position: relative;
 }
 
 .image-row{
@@ -1110,7 +1147,7 @@ a.discipline:active{
 
   .jumpLinks{
     width: 100vw;
-    padding: 130px 30px 30px 30px;
+    padding: 60px 30px 30px 30px;
   }
 
   .navigator{

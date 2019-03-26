@@ -1,7 +1,21 @@
 $(document).ready(function(){
 
 
-    //init();
+    //image click
+    $(".image").click(function(){
+        var img = $(this);
+        if( !img.hasClass("full-width") ){
+            img.addClass("full-width");
+            img.prev().addClass("caption-fw");
+            //img.next().addClass("hidden");
+        } else {
+            img.removeClass("full-width");
+            img.prev().removeClass("caption-fw");
+            //img.next().removeClass("hidden");
+        }
+    });
+
+
 
 
 
@@ -158,6 +172,11 @@ $(document).ready(function(){
         //}    
     }, 250);
     
+
+
+    //smooth scrolling
+    //init();
+
 
   
 });
