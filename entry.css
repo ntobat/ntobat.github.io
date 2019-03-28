@@ -369,7 +369,7 @@ svg{
   grid-column: img;
 }
 
-.full-width{
+.full-width, img.full-width, .image-row img.full-width{
   grid-column: 1/-1;
   grid-row: 1;
 }
@@ -428,6 +428,15 @@ p.caption-fw{
   position: relative;
 }
 
+.emphasis{
+  display: block;
+  font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+  position: relative;
+  padding: 0 calc(100vw/24);
+}
+
 #product::after{
   content: 'PRODUCT DESIGN';
   position: absolute;
@@ -474,6 +483,24 @@ blockquote.quote::before{
   font-style: normal;
   opacity: 0.25;
   z-index: 1;
+}
+
+.list{
+  grid-row-start: content-start;
+  list-style-type: none;
+  width: auto;
+  font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
+  text-indent: 12px;
+  border: 2px solid black;
+  box-shadow: 6px 6px black;
+  padding: 8px;
+  margin: 48px 0;
+}
+
+.list li{
+  font-weight: 700;
+  padding: 6px;
+  text-transform: uppercase;
 }
 
 .black-top, .black-bottom, .black-bg{
@@ -575,6 +602,89 @@ a.button-white:hover{
 @keyframes media-in{
   to { transform: translate(0,0); opacity: 1; }
 }
+
+
+/* collapsible styles */
+
+.wrap-collapsible {
+  margin-top: -60px;
+  padding: 0 calc(100vw/24);
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+.lbl-toggle {
+  display: block;
+
+  font-weight: bold;
+  font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0.75rem;
+  color: black;
+  background: white;
+  cursor: pointer;
+  box-shadow: 2px 2px black, -2px 2px black;
+  border-top: 1px solid black;
+  border-radius: 5px;
+  transition: color 0.25s ease-out, background 0.25s ease-out;
+}
+
+.lbl-toggle:hover {
+  color: white;
+  background: black;
+}
+
+.lbl-toggle::before, .lbl-toggle::after {
+  content: '⇣';
+  font-size: 0.75rem;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: .5rem;
+  transform: translateY(-1px);
+  transition: transform .2s ease-out;
+}
+.lbl-toggle::after{
+  margin-left: 0.5rem;
+}
+.toggle:checked + .lbl-toggle::before, .toggle:checked + .lbl-toggle::after {
+  transform: rotate(180deg) translateY(2px);
+}
+
+.collapsible-content {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height .25s ease-in-out;
+}
+
+.toggle:checked + .lbl-toggle + .collapsible-content {
+  max-height: 350px;
+}
+
+.toggle:checked + .lbl-toggle {
+  color: white;
+  background: black;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  transform: translateY(2px);
+}
+
+.collapsible-content .collapsible-inner {
+  background: #eee;
+  border-bottom: 1px solid black;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: .5rem 1rem;
+}
+.collapsible-inner p{
+  font-size: 0.8rem;
+}
+
+
+/* footer styles */
 
 footer{
   margin-top: -120px;
@@ -1216,6 +1326,10 @@ a.discipline:active{
 
   .bolded{
     font-size: 16px;
+  }
+
+  .emphasis{
+    font-size: 15px;
   }
 
   .sectionNumber, .sectionTitle{

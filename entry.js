@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 
     //image click
-    $(".image").click(function(){
+    $(".image:not(a)").click(function(){
         var img = $(this);
         if( !img.hasClass("full-width") ){
             img.addClass("full-width");
