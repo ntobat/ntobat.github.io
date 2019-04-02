@@ -416,8 +416,17 @@ p.caption-fw{
   transition: border 250ms;
 }
 
+.inlink-black{
+  color: white;
+  border-bottom: 1px dashed rgba(255,255,255,255.75);
+}
+
 .inlink:hover{
   border-bottom: 1px solid rgba(0,0,0,0.75);
+}
+
+.inlink-black:hover{
+  border-bottom: 1px solid rgba(255,255,255,0.75);
 }
 
 .bolded{
@@ -469,13 +478,18 @@ blockquote.quote{
   widows: 3;
   orphans: 3;
 }
+blockquote.quote-black{
+  background-color: #444;
+  border-left: 4px solid white;
+  border-right: 4px solid white;
+  color: white;
+}
 blockquote.quote::before{
   content: '\201C';
   position: absolute;
   top: 0.25em;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #fff;
   width: 3rem;
   height: 2rem;
   font-family: Arial;
@@ -483,6 +497,10 @@ blockquote.quote::before{
   font-style: normal;
   opacity: 0.25;
   z-index: 1;
+}
+blockquote.quote-black::before{
+  color: white;
+  opacity: 0.5;
 }
 
 .list{
@@ -903,6 +921,13 @@ a.jump-link:hover{
   max-width: 40px;
 }
 
+div.disciplines{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .discipline, .ux{
   font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
   font-weight: 700;
@@ -910,17 +935,13 @@ a.jump-link:hover{
   letter-spacing: 0;
   border-bottom: 1px solid transparent;
 }
-div.disciplines{
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: center;
-}
+
 p.ux{
   color: black;
   font-size: 16px;
   margin-top: 8px;
 }
+
 .discipline{
   color: #777;
   text-align: center;
@@ -937,8 +958,47 @@ p.ux{
   border-bottom: 1px solid black;
   transform: translateY(-2px);
 }
+
 a.discipline:active{
   transform: scale(1) translateY(2px);
+}
+
+a.experience{
+  position: relative;
+  display: inline-block;
+  color: black;
+  font-weight: 700;
+  border: 2px solid transparent;
+  outline: 1px solid transparent;
+  margin-top: 16px;
+  padding: 10px 16px 10px 0;
+  transition: color 400ms, padding 200ms, box-shadow 400ms, border 400ms, outline 400ms;
+  z-index: 1;
+}
+
+a.experience:hover{
+  color: white;
+  padding: 10px 16px;
+  border: 2px solid yellow;
+  box-shadow: -4px -4px red, 4px 4px blue;
+  outline: 1px solid white;
+}
+
+a.experience::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  transition: width 400ms, opacity 400ms;
+  z-index: -1;
+}
+a.experience:hover::after{
+  width: 100%;
+  opacity: 1;
 }
 
 #ovText{

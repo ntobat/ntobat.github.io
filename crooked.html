@@ -33,7 +33,7 @@
     <div class="siteNav hidden">
 
       <div class="jumpLinks">
-        <p style="font-weight: 400; color: white;">(navigate around this page)</p>
+        <p class="nav-aid" style="color: white;">(navigate around this page)</p>
         <p class="jumpTitle">JUMP TO:</p>
         <div class="navigator">
           <a data-id="top" href="#">TOP</a>
@@ -45,10 +45,10 @@
       </div>
 
       <div class="navLinks">
-        <p style="font-weight: 400">(navigate around the site)</p>
+        <p class="nav-aid">(navigate around the site)</p>
         <a class="navTitle">WORK</a>
         <div class="navigator">
-          <a id="sustain" href="sustain/index.html" data-page="1">SUSTAINABILITY</a>
+          <a id="sustain" href="sustainability.html" data-page="1">SUSTAINABILITY</a>
           <a id="depot" href="google.html" data-page="2">GOOGLE REFUGE</a>
           <a id="america" href="crooked.html" data-page="3">AMERICA 2050</a>
           <a id="twitch" href="twitch.html" data-page="4">JUST FOR MEN</a>
@@ -66,7 +66,7 @@
 
   <main class="page unselectable">
 
-    <div id="sideBlack"></div>
+    <div id="sideBlack" style="grid-row: 1/28;"></div>
     <div id="empty"></div>
 
     <div class="icons">
@@ -88,7 +88,7 @@
 
 
     <section class="row two">
-      <img id="hero" src="assets/america/iphonex.png" class="smImg" />
+      <img id="hero" src="assets/america/iphoneX.png" class="smImg" />
       <div id="heroText" class="content">
         <!--div id="titleBlock">
           <h1>Google Refuge</h1>
@@ -110,7 +110,7 @@
       <p id="ovText" class="content content-black el el-text">This project is the result of a team effort around the political education process. The apathy among young voters is well documented, and we had to put our creative heads together to come up with an engaging solution that could circumvent the lack of enthusiasm. Click the button below to read the full story.</p>
       <a class="button btn-jump" href="#section4" id="process">DESIGN PROCESS</a>
       <h3 class="subtitle-black el el-sub" style="grid-row: 3">ROLE</h3>
-      <p class="content content-black el el-text" style="grid-row: 3">The team for this project consisted of myself (experience designer), Colin O'Shea (art director), Lauren Acampora (art director), Meghan Gaffney (experience designer), Belem Medina (experience designer), and Joe Jones (art director). I was specifically responsible for: designing and developing the flagship video game, designing the web interface for the games, and naming & branding the product. To see the fully realized products, keep scrolling, or click the button above to jump to the design process and see how it was all made.</p>
+      <p class="content content-black el el-text" style="grid-row: 3"><!--The team for this project consisted of myself (experience designer), Colin O'Shea (art director), Lauren Acampora (art director), Meghan Gaffney (experience designer), Belem Medina (experience designer), and Joe Jones (art director). -->I was specifically responsible for: designing and developing the flagship video game, designing the web interface for the games, and naming & branding the product. To see the fully realized products, keep scrolling, or click the button above to jump to the design process and see how it was all made.</p>
     </section>
 
     <section class="row four black-bottom">
@@ -318,7 +318,7 @@
       </div>
     </section>
 
-    <section class="row twenty5">
+    <section class="row twenty5" id="crooked" style="padding-top: 60px; margin-top: -60px;">
       <h3 class="el el-sub">BRAND</h3>
       <div class="content">
         <p class="content el">
@@ -338,12 +338,36 @@
     </section>
 
     <section class="row twenty6">
-      <h3 class="el el-sub"> </h3>
+      <h3 class="el el-sub">EXECUTION</h3>
+      <p class="content el">
+        In order to frame the idea as something realistically possible, we needed to develop assets showing how it could work. These included a working version of the flagship video game, a prototype of the web platform for desktop & mobile, and branding for the initiative. You can see the finished products in the first three sections&nbsp;above.
+      </p>
 
+      <a class="button button-white" id="process-top" href="#">JUMP TO TOP</a>
+
+      <div class="image-row">
+        <p class="pCaption el">A simple user flow through the platform</p>
+        <img class="image lgImg el el-img" src="assets/america/flow.png" style="outline: 1px solid black;" />
+      </div>
+
+      <h3 class="el el-sub row-new">TOOLS</h3>
+      <p class="content el row-new">
+        I used a variety of tools to bring this project to life: <span style="font-weight: 700;">Affinity Designer</span> for the 8-bit art and branding, <span style="font-weight: 700;">Sketch</span> to wireframe & prototype the desktop & mobile website and create the UX assets, <span style="font-weight: 700;">Keynote</span> to prototype the video game, <span style="font-weight: 700;">Unity</span> to develop the video game, and <span style="font-weight: 700;">Google Drive</span> to concept & collaborate.
+      </p>
+
+      <div class="image-row">
+        <p class="pCaption el">Tools & technologies used in this project</p>
+        <img class="image lgImg el el-img" src="assets/america/tools.png" style="outline: 1px solid black;" />
+      </div>
+
+      <h3 class="el el-sub row-new">TEAM</h3>
+      <p class="content el row-new">
+        The team for this project consisted of myself (experience designer), Colin O'Shea (art director), Lauren Acampora (art director), Meghan Gaffney (experience designer), Belem Medina (experience designer), and Joe Jones (art director). These folks are incredible — be sure to <a class="inlink" href="https://brandcenter.vcu.edu/recruiters/students.html" target="_blank"> check them&nbsp;out</a>.
+      </p>
     </section>
 
 
-    <footer class="row twenty9">
+    <footer class="row twenty8">
       <div class="footer-left">
         <p>get in touch:</p><br>
         <a id="email" href="mailto:ntobat@gmail.com">ntobat@gmail.com</a>
