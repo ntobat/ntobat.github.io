@@ -161,6 +161,7 @@ $(function(){
     });
 
 
+
     /* open menu animation */
     $('.menu').click(function(event) {
 
