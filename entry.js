@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
 
+
     //image click
     $(".image:not(a)").click(function(){
         var img = $(this);
@@ -17,6 +18,10 @@ $(document).ready(function(){
 
 
 
+    //theme
+    var themeBtns = $("#theme > button");
+    $(themeBtns).click(handleThemeUpdate);
+    
 
 
     //scroll fade-in elements
@@ -180,6 +185,42 @@ $(document).ready(function(){
 
   
 });
+
+function handleThemeUpdate(e){
+    switch(e.target.value) {
+        case 'dark': 
+            $(':root').css('--primary-black', 'black');
+            $(':root').css('--secondary-black', '#444');
+            $(':root').css('--tertiary-black', '#777');
+            $(':root').css('--primary-white', 'white');
+            $(':root').css('--secondary-white', '#d8d8d8');
+            $(':root').css('--primary-highlight', 'red');
+
+            $(':root').css('--primary-text-light', 'white');
+            $(':root').css('--primary-text-dark', 'black');
+            break
+        case 'calm': 
+            $(':root').css('--primary-black', '#565264');
+            $(':root').css('--primary-white', '#EFEDF7');
+            $(':root').css('--secondary-black', '#93909C');
+            $(':root').css('--tertiary-black', '#B2B0B8');
+            $(':root').css('--secondary-white', '#DAD8E1');
+            $(':root').css('--primary-highlight', '#F7E796');
+
+            $(':root').css('--primary-text-light', '#E8E7EC');
+            $(':root').css('--primary-text-dark', '#313E50');
+            break
+        case 'light':
+            $(':root').css('--primary-black', 'black');
+            $(':root').css('--primary-white', 'white');
+            $(':root').css('--secondary-black', '#444');
+            $(':root').css('--tertiary-black', '#777');
+
+            $(':root').css('--primary-text-light', 'white');
+            $(':root').css('--primary-text-dark', 'black');
+            break
+    };
+};
 
 /*
 // smooth scrolling
