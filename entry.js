@@ -19,7 +19,7 @@ $(document).ready(function(){
 
 
     //theme
-    var themeBtns = $("#theme > button");
+    var themeBtns = $("#theme > div");
     $(themeBtns).click(handleThemeUpdate);
     
 
@@ -200,15 +200,15 @@ function handleThemeUpdate(e){
             $(':root').css('--primary-text-dark', 'black');
             break
         case 'calm': 
-            $(':root').css('--primary-black', '#565264');
+            $(':root').css('--primary-black', '#373540');
             $(':root').css('--primary-white', '#EFEDF7');
             $(':root').css('--secondary-black', '#93909C');
             $(':root').css('--tertiary-black', '#B2B0B8');
             $(':root').css('--secondary-white', '#DAD8E1');
-            $(':root').css('--primary-highlight', '#F7E796');
+            $(':root').css('--primary-highlight', '#FFA244');
 
             $(':root').css('--primary-text-light', '#E8E7EC');
-            $(':root').css('--primary-text-dark', '#313E50');
+            $(':root').css('--primary-text-dark', '#373540');
             break
         case 'light':
             $(':root').css('--primary-black', 'black');
