@@ -19,7 +19,7 @@ $(document).ready(function(){
 
 
     //theme
-    var themeBtns = $("#theme > div");
+    var themeBtns = $("#theme > button");
     $(themeBtns).click(handleThemeUpdate);
     
 
