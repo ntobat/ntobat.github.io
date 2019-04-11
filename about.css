@@ -61,7 +61,7 @@ a{
   left: 0;
   top: 0;
   width: 100vw;
-  height: 80px;
+  height: 74px;
   padding: 14px 25px 0 25px;
   z-index: 99;
   box-shadow: 0 1px 16px rgba(0, 0, 0, 0.45), 0 -15px rgba(255,255,255,0.9);
@@ -73,12 +73,18 @@ a{
   align-items: center;
   margin-bottom: 36px;
 }
+.header a{
+  transition: transform 400ms;
+}
+.header a:hover{
+  transform: scale(1.1);
+}
 #logo{
-  height: 52px;
+  height: 40px;
   width: auto;
 }
 #menu{
-  height: 24px;
+  height: 40px;
   width: auto;
 }
 .navTitle, .siteNav a{
@@ -94,6 +100,10 @@ a{
   display: block;
   border-bottom: 1px solid black;
   margin-bottom: 15px;
+  transition: transform 500ms ease;
+}
+.navTitleLink:hover{
+  transform: translateX(4px);
 }
 .navigator{
   overflow-y: scroll;
@@ -117,7 +127,7 @@ a{
 }
 .siteNav{
   position: absolute;
-  top: 80px;
+  top: 74px;
   left: 15px;
   width: calc(100vw - 30px);
   height: 100vh;
@@ -265,6 +275,7 @@ p.p{
   text-align: right;
   justify-self: end;
 }
+
 .accEntry{
   position: relative;
   display: inline-block;
@@ -275,6 +286,7 @@ p.p{
     -8px 8px white;
   border: 3px solid white;
   cursor: pointer;
+  transition: box-shadow 250ms;
 }
 .accEntry img.accImg{
   width: 100%;
@@ -283,6 +295,20 @@ p.p{
   position: relative;
   display: none;
 }
+
+.accEntry:hover{
+  box-shadow: -10px 10px white;
+  /*animation: shadow-animate 1s linear infinite;*/
+}
+
+/*@keyframes shadow-animate{
+  0%{ box-shadow: -8px 8px white; }
+  25%{ box-shadow: 8px 8px white; }
+  50%{ box-shadow: 8px -8px white; }
+  75%{ box-shadow: -8px -8px white; }
+  100%{ box-shadow: -8px 8px white; }
+}*/
+
 
 
 /* ==========================

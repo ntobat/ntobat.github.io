@@ -259,7 +259,7 @@ nav{
 .navTitleLink{
   border-bottom: 1px solid var(--primary-black);
   margin-bottom: 15px;
-  transition: all 500ms ease;
+  transition: transform 500ms ease;
 }
 .navTitleLink:hover{
   transform: translateX(4px);
@@ -844,14 +844,41 @@ footer{
 }
 .footer-right{
   grid-column: sidebar-end / -1;
-  padding: 40px 0;
+  /*padding: 40px 0;*/
   background-color: var(--primary-black);
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
-.footer-right a{
+.footer-half{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 250ms;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center 250px;
+}
+#footer-google{
+  background-image: url(assets/google/phone3d.gif);
+}
+#footer-sustain{
+  background-image: url(assets/sustainThumb.png);
+}
+#footer-crooked{
+  background-image: url(assets/america/thumb.png);
+}
+.footer-half:hover{
+  background-position: center;
+}
+.footer-right p{
   color: var(--primary-text-light);
+  font-family: var(--primary-font-family);
+  padding: 1.5em 3em;
+  background-color: rgba(0,0,0,0.5);
+  cursor: pointer;
 }
 
 
@@ -1050,6 +1077,11 @@ p.ux{
   transition: all 250ms ease;
 }
 
+.discipline-2{
+  margin-top: 16px;
+  cursor: default;
+}
+
 .discipline:hover{
   color: var(--primary-text-dark);
   box-shadow: 0 0 16px rgba(0,0,0,0.15);
@@ -1078,7 +1110,7 @@ a.experience:hover{
   color: var(--primary-text-light);
   padding: 10px 16px;
   border: 2px solid yellow;
-  box-shadow: -4px -4px var(--primary-highlight), 4px 4px blue;
+  box-shadow: -4px -4px red, 4px 4px blue;
   outline: 1px solid var(--primary-white);
 }
 
