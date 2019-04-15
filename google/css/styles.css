@@ -213,37 +213,26 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 #intro {
   width: 90%;
-  height: 86vh;
   position: relative;
   left: 5%;
-  background: url("../img/intro-carousel/1.jpg") no-repeat;
-  background-size: contain;
-  overflow: hidden;
-  perspective: 1px;
-  border-radius: 8px;
-  border-collapse: separate;
-  border: none;
 }
 
 #intro .intro-content {
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
   display: flex;
   justify-content: start;
-  align-items: flex-end;
+  align-items: center;
   flex-direction: column;
   text-align: center;
-  margin: 8vh 100px 0 0;
+  margin: 8vh 0 0 0;
 }
 
-#intro .intro-content h2 {
-  margin: 0 0 6vh 50%;
-  font-size: 36px;
-  font-weight: 700;
+#intro .intro-content h1 {
+  font-size: 3.5rem;
+  letter-spacing: -.03125rem;
+  line-height: 4rem;
+  margin: 12px 0 23px 0;
+  max-width: 860px;
+  margin: 0 0 6vh 0;
 }
 #intro .intro-content p{
   margin: 0 0 5vh 0;
@@ -251,7 +240,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 32px;
   font-weight: 400;
   max-width: 700px;
-  text-align: right;
+  text-align: center;
 }
 
 @media (max-width: 767px) {
@@ -406,17 +395,21 @@ h1, h2, h3, h4, h5, h6 {
 /* Connect Section
 --------------------------------*/
 #connect {
+  margin-top: 60px;
   padding: 60px 0 30px 0;
   position: relative;
 }
 #connect .connectImg {
   overflow: hidden;
   width: 100%;
+  margin-top: -120px;
+  z-index: -1;
 }
 
 #connect .connectImg img {
-  margin-left: -15px;
-  width: calc(100vw + 15px);
+  margin-left: 5%;
+  width: 90%;
+  border-radius: 8px;
   height: auto;
 }
 
@@ -431,36 +424,31 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #connect .content{
-  position: absolute;
-  bottom: 0;
-  top: 65px;
-  left: 25px;
-  right: 0;
-  z-index: 10;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
-  color: white;
-  text-align: left;
-  max-width: 50vw;
-  max-height: 30%;
+  text-align: center;
+  margin-left: 2.5%;
+  background-color: white;
+  width: 50%;
+  border-radius: 8px;
+  box-shadow: 0 13px 30px 0 rgba(0,0,0,.08);
 }
-#connect .box{
 
-}
 #connect .content h2 {
-  font-weight: 700;
-  font-size: 32px;
+  font-size: 2.75rem;
+  letter-spacing: -.5px;
+  line-height: 3.25rem;
   font-family: "Product Sans", sans-serif;
-  text-align: left;
+  text-align: center;
   color: #333;
-  margin-bottom: 20px;
-  margin-top: 8px;
+  margin-bottom: 32px;
+  margin-top: 32px;
 }
 
-#connect{
-
+#connectTxt{
+  max-width: 85%;
 }
 
 #connect .content p {
@@ -468,27 +456,10 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   font-size: 16px;
   line-height: 32px;
-  margin-bottom: 10px
+  margin: 18px 0;
 }
 
-#connect .content p:last-child {
-  margin-bottom: 0;
-}
 
-#connect .content i {
-  font-size: 20px;
-  padding-right: 4px;
-  color: #50d8af;
-}
-
-#connect .content ul {
-  list-style: none;
-  padding: 0;
-}
-
-#connect .content ul li {
-  padding-bottom: 10px;
-}
 
 /* Video Section
 --------------------------------*/
@@ -500,18 +471,53 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
 }
 
-/* Beacon Section
+
+
+/* Beacon 1 Section
 --------------------------------*/
+
+#beacon1 {
+  padding: 120px 0 0 0;
+}
+#beacon1 .container{
+  width: 90vw;
+  margin-left: 5vw;
+  padding: 0;
+  border-radius: 8px;
+  perspective: 1px;
+  border-collapse: separate;
+  border: none;
+}
+#beacon1 .container h2{
+  font-size: 2.75rem;
+  letter-spacing: -.5px;
+  line-height: 3.25rem;
+  font-family: "Product Sans", sans-serif;
+  text-align: center;
+  margin-bottom: 28px;
+}
+#beacon1 .container img{
+  width: 100%;
+  border-radius: 8px;
+  height: auto;
+}
+
+/* Beacon Section (Details)
+--------------------------------*/
+
 #beacon {
   padding: 30px 0 0 0;
 }
 #beacon .container{
-  background: url("../img/theBeacon.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100vw;
+  width: 90vw;
+  margin-left: 5vw;
   height: 85vh;
+  border-radius: 8px;
+}
+#beacon .container img{
+  width: 100%;
+  border-radius: 8px;
+  height: auto;
 }
 #beacon #beaconText{
   padding: 30px 0 80px 0;
@@ -647,9 +653,35 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Phone Section
+
+/* Phone 1 Section
 --------------------------------*/
 
+#phone1{
+  padding: 60px 0;
+}
+#phone1 .container{
+  background: url("../img/phone.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 90vw;
+  margin-left: 5vw;
+  padding: 0;
+  border-radius: 8px;
+  perspective: 1px;
+  border-collapse: separate;
+  border: none;
+}
+#phone1 .container img{
+  width: 100%;
+  border-radius: 8px;
+  height: auto;
+}
+
+
+/* Phone Section
+--------------------------------*/
 
 #phone{
   padding: 60px 0;
@@ -870,34 +902,39 @@ h1, h2, h3, h4, h5, h6 {
   
 }
 #account .container{
-  background: url("../img/account.png");
+  /*background: url("../img/account.png");*/
   background-size: contain;
   background-repeat: no-repeat;
-  width: 100vw;
-  height: 85vh;
+  width: 90vw;
+  height: 65vh;
+  margin-left: 5vw;
+  border-radius: 8px;
+  perspective: 1px;
+  border-collapse: separate;
+  border: none;
 }
+
 #account .accountContent{
   position: relative;
   height: inherit;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
 }
-#account .techSpecs{
-  position: absolute;
-  top: 75px;
-  right: 100px;
-  z-index: 10;
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  color: #3583FC;
-  text-decoration: none;
-  padding: 12px;
+
+#account .accountContent img{
+  grid-row: 1;
+  grid-column: 1/3;
+  width: 100%;
+  height: auto;
 }
-#account .techSpecs img{
-  display: block;
-  height: 450px;
-  width: auto;
-  padding-right: 8px;
+
+#account .accountImg{
+  margin-top: 12px;
+  grid-row: 1;
+  grid-column: 2/3;
 }
+
 
 
 /* Get Involved Section
@@ -982,7 +1019,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 46px;
   width: 140px;
   background-color: #1a73e8;
-  border-radius: 2px;
+  border-radius: 4px;
   color: white;
   letter-spacing: .03125rem;
   line-height: 1.375rem;
