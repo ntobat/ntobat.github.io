@@ -1,9 +1,3 @@
-/*
-  Theme Name: Reveal
-  Theme URL: https://bootstrapmade.com/reveal-bootstrap-corporate-template/
-  Author: BootstrapMade.com
-  License: https://bootstrapmade.com/license/
-*/
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -466,9 +460,23 @@ h1, h2, h3, h4, h5, h6 {
 #video{
   padding: 30px 0;
 }
+#video .container{
+  padding: 0;
+}
+#video .iframer{
+  position: relative;
+  width: 90vw;
+  height: 35vw;
+  margin-left: 5vw;
+}
 #video .container iframe{
-  display: block;
-  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -703,14 +711,16 @@ h1, h2, h3, h4, h5, h6 {
 
 #apps{
   padding: 30px 0 0 0;
-  
+  margin-bottom: 64px;
 }
 #apps .container{
-  background: url("../img/apps.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 100vw;
-  height: 720px;
+  width: 90vw;
+  margin-left: 5vw;
+  padding: 0;
+}
+#apps .container img{
+  width: 100%;
+  border-radius: 8px;
 }
 
 /* Durability Section
@@ -718,32 +728,36 @@ h1, h2, h3, h4, h5, h6 {
 
 #durable{
   padding: 0 0 30px 0;
+  margin-bottom: 64px;
 }
 #durable .container{
-  background: url("../img/durable.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 100vw;
-  height: 720px;
+  width: 90vw;
+  margin-left: 5vw;
+  padding: 0;
+
+  display: grid;
+  grid-template-rows: 1fr 64px;
+  grid-template-columns: 1fr 1fr 1fr; 
+}
+#durable .container img{
+  grid-row: 1/3;
+  grid-column: 1/4;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 #durable .durableContent{
-  position: relative;
-  height: inherit;
+  grid-row: 2/3;
+  grid-column: 3/4;
 }
-#durable a.techSpecs{
-  display: block;
-  position: absolute;
-  top: 75%;
-  right: 20%;
-  z-index: 10;
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  color: #3583FC;
-  text-decoration: none;
-  padding: 12px;
+#durable .durableContent a > *{
+  display: inline-block;
 }
- #durable .techSpecs p{
+#durable .durableContent a > img{
+  margin-top: -5px;
+}
+
+#durable .techSpecs p{
   font-size: 18px;
   margin-bottom: 0;
   box-shadow: 0 18px 0 0 transparent,
@@ -767,35 +781,29 @@ h1, h2, h3, h4, h5, h6 {
 
 #sapp{
   padding: 30px 0 0 0;
-  
+  margin-bottom: 64px;
 }
 #sapp .container{
-  background: url("../img/sappbg.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 100vw;
-  height: 680px;
+  width: 90vw;
+  margin-left: 5vw;
+
+  display: grid;
+  grid-template-rows: 48px 1fr;
+  grid-template-columns: 1fr 120px 1fr;
+}
+#sapp .container img{
+  grid-row: 1/3;
+  grid-column: 1/4;
+  width: 100%;
+  border-radius: 8px;
 }
 #sapp .sappContent{
-  position: relative;
+  grid-row: 2/3;
+  grid-column: 3/4;
 }
-#sapp .techSpecs{
-  position: absolute;
-  top: 18px;
-  right: 270px;
-  z-index: 10;
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  color: #3583FC;
-  text-decoration: none;
-  padding: 12px;
-}
-#sapp .techSpecs img{
-  display: inline-block;
-  height: 590px;
+#sapp .sappContent img{
+  max-height: 540px;
   width: auto;
-  padding-right: 8px;
 }
 
 
@@ -805,12 +813,12 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 0 30px 0;
 }
 #pixel .container{
-  background: url("../img/pixels.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100vw;
-  height: 85vh;
+  width: 90vw;
+  margin-left: 5vw;
+}
+#pixel .container img{
+  border-radius: 8px;
+  width: 100%;
 }
 #pixel .pixelContent{
   position: relative;
@@ -908,7 +916,6 @@ h1, h2, h3, h4, h5, h6 {
   background-size: contain;
   background-repeat: no-repeat;
   width: 90vw;
-  height: 65vh;
   margin-left: 5vw;
   border-radius: 8px;
   perspective: 1px;
@@ -1394,9 +1401,12 @@ h1, h2, h3, h4, h5, h6 {
   background: #2dc899;
 }
 
+
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
+
 #footer {
   margin-top: 200px;
   background: #f2f5f8;
@@ -1418,3 +1428,35 @@ h1, h2, h3, h4, h5, h6 {
 #footer .credits a {
   color: #0c2e8a;
 }
+
+
+/*--------------------------------------------------------------
+# media
+--------------------------------------------------------------*/
+
+@media screen and (max-width: 680px){
+
+  #header #nav a{
+    font-size: 10px;
+    padding: 6px 10px;
+    margin-right: 8px;
+    line-height: 26px;
+  }
+  #descrip{
+    display: none;
+  }
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
