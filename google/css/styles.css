@@ -1445,10 +1445,35 @@ h1, h2, h3, h4, h5, h6 {
   #descrip{
     display: none;
   }
+  #connect .container .content{
+    margin-left: 5vw;
+    width: 90vw;
+    box-shadow: none;
+  }
+  #connect .container .connectImg{
+    margin-top: 0;
+  }
 
+  #sapp .sappContent img{
+    max-height: 240px;
+  }
 
+  #beacon .container{
+    height: auto;
+  }
+  #beaconBoxtl, #beaconBoxtr{
+    margin-bottom: 0;
+  }
+  #beaconBoxbl, #beaconBoxbr{
+    margin-top: 0;
+  }
+  #beacon .box p{
+    font-size: 12px;
+  }
 
-
+  #phone{
+    padding-top: 0;
+  }
 
 }
 
