@@ -1,15 +1,23 @@
 $(function(){
 
 
+  //animate top bar
+  /*setInterval(function(){
+    $(".conveyor > *").clone().appendTo(".conveyor");
+  }, 1000);
+  setInterval(conveyit, 200);*/
+
+
 	//load / show / hide content with button click
 	$(".load-btn").click(function(){
 		var section = $(this).data('section');
-		$(this).next().load(section + "-section.html");
+		$(this).next().css("display", "flex").load(section + "-section.html");
 		$(this).replaceWith("<button class='btn btn-white hide-btn'>HIDE SECTION</button>");
 	});
 	$(".box").on('click', 'button.show-btn', function(){
 		$(this).next().fadeIn();
 		$(this).replaceWith("<button class='btn btn-white hide-btn'>HIDE SECTION</button>");
+    $(this).css("margin", "0");
 	});
 	$(".box").on('click', 'button.hide-btn', function(){
 		$(this).next().fadeOut();
@@ -138,4 +146,16 @@ $(function(){
 
 
 });
+
+function conveyit(){
+  $(".conveyor").find('div').first().clone().appendTo(".conveyor");
+  setTimeout(function(){
+    $(".conveyor").find('div').first().remove();
+  }, 50);
+}
+
+
+
+
+
 
