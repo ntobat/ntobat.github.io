@@ -17,7 +17,7 @@
   --primary-text-dark: black;
 
   --primary-font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
-  --secondary-font-family: "Nunito Sans", "Helvetica Neue", sans-serif;;
+  --secondary-font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
 }
 
 
@@ -467,10 +467,11 @@ svg{
   grid-column: 1/-1;
   grid-row: 1;
 }
+
 p.caption-fw{
   grid-row: 1;
   z-index: 99;
-  background-color: var(--primary-black);
+  background-color: rgba(0,0,0,0.75);
   border-top: 4px solid var(--primary-white);
   border-bottom: 4px solid var(--primary-white);
   align-self: end;
