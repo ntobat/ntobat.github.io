@@ -18,245 +18,120 @@
   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,800|Saira+Condensed:400,700" rel="stylesheet">
   <link rel="icon" type="img/ico" href="assets/favicon.ico">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="studio.js" async></script>
+
   <!-- Featherlight Lightbox & Gallery -->
   <link href="featherlight.css" type="text/css" rel="stylesheet" />
   <link href="featherlight.gallery.css" type="text/css" rel="stylesheet" />
   <script src="//cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="//cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.gallery.min.js" type="text/javascript" charset="utf-8"></script>
+
+  <script src="studio.js" type="text/javascript"></script>
 </head>
 
 <body>
 
+  <div id="progressBar"><div id="progress"></div></div>
 
-<div class="page unselectable">
-
-  <div id="tops"></div>
-
-  <div class="navbar">
-    <div class="header">
-      <a class="home" href="index.html">
-        <img id="logo" src="assets/logo.svg" />
-      </a>
-      <a class="menu" href="#">
-        <img id="menu" class="menuClosed" src="assets/menuWord.png" />
-      </a>
-    </div>
-    <div class="navi">
-      <a class="navTitle" href="#title">CREATOR STUDIO</a>
-      <div class="navigator">
-        <a class="jump" href="#anchor1">MOTION</a>
-        <a class="jump" href="#anchor2">GRAPHICS</a>
-        <a class="jump" href="#anchor3">3D</a>
-        <a class="jump" href="#anchor4">WRITING</a>
-        <!--a class="jump" href="#anchor5">OTHER</a-->
-      </div>
-    </div>
+  <nav>
+    <div class="navi"></div>
+    
     <div class="siteNav hidden">
-      <a href="#" class="navTitle">WORK</a>
-      <div class="navigator">
-        <a href="google.html">GOOGLE REFUGE</a>
-        <a href="sustainability.html">SUSTAINABILITY</a>
-        <a href="crooked.html">AMERICA 2050</a>
-        <!--a href="html">TWITCH</a-->
+
+      <div class="navLinks">
+        <p class="nav-aid" style="color: var(--primary-text-light);">(navigate around the site)</p>
+        <a class="navTitle">WORK</a>
+        <div class="navigator">
+          <a id="refuge" href="google.html" data-page="2">GOOGLE REFUGE</a>
+          <a id="sustain" href="sustainability.html" data-page="1">SUSTAINABILITY</a>
+          <a id="america" href="crooked.html" data-page="3">AMERICA 2050</a>
+          <!--a id="twitch" href="twitch.html" data-page="4">JUST FOR MEN</a-->
+          <div class="navHover"></div>
+          <div class="navBG"></div>
+        </div>
+        <a href="studio.html" class="navTitleLink">STUDIO</a>
+        <a href="about.html" class="navTitleLink">WHO'S NICK?</a>
+        <div id="credits">DESIGNED & DEVELOPED BY NICHOLAS TOBAT ©2019</div>
       </div>
-      <a href="#" class="navTitleLink">STUDIO</a>
-      <a href="about.html" class="navTitleLink">WHO'S NICK?</a>
-    </div>
-    <div id="credits">DESIGNED & DEVELOPED BY NICHOLAS TOBAT ©2018</div>
-  </div>
 
-
-  <div class="content">
-    <div class="title">
-      <h1>CREATOR STUDIO</h1>
-    </div>
-    <div class="rundownWrap" id="title">
-      <div id="rundown">
-        <h3 id="descrip">Welcome to my studio! So glad to have you. I make all kinds of things, and this is where I keep my favorites ;) Take a look around, and enjoy!</h3>
+      <div class="jumpLinks">
+        <p class="nav-aid">(navigate around this page)</p>
+        <p class="jumpTitle">JUMP TO:</p>
+        <div class="navigator">
+          <a data-id="top" href="#">TOP</a>
+          <a class="jump" data-id="1" href="#section1">MOTION</a>
+          <a class="jump" data-id="2"  href="#section2">GRAPHICS</a>
+          <a class="jump" data-id="3"  href="#section3">3D</a>
+          <!--a class="jump" data-id="4"  href="#section4">BRANDING</a>
+          <a class="jump" data-id="5"  href="#section5">WRITING</a>
+          <a class="jump" data-id="6"  href="#section6">MISC.</a-->
+        </div>
       </div>
-    </div>
 
-    <div class="section section-1">
-      <h2 class="secHead anchor" id="anchor1">MOTION</h2>
-      <h3 class="subSecHead">iPhone X: Interaction Design</h3>
     </div>
-    <div class="section section-2">
-      <a class="studioEntry motion" href="#ixd1">
-        <!--img class="picHover" id="picHover1" data-picnum='1' src="assets/studio/product.png" /-->
-        <img class="picHover" id="picHover1" data-picnum='1' src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="assets/studio/product.png" />
-        <img class="gifHover" id="gifHover1" data-gifnum='1' src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="assets/studio/product.gif" />
-        <div class="gifWrap" data-wrapnum='1'>&nbsp;</div>
-        <div id="ixd1" class="lightBoxed">
-          <img class="gallery" src="assets/studio/product.gif" />
-          <div class="iphoneWrap">&nbsp;</div>
-        </div>
-      </a>
-      <a class="studioEntry motion" href="#ixd2">
-        <img class="picHover" id="picHover2" data-picnum='2' src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="assets/studio/reserve.png" />
-        <img class="gifHover" id="gifHover2" data-gifnum='2' src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="assets/studio/reserve.gif" />
-        <div class="gifWrap" data-wrapnum='2'>&nbsp;</div>
-        <div id="ixd2" class="lightBoxed">
-          <img class="gallery" src="assets/studio/reserve.gif" />
-          <div class="iphoneWrap">&nbsp;</div>
-        </div>
-      </a>
-      <a class="studioEntry motion" href="#ixd3">
-        <img class="picHover" id="picHover3" data-picnum='3' src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="assets/studio/menu.png" />
-        <img class="gifHover" id="gifHover3" data-gifnum='3' src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="assets/studio/menu.gif" />
-        <div class="gifWrap" data-wrapnum='3'>&nbsp;</div>
-        <div id="ixd3" class="lightBoxed">
-          <img class="gallery" src="assets/studio/menu.gif" />
-          <div class="iphoneWrap">&nbsp;</div>
-        </div>
-      </a>
-      <br><br>
-    </div>
-    <div class="caption caption-2">
-      <hr>
-      <p>All made entirely with InVision Studio.</p>
-    </div>
+  </nav>
 
-    <div class="section section-3">
-    	<h3 class="subSecHead" style="margin-bottom: -12px;">Game Animation</h3>
-    </div>
-    <div class="section section-4">
-      <a class="studioEntry motion" href="#slap">
-        <img class="picHover" id="picHover4" data-picnum='4' src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="assets/america/slap.png" style="width: 300px;object-position: -50px;" />
-        <img class="gifHover" id="gifHover4" data-gifnum='4' src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="assets/america/slap.gif" style="width: 300px; object-position: -50px;" />
-        <div class="gifWrap" data-wrapnum='4'>&nbsp;</div>
-        <div id="slap" class="lightBoxed">
-          <video controls>
-            <source src="assets/america/whack.mp4" type="video/mp4" />
-          </video>
-        </div>  
-      </a>
-    </div>
-    <div class="caption caption-4">
-      <hr>
-      <p>Created in Affinity Designer. Animated in Keynote.
-        <br><br>
-        <a class="inlink" href="crooked.html">See Full Project.</a>
-      </p>
-    </div>
+  <main class="page unselectable">
 
-    <div class="section section-5 wHeader">
-      <h2 class="secHead anchor" id="anchor2">GRAPHICS</h2>
-    </div>
-    <div class="section section-6">
-    	<a class="studioEntry graphic" href="#gr1">
-        <img class="entryImg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="assets/graphics/scoob_sm.png" />
-        <div id="gr1" class="lightBoxed">
-          <img src="assets/graphics/scoob.png" />
-        </div>
-      </a>
-      <a class="studioEntry graphic" href="#gr2">
-        <img class="entryImg tallerSquare" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="assets/graphics/garden-gods_sm.png" />
-        <div id="gr2" class="lightBoxed">
-          <img src="assets/graphics/garden-gods.png" />
-        </div>
-      </a>
-      <a class="studioEntry graphic" href="#gr3">
-        <img class="entryImg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="assets/graphics/howl_sm.png" />
-        <div id="gr3" class="lightBoxed">
-          <img src="assets/graphics/howl.png" />
-        </div>
-      </a>
-      <a class="studioEntry graphic" href='#gr4'>
-        <img class="entryImg tallerSquare" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="assets/graphics/cig_sm.png" />
-        <div id="gr4" class="lightBoxed">
-          <img src="assets/graphics/cig.png" />
-        </div>
-      </a>
-      <a class="studioEntry graphic" href='#gr5'>
-        <img class="entryImg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="assets/graphics/basenji_sm.png" />
-        <div id="gr5" class="lightBoxed">
-          <img src="assets/graphics/basenji.png" />
-        </div>
-      </a>
-      <a class="studioEntry graphic" href='#gr6'>
-        <img class="entryImg tallerSquare" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="assets/graphics/oasis_sm.png" />
-        <div id="gr6" class="lightBoxed">
-          <img src="assets/graphics/oasis.png" />
-        </div>
-      </a>
-    </div>
-    <div class="caption caption-6">
-      <hr>
-      <p>Created in Affinity Designer.</p>
-    </div>
+    <div id="sideWhite"></div>
+    <div id="empty"></div>
 
-    <div class="section section-7 wHeader">
-      <h2 class="secHead anchor" id="anchor3">3D</h2>
-    </div>
-    <div class="section section-8">
-      <a class="studioEntry threed" href="#3d1">
-        <img class="picHover" id="picHover5" data-picnum='5' src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="assets/studio/mask.png" style="width: 300px;object-position: -50px 25px;" />
-        <img class="gifHover" id="gifHover5" data-gifnum='5' src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="assets/studio/maskSm.gif" style="width: 300px;object-position: -50px 25px;" />
-        <div class="gifWrap" data-wrapnum='5'>&nbsp;</div>
-        <div id="3d1" class="lightBoxed">
-          <img src="assets/studio/mask.gif" />
-        </div>
+    <div class="icons">
+      <a class="menu" href="#">
+        <img id="menu" class="menuClosed" src="assets/menuBlack.svg" />
       </a>
-      <a class="studioEntry threed" href='#3d2'>
-        <img class="entryImg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="assets/studio/portoSm.jpg" style="width: 300px;object-position: -50px 25px;" />
-        <div id="3d2" class="lightBoxed">
-          <img src="assets/studio/porto.jpg" />
-        </div>
-      </a>
-      <a class="studioEntry threed" href="#3d3">
-        <img class="picHover" id="picHover6" data-picnum='6' src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="assets/google/phone-screenshot.png" style="width: 300px;object-position: -50px;" />
-        <img class="gifHover" id="gifHover6" data-gifnum='6' src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="assets/google/phone3d.gif" style="width: 300px; object-position: -50px;" />
-        <div class="gifWrap" data-wrapnum='6'>&nbsp;</div>
-        <div id="3d3" class="lightBoxed">
-          <video controls>
-            <source src="assets/google/light.mp4" type="video/mp4" />
-          </video>
-        </div>  
-      </a>
-      <!--a class="studioEntry threed" href='#3d3'>
-        <img class="entryImg" src="assets/studio/plantSm.jpg" style="width: 300px;object-position: -50px 8px;" />
-        <div id="3d3" class="lightBoxed">
-          <img src="assets/studio/plant.jpg" />
-        </div>
-      </a-->
-    </div>
-    <div class="caption caption-8">
-      <hr>
-      <p>Created in Cinema 4D.</p>
-    </div>
-
-    <div class="section section-9 wHeader">
-        <h2 class="secHead anchor" id="anchor4">WRITING</h2>
-    </div>
-    <div class="section section-10">
-      <a class="studioEntry write" href="biff.html">
-        <img class="picHover" src="assets/studio/biff.png" />
+      <a class="home" href="index.html">
+        <img id="logo" src="assets/logoBlack.svg" />
       </a>
     </div>
 
+    <section class="row" id="title">
+      <div class="box">
+        <h1>Creator Studio</h1>
+      </div>
+    </section>
 
-    <div class="bottom section" id="bottom-twitch">
-      <h2 class="secHead anchor" id="anchor5" style="opacity: 0; visibility: hidden;">END</h2>
-    </div>
+    <!--section class="row">
+      <div class="box title-box">
+        <h4>Welcome to my studio! So glad to have you. I make all kinds of things, and this is where I keep my favorites ;) Take a look around, and enjoy!</h4>
+      </div>
+    </section-->
+
+    <section class="row three" id="section1">
+      <h3>MOTION</h3>
+      <div class="box">
+        <h4>Interaction design and animations created in InVision Studio.</h4>
+        <button class="btn btn-white load-btn" data-section="motion">LOAD SECTION</button>
+        <div id="motion" class="loader"></div>
+      </div>
+    </section>
+
+    <section class="row four" id="section2">
+      <h3>GRAPHICS</h3>
+      <div class="box">
+        <h4>Graphic illustrations created in Affinity Designer.</h4>
+        <button class="btn btn-white load-btn" data-section="graphic">LOAD SECTION</button>
+        <div id="graphic" class="loader"></div>
+      </div>
+    </section>
+
+    <section class="row five" id="section3">
+      <h3>3-D</h3>
+      <div class="box">
+        <h4>3D modeling and animation in Cinema 4D.</h4>
+        <button class="btn btn-white load-btn" data-section="threed">LOAD SECTION</button>
+        <div id="threed" class="loader"></div>
+      </div>
+    </section>
 
 
 
-  </div>
+  </main>
 
 
-</div>
 
-<script>
-window.addEventListener('load', function(){
-    var allimages= document.getElementsByTagName('img');
-    for (var i=0; i<allimages.length; i++) {
-        if (allimages[i].getAttribute('data-src')) {
-            allimages[i].setAttribute('src', allimages[i].getAttribute('data-src'));
-        }
-    }
-}, false)
-</script>
+
 
 
 </body>
+
+
