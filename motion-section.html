@@ -1,8 +1,3 @@
-<!-- ------------------
-
-	MOTION
-
-------------------- -->
 
 <!--motion entry 1-->
 <a class="studioEntry motion" href="#ixd1">
@@ -50,7 +45,17 @@
   </div>  
 </a>
 
-
+<!--motion entry 5-->
+<a class="studioEntry motion" href="#fmw">
+  <img class="picHover" id="picHover5" data-picnum='5' src="assets/studio/fmw-ss.png" style="width: 300px;object-position: -50px;" />
+  <img class="gifHover" id="gifHover5" data-gifnum='5' src="assets/studio/fmw.gif" style="width: 300px; object-position: -50px;" />
+  <div class="gifWrap" data-wrapnum='5'>&nbsp;</div>
+  <div id="fmw" class="lightBoxed">
+    <video controls autoplay muted>
+      <source src="assets/studio/fmw.mp4" type="video/mp4" />
+    </video>
+  </div>  
+</a>
 
 
 
@@ -60,6 +65,11 @@ $(function(){
 	$("a.motion").featherlightGallery({
         galleryFadeIn: 300,
         openSpeed: 300
+  });
+  $(".gifWrap").hover(function(){
+    var numb = $(this).data('wrapnum');
+    $("#picHover" + numb).toggle();
+    $("#gifHover" + numb).toggle();
   });
 });
 </script>

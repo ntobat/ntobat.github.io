@@ -4,8 +4,8 @@ $(function(){
   //animate top bar
   /*setInterval(function(){
     $(".conveyor > *").clone().appendTo(".conveyor");
-  }, 1000);
-  setInterval(conveyit, 200);*/
+  }, 1000);*/
+  setInterval(conveyit, 250);
 
 
 	//load / show / hide content with button click
@@ -22,14 +22,6 @@ $(function(){
 	$(".box").on('click', 'button.hide-btn', function(){
 		$(this).next().fadeOut();
 		$(this).replaceWith("<button class='btn btn-white show-btn'>SHOW SECTION</button>");
-	});
-
-
-	/* play gif on hover */
-	$(".gifWrap").hover(function(){
-		var numb = $(this).data('wrapnum');
-		$("#picHover" + numb).toggle();
-  		$("#gifHover" + numb).toggle();
 	});
 
 
@@ -148,10 +140,10 @@ $(function(){
 });
 
 function conveyit(){
-  $(".conveyor").find('div').first().clone().appendTo(".conveyor");
-  setTimeout(function(){
+  $(".conveyor-b").find('div').first().appendTo(".conveyor");
+  /*setTimeout(function(){
     $(".conveyor").find('div').first().remove();
-  }, 50);
+  }, 50);*/
 }
 
 
