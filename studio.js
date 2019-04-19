@@ -4,8 +4,8 @@ $(function(){
   //animate top bar
   /*setInterval(function(){
     $(".conveyor > *").clone().appendTo(".conveyor");
-  }, 1000);*/
-  setInterval(conveyit, 250);
+  }, 1000);
+  setInterval(conveyit, 250);*/
 
 
 	//load / show / hide content with button click
@@ -99,7 +99,7 @@ $(function(){
 	});
 
 
-  // progress bar
+  /*// progress bar
   setTimeout(function(){
       var winHeight = $(window).innerHeight(),
       docHeight = $(document).height(),
@@ -114,6 +114,7 @@ $(function(){
           indicator.css('width', value * 100 + '%');
       });
   }, 250);
+  */
 
 
   /*// hide nav on scroll
