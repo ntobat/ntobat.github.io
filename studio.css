@@ -390,6 +390,7 @@ div.navBG{
   grid-row: 1;
   grid-column: sidebar-start / span 1;
   background-color: white;
+  box-shadow: 0 120px white;
   width: 100%;
   height: 100%;
 }
