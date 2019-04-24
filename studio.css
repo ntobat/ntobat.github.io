@@ -397,6 +397,8 @@ div.navBG{
 #empty{
   grid-row: 1/2;
   grid-column: 1/sidebar-start;
+  position: sticky;
+  top: 0;
   overflow: hidden;
 }
 
