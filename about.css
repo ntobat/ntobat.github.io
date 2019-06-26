@@ -167,6 +167,19 @@ a{
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 20px;
 }
+#tsq{
+  width: 100vw;
+  height: 150vh;
+  background-color: black;
+  text-align: center;
+}
+#tsq video{
+  width: 85vw;
+  background-color: black;
+  border: 80px solid black;
+  margin: 0 auto;
+}
+
 .hero-right{
   grid-area: 1/2/2/3;
   background-color: rgba(0,0,0,0.25);
