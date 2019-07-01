@@ -1,0 +1,360 @@
+/* -------------------------------
+
+FONTS
+
+--------------------------------*/
+
+@font-face{
+	font-family: 'Gabo';
+	src: url('assets/fonts/gabo.otf'),
+			 url('assets/fonts/gabo.otf') format('otf');
+}
+
+
+
+/* -------------------------------
+
+SETUP
+
+--------------------------------*/
+
+/* variables */
+
+:root{
+  --primary-black: black;
+  --primary-white: white;
+  --secondary-black: #444;
+  --secondary-white: #d8d8d8;
+  --tertiary-black: #777;
+  --primary-highlight: red;
+
+  --primary-text-light: white;
+  --primary-text-dark: black;
+
+  --primary-font-family: "Gabo", "Helvetica Neue", sans-serif;
+  --secondary-font-family: "Source Sans Pro", "Helvetica Neue", sans-serif;
+}
+
+html{
+  box-sizing: border-box;
+}
+*, *:before, *:after{
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+body{
+  overflow: hidden;
+  min-height: 100vh;
+}
+p, h1, h2, h3, h4, h5, li, a{
+  color: white;
+}
+p, h1, h2, h3, h4, h5, li{
+  cursor: default;
+}
+a{
+  text-decoration: none;
+}
+
+
+
+/* -------------------------------
+
+BRAND
+
+--------------------------------*/
+
+a.button{
+	width: 160px;
+	height: 56px;
+	display: block;
+	position: relative;
+	font-family: var(--secondary-font-family);
+	font-weight: 300;
+  font-size: 24px;
+  text-align: center;
+  color: var(--primary-text-dark);
+  background-color: var(--primary-white);
+  padding: 0 16px;
+  line-height: 56px;
+  border-radius: 5px;
+  border: 1px solid var(--primary-black);
+  transition-property: color, background-color, border, box-shadow, transform;
+  transition-duration: 400ms;
+  cursor: pointer;
+}
+
+a.button:after{
+	content: ' ';
+	position: absolute;
+	top: 6px;
+	left: 6px;
+	bottom: -6px;
+	right: -6px;
+	z-index: -1;
+	border-radius: 5px;
+  border: 1px solid var(--primary-black);
+  background-color: white;
+}
+
+a.button:hover{
+	color: var(--primary-text-light);
+  background-color: var(--primary-black);
+  border: 2px solid var(--primary-white);
+  animation: btn-animate 4s linear infinite;
+  transform: scale(1.1);
+}
+a.button:hover:after{
+	content: none;
+}
+
+@keyframes btn-animate{
+  0%{ box-shadow: 6px 6px #FF5429; }
+  12.25%{ box-shadow: -6px 6px #FF5429, 10px -4px #2969FF; }
+  25%{ box-shadow: -6px -6px #FF5429; }
+  37.5%{ box-shadow: 6px 6px #FF5429, -10px -4px #FF5429; }
+  50%{ box-shadow: 6px -6px #FFBF29; }
+  62.5%{ box-shadow: -6px -6px #FF5429, 10px 4px #2969FF; }
+  75%{ box-shadow: -6px 6px #FF5429; }
+  87.5%{ box-shadow: 6px -6px #FF5429, -10px 4px #FF5429; }
+  100%{ box-shadow: 6px 6px #FFBF29; }
+}
+
+
+/* -------------------------------
+
+HEADER
+
+--------------------------------*/
+
+header{
+	position: fixed;
+	top: 0;
+	height: 86px;
+	width: 100vw;
+	padding-bottom: 6px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	background-color: white;
+	/*box-shadow: 0 0 5px 8px rgba(80,80,80,0.1);*/
+	z-index: 99;
+}
+
+
+
+/* -------------------------------
+
+GRID
+
+--------------------------------*/
+
+.page{
+	height: 400vh;
+	/*height: 100vh;
+	width: 100vw;
+	display: grid;
+	grid-template-columns: 5vw 1fr 1fr 5vw;
+	grid-template-rows: 80px 1fr 1fr;*/
+}
+
+
+
+/* -------------------------------
+
+PARALLAX
+
+--------------------------------*/
+
+.base-wrapper{
+	height: 100vh;
+}
+
+.parallax-container{
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	perspective: 8px;
+	perspective-origin: 0 0;
+}
+
+.parallax{
+	position: relative;
+	transform-origin: 0 0;
+}
+
+.background-image{
+	position: absolute;
+	width: 100vw;
+	height: auto;
+	transform-origin: 0 0;
+	transform: translateZ(0px);
+}
+
+.portrait{
+	width: 50vw;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: sticky;
+	top: 0;
+	transform-origin: 0 0;
+	transform: translateZ(0px);
+}
+.portrait img{
+	position: relative;
+	width: 35vw;
+	height: auto;
+	padding: 8px;
+	border: 2px solid #777;
+	background-color: white;
+}
+.portrait img:after{
+	content: ' ';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 10px;
+	left: 10px;
+	bottom: -10px;
+	right: -10px;
+	border: 2px solid black;
+}
+
+.wrapper{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	transform-style: preserve-3d;
+	transform-origin: 0 0;
+}
+
+.logo-image{
+  top: calc(25vh * 0.5);
+  left: calc( (50vw + 80px) * 0.5);
+	width: 35vw;
+	transform: translateZ(4px) scale(0.5);
+}
+
+.intro-text{
+  top: calc(18vh * 0.25);
+  left: calc( (50vw + 80px) * 0.25);
+	width: 35vw;
+	transform: translateZ(6px) scale(0.25);
+}
+.intro-text h1, .intro-text p{
+	font-family: var(--secondary-font-family);
+	color: black;
+}
+.intro-text h1{
+	font-size: 36px;
+}
+
+
+
+
+.spacer{
+	display: block;
+	height: 1000px;
+	width: 100vw;
+}
+
+
+
+
+
+@media screen and (max-width: 720px){
+
+	a.button{
+		width: 25%;
+		font-size: 18px;
+		height: 48px;
+		line-height: 48px;
+	}
+
+	.parallax-container{
+		position: relative;
+		width: 100vw;
+		height: 100vh;
+		overflow-x: visible;
+		overflow-y: visible;
+		perspective: 0px;
+		perspective-origin: 0 0;
+
+		display: flex;
+		flex-flow: column wrap;
+	}
+
+	.background-image{
+		position: absolute;
+		width: 100vw;
+		flex: 0 0 100%;
+	}
+
+	.portrait{
+		top: 100px;
+		width: 100vw;
+		height: auto;
+	}
+
+	.wrapper{
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.logo-image{
+		position: absolute;
+		top: auto;
+		bottom: 18px;
+		left: auto;
+		transform: none;
+		width: 25vw;
+	}
+
+	.intro-text{
+		top: auto;
+		left: auto;
+		transform: none;
+		margin-top: 80px;
+		width: 75vw;
+	}
+
+	.intro-text > *{
+		text-align: center;
+	}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
