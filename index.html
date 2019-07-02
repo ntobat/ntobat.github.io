@@ -29,9 +29,35 @@
     <a class="icon" href="#"><img id="icon" src="assets/logoBlack.svg" /></a>
     <a id="link-1" href="work.html" class="button">WORK</a>
     <a id="link-2" href="studio.html" class="button">STUDIO</a>
-    <a id="link-3" href="#" class="button">SAY HI</a>
+    <a id="link-3" href="#contact" class="button" onclick="scrollToggle()">SAY HI</a>
   </header>
 
+  <div id="contact" class="overlay">
+    <a class="cancel" href="#" onclick="scrollToggle()"></a>
+    <div class="popup">
+      <h1>SAY HI!</h1>
+      <div class="popup-content">
+        <div class="popup-section">
+          <h3>email</h3>
+          <a href="mailto:ntobat@gmail.com">
+            <img src="assets/home/email.svg" style="color: black; height: 40px;" />
+          </a>
+        </div>
+        <div class="popup-section">
+          <h3>linkedin</h3>
+          <a href="https://www.linkedin.com/in/nicktobat">
+            <img src="assets/home/linkedin.svg" style="color: black; height: 40px;" />
+          </a>
+        </div>
+        <div class="popup-section">
+          <h3>instagram</h3>
+          <a href="https://www.instagram.com/nicktobat">
+            <img src="assets/home/instagram.svg" style="color: black; height: 40px;" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="base-wrapper">
     <div class="parallax-container">
@@ -71,7 +97,7 @@
 
 
 
-  <div class="work-wrapper">
+  <!--div class="work-wrapper">
     <h1>WORK</h1>
     <div class="entry-wrapper">
       <a class="entry" href="google.html">
@@ -92,15 +118,19 @@
     </div>
   </div>
   
-  <div class="work-spacer"></div>
-  <div class="work-spacer"></div>
+  <div class="work-spacer"></div-->
 
 
 </div>
 
 
-
-
 </body>
+
+<script>
+  function scrollToggle() {
+    var element = document.getElementsByTagName("BODY")[0];
+    element.classList.toggle("stop-scrolling");
+  }
+</script>
 
 </html>
