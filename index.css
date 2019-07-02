@@ -125,7 +125,7 @@ a.active{
 	cursor: pointer;
 }
 .define::after{
-	content: '"Dirtbag" is an affectionate term meaning one who exults in living outside and pursues joy.';
+	content: '"Dirtbag" is an affectionate term meaning one who lives outside and rock climbs full-time, for fun.';
 	position: absolute;
 	width: 120px;
 	padding: 6px;
@@ -348,10 +348,12 @@ PARALLAX
 	transform: translateZ(4px) scale(0.5);
 	display: flex;
 	justify-content: space-around;
+	align-items: center;
 }
 
 .logo-image{
 	width: 35vw;
+	height: 35vw;
 }
 .logo-spacer{
 	width: 35vw;
@@ -382,6 +384,7 @@ PARALLAX
 	font-family: var(--primary-font-family);
 }
 .intro-text p{
+	font-size: calc(1vw + 6px);
 	line-height: 1.5em;
 }
 .intro-text h1{
@@ -391,7 +394,7 @@ PARALLAX
 }
 
 .sun{
-	transform: translateZ(2px) scale(0.75);
+	transform: translateZ(-1px) scale(1.125);
 	display: flex;
 	flex-flow: row wrap;
 	z-index: -1;
