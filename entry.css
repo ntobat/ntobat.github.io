@@ -16,8 +16,8 @@
   --primary-text-light: white;
   --primary-text-dark: black;
 
-  --primary-font-family: "Saira Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
-  --secondary-font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+  --primary-font-family: "Fugaz One", "Helvetica Neue", cursive;
+  --secondary-font-family: "Source Sans Pro", "Helvetica Neue", sans-serif;
 }
 
 
@@ -169,6 +169,7 @@ p.pHero{
   font-size: 32px;
   letter-spacing: 0.25px;
   transition: color 250ms;
+  font-weight: 300;
 }
 
 p.pFeatured{
@@ -186,6 +187,7 @@ p.pCaption{
   color: #ddd;
   /*opacity: 0.85;*/
   text-align: right;
+  font-weight: 300;
 
   grid-column: caption;
   align-self: center;
@@ -199,6 +201,7 @@ p{
   font-family: var(--secondary-font-family);
   color: var(--primary-text-dark);
   font-size: 18px;
+  font-weight: 300;
   letter-spacing: 0;
   line-height: 1.75em;
   transition: color 250ms;
@@ -691,7 +694,7 @@ a.button-white:hover{
   87.5%{ box-shadow: -10px -4px #FF5429, -10px 4px #FF5429; }
   100%{ box-shadow: -10px 4px #FFBF29; }
 }
-
+/*
 .el{
   opacity: 0;
 
@@ -718,7 +721,7 @@ a.button-white:hover{
 @keyframes media-in{
   to { transform: translate(0,0); opacity: 1; }
 }
-
+*/
 
 /* collapsible styles */
 
