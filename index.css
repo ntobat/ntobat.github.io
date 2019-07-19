@@ -723,6 +723,10 @@ MEDIA
 		display: none;
 	}
 
+	.scroll{
+		display: none;
+	}
+	
 	.text{
 		transform: none;
 		top: auto;
