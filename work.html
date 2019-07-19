@@ -25,43 +25,47 @@
 
 <div class="page">
 
+  <a class="icon" href="index.html"><img id="icon" src="assets/logoBlack.png" /></a>
   <header>
-    <a class="icon" href="index.html"><img id="icon" src="assets/logoBlack.png" /></a>
-    <a id="link-1" href="#" class="button active">WORK</a>
+    <a id="link-1" href="work.html" class="button">WORK</a>
     <a id="link-2" href="studio.html" class="button">STUDIO</a>
-    <a id="link-3" href="#contact" class="button">SAY HI</a>
+    <a id="link-3" href="#contact" class="button" onclick="scrollToggle()">SAY HI</a>
   </header>
 
   <div id="contact" class="overlay">
-    <a class="cancel" href="#" onclick="scrollToggle()"></a>
+    <a role="button" class="cancel" href="#" onclick="scrollToggle()"></a>
     <div class="popup">
       <h1>SAY HI!</h1>
       <div class="popup-content">
         <div class="popup-section">
-          <h3>email</h3>
+          <h3 id="email-text">ntobat@gmail.com</h3>
           <a href="mailto:ntobat@gmail.com">
-            <img src="assets/home/email.svg" style="color: black; height: 40px;" />
+            <img src="assets/home/email.svg" style="height: 40px;" />
           </a>
         </div>
         <div class="popup-section">
-          <h3>linkedin</h3>
+          <h3 id="linked-text">linkedin</h3>
           <a href="https://www.linkedin.com/in/nicktobat">
-            <img src="assets/home/linkedin.svg" style="color: black; height: 40px;" />
+            <img src="assets/home/linkedin.svg" style="height: 40px;" />
           </a>
         </div>
         <div class="popup-section">
-          <h3>instagram</h3>
+          <h3 id="insta-text">instagram</h3>
           <a href="https://www.instagram.com/nicktobat">
-            <img src="assets/home/instagram.svg" style="color: black; height: 40px;" />
+            <img src="assets/home/instagram.svg" style="height: 40px;" />
           </a>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="work-spacer"></div>
-
-  <div class="work-wrapper">
+  <div class="work-wrapper" style="margin-top: 80px;">
+    <div style="height: 10%"></div>
+    <h1>WORK</h1>
+    <br>
+    <p id="work-dscrp">Group projects completed during my Master's program in Experience Design at the VCU Brandcenter '19.</p>
+    <br>
+    <div style="height: 10%"></div>
     <div class="entry-wrapper">
       <a class="entry" href="google.html">
         <div class="box" id="google"></div>
@@ -79,6 +83,8 @@
         <p>UX / RESEARCH / WEB / ELEARNING</p>
       </a>
     </div>
+    <div style="height: 10%"></div>
+    <div style="height: 10%"></div>
   </div>
 
 

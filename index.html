@@ -25,8 +25,8 @@
 
 <div class="page">
 
+  <a class="icon" href="#"><img id="icon" src="assets/logoBlack.png" /></a>
   <header>
-    <a class="icon" href="#"><img id="icon" src="assets/logoBlack.png" /></a>
     <a id="link-1" href="work.html" class="button">WORK</a>
     <a id="link-2" href="studio.html" class="button">STUDIO</a>
     <a id="link-3" href="#contact" class="button" onclick="scrollToggle()">SAY HI</a>
@@ -38,21 +38,21 @@
       <h1>SAY HI!</h1>
       <div class="popup-content">
         <div class="popup-section">
-          <h3>ntobat@gmail.com</h3>
+          <h3 id="email-text">ntobat@gmail.com</h3>
           <a href="mailto:ntobat@gmail.com">
-            <img src="assets/home/email.svg" style="color: black; height: 40px;" />
+            <img src="assets/home/email.svg" style="height: 40px;" />
           </a>
         </div>
         <div class="popup-section">
-          <h3>linkedin</h3>
+          <h3 id="linked-text">linkedin</h3>
           <a href="https://www.linkedin.com/in/nicktobat">
-            <img src="assets/home/linkedin.svg" style="color: black; height: 40px;" />
+            <img src="assets/home/linkedin.svg" style="height: 40px;" />
           </a>
         </div>
         <div class="popup-section">
-          <h3>instagram</h3>
+          <h3 id="insta-text">instagram</h3>
           <a href="https://www.instagram.com/nicktobat">
-            <img src="assets/home/instagram.svg" style="color: black; height: 40px;" />
+            <img src="assets/home/instagram.svg" style="height: 40px;" />
           </a>
         </div>
       </div>
@@ -70,6 +70,7 @@
         <img src="assets/home/illustration-c.png" />
         <img class="cloud" id="clouds-1" src="assets/home/clouds-1.png" />
         <img class="cloud" id="clouds-2" src="assets/home/clouds-2.png" />
+        <img class="cloud" id="clouds-3" src="assets/home/clouds-3.png" />
       </div>
 
       <div class="object-wrapper scroll" id="scroll">
@@ -96,7 +97,7 @@
         <div class="intro-text">
           <h1><span style="font-weight: 300;">I am</span><br><span style="text-transform: uppercase;"> Nicholas Tobat.</span></h1>
           <br>
-          <p>I am a tireless tinkerer and hybrid designer of web, mobile, product, and brand experiences.<br><br>  I believe natural input fuels creative output. Currently you can('t) find me living out my&nbsp; <span class="define">dirtbag</span>&nbsp; dreams among the forests and cliffs of West Virginia.  </p>
+          <p>I am a tireless tinkerer and hybrid designer of web, mobile, product, and brand experiences.<br><br>  I believe natural input fuels creative output. Currently you can('t) find me living out my&nbsp; <span class="define" id="dirtbag">dirtbag</span>&nbsp; dreams among the forests and cliffs of West Virginia.  </p>
         </div>
       </div>
 
@@ -104,9 +105,13 @@
   </div>
 
 
-
-  <div class="work-wrapper">
+  <div class="work-wrapper" style="border-top: 2px solid var(--primary-gray)">
+    <div style="height: 10%"></div>
     <h1>WORK</h1>
+    <br>
+    <p id="work-dscrp">Group projects completed during my Master's program in Experience Design at the VCU Brandcenter '19.</p>
+    <br>
+    <div style="height: 10%"></div>
     <div class="entry-wrapper">
       <a class="entry" href="google.html">
         <div class="box" id="google"></div>
@@ -124,9 +129,11 @@
         <p>UX / RESEARCH / WEB / ELEARNING</p>
       </a>
     </div>
+    <div style="height: 10%"></div>
+    <div style="height: 10%"></div>
   </div>
   
-  <div class="work-spacer"></div>
+  <!--div class="work-spacer"></div-->
 
 
 </div>
