@@ -14,6 +14,10 @@ SETUP
   --tertiary-black: #777;
   --primary-highlight: red;
 
+  --red: rgb(255,84,41);
+  --blue: rgb(41,105,255);
+  --yellah: rgb(255,191,41);
+
   --primary-text-light: white;
   --primary-text-dark: black;
 
@@ -157,7 +161,13 @@ a.active{
   	transparent 5px,
   	black 5px,
   	black 6px
-		);
+		),
+  	repeating-linear-gradient(45deg,
+  	transparent 0px,
+  	transparent 5px,
+  	black 5px,
+  	black 6px
+  	);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -241,20 +251,22 @@ a.icon{
 	position: fixed;
 	bottom: 24px;
 	left: 24px;
+	z-index: 9999;
 }
 img#icon{
 	width: 48px;
 	height: auto;
 	padding: 12px;
 }
+
 #link-1{
-	box-shadow: 4px 4px white, 6px 6px blue;
+	box-shadow: 4px 4px white, 6px 6px var(--blue);
 }
 #link-2{
-	box-shadow: 4px 4px white, 6px 6px red;
+	box-shadow: 4px 4px white, 6px 6px var(--red);
 }
 #link-3{
-	box-shadow: 4px 4px white, 6px 6px #FFBF29;
+	box-shadow: 4px 4px white, 6px 6px var(--yellah);
 }
 
 
@@ -418,6 +430,126 @@ PARALLAX
 	font-size: calc(2.5vw + 16px);
 	line-height: 1.2em;
 }
+.scrl-spacer{
+	width: 100vw;
+	height: calc(100vh - 100px);
+}
+.scroll{
+	transform: translateZ(7px) scale(0.125);
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+  align-items: center;
+}
+
+.scroller {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  width: 48px;
+  border-radius: 100%;
+  /*box-shadow: 0 0 8px var(--yellah);*/
+  background: #FFFFFF;
+}
+
+.scroll-indctr{
+	position: relative;
+	width: 48px;
+	height: 48px;
+	padding: 4px;
+	border-radius: 100%;
+	border: 3px solid var(--yellah);
+	z-index: 99;
+}
+
+.scroller::after {
+  opacity: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  content: '';
+  height: 100%;
+  width: 100%;
+  border: 8px solid var(--red);
+  border-radius: 100%;
+  -webkit-animation-name: ripple;
+          animation-name: ripple;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(0.65, 0, 0.34, 1);
+          animation-timing-function: cubic-bezier(0.65, 0, 0.34, 1);
+  z-index: -1;
+}
+.scroller::before {
+  opacity: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  content: '';
+  height: 100%;
+  width: 100%;
+  border: 8px solid var(--blue);
+  border-radius: 100%;
+  -webkit-animation-name: ripple;
+          animation-name: ripple;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+  -webkit-animation-delay: 0.45s;
+          animation-delay: 0.45s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(0.65, 0, 0.34, 1);
+          animation-timing-function: cubic-bezier(0.65, 0, 0.34, 1);
+  z-index: -1;
+}
+
+@-webkit-keyframes ripple {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale3d(0.75, 0.75, 1);
+            transform: scale3d(0.75, 0.75, 1);
+  }
+  25%{
+  	opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale3d(1.5, 1.5, 1);
+            transform: scale3d(1.5, 1.5, 1);
+  }
+}
+
+@keyframes ripple {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale3d(0.75, 0.75, 1);
+            transform: scale3d(0.75, 0.75, 1);
+  }
+  25%{
+  	opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale3d(1.5, 1.5, 1);
+            transform: scale3d(1.5, 1.5, 1);
+  }
+}
+
 
 .sun{
 	transform: translateZ(-1px) scale(1.125);
@@ -433,7 +565,7 @@ PARALLAX
 
 #sun{
 	width: 30vw;
-	animation: sunspin 6s linear infinite;
+	animation: sunspin 8s linear infinite;
 }
 
 @keyframes sunspin{
@@ -453,7 +585,7 @@ WORK
 
 .work-spacer{
 	width: 100vw;
-	height: 120px;
+	height: 150px;
 }
 
 .work-wrapper{
@@ -626,6 +758,10 @@ MEDIA
 
 	.work-wrapper{
 		margin-top: 40px;
+	}
+
+	.entry-wrapper{
+		margin-top: 16px;
 	}
 
 	.entry{

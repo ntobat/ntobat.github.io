@@ -33,12 +33,12 @@
   </header>
 
   <div id="contact" class="overlay">
-    <a class="cancel" href="#" onclick="scrollToggle()"></a>
+    <a role="button" class="cancel" href="#" onclick="scrollToggle()"></a>
     <div class="popup">
       <h1>SAY HI!</h1>
       <div class="popup-content">
         <div class="popup-section">
-          <h3>email</h3>
+          <h3>ntobat@gmail.com</h3>
           <a href="mailto:ntobat@gmail.com">
             <img src="assets/home/email.svg" style="color: black; height: 40px;" />
           </a>
@@ -72,6 +72,12 @@
         <img class="cloud" id="clouds-2" src="assets/home/clouds-2.png" />
       </div>
 
+      <div class="object-wrapper scroll" id="scroll">
+        <div class="scroller">
+          <img class="parallax scroll-indctr ripple" src="assets/home/scroll.png" />
+        </div>
+      </div>
+
       <div class="object-wrapper logo">
         <div class="logo-spacer"></div>
         <img class="parallax logo-image" src="assets/home/icon_black.png" />
@@ -88,7 +94,7 @@
         <div class="horiz-spacer"></div>
         <div class="text-spacer"></div>
         <div class="intro-text">
-          <h1><span style="font-weight: 300;">I am</span><br>NICHOLAS TOBAT.</h1>
+          <h1><span style="font-weight: 300;">I am</span><br><span style="text-transform: uppercase;"> Nicholas Tobat.</span></h1>
           <br>
           <p>I am a tireless tinkerer and hybrid designer of web, mobile, product, and brand experiences.<br><br>  I believe natural input fuels creative output. Currently you can('t) find me living out my&nbsp; <span class="define">dirtbag</span>&nbsp; dreams among the forests and cliffs of West Virginia.  </p>
         </div>
@@ -128,11 +134,12 @@
 
 </body>
 
-<script>
+<script type="text/javascript">
   function scrollToggle() {
     var element = document.getElementsByTagName("BODY")[0];
     element.classList.toggle("stop-scrolling");
   }
 </script>
+
 
 </html>
