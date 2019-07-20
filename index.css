@@ -267,6 +267,10 @@ header{
 		box-shadow: 4px 4px white, 6px 6px var(--yellah);
 	}
 
+.mobile-scroll-wrapper{
+	display: none;
+}
+
 
 
 /* -------------------------------
@@ -577,9 +581,9 @@ WORK
 	height: 150px;
 }
 
-.work-wrapper{
+.section-wrapper{
 	position: sticky;
-	top: 0;
+	top: 80px;
 	height: calc(100vh - 80px);
 	width: 100vw;
 	display: flex;
@@ -589,15 +593,14 @@ WORK
 	background-color: var(--primary-white);
 }
 
-.work-wrapper > h1{
+.descrip > h1{
 	text-align: center;
 	text-decoration: underline;
 	/*margin-bottom: 48px;*/
 }
 
-#work-dscrp{
+.work-dscrp{
 	text-align: center;
-	max-width: 75%;
 }
 
 .entry-wrapper{
@@ -651,6 +654,16 @@ WORK
 	background-image: url('assets/home/sustain.jpg');
 }
 
+#cola{
+	background-image: url('assets/home/cola.jpg');
+}
+#book{
+	background-image: url('assets/home/book.jpg');
+}
+#biff{
+	background-image: url('assets/home/biff.jpg');
+}
+
 .entry:hover > .box{
 	transform: scale(1.1);
 	border: 3px solid black;
@@ -677,6 +690,7 @@ MEDIA
 @media screen and (max-width: 720px){
 
 	body{
+		width: 100vw;
 		overflow-x: hidden;
 	}
 
@@ -733,9 +747,12 @@ MEDIA
 	}
 
 	.text{
+		position: absolute;
+		bottom: 120px;
 		transform: none;
 		top: auto;
 		z-index: 10;
+		margin: 0;
 	}
 
 	.sun{
@@ -743,6 +760,9 @@ MEDIA
 		position: absolute;
 		justify-content: center;
 		align-items: center;
+	}
+	#sun{
+		margin-top: 64px;
 	}
 
 	.logo-spacer, .horiz-spacer, .text-spacer, .horizo-spacer{
@@ -762,12 +782,47 @@ MEDIA
 		font-size: calc(1.5vw + 6px);
 	}
 
+	.mobile-scroll-wrapper{
+		width: 100vw;
+		display: block;
+		position: fixed;
+		bottom: 24px;
+		display: flex;
+		justify-content: center;
+		z-index: 999;
+	}
+	
+	.scroller::before, .scroller::after{
+		z-index: 1;
+	}
+	.scroll-indctr{
+		background-color: white;
+		z-index: 98;
+	}
 
-	/* work */
 
-	.work-wrapper{
+	/* sections */
+
+	.section-wrapper{
 		height: auto;
 		padding: 80px 0;
+	}
+
+	#section-spacer{
+		display: none;
+	}
+
+	#work-wrapper{
+		position: relative;
+		top: auto;
+		bottom: 0;
+	}
+
+	.descrip{
+		position: sticky;
+		top: 80px;
+		background-color: white;
+		padding-bottom: 32px;
 	}
 
 	.entry-wrapper{
