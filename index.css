@@ -789,7 +789,7 @@ MEDIA
 		bottom: 24px;
 		display: flex;
 		justify-content: center;
-		z-index: 999;
+		z-index: 97;
 	}
 	
 	.scroller::before, .scroller::after{
@@ -806,6 +806,7 @@ MEDIA
 	.section-wrapper{
 		height: auto;
 		padding: 80px 0;
+		z-index: 98;
 	}
 
 	#section-spacer{
