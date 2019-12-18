@@ -132,6 +132,14 @@ a.active{
 	content: '"Dirtbag" is an affectionate term meaning one who lives outside and rock climbs full-time, for fun.';
 }
 
+#job-title{
+	text-transform: uppercase;
+	font-weight: 300;
+	font-size: 14px;
+	color: #777;
+	letter-spacing: 0.15em;
+}
+
 .overlay{
 	position: fixed;
 	top: 0;
@@ -780,6 +788,10 @@ MEDIA
 
 	.intro-text p{
 		font-size: calc(1.5vw + 6px);
+	}
+
+	#job-title{
+		font-size: 10px;
 	}
 
 	.mobile-scroll-wrapper{
