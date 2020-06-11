@@ -414,7 +414,6 @@ div.navBG{
 .page{
   display: grid;
   grid-row-gap: 120px;
-  grid-column-gap: ;
   grid-template-columns: [header-start caption-start sidebar-start] 1fr 1fr [header-end caption-end img-start subtitle-start] 1fr [sidebar-end subtitle-end] 1fr [content-start] 6fr [img-end content-end gutter-start] 1fr [gutter-end deadspace] 1fr;
   grid-auto-rows: minmax(100px, auto);
 }
@@ -1294,11 +1293,6 @@ a.experience:hover::after{
 ========================== */
 
 @media screen and (max-width: 900px){
-
-
-  #sideBlack{
-
-  }
 
   .icons{
     position: fixed;

@@ -584,9 +584,14 @@ WORK
 
 --------------------------------*/
 
+.section-spacer {
+	width: 100vw;
+	height: 80px
+}
+
 .work-spacer{
 	width: 100vw;
-	height: 150px;
+	height: 240px;
 }
 
 .section-wrapper{
@@ -650,6 +655,16 @@ WORK
 	font-family: var(--primary-font-family);
 	font-size: 14px;
 	color: #777;
+}
+
+#backbone{
+	background-image: url('assets/home/pd.jpg');
+}
+#vertebrae{
+	background-image: url('assets/home/vertebrae.jpg');
+}
+#dev{
+	background-image: url('assets/home/dev.jpg');
 }
 
 #google{
@@ -821,11 +836,11 @@ MEDIA
 		z-index: 98;
 	}
 
-	#section-spacer{
+	.section-spacer{
 		display: none;
 	}
 
-	#work-wrapper{
+	#grad-wrapper, #work-wrapper{
 		position: relative;
 		top: auto;
 		bottom: 0;
