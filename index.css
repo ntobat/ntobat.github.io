@@ -135,7 +135,7 @@ a.active{
 #job-title{
 	text-transform: uppercase;
 	font-weight: 300;
-	font-size: 14px;
+	font-size: 16px;
 	color: #777;
 	letter-spacing: 0.15em;
 }
@@ -413,7 +413,7 @@ PARALLAX
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-around;
-	top: calc(10vw + 1vh);
+	top: calc(10vw + 3vh);
 	}
 	.intro-text{
 		width: 38vw;
@@ -430,7 +430,7 @@ PARALLAX
 		font-family: var(--primary-font-family);
 	}
 	.intro-text p{
-		font-size: calc(1vw + 6px);
+		font-size: calc(1vw + 5px);
 		line-height: 1.5em;
 	}
 	.intro-text h1{

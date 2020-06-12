@@ -1,5 +1,22 @@
 $(function(){
 
+	// product design lightbox
+	$('.lb-trigger').click(function(e) {
+		e.preventDefault();
+		var image_src = $(this).attr('src');
+
+		$('#lb-content').html('<img src="' + image_src + '" />');
+
+		var maxheightvalue = $("#lightbox").height -60;
+		$("#lightbox img").css("max-height", maxheightvalue + "px");
+		//show lightbox window
+		$('#lightbox').fadeIn(400);
+	})
+	// click to close
+	$(document).on('click', '#lightbox', function() { //must use live, as the lightbox element is inserted into the DOM
+		$('#lightbox').fadeOut(300);
+	});
+
 	//background color animation
 	$(".skin").click(function(e){
 		e.preventDefault();

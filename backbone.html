@@ -18,7 +18,7 @@
   <link href="https://fonts.googleapis.com/css?family=Fugaz+One|Source+Sans+Pro:300,400,700&display=swap" rel="stylesheet">
   <link rel="icon" type="img/ico" href="assets/favicon.ico">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="entry.js" type="text/javascript"></script>
+  <script src="scripts.js" type="text/javascript"></script>
 </head>
 
 
@@ -80,13 +80,13 @@
       </section>
       <div class="images">
         <div class="img-wrap">
-          <img src="assets/backbone/reportlib1.png" />
+          <img class="lb-trigger" src="assets/backbone/reportlib1.png" />
         </div>
         <div class="img-wrap">
-          <img src="assets/backbone/reportlib2.png" />
+          <img  class="lb-trigger"src="assets/backbone/reportlib2.png" />
         </div>
         <div class="img-wrap">
-          <img src="assets/backbone/reportlib3.png" />
+          <img class="lb-trigger" src="assets/backbone/reportlib3.png" />
         </div>
       </div>
 
@@ -96,13 +96,13 @@
       </section>
       <div class="images">
         <div class="img-wrap">
-          <img src="assets/backbone/reportc1.png" />
+          <img class="lb-trigger" src="assets/backbone/reportc1.png" />
         </div>
         <div class="img-wrap">
-          <img src="assets/backbone/reportc2.png" />
+          <img class="lb-trigger" src="assets/backbone/reportc2.png" />
         </div>
         <div class="img-wrap">
-          <img src="assets/backbone/reportc3.png" />
+          <img class="lb-trigger" src="assets/backbone/reportc3.png" />
         </div>
       </div>
 
@@ -112,13 +112,13 @@
       </section>
       <div class="images">
         <div class="img-wrap">
-          <img src="assets/backbone/reportg1.png" />
+          <img class="lb-trigger" src="assets/backbone/reportg1.png" />
         </div>
         <div class="img-wrap">
-          <img src="assets/backbone/reportg2.png" />
+          <img class="lb-trigger" src="assets/backbone/reportg2.png" />
         </div>
         <div class="img-wrap">
-          <img src="assets/backbone/reportg3.png" />
+          <img class="lb-trigger" src="assets/backbone/reportg3.png" />
         </div>
       </div>
     </article>
@@ -135,13 +135,13 @@
       </section>
       <div class="images">
         <div class="img-wrap">
-          <img src="assets/backbone/act1.png" />
+          <img class="lb-trigger" src="assets/backbone/act1.png" />
         </div>
         <div class="img-wrap">
-          <img src="assets/backbone/act2.png" />
+          <img class="lb-trigger" src="assets/backbone/act2.png" />
         </div>
         <div class="img-wrap">
-          <img src="assets/backbone/act3.png" />
+          <img class="lb-trigger" src="assets/backbone/act3.png" />
         </div>
       </div>
 
@@ -151,13 +151,13 @@
       </section>
       <div class="images">
         <div class="img-wrap">
-          <img src="assets/backbone/actf1.png" />
+          <img class="lb-trigger" src="assets/backbone/actf1.png" />
         </div>
         <div class="img-wrap">
-          <img src="assets/backbone/actf2.png" />
+          <img class="lb-trigger" src="assets/backbone/actf2.png" />
         </div>
         <div class="img-wrap">
-          <img src="assets/backbone/actf3.png" />
+          <img class="lb-trigger" src="assets/backbone/actf3.png" />
         </div>
       </div>
 
@@ -167,13 +167,13 @@
       </section>
       <div class="images">
         <div class="img-wrap">
-          <img src="assets/backbone/actd1.png" />
+          <img class="lb-trigger" src="assets/backbone/actd1.png" />
         </div>
         <div class="img-wrap">
-          <img src="assets/backbone/actd2.png" />
+          <img class="lb-trigger" src="assets/backbone/actd2.png" />
         </div>
         <div class="img-wrap">
-          <img src="assets/backbone/actd3.png" />
+          <img class="lb-trigger" src="assets/backbone/actd3.png" />
         </div>
       </div>
     </article>
@@ -187,50 +187,60 @@
       <section>
         <h3>1. The Audit</h3>
         <p>
-          My first step was to audit the current UI kit, which was implemented as a linked library in Sketch. I noticed some inconsistencies in this initial audit that I was able to iron out after discussion with the team. I then decided on a course of action for the kit -- I would need to define a number of gray hues and then convert our most-used patterns into this new muted aesthetic.
+          My first step was to audit the current UI kit, which was implemented as a linked library in Sketch. I noticed some inconsistencies in this initial audit that I was able to iron out after discussion with the team.
+        </p>
+        <br>
+        <p> >> These inconsistencies led me to create our Design System, Vertebrae; <a class="inlink" href="https://zeroheight.com/07665ef61">check it out here!</a></p>
+        <br>
+        <p>
+          I then decided on a course of action for the kit -- I would need to define a number of gray hues and then convert our most-used patterns into this new muted aesthetic.
         </p>
       </section>
-      <!--div class="images">
+      <div class="images">
         <div class="img-wrap">
-          <img src="assets/backbone/act1.png" />
+          <img class="lb-trigger" src="assets/backbone/wkit1.png" />
         </div>
         <div class="img-wrap">
-          <img src="assets/backbone/act2.png" />
+          <img class="lb-trigger" src="assets/backbone/wkit2.png" />
         </div>
         <div class="img-wrap">
-          <img src="assets/backbone/act3.png" />
+          <img class="lb-trigger" src="assets/backbone/wkit3.png" />
         </div>
       </div>
 
       <section>
-        <h3>2. The Feed, Filtered</h3>
-        <p>While a running list of activities is nice, the real power of this feature is in its filtering system. Whether you're looking for a specific user, date, or even brand (for multi-brand companies), the filter drawer is here to help. Applied filters are shown both within their individual sections and in aggregate at the top of the drawer.</p>
+        <h3>2. Development</h3>
+        <p>
+          Once the building blocks were in place, I developed the wireframe kit by copying elements from our UI kit and simplifying: removing colors and border-radii, replacing icons with ambiguous squares, and converting text elements into gray boxes.
+        </p>
       </section>
       <div class="images">
         <div class="img-wrap">
-          <img src="assets/backbone/actf1.png" />
+          <img class="lb-trigger" src="assets/backbone/wkitd1.png" />
         </div>
         <div class="img-wrap">
-          <img src="assets/backbone/actf2.png" />
+          <img class="lb-trigger" src="assets/backbone/wkitd2.png" />
         </div>
         <div class="img-wrap">
-          <img src="assets/backbone/actf3.png" />
+          <img class="lb-trigger" src="assets/backbone/wkitd3.png" />
         </div>
       </div>
 
       <section>
-        <h3>3. Dates Are Hard</h3>
-        <p>No one really likes a datepicker dropdown. I provided a functional workaround with Quick Select options within the date range section.</p>
+        <h3>3. The Kit In Action!</h3>
+        <p>
+          With everything in place, it is now a breeze to quickly mock up wireframes for early feature development and concepting. After development of the kit, wireframing as a step in the design process was solidified and we saw our early meetings move much more efficiently.
+        </p>
       </section>
       <div class="images">
         <div class="img-wrap">
-          <img src="assets/backbone/actd1.png" />
+          <img class="lb-trigger" src="assets/backbone/wkita1.png" />
         </div>
         <div class="img-wrap">
-          <img src="assets/backbone/actd2.png" />
+          <img class="lb-trigger" src="assets/backbone/wkita2.png" />
         </div>
         <div class="img-wrap">
-          <img src="assets/backbone/actd3.png" />
+          <img class="lb-trigger" src="assets/backbone/wkita3.png" />
         </div>
       </div-->
 
@@ -238,9 +248,19 @@
 
   </main>
 
+  <div id="lightbox" style="display: none;">
+    <div id="lb-content">
+      <img />
+    </div>
+  </div>
 
 
-
+  <script type="text/javascript">
+    function scrollToggle() {
+      var element = document.getElementsByTagName("BODY")[0];
+      element.classList.toggle("stop-scrolling");
+    }
+  </script>
 
 
 
