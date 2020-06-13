@@ -3,6 +3,9 @@ $(function(){
 	// product design lightbox
 	$('.lb-trigger').click(function(e) {
 		e.preventDefault();
+		// disable scroll
+		$('body').addClass("stop-scrolling");
+
 		var image_src = $(this).attr('src');
 
 		$('#lb-content').html('<img src="' + image_src + '" />');
@@ -13,8 +16,9 @@ $(function(){
 		$('#lightbox').fadeIn(400);
 	})
 	// click to close
-	$(document).on('click', '#lightbox', function() { //must use live, as the lightbox element is inserted into the DOM
+	$(document).on('click', '#lightbox', function() {
 		$('#lightbox').fadeOut(300);
+		$('body').removeClass('stop-scrolling');
 	});
 
 	//background color animation
