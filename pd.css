@@ -54,8 +54,11 @@ a{
   transition: color 250ms;
 }
 
-h1{
+h1, h2, h3, h4, h5 {
   font-family: var(--primary-font-family);
+}
+
+h1{
   color: var(--primary-text-dark);
   font-size: 64px;
   font-weight: 700;
@@ -64,7 +67,6 @@ h1{
 }
 
 h2{
-  font-family: var(--primary-font-family);
   color: var(--primary-text-dark);
   font-size: 36px;
   letter-spacing: 0;
@@ -72,13 +74,11 @@ h2{
 }
 
 h3{
-  font-family: var(--primary-font-family);
   font-size: 28px;
   letter-spacing: 0.5px;
 }
 
 h4{
-  font-family: var(--primary-font-family);
   color: var(--primary-text-dark);
   font-size: 20px;
   letter-spacing: 0;
@@ -208,7 +208,7 @@ a.button{
 }
 
 #progress{
-  background-color: var(--primary-highlight);
+  background-color: #FFBF29;
   width: 0;
   height: 4px;
 }
@@ -287,7 +287,7 @@ a.button{
       max-width: 480px;
       transition: transform 400ms;
     }
-    .link .box {
+    .link .link-img {
       width: 100%;
       max-width: 480px;
       height: 240px;
@@ -352,7 +352,7 @@ main article {
   article .img-wrap {
     cursor: pointer;
     border-radius: 4px;
-    box-shadow: 0 2px 12px 4px rgba(0,0,0,0.24);
+    box-shadow: 0 2px 12px 4px rgba(0,0,0,0.20);
     transition: box-shadow 400ms, transform 400ms;
   }
   article .img-wrap:not(:last-child) {
@@ -389,7 +389,7 @@ main article {
 
 .footer-content {
   background-color: black;
-  padding-bottom: 120px;
+  padding-bottom: 80px;
 }
   .footer-content h1 {
     color: white;
@@ -465,8 +465,10 @@ main article {
 
 .credits {
   text-align: center;
-  margin: 64px 0;
+  margin: 200px 0 0;
   color: white;
+  font-size: 12px;
+  letter-spacing: 1px;
 }
 
 
@@ -497,7 +499,7 @@ main article {
       width: 40px;
       color: black;
     }
-    #lb-content p {
+    p#lb-close {
       display: block;
       font-family: var(--primary-font-family);
       color: white;
@@ -508,6 +510,16 @@ main article {
       margin: 40px auto;
       border-radius: 1px;
       box-shadow: 0 0 24px 8px #444;
-      width: 1080px;
       max-width: 100%;
+      max-height: calc(100vh - 80px);
+    }
+    #lightbox #lb-content img::before {
+      content: 'click anywhere to close';
+      position: absolute;
+      top: 0;
+      left: 0;
+      text-align: center;
+      width: 100%;
+      font-size: 12px;
+      color: white;
     }

@@ -14,12 +14,29 @@ $(function(){
 		$("#lightbox img").css("max-height", maxheightvalue + "px");
 		//show lightbox window
 		$('#lightbox').fadeIn(400);
+		$('#lb-close').fadeIn(400);
 	})
 	// click to close
 	$(document).on('click', '#lightbox', function() {
 		$('#lightbox').fadeOut(300);
 		$('body').removeClass('stop-scrolling');
 	});
+
+	// progress bar
+	setTimeout(function(){
+		var winHeight = $(window).innerHeight(),
+		docHeight = $(document).height(),
+		max = docHeight - winHeight,
+		value = $(window).scrollTop() / max,
+		indicator = $("#progress");
+
+		indicator.css('width', value * 100 + '%');
+				
+		$(document).on('scroll', function(){
+				value = $(window).scrollTop() / max;
+				indicator.css('width', value * 100 + '%');
+		});
+	}, 250);
 
 	//background color animation
 	$(".skin").click(function(e){
