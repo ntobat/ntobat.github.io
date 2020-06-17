@@ -304,13 +304,13 @@ a.button{
     }
 
     #bcur-link{
-      background-image: url('assets/backbone/report.png');
+      background-image: url('../assets/backbone/report.png');
     }
     #feed-link{
-      background-image: url('assets/backbone/feed.png');
+      background-image: url('../assets/backbone/feed.png');
     }
     #kit-link{
-      background-image: url('assets/backbone/kit.png');
+      background-image: url('../assets/backbone/kit.png');
     }
 
 
@@ -445,22 +445,22 @@ main article {
 }
 
 #backbone{
-	background-image: url('assets/home/pd.jpg');
+	background-image: url('../assets/home/pd.jpg');
 }
 #vertebrae{
-	background-image: url('assets/home/vertebrae.jpg');
+	background-image: url('../assets/home/vertebrae.jpg');
 }
 #dev{
-	background-image: url('assets/home/dev.jpg');
+	background-image: url('../assets/home/dev.jpg');
 }
 #google{
-	background-image: url('assets/home/google.jpg');
+	background-image: url('../assets/home/google.jpg');
 }
 #crooked{
-	background-image: url('assets/home/crooked.jpg');
+	background-image: url('../assets/home/crooked.jpg');
 }
 #sustain{
-	background-image: url('assets/home/sustain.jpg');
+	background-image: url('../assets/home/sustain.jpg');
 }
 
 .credits {

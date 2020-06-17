@@ -344,22 +344,22 @@ div.navHover{
 }
 
 #sustain:hover ~ div.navHover{
-  background-image: url('assets/sustain/unplug_.png');
+  background-image: url('/assets/sustain/unplug_.png');
   /*background-color: #2C67D5;*/
 }
 
 #depot:hover ~ div.navHover{
-  background-image: url('assets/depot/navThumb_.png');
+  background-image: url('/assets/depot/navThumb_.png');
   /*background-color: #FE6900;*/
 }
 
 #america:hover ~ div.navHover{
-  background-image: url('assets/america/navThumb.png');
+  background-image: url('/assets/america/navThumb.png');
   /*background-color: #333;*/
 }
 
 #twitch:hover ~ div.navHover{
-  background-image: url('assets/twitch/navThumb.png');
+  background-image: url('/assets/twitch/navThumb.png');
   /*background-color: #6C3AAA;*/
 }
 
@@ -865,13 +865,13 @@ footer{
   background-position: center 250px;
 }
 #footer-google{
-  background-image: url(assets/google/phone3d.gif);
+  background-image: url(/assets/google/phone3d.gif);
 }
 #footer-sustain{
-  background-image: url(assets/sustainThumb.png);
+  background-image: url(/assets/sustainThumb.png);
 }
 #footer-crooked{
-  background-image: url(assets/america/thumb.png);
+  background-image: url(/assets/america/thumb.png);
 }
 .footer-half:hover{
   background-position: center;
