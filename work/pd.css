@@ -168,30 +168,6 @@ a.button{
     100%{ box-shadow: 6px 6px #FFBF29; }
   }
 
-  .discipline {
-    font-family: var(--primary-font-family);
-    font-weight: 700;
-    font-size: 14px;
-    letter-spacing: 0;
-    border-bottom: 1px solid black;
-    border-radius: 4px;
-    color: black;
-    background-color: white;
-    text-align: center;
-    text-transform: uppercase;
-    min-width: 60px;
-    margin: 8px 12px 0 0;
-    padding: 8px 12px;
-    cursor: pointer;
-    transition: all 250ms ease;
-  }
-    .discipline:hover{
-      color: var(--primary-text-dark);
-      box-shadow: 0 0 16px rgba(0,0,0,0.24);
-      border-bottom: 1px solid var(--primary-black);
-      transform: translateY(-2px);
-    }
-
 
 /* progress bar */
 
@@ -271,6 +247,30 @@ a.button{
       margin-bottom: 16px;
     }
 
+  .button-link {
+    font-family: var(--primary-font-family);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0;
+    border-bottom: 1px solid black;
+    border-radius: 4px;
+    color: black;
+    background-color: white;
+    text-align: center;
+    text-transform: uppercase;
+    min-width: 60px;
+    margin: 8px 12px 0 0;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: all 250ms ease;
+  }
+    .button-link:hover {
+      color: var(--primary-text-dark);
+      box-shadow: 0 0 16px rgba(0,0,0,0.24);
+      border-bottom: 1px solid var(--primary-black);
+      transform: translateY(-2px);
+    }
+
   .links {
     display: flex;
     flex-flow: row nowrap;
@@ -311,6 +311,16 @@ a.button{
     }
     #kit-link{
       background-image: url('../assets/backbone/kit.png');
+    }
+
+    #motive-link{
+      background-image: url('../assets/backbone/vertm1.png');
+    }
+    #audit-link{
+      background-image: url('../assets/backbone/verta1.png');
+    }
+    #creation-link{
+      background-image: url('../assets/backbone/vertc1.png');
     }
 
 

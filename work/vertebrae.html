@@ -6,7 +6,7 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114927820-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'UA-114927820-1');
@@ -15,7 +15,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/work/pd.css">
-  <link href="https://fonts.googleapis.com/css?family=Fugaz+One|Source+Sans+Pro:300,400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fugaz+One|Source+Sans+Pro:300,400,700&display=swap"
+    rel="stylesheet">
   <link rel="icon" type="img/ico" href="/assets/favicon.ico">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="/scripts.js" type="text/javascript"></script>
@@ -24,7 +25,9 @@
 
 <body>
 
-  <div id="progressBar"><div id="progress"></div></div>
+  <div id="progressBar">
+    <div id="progress"></div>
+  </div>
 
   <div class="top-block">
 
@@ -40,80 +43,95 @@
       <div class="overview">
         <h4>Overview</h4>
         <p>
-          Vertebrae is the Design System for Backbone PLM. I embarked on its creation in my first few months on the job because of
-          the inconsistencies and incomplete implementations I noticed plaguing our app — I believed a design system was the
-          perfect way to address these issues while simultaneously strengthening our brand and the designer/developer relationship.
+          Vertebrae is the Design System for Backbone PLM. I embarked on its creation in my first few months on the job
+          because of
+          the inconsistencies and incomplete implementations I noticed plaguing our app. I believed a design system was
+          the
+          perfect way to address these issues while simultaneously strengthening our brand and the designer/developer
+          relationship.
         </p>
-        <a class="discipline" href="https://zeroheight.com/07665ef61" target="_blank">Show Me</a>
+        <a class="button-link" href="https://zeroheight.com/07665ef61" target="_blank">Show Me</a>
       </div>
       <p id="jump">Jump to:</p>
     </div>
 
     <div class="links">
-      <a class="link" href="#bcur">
-        <div class="link-img" id="bcur-link">
+      <a class="link" href="#motive">
+        <div class="link-img" id="motive-link">
           <img src="" />
         </div>
-        <h4 class="title">Utilization Reports</h4>
+        <h4 class="title">Motivation</h4>
       </a>
-      <a class="link" href="#feed">
-        <div class="link-img" id="feed-link">
+      <a class="link" href="#audit">
+        <div class="link-img" id="audit-link">
         </div>
-        <h4 class="title">Activity Feed</h4>
+        <h4 class="title">The Audit</h4>
       </a>
-      <a class="link" href="#kit">
-        <div class="link-img" id="kit-link">
+      <a class="link" href="#creation">
+        <div class="link-img" id="creation-link">
         </div>
-        <h4 class="title">Wireframe Kit</h4>
+        <h4 class="title">Creation</h4>
       </a>
     </div>
 
   </div>
 
 
-  <!-- <main>
+  <main>
 
-    <article class="bcur" id="bcur">
-      <h1>Utilization Reports</h1>
+    <article>
+      <h1>Crafting a Design System</h1>
       <p class="descr">
-        The majority of Backbone's clients are apparel companies. Our users needed a way to display a selected set of components — the building blocks of products, such as buttons, zippers, and fabrics — in a dynamic, exportable&nbsp;report to help with Purchase Orders and product planning.
+
       </p>
 
       <section>
-        <h3>1. Report Library</h3>
-        <p>The report library serves as the landing page for this feature and houses all utilization reports created by or shared with the current user.</p>
+        <h3 id="motive">1. Motivation</h3>
+        <p>One of my first projects was to design a new feature for the Bill of Materials (or BOM; essentially, a
+          spreadsheet of all the components it takes to make a product, such as a t-shirt). You can see it in the first
+          image below. And if you do open it up, you should immediately notice some glaring UI issues: the toolbar is
+          not attached to the nav bar; column headers are not aligned with their columns; icon and input alignments are
+          off. As I explored the BOM, my immediate urge was to redesign it; it clearly could use some TLC. But as I grew
+          more familiar with the app, it became more and more obvious that there was a larger problem afoot — there was
+          no consistency across our design patterns, and the designs being passed to engineering were not being properly
+          implemented.</p>
       </section>
       <div class="images">
         <div class="img-wrap">
-          <img class="lb-trigger" src="/assets/backbone/reportlib1.png" />
+          <img class="lb-trigger" src="/assets/backbone/vertm1.png" />
         </div>
         <div class="img-wrap">
-          <img  class="lb-trigger"src="/assets/backbone/reportlib2.png" />
+          <img class="lb-trigger" src="/assets/backbone/vertm1.png" />
         </div>
         <div class="img-wrap">
-          <img class="lb-trigger" src="/assets/backbone/reportlib3.png" />
+          <img class="lb-trigger" src="/assets/backbone/vertm1.png" />
         </div>
       </div>
 
       <section>
-        <h3>2. Report Creation</h3>
-        <p>Here, the user decides which components to include in the report, using both component- and product-level attributes. I reimagined our (admittedly bug-riddled) filtering UI/UX to implement a simple, section-based filtering system with informative tooltips to let the user know how the report is generated in the back-end.</p>
+        <h3 id="audit">2. The Audit</h3>
+        <p>
+          I have created plenty of style guides, but never something so involved as a design system, combining design,
+          code, and branding in one place. After researching best practices for design systems, I knew my first step
+          would be to audit ... everything. Our UI Kit, the style guide, our marketing website, the ENTIRE app, resuable
+          code components, stylesheets — the whole enchilada.
+        </p>
       </section>
       <div class="images">
         <div class="img-wrap">
-          <img class="lb-trigger" src="/assets/backbone/reportc1.png" />
+          <img class="lb-trigger" src="/assets/backbone/verta1.png" />
         </div>
         <div class="img-wrap">
-          <img class="lb-trigger" src="/assets/backbone/reportc2.png" />
+          <img class="lb-trigger" src="/assets/backbone/verta1.png" />
         </div>
         <div class="img-wrap">
-          <img class="lb-trigger" src="/assets/backbone/reportc3.png" />
+          <img class="lb-trigger" src="/assets/backbone/verta1.png" />
         </div>
       </div>
 
       <section>
-        <h3>3. Report Generation</h3>
-        <p>Reports are generated with a set of features to give the user ultimate control over the data displayed. These features include searching, sorting, filtering, and column management. While many of these patterns are reusable components found elsewhere in the app, I developed the column manager specifically for this reporting module.</p>
+        <h3 id="creation">3. Creation</h3>
+        <p>I named the system Vertebrae; the vertebrae are the bones that form the backbone, making a fitting analogy.</p>
       </section>
       <div class="images">
         <div class="img-wrap">
@@ -127,7 +145,7 @@
         </div>
       </div>
 
-    </article> -->
+    </article>
 
   </main>
 
@@ -135,9 +153,9 @@
     <div class="footer-transition"></div>
     <div class="footer-content">
       <h1>Want to see more?</h1>
-      
+
       <div class="entry-wrapper">
-        <a class="entry" href="work/backbone.html" =>
+        <a class="entry" href="work/backbone.html"=>
           <div class="box" id="backbone"></div>
           <h1 class="title">Product Design</h1>
           <p>UI / UX / WEB / PRODUCT</p>
@@ -171,4 +189,5 @@
 
 
 </body>
+
 </html>
