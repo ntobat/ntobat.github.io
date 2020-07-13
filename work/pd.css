@@ -959,6 +959,7 @@ article .cam-images .img-wrap img {
 }
 
 .credits {
+  font-family: var(--primary-font-family);
   text-align: center;
   margin: 200px 0 0;
   color: white;
