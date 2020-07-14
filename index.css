@@ -335,7 +335,7 @@ PARALLAX
 	}
 	#clouds-1{
 		transform: translateX(-200vw);
-		animation: drift-1 18s linear infinite;
+		animation: drift-1 16s linear infinite;
 	}
 	#clouds-2{
 		transform: translateX(-300vw);
@@ -344,7 +344,7 @@ PARALLAX
 	}
 	#clouds-3{
 		transform: translateX(-400vw);
-		animation: drift-3 26s linear infinite;
+		animation: drift-3 24s linear infinite;
 	}
 
 	@keyframes drift-1{
@@ -413,7 +413,7 @@ PARALLAX
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-around;
-	top: calc(10vw + 3vh);
+	top: calc(8vw + 4vh);
 	}
 	.intro-text{
 		width: 38vw;
@@ -629,6 +629,10 @@ WORK
 	cursor: pointer;
 }
 
+.entry {
+	margin: 24px;
+}
+
 .box{
 	height: 260px;
 	width: 260px;
@@ -665,6 +669,9 @@ WORK
 }
 #dev{
 	background-image: url('assets/home/dev.jpg');
+}
+#app{
+	background-image: url('assets/home/app.jpg');
 }
 
 #google{

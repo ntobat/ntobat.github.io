@@ -948,6 +948,9 @@ article .cam-images .img-wrap img {
 #dev{
 	background-image: url('../assets/home/dev.jpg');
 }
+#app{
+	background-image: url('../assets/home/app.jpg');
+}
 #google{
 	background-image: url('../assets/home/google.jpg');
 }
