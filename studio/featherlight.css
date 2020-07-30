@@ -17,7 +17,7 @@ html.with-featherlight {
 
 .featherlight .featherlight-content img, .featherlight .featherlight-content video {
     max-height: 85vh;
-    max-width: calc(100vw - 350px);
+    max-width: calc(100vw - 360px);
 }
 
 .featherlight {
@@ -51,8 +51,8 @@ html.with-featherlight {
     text-align: left;
     vertical-align: middle;
     display: inline-block;
-    padding: 25px 25px 0;
-    border-bottom: 25px solid transparent;
+    padding: 32px 32px 0;
+    border-bottom: 32px solid transparent;
     margin-left: 5%;
     margin-right: 5%;
     max-height: 95%;
