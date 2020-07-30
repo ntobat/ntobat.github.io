@@ -373,7 +373,6 @@ div.navBG{
 .page{
   display: grid;
   grid-row-gap: 100px;
-  grid-column-gap: ;
   grid-template-columns: [deadspace] 1fr [gutter-start] 1fr [gutter-end img-start content-start] 6fr [content-end] 1fr [sidebar-start subtitle-start] 1fr [subtitle-end img-end caption-start header-start] 1fr 1fr [header-end caption-end sidebar-end];
   grid-auto-rows: minmax(100px, auto);
 }
@@ -604,9 +603,6 @@ div.navBG{
   text-align: center;
   align-self: center;
 }
-#title .box{
-
-}
 .title-box{
   grid-column: content;
   position: relative;
@@ -781,7 +777,7 @@ button.btn-white:hover, a.btn-white:hover{
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('assets/studio/iphone2.png');
+  background-image: url('/assets/studio/iphone2.png');
   background-size: 100% 99%;
   background-repeat: no-repeat;
 }
@@ -789,7 +785,7 @@ a.graphic, a.motion, a.threed, a.write{
   display: inline-block;
 }
 .lightBoxed img{
-  padding: 20px;
+  padding: 24px;
 }
 
 
