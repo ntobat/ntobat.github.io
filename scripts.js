@@ -34,11 +34,10 @@ $(function(){
 		$("#load-proj-ute").replaceWith("<article class='load-proj' id='load-proj-ute'></article>");
 		$("#load-proj-feed").replaceWith("<article class='load-proj' id='load-proj-feed'></article>");
 		$("#load-proj-kit").replaceWith("<article class='load-proj' id='load-proj-kit'></article>");
-		$("#load-proj-" + section).load(section + "-section.html");
 		setTimeout(function(){
-			// $("#load-proj-" + section).load(section + "-section.html");
-			window.location = goTo;
-		}, 150);
+			$("#load-proj-" + section).load(section + "-section.html");
+			// window.location = goTo;
+		}, 100);
 	});
 
 
