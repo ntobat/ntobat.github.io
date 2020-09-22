@@ -8,6 +8,9 @@ $(function(){
 
 		var image_src = $(this).attr('src');
 
+		// Close button slash text
+		// $('#lb-content').html('<div id="lb-close">✕</div><img src="' + image_src + '" />');
+		// $('#lb-content').html('<div id="lb-close">Click anywhere to close</div><img src="' + image_src + '" />');
 		$('#lb-content').html('<img src="' + image_src + '" />');
 
 		var maxheightvalue = $("#lightbox").height -60;
@@ -21,6 +24,23 @@ $(function(){
 		$('#lightbox').fadeOut(300);
 		$('body').removeClass('stop-scrolling');
 	});
+
+
+	//load / show / hide content with button click
+	$(".project").click(function(e){
+		e.preventDefault();
+		var goTo = this.getAttribute("href");
+		var section = $(this).data('section');
+		$("#load-proj-ute").replaceWith("<article class='load-proj' id='load-proj-ute'></article>");
+		$("#load-proj-feed").replaceWith("<article class='load-proj' id='load-proj-feed'></article>");
+		$("#load-proj-kit").replaceWith("<article class='load-proj' id='load-proj-kit'></article>");
+		$("#load-proj-" + section).load(section + "-section.html");
+		setTimeout(function(){
+			// $("#load-proj-" + section).load(section + "-section.html");
+			window.location = goTo;
+		}, 150);
+	});
+
 
 	// progress bar
 	setTimeout(function(){

@@ -1,0 +1,100 @@
+
+    <h1>Utilization Reports</h1>
+    <p class="descr">
+        The majority of Backbone's clients are apparel companies. Our users needed a way to display a selected set of
+        components — the building blocks of products, such as buttons, zippers, and fabrics — in a dynamic,
+        exportable&nbsp;report to help with Purchase Orders and product planning.
+    </p>
+    
+    <section>
+        <h3>1. Report Library</h3>
+        <p>The report library serves as the landing page for this feature and houses all utilization reports created by
+        or shared with the current user.</p>
+    </section>
+    <div class="images">
+        <div class="img-wrap">
+        <img class="lb-trigger" src="/assets/backbone/reportlib1.png" />
+        </div>
+        <div class="img-wrap">
+        <img class="lb-trigger" src="/assets/backbone/reportlib2.png" />
+        </div>
+        <div class="img-wrap">
+        <img class="lb-trigger" src="/assets/backbone/reportlib3.png" />
+        </div>
+    </div>
+    
+    <section>
+        <h3>2. Report Creation</h3>
+        <p>Here, the user decides which components to include in the report, using both component- and product-level
+        attributes. I reimagined our (admittedly bug-riddled) filtering UI/UX to implement a simple, section-based
+        filtering system with informative tooltips to let the user know how the report is generated in the back-end.
+        </p>
+    </section>
+    <div class="images">
+        <div class="img-wrap">
+        <img class="lb-trigger" src="/assets/backbone/reportc1.png" />
+        </div>
+        <div class="img-wrap">
+        <img class="lb-trigger" src="/assets/backbone/reportc2.png" />
+        </div>
+        <div class="img-wrap">
+        <img class="lb-trigger" src="/assets/backbone/reportc3.png" />
+        </div>
+    </div>
+    
+    <section>
+        <h3>3. Report Generation</h3>
+        <p>Reports are generated with a set of features to give the user ultimate control over the data displayed. These
+        features include searching, sorting, filtering, and column management. While many of these patterns are
+        reusable components found elsewhere in the app, I developed the column manager specifically for this reporting
+        module.</p>
+    </section>
+    <div class="images">
+        <div class="img-wrap">
+        <img class="lb-trigger" src="/assets/backbone/reportg1.png" />
+        </div>
+        <div class="img-wrap">
+        <img class="lb-trigger" src="/assets/backbone/reportg2.png" />
+        </div>
+        <div class="img-wrap">
+        <img class="lb-trigger" src="/assets/backbone/reportg3.png" />
+        </div>
+    </div>
+
+    <div class="article-divider">
+        <p>↧</p>
+        <p>↧</p>
+        <p>↧</p>
+    </div>
+
+    
+
+<script>
+    $(function(){
+
+// product design lightbox
+$('.lb-trigger').click(function(e) {
+    e.preventDefault();
+    // disable scroll
+    $('body').addClass("stop-scrolling");
+
+    var image_src = $(this).attr('src');
+
+    // Close button slash text
+    // $('#lb-content').html('<div id="lb-close">✕</div><img src="' + image_src + '" />');
+    // $('#lb-content').html('<div id="lb-close">Click anywhere to close</div><img src="' + image_src + '" />');
+    $('#lb-content').html('<img src="' + image_src + '" />');
+
+    var maxheightvalue = $("#lightbox").height -60;
+    $("#lightbox img").css("max-height", maxheightvalue + "px");
+    //show lightbox window
+    $('#lightbox').fadeIn(400);
+    $('#lb-close').fadeIn(400);
+})
+// click to close
+$(document).on('click', '#lightbox', function() {
+    $('#lightbox').fadeOut(300);
+    $('body').removeClass('stop-scrolling');
+});
+    });
+</script>

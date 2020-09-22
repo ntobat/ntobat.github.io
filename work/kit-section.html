@@ -1,0 +1,113 @@
+
+<h1>Wireframe Kit</h1>
+<p class="descr">
+    In addition to my management of our Design System, I was asked to develop a bespoke wireframe kit for the design
+    team as we began to implement more formal UX practices. We noticed our stakeholders getting caught up in the
+    colors and specifics of our designs even though they were only in the conceptual stage. The wireframe kit solved
+    this problem by allowing us to focus on the content and ignore the aesthetics until a later design stage.
+</p>
+
+<section>
+    <h3>1. The Audit</h3>
+    <p>
+    My first step was to audit the current UI kit, which was implemented as a linked library in Sketch. I noticed
+    some inconsistencies in this initial audit that I was able to iron out after discussion with the team.
+    </p>
+    <br>
+    <p> >> These inconsistencies led me to create our Design System, Vertebrae; <a class="inlink"
+        href="https://zeroheight.com/07665ef61">check it out here!</a></p>
+    <br>
+    <p>
+    I then decided on a course of action for the kit -- I would need to define a number of gray hues and then
+    convert our most-used patterns into this new muted aesthetic.
+    </p>
+</section>
+<div class="images">
+    <div class="img-wrap">
+    <img class="lb-trigger" src="/assets/backbone/wkit1.png" />
+    </div>
+    <div class="img-wrap">
+    <img class="lb-trigger" src="/assets/backbone/wkit2.png" />
+    </div>
+    <div class="img-wrap">
+    <img class="lb-trigger" src="/assets/backbone/wkit3.png" />
+    </div>
+</div>
+
+<section>
+    <h3>2. Development</h3>
+    <p>
+    Once the building blocks were in place, I developed the wireframe kit by copying elements from our UI kit and
+    simplifying: removing colors and border-radii, replacing icons with ambiguous squares, and converting text
+    elements into gray boxes.
+    </p>
+</section>
+<div class="images">
+    <div class="img-wrap">
+    <img class="lb-trigger" src="/assets/backbone/wkitd1.png" />
+    </div>
+    <div class="img-wrap">
+    <img class="lb-trigger" src="/assets/backbone/wkitd2.png" />
+    </div>
+    <div class="img-wrap">
+    <img class="lb-trigger" src="/assets/backbone/wkitd3.png" />
+    </div>
+</div>
+
+<section>
+    <h3>3. The Kit In Action!</h3>
+    <p>
+    With everything in place, it is now a breeze to quickly mock up wireframes for early feature development and
+    concepting.
+    After development of the kit, wireframing as a step in the design process was solidified and we saw our early
+    meetings
+    move much more efficiently.
+    </p>
+</section>
+<div class="images">
+    <div class="img-wrap">
+    <img class="lb-trigger" src="/assets/backbone/wkita1.png" />
+    </div>
+    <div class="img-wrap">
+    <img class="lb-trigger" src="/assets/backbone/wkita2.png" />
+    </div>
+    <div class="img-wrap">
+    <img class="lb-trigger" src="/assets/backbone/wkita3.png" />
+    </div>
+</div>
+
+<div class="article-divider">
+</div>
+
+
+
+
+<script>
+    $(function(){
+
+// product design lightbox
+$('.lb-trigger').click(function(e) {
+    e.preventDefault();
+    // disable scroll
+    $('body').addClass("stop-scrolling");
+
+    var image_src = $(this).attr('src');
+
+    // Close button slash text
+    // $('#lb-content').html('<div id="lb-close">✕</div><img src="' + image_src + '" />');
+    // $('#lb-content').html('<div id="lb-close">Click anywhere to close</div><img src="' + image_src + '" />');
+    $('#lb-content').html('<img src="' + image_src + '" />');
+
+    var maxheightvalue = $("#lightbox").height -60;
+    $("#lightbox img").css("max-height", maxheightvalue + "px");
+    //show lightbox window
+    $('#lightbox').fadeIn(400);
+    $('#lb-close').fadeIn(400);
+})
+// click to close
+$(document).on('click', '#lightbox', function() {
+    $('#lightbox').fadeOut(300);
+    $('body').removeClass('stop-scrolling');
+});
+    });
+</script>
